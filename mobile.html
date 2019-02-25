@@ -1,0 +1,130 @@
+<!-- 
+29.01
+1 час 
+30.01
+1 Час
+01.02
+1 час
+04.02
+1 час
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobile Training</title>
+	<link href="mobile.css" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<h3 class="title">Заполните контактную информацию</h3>
+	</div>
+	<div class="main">
+		<div class="main__input-1">
+			<div class="input1">
+				<input type="text" name="a" placeholder="Ваш город или регион*">
+			</div>
+			<div class="input1">
+				<input type="text" name="a" placeholder="Фамилия, имя и отчество*">
+			</div>
+		</div>	
+		<div class="main__input-2">
+			<div class="input2-1">
+				<input type="text" name="b" placeholder="Контактный телефон*">
+			</div>
+			<div class="input2-2" id="input2-2">
+				<input type="text" name="b" placeholder="Электронная почта">
+			</div>
+		</div>	
+		<div class="input__checkbox" id="input__checkbox">
+			<input type="checkbox" name="a"><p>Перенесите свой номер в Тинькофф Мобайл и получите 1000 Р</p>
+		</div>	
+		<div class="main__input-1">
+			<div class="input1">
+				<input type="text" name="a" placeholder="Гражданство">
+			</div>
+		</div>
+		<div class="input__citizen-country">
+			<input type="select" name="a" placeholder="Укажите страну*">
+		</div>
+	</div>
+	<hr>
+	<div class="main-footer">
+		<input type="checkbox" name="b">Я принимаю условия передачи информации
+		<div class="main-footer__next-button">
+			<button class="next-button">Далее</button>
+		</div>
+	</div>
+	<div class="appointment">
+		<h3 class="title__appointment">Назначение встречи</h3>
+		<form>
+			<h2 class="form__title">Куда и когда привезти</h2>
+			<p>
+				<input type="text" name="c" placeholder="Индекс">
+				<input type="text" name="c" placeholder="Регион*">
+				<input type="text" name="c" placeholder="Район или город*">
+				<input type="text" name="c" placeholder="Населенный пункт*">
+				<input type="text" name="c" placeholder="Улица*">
+				<input type="text" name="c" placeholder="Дом*">
+				<input type="text" name="c" placeholder="Корпус">
+				<input type="text" name="c" placeholder="Строение">
+				<input type="text" name="c" placeholder="Квартира">
+				<input type="text" name="c" placeholder="Дата">
+				<input type="text" name="c" placeholder="Время">
+				<input type="text" name="c" placeholder="Комментарий для представителя">
+			</p>
+			<hr>
+			<p>
+				Мы заранее свяжемся с вами<br>и уточним детали встречи
+			</p>
+			<input type="submit" name="c">Заказать доставку
+		</form>				
+	</div>
+	<div class="form-final">
+		<div class="circle"></div>
+		<div class="check"></div>
+		<h2 class="form-final__title">Спасибо, что выбрали Тинькофф Мобайл!</h2>
+		<p class="form-final__appointment-info">
+			Встреча с Вашим представителем пройдет 1 февраля <br>
+			с 10 до 19 по адресу г Ухта, ул Строительная, д 2а. <br>
+			Пожалуйста не забудьте паспорт.
+		</p>
+		<hr>
+		<p class="form-final__appointment-info2">
+			С утра в день доставки Вам прийдет СМС с телефоном представителя. Сам представитель позвонит <br>
+			Вам за час до встречи. На встрече Вам понадобится оригинал паспорта, представитель <br>
+			сфотографирует Вас и документы, поможет установить приложение и пополнить баланс. 
+		</p>
+		<hr>
+		<div class="phone"></div>
+		<div class="tooltip"></div>
+		<h3 class="bring-a-friend">Пригласите друга и получите 300 Р на связь</h3>
+		<p class="form-final__subtitle">А друг получит удвоение минут и интернета</p>
+		<a href="">Подробнее</a>
+		<p class="form-final__bring-learn_more">
+			Укажите контактный номер и имя друга, которого хотите пригласить в Тинькофф Мобайл. 
+			Мы свяжемся с вашим другом и расскажем об условиях и тарифах. <br>
+			Мы зачислим вам 300 ₽ на связь, а другу на месяц удвоим пакеты минут и интернета после того, как он получит SIM-карту и оплатит любую услугу. 
+			Важно, чтобы друг сделал это в пределах 90 дней после активации SIM-карты. <br>
+		</p>
+		<a href="http://static.tcsbank.ru/documents/promo/mgm-form/baf-mobile.pdf">Подробное описание акции</a>
+		<form>
+			<p>
+				<input type="text" name="d" placeholder="Контактный телефон друга*">
+				<input type="text" name="d" placeholder="Фамилия, имя и отчество друга*">
+				<input type="checkbox" name="d" checked>Я принимаю <span class="span-blue">условия передачи информации</span>
+				<input type="submit" name="d">
+			</p>
+			<div class="thank_you">
+				<h3>Спасибо, что пригласили друга!</h3>
+				<button class="more_baf">Пригласить еще</button>
+			</div>
+		</form>
+	</div>
+	<script src="mobile.js"></script>
+</body>
+</html>
