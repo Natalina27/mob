@@ -1,0 +1,142 @@
+<!-- 
+29.01
+1 час 
+30.01
+1 Час
+01.02
+1 час
+04.02
+1 час
+25.02 
+1 час 30 мин
+-->
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobile Training</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<h3 class="title">Заполните контактную информацию</h3>
+	</header>
+	<main class="main">
+		<form action="" method="get" class="form">
+		<div class="form__region">
+			<label for="region" class="label">Ваш город или регион</label>
+			<input class="form__region-input" id="region" type="text" name="region" placeholder="Ваш город или регион*">
+		</div>	
+		<div class="form__region">	
+			<label for="name" class="label">Фамилия, имя и отчество</label>
+			<input class="form__name-input"	id="name" type="text" name="name" placeholder="Фамилия, имя и отчество*">
+		</div>	
+		<div class="form__wrapper">		
+			<div class="form__phone">
+				<label for="phone" class="label">Контактный телефон</label>
+				<input class="form__phone-input" id="phone" type="tel" name="phone" placeholder="Контактный телефон*">
+			</div>
+			<div class="form__email">
+				<label for="email" class="label">Электронная почта</label>
+				<input class="form__phone-input" id="email" type="email" name="email" placeholder="Электронная почта">
+			</div>
+		</div>	
+		<div class="form__save-number">
+			<label class='label' for="save-number">Сохранить свой номер</label>
+			<input class="form__save-number-input" id="save-number" type="checkbox" name="save-number"> 
+			<p>Перенесите свой номер в Тинькофф Мобайл и получите 1000 Р</p>
+		</div>	
+		<div class="form__citizenship">
+			<label class='label' for="citizenship">Гражданство</label>
+			<select class="form__citizenship-input" id="citizenship" name="citizenship">
+				<option value="value1" selected>Имею гражданство</option> 
+				<option value="value2">Не имею гражданство</option>
+			</select>
+		</div>		
+		<div class="form__country">
+			<label for="country" class='label'>Укажите страну</label>
+			<input class="form__country-input" id="country" type="text" name="country" placeholder="Укажите страну*">
+		</div>
+		<div class="form__wrapper">
+			<div class="form__condition">				
+				<input id="condition" class="form__condition-input" type="checkbox" name="condition">
+				<label class="form__condition-description" for="condition">Я принимаю условия передачи информации</label>
+			</div>
+				<button type="button" class="form__next-btn">Далее</button>
+		</div>
+	
+		
+		<!-- 
+	<div class="appointment">
+		<h3 class="title__appointment">Назначение встречи</h3>
+		<form>
+			<h2 class="form__title">Куда и когда привезти</h2>
+			<p>
+				<input type="text" name="c" placeholder="Индекс">
+				<input type="text" name="c" placeholder="Регион*">
+				<input type="text" name="c" placeholder="Район или город*">
+				<input type="text" name="c" placeholder="Населенный пункт*">
+				<input type="text" name="c" placeholder="Улица*">
+				<input type="text" name="c" placeholder="Дом*">
+				<input type="text" name="c" placeholder="Корпус">
+				<input type="text" name="c" placeholder="Строение">
+				<input type="text" name="c" placeholder="Квартира">
+				<input type="text" name="c" placeholder="Дата">
+				<input type="text" name="c" placeholder="Время">
+				<input type="text" name="c" placeholder="Комментарий для представителя">
+			</p>
+			<hr>
+			<p>
+				Мы заранее свяжемся с вами<br>и уточним детали встречи
+			</p>
+			<input type="submit" name="c">Заказать доставку
+		</form>				
+	</div>
+	<div class="form-final">
+		<div class="circle"></div>
+		<div class="check"></div>
+		<h2 class="form-final__title">Спасибо, что выбрали Тинькофф Мобайл!</h2>
+		<p class="form-final__appointment-info">
+			Встреча с Вашим представителем пройдет 1 февраля <br>
+			с 10 до 19 по адресу г Ухта, ул Строительная, д 2а. <br>
+			Пожалуйста не забудьте паспорт.
+		</p>
+		<hr>
+		<p class="form-final__appointment-info2">
+			С утра в день доставки Вам прийдет СМС с телефоном представителя. Сам представитель позвонит <br>
+			Вам за час до встречи. На встрече Вам понадобится оригинал паспорта, представитель <br>
+			сфотографирует Вас и документы, поможет установить приложение и пополнить баланс. 
+		</p>
+		<hr>
+		<div class="phone"></div>
+		<div class="tooltip"></div>
+		<h3 class="bring-a-friend">Пригласите друга и получите 300 Р на связь</h3>
+		<p class="form-final__subtitle">А друг получит удвоение минут и интернета</p>
+		<a href="">Подробнее</a>
+		<p class="form-final__bring-learn_more">
+			Укажите контактный номер и имя друга, которого хотите пригласить в Тинькофф Мобайл. 
+			Мы свяжемся с вашим другом и расскажем об условиях и тарифах. <br>
+			Мы зачислим вам 300 ₽ на связь, а другу на месяц удвоим пакеты минут и интернета после того, как он получит SIM-карту и оплатит любую услугу. 
+			Важно, чтобы друг сделал это в пределах 90 дней после активации SIM-карты. <br>
+		</p>
+		<a href="http://static.tcsbank.ru/documents/promo/mgm-form/baf-mobile.pdf">Подробное описание акции</a>
+		<form>
+			<p>
+				<input type="text" name="d" placeholder="Контактный телефон друга*">
+				<input type="text" name="d" placeholder="Фамилия, имя и отчество друга*">
+				<input type="checkbox" name="d" checked>Я принимаю <span class="span-blue">условия передачи информации</span>
+				<input type="submit" name="d">
+			</p>
+			<div class="thank_you">
+				<h3>Спасибо, что пригласили друга!</h3>
+				<button class="more_baf">Пригласить еще</button>
+			</div>
+		</form>
+	</div>
+	</main> -->
+	</form>
+	<script src="main.js"></script>
+</body>
+</html>
