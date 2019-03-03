@@ -1,0 +1,232 @@
+<!-- 
+
+02.03 
+15:30 - 18:30
+19:50 21:00
+
+03.03
+15:30
+-->
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobile Training</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<h3 class="title">Заполните контактную информацию</h3>
+	</header>
+	<main class="main">
+		<form class="form" action="" method="get">
+			<div class="application_form">
+				<div class="form__region">
+					<label class="label" for="region">Ваш город или регион</label>
+					<input id="region" class="form__region-input" type="text" name="region" placeholder="Ваш город или регион*">
+				</div>	
+				<div class="form__name">	
+					<label class="label" for="name">Фамилия, имя и отчество</label>
+					<input id="name" class="form__name-input" type="text" name="name" placeholder="Фамилия, имя и отчество*">
+				</div>	
+				<div class="form__wrapper">		
+					<div class="form__phone">
+						<label class="label" for="phone">Контактный телефон</label>
+						<input id="phone" class="form__phone-input" type="tel" name="phone" placeholder="Контактный телефон*">
+					</div>
+					<div class="form__email">
+						<label class="label" for="email">Электронная почта</label>
+						<input id="email" class="form__email-input" type="email" name="email" placeholder="Электронная почта">
+					</div>
+				</div>	
+				<div class="form__save-number">
+					<label class="label" for="save-number">Сохранить свой номер</label>
+					<input id="save-number" class="form__save-number-input"  type="checkbox" name="save-number" checked> 
+					<p class="form__save-number-par">Перенесите свой номер в Тинькофф Мобайл и получите 1000 Р</p>
+				</div>	
+				<div class="form__citizenship">
+					<label class='label' for="citizenship">Гражданство</label>
+					<select class="form__citizenship-input" id="citizenship" name="citizenship">
+						<option value="value1" selected>Имею гражданство</option> 
+						<option value="value2">Не имею гражданство</option>
+					</select>
+				</div>	
+				<div class="form__wrapper">									
+					<div class="condition">
+						<input id="accept_cond" class="condition__checkbox" type="checkbox" name="accept_condition" checked>
+						<label class="condition__label" for="accept_cond">Я принимаю </label>
+						<button class="condition__button" type="button">условия передачи информации</button>
+					</div>	
+					<button class="form__next-btn" type="button">Далее</button>			
+				</div>					
+			</div>		
+			<div class="appointment">
+				<header class="header">
+					<h3 class="title">Назначение встречи</h3>
+				</header>		
+				<h2 class="form__title">Куда и когда привезти</h2>
+				<div class="form__country">
+					<label for="country" class="label">Укажите страну</label>
+					<input id="country" class="form__country-input"  type="text" name="country" placeholder="Укажите страну*">
+				</div>
+				<div class="form__postcode">
+					<label class="label" for="postcode">Индекс</label>
+					<input id="postcode" class="form__postcode-input" type="number" name="postcode" placeholder="Индекс">
+				</div>
+				<div class="form__appointment-region">
+					<label class="label" for="appointment_region">Регион</label>
+					<input id="appointment_region" class="form__appointment_region-input" type="text" name="appointment_region" placeholder="Регион*">
+				</div>
+				<div class="form__district_or_city">
+					<label class="label" for="district_or_city">Район или город</label>
+					<input id="district_or_city" class="form__district_or_city-input" type="text" name="district_or_city" placeholder="Район или город*">
+				</div>	
+				<div class="form__settlement">				
+					<label class="label" for="settlement">Населенный пункт</label>
+					<input id="settlement" class="form__settlement-input" type="text" name="settlement" placeholder="Населенный пункт*">
+				</div>
+				<div class="form__street">
+					<label class="label" for="street">Улица</label>
+					<input id="street" class="form__street-input" type="text" name="street" placeholder="Улица*">
+				</div>
+				<div class="form__wrapper">
+					<div class="form__house">
+						<label class="label" for="house">Дом</label>
+						<input id="house" class="form__house-input "type="text" name="house" placeholder="Дом*">
+					</div>
+					<div class="form__building">
+						<label class="label" for="building">Корпус</label>
+						<input id="building" class="form__building-input" type="text" name=building" placeholder="Корпус">
+					</div>
+					<div class="form__edifice">
+						<label class="label" for="edifice">Строение</label>
+						<input id="edifice" class="form__edifice-input" type="text" name="edifice" placeholder="Строение">
+					</div>
+					<div class="form__flat">
+						<label class="label" for="flat">Квартира</label>
+						<input id="flat" class="form__flat-input" type="text" name="flat" placeholder="Квартира">
+					</div>
+				</div>
+				<div class="form__wrapper">
+					<div class="form__date">
+						<label class="label" for="date">Дата</label>
+						<select id="date" class="form__date-input" name="date">
+							<option value="1">5 марта, послезавтра</option>							
+							<option value="2">6 марта, четверг</option>							
+							<option value="3">7 марта, пятница</option>								
+						</select>
+					</div>
+					<div class="form__time">
+						<label class="label" for="time">Время</label>
+						<select id="time" class="form__time-input" name="time">
+							<optgroup label="Рекомендуем">
+								<option>17:00 - 19:00</option>
+							</optgroup> 
+							<optgroup label="Все варианты">
+								<option>8:00 - 10:00</option>
+								<option>10:00 - 12:00</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+				<div class="form__comment">
+					<label class="label" for="comment">Комментарий</label>
+					<input id="comment" class="form__comment-input "type="text" name="comment" placeholder="Комментарий для представителя">
+				</div>
+				<div class="form__wrapper">
+					<p>Мы заранее свяжемся с вами и уточним детали встречи</p>
+					<input class="form__request-submit" type="submit" value="Заказать доставку">					
+				</div>
+			</div>
+		</form>
+		<div class="appointment">
+			<h2 class="appointment__title">Спасибо, что выбрали Тинькофф Мобайл!</h2>
+			<p class="appointment__info">
+				Встреча с Вашим представителем пройдет 1 февраля <br>
+				с 10 до 19 по адресу г Ухта, ул Строительная, д 2а. <br>
+				Пожалуйста не забудьте паспорт.
+			</p>
+			<p class="appointment__delivery">
+				С утра в день доставки Вам прийдет СМС с телефоном представителя. Сам представитель позвонит Вам за час до встречи. На встрече Вам понадобится оригинал паспорта, представитель сфотографирует Вас и документы, поможет установить приложение и пополнить баланс. 
+			</p>
+		</div>
+		<div class="bring">
+			<div class="bring-info">
+				<h3 class="bring-info__title">Пригласите друга и получите 300 Р на связь</h3>
+				<p class="bring-info__subtitle">А друг получит удвоение минут и интернета</p>
+				<button class="bring-info__learn_more" type="button">Подробнее</button>
+				<p class="bring-info__learn_more_text">
+					Укажите контактный номер и имя друга, которого хотите пригласить в Тинькофф Мобайл. 
+					Мы свяжемся с вашим другом и расскажем об условиях и тарифах. <br>
+					Мы зачислим вам 300 ₽ на связь, а другу на месяц удвоим пакеты минут и интернета после того, как он получит SIM-карту и оплатит любую услугу. 
+					Важно, чтобы друг сделал это в пределах 90 дней после активации SIM-карты.
+				</p>
+				<a class="bring-info__conditions" href="http://static.tcsbank.ru/documents/promo/mgm-form/baf-mobile.pdf">Подробное описание акции</a>
+			</div>
+			<form class="form_bring">
+				<div class="form_bring__wrapper">
+					<label class="label" for="friend_phone">Телефон друга</label>
+					<input id="friend_phone" class="form__friend_phone-input" type="tel" name="friend_phone" placeholder="Контактный телефон друга*">
+					<label class="label" for="friend_name">ФИО друга</label>
+					<input id="friend_name" class="form__friend_name-input" type="text" name="friend_name" placeholder="Фамилия, имя и отчество друга*">
+				</div>
+				<div class="form__wrapper">
+					<div class="condition">
+						<input id="accept_condition" class="condition__checkbox" type="checkbox" name="accept_condition" checked>
+						<label class="condition__label" for="accept_condition">Я принимаю </label>
+						<button class="condition__button" type="button">условия передачи информации</button>
+					</div>			
+					<input id="invite" class="form__invite-submit" type="submit" name="invite" value="Пригласить">
+				</div>
+			</form>
+				<div class="thank_you">
+					<h3 class="thank_you__title">Спасибо, что пригласили друга!</h3>
+					<button class="thank_you__more_btn" type="button">Пригласить еще</button>
+				</div>			
+		</div>	
+	</main>	
+	<div class="popup popup--condition">
+		<button class="popup__close_btn" type="button"></button>
+		<h2 class="form__agree_conditions-title">Условия передачи информации</h2>
+		<p class="form__agree_conditions-par">
+			Я даю согласие ООО «Тинькофф Мобайл», ОГРН 1177746287498 (далее — «Оператор») и АО «Тинькофф Банк», ОГРН 1027739642281 (далее — «Банк») на обработку всех моих персональных данных, указанных в заявке, любыми способами, в том числе третьими лицами, в том числе воспроизведение, электронное копирование, обезличивание, блокирование, уничтожение, а также вышеуказанную обработку иных моих персональных данных, полученных в результате их обработки, с целью:
+		</p>
+		<ul class="form__agree_conditions-list">
+			<li class="form__agree_conditions-item">заключения с Оператором договора об оказании услуг подвижной радиотелефонной связи;</li>
+			<li class="form__agree_conditions-item">создания информационных систем персональных данных Оператора;</li>
+			<li class="form__agree_conditions-item">заключения с Банком универсального договора и договора счета;</li>
+			<li class="form__agree_conditions-item">создания информационных систем персональных данных Банка;</li>
+			<li class="form__agree_conditions-item">а также в любых других целях, прямо или косвенно связанных с предложением иных продуктов Оператора и/или Банка, и направления мне информации о новых продуктах и услугах Оператора и/или Банка и/или их контрагентов.</li>							
+		</ul>
+		<p class="form__agree_conditions-text">
+			Указанное согласие дано на срок 1 год, а в случае его отзыва обработка моих персональных данных должна быть прекращена Оператором и/или Банком и/или третьими лицами и данные уничтожены в срок не позднее 1 (одного) месяца с даты получения Оператором и/или Банком соответствующего отзыва.
+		</p>
+		<p class="form__agree_conditions-text">
+			Я даю согласие на получение мной рассылок, в том числе по сети подвижной радиотелефонной связи, в том числе рекламных от Оператора и/или Банка, их контрагентов и аффилированных лиц.
+		</p>
+	</div>	
+	<div class="popup popup--friend_condition">
+		<div class="bring__hidden_conditions_cross"></div>
+		<h2 class="bring__hidden-title">Условия передачи информации</h2>
+		<p class="bring__hidden-par">
+			Я подтверждаю, что мной получено согласие третьего лица, персональные данные которого указаны в заявке, на обработку ООО «Тинькофф Мобайл» соответствующих персональных данных любыми способами, в том числе третьими лицами, в том числе воспроизведение, электронное копирование, обезличивание, блокирование, уничтожение, а также вышеуказанную обработку иных моих персональных данных, полученных в результате их обработки, с целью:
+		</p>
+		<ul class="bring__hidden-ul">
+			<li class="bring__hidden-li">заключения с Оператором договора об оказании услуг подвижной радиотелефонной связи;</li>
+			<li class="bring__hidden-li">создания информационных систем персональных данных Оператора;</li>
+			<li class="bring__hidden-li">заключения с Банком универсального договора и договора счета;</li>
+			<li class="bring__hidden-li">создания информационных систем персональных данных Банка;</li>
+			<li class="bring__hidden-li">а также в любых других целях, прямо или косвенно связанных с предложением иных продуктов Оператора и/или Банка, и направления мне информации о новых продуктах и услугах Оператора и/или Банка и/или их контрагентов.</li>							
+		</ul>
+		<p class="bring__hidden-par">
+			Указанное согласие дано на срок 1 год, а в случае его отзыва обработка моих персональных данных должна быть прекращена Оператором и/или Банком и/или третьими лицами и данные уничтожены в срок не позднее 1 (одного) месяца с даты получения Оператором и/или Банком соответствующего отзыва.
+		</p>
+		<p class="bring__hidden-par">
+			Я также подтверждаю, что мной получено согласие указанного третьего лица на получение им рассылок, в том числе по сети подвижной радиотелефонной связи, в том числе рекламных от Оператора и/или Банка, их контрагентов и аффилированных лиц.
+		</p>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
