@@ -1,14 +1,3 @@
-<!-- 
-
-02.03 
-15:30 - 18:30
-19:50 21:00
-
-03.03
-15:30 - 21:00
--->
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -55,7 +44,7 @@
 						<option value="value2">Не имею гражданство</option>
 					</select>
 				</div>	
-				<div class="form__wrapper">									
+				<div class="form__wrapper form__wrapper-next">									
 					<div class="condition">
 						<input id="accept_cond" class="condition__checkbox" type="checkbox" name="accept_condition" checked>
 						<label class="condition__label" for="accept_cond">Я принимаю </label>
@@ -93,7 +82,7 @@
 					<label class="label" for="street">Улица</label>
 					<input id="street" class="form__street-input" type="text" name="street" placeholder="Улица*">
 				</div>
-				<div class="form__wrapper">
+				<div class="form__wrapper form__wrapper__address">
 					<div class="form__house">
 						<label class="label" for="house">Дом</label>
 						<input id="house" class="form__house-input "type="text" name="house" placeholder="Дом*">
@@ -137,8 +126,8 @@
 					<label class="label" for="comment">Комментарий</label>
 					<input id="comment" class="form__comment-input "type="text" name="comment" placeholder="Комментарий для представителя">
 				</div>
-				<div class="form__wrapper">
-					<p>Мы заранее свяжемся с вами и уточним детали встречи</p>
+				<div class="form__wrapper form__wrapper-next">
+					<p class="form__wrapper-note">Мы заранее свяжемся с вами и уточним детали встречи</p>
 					<input class="form__request-submit" type="submit" value="Заказать доставку">					
 				</div>
 			</div>
@@ -148,17 +137,20 @@
 			<p class="appointment__info">
 				Встреча с Вашим представителем пройдет 1 февраля <br>
 				с 10 до 19 по адресу г Ухта, ул Строительная, д 2а. <br>
-				Пожалуйста не забудьте паспорт.
-			</p>
-			<p class="appointment__delivery">
-				С утра в день доставки Вам прийдет СМС с телефоном представителя. Сам представитель позвонит Вам за час до встречи. На встрече Вам понадобится оригинал паспорта, представитель сфотографирует Вас и документы, поможет установить приложение и пополнить баланс. 
+				Пожалуйста не забудьте паспорт. <br>
+				С утра в день доставки Вам прийдет СМС с телефоном представителя. <br>
+				Сам представитель позвонит Вам за час до встречи. <br>
+				На встрече Вам понадобится оригинал паспорта, представитель <br>
+				сфотографирует Вас и документы, поможет установить приложение и пополнить баланс. 
 			</p>
 		</div>
 		<div class="bring">
 			<div class="bring-info">
 				<h3 class="bring-info__title">Пригласите друга и получите 300 Р на связь</h3>
 				<p class="bring-info__subtitle">А друг получит удвоение минут и интернета</p>
-				<button class="bring-info__learn_more" type="button">Подробнее</button>
+				<div class="bring-info__wrap">
+					<button class="bring-info__learn_more" type="button">Подробнее</button>
+				</div>
 				<p class="bring-info__learn_more-text">
 					Укажите контактный номер и имя друга, которого хотите пригласить в Тинькофф Мобайл. 
 					Мы свяжемся с вашим другом и расскажем об условиях и тарифах. <br>
@@ -174,7 +166,7 @@
 					<label class="label" for="friend_name">ФИО друга</label>
 					<input id="friend_name" class="form__friend_name-input" type="text" name="friend_name" placeholder="Фамилия, имя и отчество друга*">
 				</div>
-				<div class="form__wrapper">
+				<div class="form__wrapper form__wrapper-bring">
 					<div class="condition">
 						<input id="accept_condition" class="condition__checkbox" type="checkbox" name="accept_condition" checked>
 						<label class="condition__label" for="accept_condition">Я принимаю </label>

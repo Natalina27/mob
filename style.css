@@ -1,8 +1,13 @@
 body {
 	width:  960px;
 	margin: 0 auto;
+	
+}
+
+.form {
+	padding-top: 30px;
 	border: 1px solid #dce3ea;
-	border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 10px 10px;
 }
 
 .header {
@@ -16,7 +21,7 @@ body {
 	color: white;
 	text-align: center;
 	padding: 30px;
-	font-family: sans-serif;
+	font-family: EllipsisFallback;
 	font-size: 24px;
 	font-weight: 100;
 }
@@ -37,6 +42,11 @@ body {
 	height: 20px;
 	margin: 0;
 	margin-right: 15px;
+	cursor: pointer;
+}
+
+.form__label {
+	cursor: pointer;	
 }
 
 .form__agree_conditions {
@@ -51,16 +61,34 @@ body {
 	max-width: 610px;
 	margin: 30px auto;
 	padding-bottom: 30px;
+	margin-bottom: 0;
 }
 
-.form__region, .form__name {
+.form__region, .form__name, .form__country, .form__postcode, .form__appointment_region, .form__district_or_city, .form__settlement, .form__street, .form__comment {
 	max-width: 610px;
 	margin: 30px auto;	
+
 }
 
-.form__region-input, .form__name-input {
-	width: 610px;
+.form__region-input, .form__name-input, .form__country-input, .form__postcode-input, .form__appointment_region-input, .form__district_or_city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
+	width: 100%;
 	padding: 25px;
+	display: block;
+	box-sizing: border-box;
+}
+
+.form__wrapper-note {
+	width: 302px;
+}
+
+.form__request-submit {
+	width: 302px;
+	padding: 0;
+}
+
+.form__wrapper-next input {
+	background: #ffdd2d;
+	border: none;
 }
 
 .form__citizenship-input {
@@ -68,28 +96,53 @@ body {
 	border-radius: 5px;
 	background-color: #eef2f7;
 	padding: 25px;
+	border: 1px solid #dce3ea;
+	cursor: pointer;
 }
 
-.form__phone, .form__email{ 
-	width: 302px;
+.form__phone, .form__email { 
+	max-width: 302px;
 }
 
 .form__phone-input, .form__email-input {
-	width: 302px;
+	padding: 25px;
+	box-sizing: border-box;
+	padding-right: 105px;
+}
+
+.form__house, .form__building, .form__edifice, .form__flat {
+	max-width: 150px;
+}
+
+.form__house-input, .form__building-input, .form__edifice-input, .form__flat-input {
+	width: 150px;
+	padding: 25px;
+	box-sizing: border-box;
 }
 
 
-.form__citizenship-input {
-	width: 610px;
+.form__date, .form__time {
+	max-width: 302px;
+	margin-bottom: 0;
+}
+
+.form__date-input, .form__time-input {
+	width: 302px;
 	border-radius: 5px;
 	background-color: #eef2f7;
-	padding: 24px;
+	padding: 25px;
 	border: 1px solid #dce3ea;
+	cursor: pointer;	
+	box-sizing: border-box;
 }
+
 
 
 .form__save_number-wrapper {
-	margin-bottom: 10px;
+	margin: 30px auto;
+	margin-bottom: 13px;
+	display: flex;
+    align-items: center;
 }
 
 .form__save_number {
@@ -114,3 +167,128 @@ body {
 	width: 20px;
 	height: 20px;
 }
+
+.form__next_btn {
+	padding: 25px;
+    border-radius: 5px;
+    width: 206px;
+    border-style: none;
+    background: #ffdd2d;
+    cursor: pointer;
+}
+
+.form__wrapper-next {
+	border-top: 1px solid #dce3ea;
+	border-bottom: 1px solid #dce3ea;
+	border-radius: 0 0 5px 5px;
+	margin: 0;
+	padding: 30px 18.5% 30px 18.5%;
+}
+
+.condition {
+	display: flex;
+    align-items: center;
+}
+
+.condition__button {
+	background-color: white;
+	border-style: none;
+	color: #74a3c7;
+	cursor: pointer;
+}
+
+.condition__checkbox {
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+}
+
+.form__title {
+	max-width: 612px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.appointment {
+	margin-top: 90px;
+}
+
+.appointment__title, .appointment__info, .bring-info__title, .bring-info__subtitle {
+	text-align: center;
+	margin: 30px auto;
+}
+
+.bring-info__title {
+	margin-top: 130px;
+}
+
+.appointment__info {
+	padding-top: 0;
+	padding-bottom: 60px;
+	border-bottom: 1px solid #dce3ea;
+	line-height: 1.3;
+}
+
+.bring-info {
+
+}
+
+.bring-info__wrap {
+	margin: 0 auto;
+	width: 70px;
+}
+
+.bring-info__learn_more {
+	border: none;
+    padding: 0;
+    background: none;
+    color: #74a3c7;
+    cursor: pointer;
+}
+
+.bring {
+	border: 1px solid #dce3ea; 
+	margin-top: ;
+}
+
+.bring-info__learn_more-text {
+	max-width: 700px;
+	max-height: 80px;
+	margin: 30px auto;
+}
+
+.form_bring {
+	max-width: 700px;
+	height: 222px;
+	margin: 0 auto;
+}
+
+.form__wrapper-bring {
+	max-width: 700px;
+}
+
+.form_bring__wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+	max-width: 700px;
+}
+
+.form__friend_phone-input, .form__friend_name-input {
+	width: 346px;
+    border-radius: 5px;
+    background-color: #eef2f7;
+    padding: 25px;
+    border: 1px solid #dce3ea;
+    cursor: pointer;
+}
+
+.form__invite-submit {
+	width: 206px;
+    border-radius: 5px;
+    background-color: #ffdd2d;
+    padding: 25px;
+    border: 1px solid #dce3ea;
+    cursor: pointer;
+}
+
