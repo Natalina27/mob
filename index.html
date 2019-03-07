@@ -14,21 +14,24 @@
 			<div class="application_form">
 				<div class="form__region input_parent">					
 					<input id="region" class="form__region-input" type="text" name="region">
-					<label class="label" for="region">Ваш город или регион</label>
+					<label class="label" for="region">Ваш город или регион*</label>
 					<div class="input_close_btn"></div>
 				</div>	
-				<div class="form__name">	
+				<div class="form__name input_parent">						
+					<input id="name" class="form__name-input" type="text" name="name">
 					<label class="label" for="name">Фамилия, имя и отчество</label>
-					<input id="name" class="form__name-input" type="text" name="name" placeholder="Фамилия, имя и отчество*">
+					<div class="input_close_btn"></div>
 				</div>	
 				<div class="form__wrapper">		
-					<div class="form__phone">
-						<label class="label" for="phone">Контактный телефон</label>
-						<input id="phone" class="form__phone-input" type="tel" name="phone" placeholder="Контактный телефон*">
+					<div class="form__phone input_parent">						
+						<input id="phone" class="form__phone-input" type="tel" name="phone">
+						<label class="label-phone" for="phone">Контактный телефон</label>
+						<div class="input_close_btn"></div>
 					</div>
-					<div class="form__email">
+					<div class="form__email input_parent">
+						<input id="email" class="form__email-input" type="email" name="email">
 						<label class="label" for="email">Электронная почта</label>
-						<input id="email" class="form__email-input" type="email" name="email" placeholder="Электронная почта">
+						<div class="input_close_btn"></div>
 					</div>
 				</div>	
 				<div class="form__save_number">				
@@ -38,8 +41,7 @@
 					</div>
 					<p class="form__save_number-text">Перенесите свой номер в Тинькофф Мобайл и получите 1000 Р</p>
 				</div>	
-				<div class="form__citizenship">
-					<label class='label' for="citizenship">Гражданство</label>
+				<div class="form__citizenship">					
 					<select class="form__citizenship-input" id="citizenship" name="citizenship">
 						<option value="value1" selected>Имею гражданство</option> 
 						<option value="value2">Не имею гражданство</option>
@@ -59,60 +61,70 @@
 					<h3 class="header__title">Назначение встречи</h3>
 				</header>		
 				<h3 class="form__title">Куда и когда привезти</h3>
-				<div class="form__country">
+				<div class="form__country input_parent">
+					<input id="country" class="form__country-input"  type="text" name="country">
 					<label for="country" class="label">Укажите страну</label>
-					<input id="country" class="form__country-input"  type="text" name="country" placeholder="Укажите страну*">
+					<div class="input_close_btn"></div>
 				</div>
-				<div class="form__postcode">
+				<div class="form__postcode input_parent">
+					<input id="postcode" class="form__postcode-input" type="number" name="postcode">
 					<label class="label" for="postcode">Индекс</label>
-					<input id="postcode" class="form__postcode-input" type="number" name="postcode" placeholder="Индекс">
+					<div class="input_close_btn"></div>
 				</div>
-				<div class="form__appointment_region">
+				<div class="form__appointment_region input_parent">					
+					<input id="appointment_region" class="form__appointment_region-input" type="text" name="appointment_region">
 					<label class="label" for="appointment_region">Регион</label>
-					<input id="appointment_region" class="form__appointment_region-input" type="text" name="appointment_region" placeholder="Регион*">
+					<div class="input_close_btn"></div>
 				</div>
-				<div class="form__district_or_city">
+				<div class="form__district_or_city input_parent">					
+					<input id="district_or_city" class="form__district_or_city-input" type="text" name="district_or_city">
 					<label class="label" for="district_or_city">Район или город</label>
-					<input id="district_or_city" class="form__district_or_city-input" type="text" name="district_or_city" placeholder="Район или город*">
+					<div class="input_close_btn"></div>
 				</div>	
-				<div class="form__settlement">				
+				<div class="form__settlement input_parent">									
+					<input id="settlement" class="form__settlement-input" type="text" name="settlement">
 					<label class="label" for="settlement">Населенный пункт</label>
-					<input id="settlement" class="form__settlement-input" type="text" name="settlement" placeholder="Населенный пункт*">
+					<div class="input_close_btn"></div>
 				</div>
-				<div class="form__street">
+				<div class="form__street input_parent">					
+					<input id="street" class="form__street-input" type="text" name="street">
 					<label class="label" for="street">Улица</label>
-					<input id="street" class="form__street-input" type="text" name="street" placeholder="Улица*">
+					<div class="input_close_btn"></div>
 				</div>
 				<div class="form__wrapper form__wrapper__address">
-					<div class="form__house">
+					<div class="form__house input_parent">
+						<input id="house" class="form__house-input "type="text" name="house">
 						<label class="label" for="house">Дом</label>
-						<input id="house" class="form__house-input "type="text" name="house" placeholder="Дом*">
+						<div class="input_close_btn"></div>
 					</div>
-					<div class="form__building">
+					<div class="form__building input_parent">						
+						<input id="building" class="form__building-input" type="text" name=building">
 						<label class="label" for="building">Корпус</label>
-						<input id="building" class="form__building-input" type="text" name=building" placeholder="Корпус">
+						<div class="input_close_btn"></div>
 					</div>
-					<div class="form__edifice">
+					<div class="form__edifice input_parent">						
+						<input id="edifice" class="form__edifice-input" type="text" name="edifice">
 						<label class="label" for="edifice">Строение</label>
-						<input id="edifice" class="form__edifice-input" type="text" name="edifice" placeholder="Строение">
+						<div class="input_close_btn"></div>
 					</div>
-					<div class="form__flat">
+					<div class="form__flat input_parent">						
+						<input id="flat" class="form__flat-input" type="text" name="flat">
 						<label class="label" for="flat">Квартира</label>
-						<input id="flat" class="form__flat-input" type="text" name="flat" placeholder="Квартира">
+						<div class="input_close_btn"></div>
 					</div>
 				</div>
 				<div class="form__wrapper">
-					<div class="form__date">
-						<label class="label" for="date">Дата</label>
+					<div class="form__date input_parent">						
 						<select id="date" class="form__date-input" name="date">
+						<label class="label" for="date">Дата</label>
 							<option value="1">5 марта, послезавтра</option>							
 							<option value="2">6 марта, четверг</option>							
 							<option value="3">7 марта, пятница</option>								
 						</select>
 					</div>
-					<div class="form__time">
-						<label class="label" for="time">Время</label>
+					<div class="form__time input_parent">
 						<select id="time" class="form__time-input" name="time">
+						<label class="label" for="time">Время</label>
 							<optgroup label="Рекомендуем">
 								<option>17:00 - 19:00</option>
 							</optgroup> 
@@ -123,9 +135,9 @@
 						</select>
 					</div>
 				</div>
-				<div class="form__comment">
+				<div class="form__comment input_parent">					
+					<input id="comment" class="form__comment-input "type="text" name="comment">
 					<label class="label" for="comment">Комментарий</label>
-					<input id="comment" class="form__comment-input "type="text" name="comment" placeholder="Комментарий для представителя">
 				</div>
 				<div class="form__wrapper form__wrapper-next">
 					<p class="form__wrapper-note">Мы заранее свяжемся с вами и уточним детали встречи</p>
@@ -161,7 +173,7 @@
 				<a class="bring-info__conditions" href="http://static.tcsbank.ru/documents/promo/mgm-form/baf-mobile.pdf" target="_blank">Подробное описание акции</a>
 			</div>
 			<form class="form_bring">
-				<div class="form_bring__wrapper">
+				<div class="form_bring__wrapper input_parent">
 					<label class="label" for="friend_phone">Телефон друга</label>
 					<input id="friend_phone" class="form__friend_phone-input" type="tel" name="friend_phone" placeholder="Контактный телефон друга*">
 					<label class="label" for="friend_name">ФИО друга</label>
@@ -183,7 +195,9 @@
 		</div>	
 	</main>	
 	<div class="popup popup--condition">
-		<button class="popup__close_btn" type="button"><span></span></button>
+		<div class="popup__close_btn-wrapper">
+			<button class="popup__close_btn" type="button"><span></span></button>
+		</div>
 		<h3 class="form__agree_conditions-title">Условия передачи информации</h3>
 		<p class="form__agree_conditions-text">
 			Я даю согласие ООО «Тинькофф Мобайл», ОГРН 1177746287498 (далее — «Оператор») и АО «Тинькофф Банк», ОГРН 1027739642281 (далее — «Банк») на обработку всех моих персональных данных, указанных в заявке, любыми способами, в том числе третьими лицами, в том числе воспроизведение, электронное копирование, обезличивание, блокирование, уничтожение, а также вышеуказанную обработку иных моих персональных данных, полученных в результате их обработки, с целью:
@@ -203,7 +217,9 @@
 		</p>
 	</div>	
 	<div class="popup popup--friend_condition">
-		<button class="popup__close_btn" type="button"><span></span></button>
+		<div class="popup__close_btn-wrapper">
+			<button class="popup__close_btn" type="button"><span></span></button>
+		</div>
 		<h3 class="form__agree_conditions-title">Условия передачи информации</h3>
 		<p class="form__agree_conditions-text">
 			Я подтверждаю, что мной получено согласие третьего лица, персональные данные которого указаны в заявке, на обработку ООО «Тинькофф Мобайл» соответствующих персональных данных любыми способами, в том числе третьими лицами, в том числе воспроизведение, электронное копирование, обезличивание, блокирование, уничтожение, а также вышеуказанную обработку иных моих персональных данных, полученных в результате их обработки, с целью:
