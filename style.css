@@ -1,7 +1,15 @@
 body {
 	width:  960px;
-	margin: 0 auto;
-	
+	margin: 0 auto;	
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+.input_parent {
+	position: relative;
 }
 
 .form {
@@ -27,7 +35,18 @@ body {
 }
 
 .label {
-    display: none;
+    font-size: 17px;
+    position: absolute;
+    left: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 1s;
+}
+
+input:focus + .label {
+	font-size: 10px;
+	transition: 1s;
+	top: 30%;
 }
 
 .form input {
@@ -73,8 +92,19 @@ body {
 .form__region-input, .form__name-input, .form__country-input, .form__postcode-input, .form__appointment_region-input, .form__district_or_city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
 	width: 100%;
 	padding: 25px;
+	padding: 25px;
 	display: block;
 	box-sizing: border-box;
+}
+
+.input_close_btn {
+	background: green;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	right: 26px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .form__wrapper-note {
@@ -291,4 +321,97 @@ body {
     border: 1px solid #dce3ea;
     cursor: pointer;
 }
+
+.thank_you {
+	max-width: 206px;
+	margin: 0 auto;
+}
+
+
+.thank_you__title {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.thank_you__more_btn {
+	margin: 0 auto;
+	width: 206px;
+    border-radius: 5px;
+    background-color: #ffdd2d;
+    padding: 25px;
+    border: 1px solid #dce3ea;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.form__agree_conditions-title {
+	text-align: center;
+}
+
+.form__agree_conditions-list {
+	list-style: none;
+	line-height: 2;
+}
+
+.form__agree_conditions-list li::before {
+    content: "";
+    display: inline-block;
+    border: 5px solid #ffdd2d;
+    border-radius: 50%;
+    margin-right: 15px;
+    padding: 1px;
+
+}
+
+.popup__close_btn {
+  width: 4em;
+  height: 4em;
+  
+  position: relative;
+  
+  font-size: 8px;
+  
+  transform: rotate(45deg);
+}
+
+.popup__close_btn:before,
+.popup__close_btn:after,
+.popup__close_btn span:before,
+.popup__close_btn span:after {
+  content: "";
+  
+  position: absolute;
+  top: 0;     left: 0;
+  bottom: 0;  right: 0;
+  
+  background: #111;
+  
+  transition: 0.2s ease;
+  transition-property: transform, width, height;
+}
+
+.popup__close_btn:before,
+.popup__close_btn:after {  
+  width: 50%;
+  height: 0.5em;
+  
+  margin: auto 0;
+}
+
+.popup__close_btn:after {  
+  margin-left: auto;
+}
+
+.popup__close_btn span:before,
+.popup__close_btn span:after {  
+  width: 0.5em;
+  height: 50%;
+  
+  margin: 0 auto;
+}
+
+.popup__close_btn span:after {  
+  margin-top: auto;
+}
+
 

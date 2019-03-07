@@ -12,9 +12,10 @@
 	<main class="main">
 		<form class="form" action="" method="get">
 			<div class="application_form">
-				<div class="form__region">
+				<div class="form__region input_parent">					
+					<input id="region" class="form__region-input" type="text" name="region">
 					<label class="label" for="region">Ваш город или регион</label>
-					<input id="region" class="form__region-input" type="text" name="region" placeholder="Ваш город или регион*">
+					<div class="input_close_btn"></div>
 				</div>	
 				<div class="form__name">	
 					<label class="label" for="name">Фамилия, имя и отчество</label>
@@ -157,7 +158,7 @@
 					Мы зачислим вам 300 ₽ на связь, а другу на месяц удвоим пакеты минут и интернета после того, как он получит SIM-карту и оплатит любую услугу. 
 					Важно, чтобы друг сделал это в пределах 90 дней после активации SIM-карты.
 				</p>
-				<a class="bring-info__conditions" href="http://static.tcsbank.ru/documents/promo/mgm-form/baf-mobile.pdf">Подробное описание акции</a>
+				<a class="bring-info__conditions" href="http://static.tcsbank.ru/documents/promo/mgm-form/baf-mobile.pdf" target="_blank">Подробное описание акции</a>
 			</div>
 			<form class="form_bring">
 				<div class="form_bring__wrapper">
@@ -175,14 +176,14 @@
 					<input id="invite" class="form__invite-submit" type="submit" name="invite" value="Пригласить">
 				</div>
 			</form>
-				<div class="thank_you">
-					<h3 class="thank_you__title">Спасибо, что пригласили друга!</h3>
+			<h3 class="thank_you__title">Спасибо, что пригласили друга!</h3>
+				<div class="thank_you">					
 					<button class="thank_you__more_btn" type="button">Пригласить еще</button>
 				</div>			
 		</div>	
 	</main>	
 	<div class="popup popup--condition">
-		<button class="popup__close_btn" type="button"></button>
+		<button class="popup__close_btn" type="button"><span></span></button>
 		<h3 class="form__agree_conditions-title">Условия передачи информации</h3>
 		<p class="form__agree_conditions-text">
 			Я даю согласие ООО «Тинькофф Мобайл», ОГРН 1177746287498 (далее — «Оператор») и АО «Тинькофф Банк», ОГРН 1027739642281 (далее — «Банк») на обработку всех моих персональных данных, указанных в заявке, любыми способами, в том числе третьими лицами, в том числе воспроизведение, электронное копирование, обезличивание, блокирование, уничтожение, а также вышеуказанную обработку иных моих персональных данных, полученных в результате их обработки, с целью:
@@ -202,7 +203,7 @@
 		</p>
 	</div>	
 	<div class="popup popup--friend_condition">
-		<button class="popup__close_btn" type="button"></button>
+		<button class="popup__close_btn" type="button"><span></span></button>
 		<h3 class="form__agree_conditions-title">Условия передачи информации</h3>
 		<p class="form__agree_conditions-text">
 			Я подтверждаю, что мной получено согласие третьего лица, персональные данные которого указаны в заявке, на обработку ООО «Тинькофф Мобайл» соответствующих персональных данных любыми способами, в том числе третьими лицами, в том числе воспроизведение, электронное копирование, обезличивание, блокирование, уничтожение, а также вышеуказанную обработку иных моих персональных данных, полученных в результате их обработки, с целью:
