@@ -36,19 +36,18 @@ button {
 	font-weight: 100;
 }
 
-.label, .label-phone {
-    font-size: 19px;
-    position: absolute;
-    left: 26px;
+.label-phone {
+    font-size: 14px;
+    position: absolute;	
     top: 50%;
     transform: translateY(-50%);
     transition: 1s;
     color: grey;
+    width: 100%;	
+	padding: 12px 25px 48px 25px;
 }
 
-
-
-.label, .label-phone {
+.label {
     font-size: 19px;
     position: absolute;
     left: 26px;
@@ -102,21 +101,19 @@ input:focus + .label {
 	margin-bottom: 0;
 }
 
-.form__region, .form__name, .form__country, .form__postcode, .form__appointment_region, .form__district_or_city, .form__settlement, .form__street, .form__comment {
+.form__region, .form__name, .form__country, .form__postcode, .form__appointment_region, 
+.form__district_or_city, .form__settlement, .form__street, .form__comment {
 	max-width: 610px;
 	margin: 30px auto;	
 
 }
 
-.form__region-input, .form__name-input, .form__country-input, .form__postcode-input, .form__appointment_region-input, .form__district_or_city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
+.form__region-input, .form__name-input, .form__country-input, .form__postcode-input, 
+.form__appointment_region-input, .form__district_or_city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
 	width: 100%;
-	padding: 25px;
-	padding-top: 30px;
-	padding-bottom: 9px;
 	display: block;
 	box-sizing: border-box;
-	padding-bottom: 12px;
-    padding-top: 48px;
+    padding: 48px 25px 12px 25px;
     font-size: 19px;
 }
 
@@ -145,14 +142,19 @@ input:focus + .label {
 	cursor: pointer;
 }
 
+.form__phone {
+
+}
+
 .form__phone, .form__email { 
 	max-width: 302px;
 }
 
 .form__phone-input, .form__email-input {
-	padding: 25px;
+	padding: 48px 25px 12px 25px;
 	box-sizing: border-box;
 	padding-right: 105px;
+	font-size: 19px;
 }
 
 .form__house, .form__building, .form__edifice, .form__flat {
@@ -378,16 +380,6 @@ input:focus + .label {
 
 }
 
-/*.input_close_btn {
-	background: #8e8e8e;
-	height: 15px;
-	width: 15px;
-	position: absolute;
-
-	transform: translateY(-50%) rotate(45deg);
-	cursor: pointer;
-}
-*/
 .input_close_btn{
 
     position: absolute;
