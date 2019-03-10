@@ -15,9 +15,15 @@ button {
 }
 
 .form {
+	
+}
+
+.application_form {
 	padding-top: 30px;
 	border: 1px solid #dce3ea;
-	border-radius: 10px 10px 10px 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+
 }
 
 .header {
@@ -36,7 +42,18 @@ button {
 	font-weight: 100;
 }
 
-.label, .label-phone {
+.label-phone {
+    font-size: 14px;
+    position: absolute;	
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 1s;
+    color: grey;
+    width: 100%;	
+	padding: 9px 25px 36px 25px;
+}
+
+.label {
     font-size: 19px;
     position: absolute;
     left: 26px;
@@ -46,25 +63,12 @@ button {
     color: grey;
 }
 
-
-
-.label, .label-phone {
-    font-size: 19px;
-    position: absolute;
-    left: 26px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 1s;
-    color: grey;
-}
-
-input:focus + .label {
+input:focus + .label, 
+.form__input-up + .label {
 	font-size: 14px;
 	transition: 1s;
 	top: 30%;
 }
-
-
 
 
 .form input {
@@ -102,33 +106,32 @@ input:focus + .label {
 	margin-bottom: 0;
 }
 
-.form__region, .form__name, .form__country, .form__postcode, .form__appointment_region, .form__district_or_city, .form__settlement, .form__street, .form__comment {
+.form__region, .form__name, .form__country, .form__postcode, .form__appointment_region, 
+.form__district_or_city, .form__settlement, .form__street, .form__comment {
 	max-width: 610px;
 	margin: 30px auto;	
-
 }
 
-.form__region-input, .form__name-input, .form__country-input, .form__postcode-input, .form__appointment_region-input, .form__district_or_city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
+.form__region-input, .form__name-input, .form__country-input, .form__postcode-input, 
+.form__appointment_region-input, .form__district_or_city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
 	width: 100%;
-	padding: 25px;
-	padding-top: 30px;
-	padding-bottom: 9px;
 	display: block;
 	box-sizing: border-box;
-	padding-bottom: 12px;
-    padding-top: 48px;
+    padding: 36px 25px 9px 25px;
     font-size: 19px;
+    height: 100%;		
 }
 
 
 
 .form__wrapper-note {
-	width: 302px;
+	max-width: 302px;
 }
 
 .form__request-submit {
 	width: 302px;
 	padding: 0;
+	font-size: 19px;
 }
 
 .form__wrapper-next input {
@@ -140,9 +143,14 @@ input:focus + .label {
 	width: 610px;
 	border-radius: 5px;
 	background-color: #eef2f7;
-	padding: 25px;
+	padding: 36px 25px 9px 25px;
 	border: 1px solid #dce3ea;
 	cursor: pointer;
+	font-size: 19px;
+}
+
+.form__phone {
+
 }
 
 .form__phone, .form__email { 
@@ -150,19 +158,22 @@ input:focus + .label {
 }
 
 .form__phone-input, .form__email-input {
-	padding: 25px;
+	padding: 36px 25px 9px 25px;
 	box-sizing: border-box;
-	padding-right: 105px;
+	font-size: 19px;
+	position: relative;
 }
 
 .form__house, .form__building, .form__edifice, .form__flat {
 	max-width: 150px;
+
 }
 
 .form__house-input, .form__building-input, .form__edifice-input, .form__flat-input {
 	width: 150px;
-	padding: 25px;
+	padding: 36px 25px 9px 25px;
 	box-sizing: border-box;
+	font-size: 19px
 }
 
 
@@ -175,10 +186,11 @@ input:focus + .label {
 	width: 302px;
 	border-radius: 5px;
 	background-color: #eef2f7;
-	padding: 25px;
+	padding: 35px 25px 9px 25px;
 	border: 1px solid #dce3ea;
 	cursor: pointer;	
 	box-sizing: border-box;
+	font-size: 19px;
 }
 
 
@@ -214,32 +226,32 @@ input:focus + .label {
 }
 
 .form__next_btn {
-	padding: 25px;
+	padding: 22px;
     border-radius: 5px;
     width: 206px;
     border-style: none;
     background: #ffdd2d;
     cursor: pointer;
+    font-size: 19px;
 }
 
 .form__wrapper-next {
 	border-top: 1px solid #dce3ea;
-	border-bottom: 1px solid #dce3ea;
 	border-radius: 0 0 5px 5px;
-	margin: 0;
-	padding: 30px 18.5% 30px 18.5%;
+	margin: 0 auto;
+	padding: 30px 18.5% 30px 18.5%
 }
 
 .condition {
 	display: flex;
     align-items: center;
+    font-size: 14px;
 }
 
 .condition__button {
 	background-color: white;
 	border-style: none;
 	color: #74a3c7;
-	cursor: pointer;
 }
 
 .condition__checkbox {
@@ -378,16 +390,6 @@ input:focus + .label {
 
 }
 
-/*.input_close_btn {
-	background: #8e8e8e;
-	height: 15px;
-	width: 15px;
-	position: absolute;
-
-	transform: translateY(-50%) rotate(45deg);
-	cursor: pointer;
-}
-*/
 .input_close_btn{
 
     position: absolute;
