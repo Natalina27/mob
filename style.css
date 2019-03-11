@@ -10,15 +10,15 @@ button {
 	border: none;
 }
 
-.input_parent {
+.input-parent {
 	position: relative;
 }
 
-.form {
-	
+.input-close-btn {
+	display: none;
 }
 
-.application_form {
+.application-form {
 	padding-top: 30px;
 	border: 1px solid #dce3ea;
 	border-bottom-right-radius: 10px;
@@ -53,6 +53,14 @@ button {
 	padding: 9px 25px 36px 25px;
 }
 
+.label-select {
+    font-size: 14px;
+    position: absolute;
+    top: 15%;
+    color: grey;
+    left: 4.8%;
+}
+
 .label {
     font-size: 19px;
     position: absolute;
@@ -79,7 +87,7 @@ input:focus + .label,
 
 }
 
-.form__save_number-input {
+.form__save-number-input {
 	width: 20px;
 	height: 20px;
 	margin: 0;
@@ -91,11 +99,11 @@ input:focus + .label,
 	cursor: pointer;	
 }
 
-.form__agree_conditions {
+.form__agree-conditions {
 	display: none;
 }
 
-.form__save_number-text {
+.form__save-number-text {
 	margin: 0;
 }
 
@@ -104,16 +112,28 @@ input:focus + .label,
 	margin: 30px auto;
 	padding-bottom: 30px;
 	margin-bottom: 0;
+	position: relative;
 }
 
-.form__region, .form__name, .form__country, .form__postcode, .form__appointment_region, 
-.form__district_or_city, .form__settlement, .form__street, .form__comment {
+.form__region, 
+.form__name, 
+.form__country, 
+.form__postcode, 
+.form__appointment-region, 
+.form__district-or-city, 
+.form__settlement, 
+.form__street, 
+.form__comment {
 	max-width: 610px;
 	margin: 30px auto;	
 }
 
+.form__country {
+	margin-top: 10px;
+}
+
 .form__region-input, .form__name-input, .form__country-input, .form__postcode-input, 
-.form__appointment_region-input, .form__district_or_city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
+.form__appointment-region-input, .form__district-or-city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
 	width: 100%;
 	display: block;
 	box-sizing: border-box;
@@ -149,9 +169,7 @@ input:focus + .label,
 	font-size: 19px;
 }
 
-.form__phone {
 
-}
 
 .form__phone, .form__email { 
 	max-width: 302px;
@@ -182,7 +200,8 @@ input:focus + .label,
 	margin-bottom: 0;
 }
 
-.form__date-input, .form__time-input {
+.form__date-input, 
+.form__time-input {
 	width: 302px;
 	border-radius: 5px;
 	background-color: #eef2f7;
@@ -193,16 +212,26 @@ input:focus + .label,
 	font-size: 19px;
 }
 
+.form__friend-phone-input, 
+.form__friend-name-input {
+	width: 302px;
+    border-radius: 5px;
+    background-color: #eef2f7;
+    padding: 35px 20px 9px 25px;
+    border: 1px solid #dce3ea;
+    font-size: 19px;
+}
 
 
-.form__save_number-wrapper {
+
+.form__save-number-wrapper {
 	margin: 30px auto;
 	margin-bottom: 13px;
 	display: flex;
     align-items: center;
 }
 
-.form__save_number {
+.form__save-number {
 	max-width: 610px;
 	margin: 30px auto;
 }
@@ -225,7 +254,7 @@ input:focus + .label,
 	height: 20px;
 }
 
-.form__next_btn {
+.form__next-btn {
 	padding: 22px;
     border-radius: 5px;
     width: 206px;
@@ -252,6 +281,7 @@ input:focus + .label,
 	background-color: white;
 	border-style: none;
 	color: #74a3c7;
+	cursor: pointer;
 }
 
 .condition__checkbox {
@@ -260,17 +290,35 @@ input:focus + .label,
 	margin-right: 15px;
 }
 
+.condition__label {
+	cursor: pointer;
+}
+
 .form__title {
 	max-width: 612px;
 	margin: 0 auto;
 	margin-top: 30px;
+	font-family: calibri;
+	font-size: 30px;
+	font-weight: 100;
+	color: black;
+	letter-spacing: -1px;
 }
 
 .appointment {
 	margin-top: 90px;
+	border: 1px solid #dce3ea;
+	border-radius: 5px 5px 5px 5px;
 }
 
-.appointment__title, .appointment__info, .bring-info__title, .bring-info__subtitle {
+.appointment-end {
+	margin: 130px auto 30px auto;
+	text-align: center;
+}
+
+.appointment-end__info, 
+.bring-info__title, 
+.bring-info__subtitle {
 	text-align: center;
 	margin: 30px auto;
 }
@@ -279,7 +327,7 @@ input:focus + .label,
 	margin-top: 130px;
 }
 
-.appointment__info {
+.appointment-end__info {
 	padding-top: 0;
 	padding-bottom: 60px;
 	border-bottom: 1px solid #dce3ea;
@@ -295,7 +343,7 @@ input:focus + .label,
 	width: 70px;
 }
 
-.bring-info__learn_more {
+.bring-info__learn-more {
 	border: none;
     padding: 0;
     background: none;
@@ -308,37 +356,32 @@ input:focus + .label,
 	margin-top: ;
 }
 
-.bring-info__learn_more-text {
+.bring-info__learn-more-text {
 	max-width: 700px;
 	max-height: 80px;
 	margin: 30px auto;
 }
 
-.form_bring {
+.form-bring {
 	max-width: 700px;
 	height: 222px;
+
 	margin: 0 auto;
+	margin-top: 30px;
 }
 
 .form__wrapper-bring {
 	max-width: 700px;
 }
 
-.form_bring__wrapper {
+.form-bring__wrapper {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 60px;
 	max-width: 700px;
 }
 
-.form__friend_phone-input, .form__friend_name-input {
-	width: 346px;
-    border-radius: 5px;
-    background-color: #eef2f7;
-    padding: 25px;
-    border: 1px solid #dce3ea;
-    cursor: pointer;
-}
+
 
 .form__invite-submit {
 	width: 206px;
@@ -349,18 +392,18 @@ input:focus + .label,
     cursor: pointer;
 }
 
-.thank_you {
+.thank-you {
 	max-width: 206px;
 	margin: 0 auto;
 }
 
 
-.thank_you__title {
+.thank-you__title {
 	margin-bottom: 30px;
 	text-align: center;
 }
 
-.thank_you__more_btn {
+.thank-you__more-btn {
 	margin: 0 auto;
 	width: 206px;
     border-radius: 5px;
@@ -371,16 +414,16 @@ input:focus + .label,
     margin-bottom: 30px;
 }
 
-.form__agree_conditions-title {
+.form__agree-conditions-title {
 	text-align: center;
 }
 
-.form__agree_conditions-list {
+.form__agree-conditions-list {
 	list-style: none;
 	line-height: 2;
 }
 
-.form__agree_conditions-list li::before {
+.form__agree-conditions-list li::before {
     content: "";
     display: inline-block;
     border: 5px solid #ffdd2d;
@@ -390,7 +433,7 @@ input:focus + .label,
 
 }
 
-.input_close_btn{
+.input-close-btn{
 
     position: absolute;
     right: 20px;
@@ -401,8 +444,8 @@ input:focus + .label,
     border-radius: 50%;
 }
 
-.input_close_btn:before,
-.input_close_btn:after {
+.input-close-btn:before,
+.input-close-btn:after {
     content: "";
     position: absolute;
 	width: 20px;
@@ -410,18 +453,18 @@ input:focus + .label,
     background: #8e8e8e;
 }
 
-.input_close_btn:before {
+.input-close-btn:before {
     webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-.input_close_btn:after {
+.input-close-btn:after {
     webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 
    }
 
-.popup__close_btn {
+.popup__close-btn {
 
     position: absolute;
     right: 20px;
@@ -432,8 +475,8 @@ input:focus + .label,
     border-radius: 50%;
 }
 
-.popup__close_btn:before,
-.popup__close_btn:after {
+.popup__close-btn:before,
+.popup__close-btn:after {
     content: "";
     position: absolute;
 	width: 20px;
@@ -441,18 +484,18 @@ input:focus + .label,
     background: #8e8e8e;
 }
 
-.popup__close_btn:before {
+.popup__close-btn:before {
     webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-.popup__close_btn:after {
+.popup__close-btn:after {
     webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 
    }
 
-.popup__close_btn-wrapper {
+.popup__close-btn-wrapper {
 	display: flex;
     justify-content: flex-end;
     position: relative;
