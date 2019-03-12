@@ -15,7 +15,7 @@ button {
 }
 
 .input-close-btn {
-	display: none;
+	
 }
 
 .application-form {
@@ -51,6 +51,7 @@ button {
     color: grey;
     width: 100%;	
 	padding: 9px 25px 36px 25px;
+	pointer-events: none;
 }
 
 .label-select {
@@ -59,6 +60,7 @@ button {
     top: 15%;
     color: grey;
     left: 4.8%;
+    pointer-events: none;
 }
 
 .label {
@@ -69,6 +71,7 @@ button {
     transform: translateY(-50%);
     transition: 1s;
     color: grey;
+    pointer-events: none;
 }
 
 input:focus + .label, 
@@ -312,7 +315,7 @@ input:focus + .label,
 }
 
 .appointment-end {
-	margin: 130px auto 30px auto;
+	margin: 30px auto 30px auto;
 	text-align: center;
 }
 
@@ -502,4 +505,18 @@ input:focus + .label,
 }
 
 
+.appointment-end__title:before {
+	content: "";
+	display: block;
+	background: #e0f3e3;
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	margin: 0 auto;
+	margin-bottom: 30px;	
+}
 
+
+.appointment-end__title {
+	font-family: calibri;
+}
