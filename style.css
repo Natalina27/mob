@@ -208,6 +208,7 @@ select {
 	box-sizing: border-box;
 	font-size: 19px;
 	position: relative;
+	width: 302px;
 }
 
 .form__house, .form__building, .form__edifice, .form__flat {
