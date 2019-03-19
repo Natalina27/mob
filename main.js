@@ -1,4 +1,5 @@
 function ascentText(labelClass) {
+
 	const input = document.querySelector(labelClass);
 
 	input.addEventListener("blur", function() {
@@ -9,15 +10,28 @@ function ascentText(labelClass) {
 		}
 
 		appearCross();
-
 	}); 
 }
 
 ascentText(".js-ascent-text");
 
-// При событии click на крестике нужно проверить есть ли в инпуте какой-то текст.
-// Если есть, то удаляем текст из инпута.
+		// for (i = 0; i < input.length; i ++) {
+		// 	[i].click = this.function();
+		// }
 
+var inputs = document.querySelectorAll(".input");
+var i;
+		for (i = 0; i < inputs.length; i ++) {
+			inputs[i].addEventListener("click", function() {
+		if (inputs.value.length > 0) {
+			inputs.classList.add("form__input-up");				
+		} else {
+			inputs.classList.remove("form__input-up");	
+		}
+
+		appearCross();
+	}); 
+}
 
 
 function clearField() {
@@ -30,7 +44,10 @@ function clearField() {
 	});
 }
 
+
 clearField();
+
+
 
 
 
@@ -44,7 +61,10 @@ function appearCross() {
 	} else {	
 		closeBtn.style.display = "none";
 	}
+
 }
+
+
 
 
 
