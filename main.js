@@ -15,24 +15,23 @@ function ascentText(labelClass) {
 
 ascentText(".js-ascent-text");
 
-		// for (i = 0; i < input.length; i ++) {
-		// 	[i].click = this.function();
-		// }
 
-var inputs = document.querySelectorAll(".input");
+
+
+function name() {
+
+var inputs = document.querySelectorAll("input");
 var i;
-		for (i = 0; i < inputs.length; i ++) {
-			inputs[i].addEventListener("click", function() {
+console.log(inputs);
+		for (i = 0; i < inputs.length; i ++) {			
 		if (inputs.value.length > 0) {
 			inputs.classList.add("form__input-up");				
 		} else {
 			inputs.classList.remove("form__input-up");	
 		}
-
-		appearCross();
-	}); 
+	}; 
+	
 }
-
 
 function clearField() {
 	const input = document.querySelector(".js-ascent-text");
