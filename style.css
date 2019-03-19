@@ -84,6 +84,7 @@ input:focus + .label,
 	background-color: #eef2f7;
 	border: none;
 	max-width: 610px;
+	font-family: calibri;
 }
 
 .form input:hover,
@@ -99,6 +100,14 @@ input:focus + .label,
 	outline: none;
 	box-shadow: 0 0 0 1px #c4c4c4;
 }
+
+.form-bring__phone input:focus,
+.form-bring__name input:focus {
+	background: white;
+	outline: none;
+	box-shadow: 0 0 0 1px #c4c4c4;	
+}
+
 
 .form__save-number-input {
 	width: 20px;
@@ -157,7 +166,8 @@ input:focus + .label,
 
 
 .form__wrapper-note {
-	max-width: 302px;
+    max-width: 234px;
+    margin-right: 66px;
 }
 
 .form__request-submit {
@@ -181,6 +191,8 @@ input:focus + .label,
 	font-size: 19px;
 
 }
+
+
 
 select {
 	font-family: calibri;	
@@ -230,12 +242,13 @@ select {
 
 .form__friend-phone-input, 
 .form__friend-name-input {
-	width: 302px;
+	width: 298px;
     border-radius: 5px;
     background-color: #eef2f7;
     padding: 35px 20px 9px 25px;
     border: 1px solid #dce3ea;
     font-size: 19px;
+    font-family: calibri;
 }
 
 
@@ -284,6 +297,8 @@ button {
 	font-family: calibri;
 }
 
+.thank-you__more-btn:hover,
+.form__invite-submit:hover,
 .form__next-btn:hover {
 	background: #f4d01b;
 	transition: 0.5s;
@@ -314,6 +329,8 @@ button {
 	font-size: 17px;
 }
 
+.thank-you__more-btn:focus,
+.form__invite-submit:focus,
 .condition__button:focus {
 	outline: none;
 }
@@ -362,8 +379,21 @@ button {
 	margin-top: 0;
 }
 
+.bring-info__subtitle {
+	color: grey;
+	margin-bottom: 15px;
+}
+
 .bring-info__title {
 	margin-top: 130px;
+	font-family: calibri;
+	font-weight: 400;
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+.bring-info__title-ruble {
+	font-size: 23px;
 }
 
 .appointment-end__info {
@@ -371,6 +401,8 @@ button {
 	padding-bottom: 60px;
 	border-bottom: 1px solid #dce3ea;
 	line-height: 1.3;
+	color: grey;
+	margin-top: 30px;
 }
 
 .bring-info {
@@ -388,11 +420,34 @@ button {
     background: none;
     color: #74a3c7;
     cursor: pointer;
+    font-size: 18px;
+    border-bottom: 1px #74a3c7 dashed;
+}
+
+.bring-info__learn-more:focus {
+	outline: none;
 }
 
 .bring {
 	border: 1px solid #dce3ea; 
 	margin-top: ;
+}
+
+.bring-info__conditions {
+	text-decoration: none;
+	color: #74a3c7;
+}
+
+.bring-info__conditions:focus {
+	background: #ffdd2d;
+}
+
+.bring-info__learn_more-text {
+	max-width: 700px;
+	margin: 0 auto;
+	font-size: 14px;
+	font-family: calibri;
+	color: grey;
 }
 
 .bring-info__learn-more-text {
@@ -426,9 +481,11 @@ button {
 	width: 206px;
     border-radius: 5px;
     background-color: #ffdd2d;
-    padding: 25px;
+    padding: 22px 25px 22px 25px;
     border: 1px solid #dce3ea;
     cursor: pointer;
+    font-size: 19px;
+    font-family: calibri;
 }
 
 .thank-you {
@@ -440,6 +497,9 @@ button {
 .thank-you__title {
 	margin-bottom: 30px;
 	text-align: center;
+	font-family: calibri;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .thank-you__more-btn {
@@ -447,16 +507,20 @@ button {
 	width: 206px;
     border-radius: 5px;
     background-color: #ffdd2d;
-    padding: 25px;
+    padding: 22px 24px 22px 24px;
     border: 1px solid #dce3ea;
     cursor: pointer;
     margin-bottom: 30px;
+	font-family: calibri;
+    font-weight: 100;
+    font-size: 19px;    
 }
 
 .poput__condition-wrap {
 	background: #fffef4;
 	max-width: 750px;
 	margin: 0 auto;
+	height: 1000px;
 }
 
 .form__agree-conditions-title {
@@ -547,6 +611,8 @@ button {
 .appointment-end__title {
 	font-family: calibri;
 	margin-bottom: 0px;	
+	font-size: 30px;
+    font-weight: 100;
 }
 
 .appointment-end__wrap {
@@ -582,6 +648,7 @@ button {
     font-size: 17px;
     line-height: 24px;
     height: 100%;
+    overflow: auto;
 }
 
 
