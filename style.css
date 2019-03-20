@@ -203,7 +203,8 @@ select {
 	max-width: 302px;
 }
 
-.form__phone-input, .form__email-input {
+.form__phone-input, 
+.form__email-input {
 	padding: 36px 25px 9px 25px;
 	box-sizing: border-box;
 	font-size: 19px;
