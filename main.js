@@ -1,17 +1,16 @@
-// function citizenship() {
-// 	const citizen = document.querySelector(".form__citizenship-input");
-// 	const value1 = citizen.options[citizen.selectedIndex].value;
-// 	const countryOk = document.querySelector(".form__country");
+function citizenship() {
+	const citizen = document.querySelector(".form__citizenship-input");
+	const value = citizen.options[citizen.selectedIndex].value;
+	const countryOk = document.querySelector(".form__country");
 
+		if (citizen.selectedIndex.value == 'Имею гражданство РФ') {
+			countryOk.style.display = "none";
+		} else {
+			countryOk.style.display = "block";
+		}
+}
 
-// 		if (citizen.value === value1) {
-// 			countryOk.style.display = "none";
-// 		} else {
-// 			countryOk.style.display = "block";
-// 		}
-// }
-
-// citizenship();
+citizenship();
 
 
 function ascentText(labelClass) {

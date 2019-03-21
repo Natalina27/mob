@@ -151,7 +151,7 @@ input:focus + .label,
 }
 
 .form__country {
-	
+	display: none;
 }
 
 .form__region-input, 
