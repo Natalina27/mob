@@ -151,11 +151,18 @@ input:focus + .label,
 }
 
 .form__country {
-	margin-top: 10px;
+	
 }
 
-.form__region-input, .form__name-input, .form__country-input, .form__postcode-input, 
-.form__appointment-region-input, .form__district-or-city-input, .form__settlement-input, .form__street-input, .form__comment-input  {
+.form__region-input, 
+.form__name-input, 
+.form__country-input, 
+.form__postcode-input, 
+.form__appointment-region-input, 
+.form__district-or-city-input, 
+.form__settlement-input, 
+.form__street-input, 
+.form__comment-input  {
 	width: 100%;
 	display: block;
 	box-sizing: border-box;
@@ -203,7 +210,8 @@ select {
 	max-width: 302px;
 }
 
-.form__phone-input, .form__email-input {
+.form__phone-input, 
+.form__email-input {
 	padding: 36px 25px 9px 25px;
 	box-sizing: border-box;
 	font-size: 19px;
@@ -211,12 +219,18 @@ select {
 	width: 302px;
 }
 
-.form__house, .form__building, .form__edifice, .form__flat {
+.form__house, 
+.form__building, 
+.form__edifice, 
+.form__flat {
 	max-width: 150px;
 
 }
 
-.form__house-input, .form__building-input, .form__edifice-input, .form__flat-input {
+.form__house-input, 
+.form__building-input, 
+.form__edifice-input, 
+.form__flat-input {
 	width: 150px;
 	padding: 36px 25px 9px 25px;
 	box-sizing: border-box;
@@ -224,7 +238,8 @@ select {
 }
 
 
-.form__date, .form__time {
+.form__date, 
+.form__time {
 	max-width: 302px;
 	margin-bottom: 0;
 }
@@ -275,7 +290,8 @@ select {
 }
 
 
-.form__condition-input, .form__condition-text {
+.form__condition-input, 
+.form__condition-text {
 	margin: 0 auto;
 }
 
