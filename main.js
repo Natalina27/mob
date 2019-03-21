@@ -1,47 +1,58 @@
+// function citizenship() {
+// 	const citizen = document.querySelector(".form__citizenship-input");
+// 	const value1 = citizen.options[citizen.selectedIndex].value;
+// 	const countryOk = document.querySelector(".form__country");
+
+
+// 		if (citizen.value === value1) {
+// 			countryOk.style.display = "none";
+// 		} else {
+// 			countryOk.style.display = "block";
+// 		}
+// }
+
+// citizenship();
+
+
 function ascentText(labelClass) {
+	const inputs = document.querySelectorAll(labelClass);
 
-	const input = document.querySelector(labelClass);
+	for (let i = 0; i < inputs.length; i++) {
+		inputs[i].addEventListener("blur", function() {
+			if (inputs[i].value.length > 0) {
+				inputs[i].classList.add("form__input-up");				
+			} else {
+				inputs[i].classList.remove("form__input-up");	
+			}
 
-	input.addEventListener("blur", function() {
-		if (input.value.length > 0) {
-			input.classList.add("form__input-up");				
-		} else {
-			input.classList.remove("form__input-up");	
-		}
-
-		appearCross();
-	}); 
+			appearCross();
+		}); 
+	}
 }
 
 ascentText(".js-ascent-text");
 
-		// for (i = 0; i < input.length; i ++) {
-		// 	[i].click = this.function();
-		// }
 
-var inputs = document.querySelectorAll(".input");
-var i;
-		for (i = 0; i < inputs.length; i ++) {
-			inputs[i].addEventListener("click", function() {
-		if (inputs.value.length > 0) {
-			inputs.classList.add("form__input-up");				
-		} else {
-			inputs.classList.remove("form__input-up");	
-		}
 
-		appearCross();
-	}); 
-}
 
 
 function clearField() {
-	const input = document.querySelector(".js-ascent-text");
-	const crossInput = document.querySelector(".js-clear-field");
+	const inputs = document.querySelectorAll(".js-ascent-text");
+	const clearField = document.querySelectorAll(".js-clear-field");
 
-	crossInput.addEventListener("click", function() {
-			input.value = "";		
+	for (let i = 0; i < clearField.length; i++) {
+		clearField[i].addEventListener("click", function() {
+			inputs[i].value = "";						
+
+			if (inputs[i].value.length > 0) {
+				inputs[i].classList.add("form__input-up");				
+			} else {
+				inputs[i].classList.remove("form__input-up");	
+			}
+
 			appearCross();
-	});
+		});
+	}
 }
 
 
@@ -49,22 +60,18 @@ clearField();
 
 
 
-
-
 function appearCross() { 
-	const input = document.querySelector(".js-ascent-text");
-	const closeBtn = document.querySelector(".input-close-btn");
+	const inputs = document.querySelectorAll(".js-ascent-text");
+	const clearField = document.querySelectorAll(".js-clear-field");
 
-
-	if (input.value.length > 0) {
-		closeBtn.style.display = "block";
-	} else {	
-		closeBtn.style.display = "none";
+	for (let i = 0; i < clearField.length; i++) {
+		if (inputs[i].value.length > 0) {
+			clearField[i].style.display = "block";
+		} else {	
+			clearField[i].style.display = "none";
+		}
 	}
-
 }
-
-
 
 
 
@@ -113,3 +120,19 @@ modal();
 // clearField();
 
 
+// function name() {
+
+// var inputs = document.querySelectorAll("input");
+// // var i;
+// console.log(inputs);
+// 		for (i = 0; i < inputs.length; i ++) {			
+// 		if (inputs.value.length > 0) {
+// 			inputs.classList.add("form__input-up");				
+// 		} else {
+// 			inputs.classList.remove("form__input-up");	
+// 		}
+// 	}; 
+	
+// }
+
+// name();
