@@ -1,17 +1,43 @@
-// function citizenship() {
+// function showMore() {
+// 	var btn = document.querySelector(".bring-info__learn-more");
+// 		btn.addEventListener("click" function {
+// 			btn.style.display = "none";
+// 		});
+// }
+
+// showMore();
+
+function citizenship() {
 // 	const citizen = document.querySelector(".form__citizenship-input");
-// 	const value1 = citizen.options[citizen.selectedIndex].value;
+// 	const value = citizen.options[citizen.selectedIndex].value;
 // 	const countryOk = document.querySelector(".form__country");
 
+// console.log(citizen);
+// console.log(value);
 
-// 		if (citizen.value === value1) {
+// 		if (citizen.selectedIndex = 0) {
 // 			countryOk.style.display = "none";
 // 		} else {
 // 			countryOk.style.display = "block";
 // 		}
 // }
 
-// citizenship();
+var sel = document.querySelector(".form__citizenship-input");
+var value = sel.options[sel.selectedIndex].value;
+var countryOk = document.querySelector(".form__country");
+
+	for (let i = 0; i < sel.options; i++) {
+		if (value.selectedIndex == 0) {
+			countryOk.style.display = "none";
+		} else {
+			countryOk.style.display = "block";
+		}
+	}
+}
+
+
+
+citizenship();
 
 
 function ascentText(labelClass) {
@@ -93,6 +119,28 @@ function modal() {
 }
 
 modal();
+
+
+function modal2() {
+	const conditionInfo = document.querySelector(".condition__button-friend"); 
+	const modal = document.querySelector(".popup--friend-condition");
+	const closeBtn = document.querySelector(".popup__close-btn");
+
+	conditionInfo.addEventListener("click", function() {
+		modal.classList.add("modal");
+		modal.classList.remove("popup", "popup--friend-condition");
+	})
+
+	closeBtn.addEventListener("click", function() {
+		modal.classList.add("popup", "popup--friend-condition");
+		modal.classList.remove("modal");
+	})
+
+}
+
+modal2();
+
+
 
 
 

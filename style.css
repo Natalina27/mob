@@ -10,8 +10,29 @@ button {
 	border: none;
 }
 
-.input-parent {
+.input-parent, 
+.condition {
 	position: relative;
+}
+
+
+
+.input-error,
+.input-error__checkbox {
+	color: red;
+    position: absolute;
+    top: 70px;
+    font-family: calibri;
+    font-size: 14px;
+    width: inherit;
+}
+
+.input-error__checkbox {
+	top: 55px;
+}
+
+.input-error__checkbox {
+
 }
 
 
@@ -150,9 +171,6 @@ input:focus + .label,
 	margin: 30px auto;	
 }
 
-.form__country {
-	
-}
 
 .form__region-input, 
 .form__name-input, 
@@ -169,6 +187,12 @@ input:focus + .label,
     padding: 36px 25px 9px 25px;
     font-size: 19px;
     height: 100%;		
+}
+
+.form__country,
+.input-error,
+.bring-info__learn_more-text {
+	display: none;
 }
 
 
@@ -360,6 +384,7 @@ button {
 	width: 20px;
 	height: 20px;
 	margin-right: 15px;
+	margin-left: 0px;
 }
 
 .condition__label {
@@ -599,6 +624,7 @@ button {
     padding: 11px 29px 12px 0px;
     cursor: pointer;
     border-radius: 50%;
+    outline: none;
 }
 
 .popup__close-btn:before,
