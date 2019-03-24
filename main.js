@@ -1,18 +1,19 @@
-// function citizenship() {
-// 	const citizen = document.querySelector(".form__citizenship-input");
-// 	const value1 = citizen.options[citizen.selectedIndex].value;
-// 	const countryOk = document.querySelector(".form__country");
+function citizenship() {
 
+var sel = document.querySelector(".form__citizenship-input");
+var value = sel.options[sel.selectedIndex].value;
+var countryOk = document.querySelector(".form__country");
 
-// 		if (citizen.value === value1) {
-// 			countryOk.style.display = "none";
-// 		} else {
-// 			countryOk.style.display = "block";
-// 		}
-// }
+	sel.addEventListener("click", function() {
+		if (sel.selectedIndex == 0) {
+			countryOk.style.display = "none";
+		} else {
+			countryOk.style.display = "block";
+		}
+	});
+}
 
-// citizenship();
-
+citizenship();
 
 function ascentText(labelClass) {
 	const inputs = document.querySelectorAll(labelClass);
@@ -31,10 +32,6 @@ function ascentText(labelClass) {
 }
 
 ascentText(".js-ascent-text");
-
-
-
-
 
 function clearField() {
 	const inputs = document.querySelectorAll(".js-ascent-text");
@@ -55,10 +52,7 @@ function clearField() {
 	}
 }
 
-
 clearField();
-
-
 
 function appearCross() { 
 	const inputs = document.querySelectorAll(".js-ascent-text");
@@ -73,66 +67,26 @@ function appearCross() {
 	}
 }
 
-
-
-function modal() {
-	const conditionInfo = document.querySelector(".condition__button"); 
-	const modal = document.querySelector(".popup");
-	const closeBtn = document.querySelector(".popup__close-btn");
+function toggleModal(button, popup, closeButton) {
+	const conditionInfo = document.querySelector(button); 
+	const modal = document.querySelector(popup);
+	const closeBtn = document.querySelector(closeButton);
 
 	conditionInfo.addEventListener("click", function() {
 		modal.classList.add("modal");
-		modal.classList.remove("popup", "popup--condition");
+		modal.classList.remove("popup");
 	})
 
 	closeBtn.addEventListener("click", function() {
-		modal.classList.add("popup", "popup--condition");
+		modal.classList.add("popup");
 		modal.classList.remove("modal");
 	})
 
 }
 
-modal();
+toggleModal(".js-open-btn-conditions", ".js-popup--condition", ".js-close-btn-conditions");
+toggleModal(".js-open-btn-friend", ".js-popup--friend-condition", ".js-close-btn-friend");
 
 
 
-// function clearField() {
 
-// var input = document.querySelector(".js-ascent-text");
-
-// if (input.Value != 0) {
-// 	alert("hbtrb");
-
-// };
-// }
-
-// function clearField() { 
-
-// var input = document.querySelector(".js-ascent-text");
-
-// if (input.value != 0) {
-// document.querySelector(".input-close-btn").style.display = "block";
-// } else {document.querySelector(".input-close-btn").style.display = "none";}
-
-
-// }
-
-// clearField();
-
-
-// function name() {
-
-// var inputs = document.querySelectorAll("input");
-// // var i;
-// console.log(inputs);
-// 		for (i = 0; i < inputs.length; i ++) {			
-// 		if (inputs.value.length > 0) {
-// 			inputs.classList.add("form__input-up");				
-// 		} else {
-// 			inputs.classList.remove("form__input-up");	
-// 		}
-// 	}; 
-	
-// }
-
-// name();
