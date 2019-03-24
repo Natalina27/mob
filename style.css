@@ -189,11 +189,15 @@ input:focus + .label,
     height: 100%;		
 }
 
-.form__country,
-.input-error,
+.form__country,	
 .bring-info__learn_more-text {
 	display: none;
 }
+
+.input-error:empty {
+	display: none;
+}
+
 
 
 .form__wrapper-note {

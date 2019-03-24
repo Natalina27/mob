@@ -16,26 +16,26 @@
 					<input id="region" class="form__region-input js-ascent-text" type="text" name="region">
 					<label class="label" for="region">Ваш город или регион*</label>
 					<div class="input-close-btn js-clear-field"></div>
-					<div class="input-error"></div>
+					<div class="input-error js-error-region"></div>
 				</div>	
 				<div class="form__name input-parent">						
 					<input id="name" class="form__name-input js-ascent-text" type="text" name="name">
 					<label class="label" for="name">Фамилия, имя и отчество*</label>
 					<div class="input-close-btn js-clear-field"></div>
-					<div class="input-error"></div>
+					<div class="input-error js-error-name"></div>
 				</div>	
 				<div class="form__wrapper">		
 					<div class="form__phone input-parent">						
 						<input id="phone" class="form__phone-input js-ascent-text" type="tel" name="phone" placeholder="+7(">
 						<label class="label-phone" for="phone">Контактный телефон*</label>
 						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error"></div>
+						<div class="input-error js-error"></div>
 					</div>
 					<div class="form__email input-parent">
 						<input id="email" class="form__email-input js-ascent-text" type="email" name="email">
 						<label class="label" for="email">Электронная почта</label>
 						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error"></div>
+						<div class="input-error js-error"></div>
 					</div>
 				</div>	
 				<div class="form__save-number">				
@@ -55,9 +55,9 @@
 				<div class="form__wrapper form__wrapper-next">									
 					<div class="condition">
 						<input id="accept-cond" class="condition__checkbox" type="checkbox" name="accept-condition" checked>
-						<div class="input-error__checkbox"></div>
+						<div class="input-error js-error__checkbox"></div>
 						<label class="condition__label" for="accept-cond">Я принимаю </label>
-						<button class="condition__button" type="button">условия передачи информации</button>
+						<button class="condition__button js-open-btn-conditions" type="button">условия передачи информации</button>
 					</div>	
 					<button class="form__next-btn" type="button">Далее</button>			
 				</div>					
@@ -76,56 +76,56 @@
 					<input id="postcode" class="form__postcode-input js-ascent-text" type="number" name="postcode">
 					<label class="label" for="postcode">Индекс</label>
 					<div class="input-close-btn js-clear-field"></div>
-					<div class="input-error"></div>
+					<div class="input-error js-error"></div>
 				</div>
 				<div class="form__appointment-region input-parent">					
 					<input id="appointment-region" class="form__appointment-region-input js-ascent-text" type="text" name="appointment-region">
 					<label class="label" for="appointment-region">Регион</label>
 					<div class="input-close-btn js-clear-field"></div>
-					<div class="input-error"></div>
+					<div class="input-error js-error"></div>
 				</div>
 				<div class="form__district-or-city input-parent">					
 					<input id="district-or-city" class="form__district-or-city-input js-ascent-text" type="text" name="district-or-city">
 					<label class="label" for="district-or-city">Район или город</label>
 					<div class="input-close-btn js-clear-field"></div>
-					<div class="input-error"></div>
+					<div class="input-error js-error"></div>
 				</div>	
 				<div class="form__settlement input-parent">									
 					<input id="settlement" class="form__settlement-input js-ascent-text" type="text" name="settlement">
 					<label class="label" for="settlement">Населенный пункт</label>
 					<div class="input-close-btn js-clear-field"></div>
-					<div class="input-error"></div>
+					<div class="input-error js-error"></div>
 				</div>
 				<div class="form__street input-parent">					
 					<input id="street" class="form__street-input js-ascent-text" type="text" name="street">
 					<label class="label" for="street">Улица</label>
 					<div class="input-close-btn js-clear-field"></div>
-					<div class="input-error"></div>
+					<div class="input-error js-error"></div>
 				</div>
 				<div class="form__wrapper form__wrapper__address">
 					<div class="form__house input-parent">
 						<input id="house" class="form__house-input js-ascent-text" type="text" name="house">
 						<label class="label" for="house">Дом</label>
 						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error"></div>
+						<div class="input-error js-error"></div>
 					</div>
 					<div class="form__building input-parent">						
 						<input id="building" class="form__building-input js-ascent-text" type="text" name=building">
 						<label class="label" for="building">Корпус</label>
 						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error"></div>
+						<div class="input-error js-error"></div>
 					</div>
 					<div class="form__edifice input-parent">						
 						<input id="edifice" class="form__edifice-input js-ascent-text" type="text" name="edifice">
 						<label class="label" for="edifice">Строение</label>
 						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error"></div>
+						<div class="input-error js-error"></div>
 					</div>
 					<div class="form__flat input-parent">						
 						<input id="flat" class="form__flat-input js-ascent-text" type="text" name="flat">
 						<label class="label" for="flat">Квартира</label>
 						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error"></div>
+						<div class="input-error js-error"></div>
 					</div>
 				</div>
 				<div class="form__wrapper">
@@ -195,20 +195,20 @@
 						<input id="friend-phone" class="form__friend-phone-input js-ascent-text" type="tel" name="friend-phone">
 						<label class="label" for="friend-phone">Контактный телефон друга*</label>		
 						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error"></div>
+						<div class="input-error js-error"></div>
 					</div>
 					<div class="form-bring__name input-parent">
 						<input id="friend-name" class="form__friend-name-input js-ascent-text" type="text" name="friend-name">
 						<label class="label" for="friend-name">Фамилия, имя и отчество друга*</label>
 						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error"></div>
+						<div class="input-error js-error"></div>
 					</div>	
 				</div>	
 				<div class="form__wrapper form__wrapper-bring">
 					<div class="condition">
 						<input id="accept-condition" class="condition__checkbox" type="checkbox" name="accept-condition" checked>
 						<label class="condition__label" for="accept-condition">Я принимаю </label>
-						<button class="condition__button condition__button-friend" type="button">условия передачи информации</button>
+						<button class="condition__button condition__button-friend js-open-btn-friend" type="button">условия передачи информации</button>
 					</div>			
 					<input id="invite" class="form__invite-submit" type="submit" name="invite" value="Пригласить">
 				</div>
@@ -219,9 +219,9 @@
 				</div>			
 		</div>	
 	</main>	
-	<div class="popup popup--condition">
+	<div class="popup popup--condition js-popup--condition">
 		<div class="popup__close-btn-wrapper">
-			<button class="popup__close-btn" type="button"><span></span></button>
+			<button class="popup__close-btn js-close-btn-conditions" type="button"><span></span></button>
 		</div>
 		<h3 class="form__agree-conditions-title">Условия передачи информации</h3>
 		<div class="poput__condition-wrap">
@@ -249,9 +249,9 @@
 			</p>
 		</div>
 	</div>	
-	<div class="popup popup--friend-condition">
+	<div class="popup popup--friend-condition js-popup--friend-condition">
 		<div class="popup__close-btn-wrapper">
-			<button class="popup__close-btn" type="button"><span></span></button>
+			<button class="popup__close-btn js-close-btn-friend" type="button"><span></span></button>
 		</div>
 		<h3 class="form__agree-conditions-title">Условия передачи информации</h3>
 		<p class="form__agree-conditions-text">
