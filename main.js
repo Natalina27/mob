@@ -1,3 +1,37 @@
+function learnMoreBtn() {
+	const btn = document.querySelector(".bring-info__learn-more");
+	const text = document.querySelector(".bring-info__learn_more-text");
+
+	btn.addEventListener("click", function() {
+		// btn.classList.add("display-none");
+		// text.classList.add("display-block");
+		btn.style.display = "none";
+		text.style.display = "block";
+	}); 
+}
+
+learnMoreBtn();
+
+
+function appearError() {
+	let input = document.querySelector(".js-name-input");
+	let errorPlace = document.querySelector(".js-error-name");
+
+	input.addEventListener("blur", function() {
+		if (input.value.length == 0) {
+			errorPlace.innerHTML = "Укажите Ваше ФИО";
+			input.classList.add("error-border");
+			input.classList.remove("pseudo-hover");
+		} else {
+			errorPlace.innerHTML = "";
+			input.classList.remove("error-border");
+			input.classList.add("pseudo-hover");
+		}
+	});
+}
+
+appearError();
+
 function citizenship() {
 
 var sel = document.querySelector(".form__citizenship-input");
