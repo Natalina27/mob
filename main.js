@@ -8,6 +8,7 @@ const App = (function() {
 	const countryOk = document.querySelector(".form__country");
 	const inputs = document.querySelectorAll(".js-ascent-text");
 	const clearField = document.querySelectorAll(".js-clear-field");
+	const shortAppSwitch = document.querySelector(".form__fill-short-app-input");
 
 
 	return {
@@ -22,6 +23,11 @@ const App = (function() {
 			this.toggleModal(".js-open-btn-conditions", ".js-popup--condition", ".js-close-btn-conditions");
 			this.toggleModal(".js-open-btn-friend", ".js-popup--friend-condition", ".js-close-btn-friend");
 			this.addPlaceholder();
+			this.recallCheckbox();
+		},
+
+		recallCheckbox: function() {
+
 		},
 
 		learnMoreBtn: function() { // объявляем функцию
