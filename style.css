@@ -61,7 +61,6 @@ input:focus + .label,
 }
 
 .application-form {
-	padding-top: 30px;
 	border: 1px solid #dce3ea;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -69,7 +68,7 @@ input:focus + .label,
 
 .header {
 	background-color: #3e4757;
-	height: 88px;
+	height: 81px;
 	border-radius: 10px 10px 0 0;
 }
 
@@ -81,6 +80,7 @@ input:focus + .label,
 	font-family: CALIBRI;
 	font-size: 24px;
 	font-weight: 100;
+	margin-top: 50px;
 }
 
 .label-phone {
@@ -127,7 +127,7 @@ input:focus + .label,
 	box-shadow: 0 0 0 1px #c4c4c4;
 }
 
-.form__save-number-input {
+.form__fill-short-app-input {
 	width: 20px;
 	height: 20px;
 	margin: 0;
@@ -142,6 +142,8 @@ input:focus + .label,
 .form__agree-conditions {
 	display: none;
 }
+
+
 
 .form__save-number-text {
 	margin: 0;
@@ -163,10 +165,17 @@ input:focus + .label,
 .form__district-or-city, 
 .form__settlement, 
 .form__street, 
-.form__comment {
+.form__comment,
+.form__phone,
+.form__email {
 	max-width: 610px;
 	margin: 30px auto;	
 }
+
+.form__country {
+	margin-top: 0px;
+}
+
 
 
 .form__region-input, 
@@ -177,7 +186,9 @@ input:focus + .label,
 .form__district-or-city-input, 
 .form__settlement-input, 
 .form__street-input, 
-.form__comment-input  {
+.form__comment-input,
+.form__phone-input, 
+.form__email-input  {
 	width: 100%;
 	display: block;
 	box-sizing: border-box;
@@ -194,8 +205,6 @@ input:focus + .label,
 .input-error:empty {
 	display: none;
 }
-
-
 
 .form__wrapper-note {
     max-width: 234px;
@@ -223,25 +232,17 @@ input:focus + .label,
 	font-size: 19px;
 }
 
-.form__phone, .form__email { 
-	max-width: 302px;
+.form__recall {
+	display: none;
 }
 
-.form__phone-input, 
-.form__email-input {
-	padding: 36px 25px 9px 25px;
-	box-sizing: border-box;
-	font-size: 19px;
-	position: relative;
-	width: 302px;
-}
+
 
 .form__house, 
 .form__building, 
 .form__edifice, 
 .form__flat {
 	max-width: 150px;
-
 }
 
 .form__house-input, 
@@ -265,11 +266,15 @@ input:focus + .label,
 	width: 302px;
 	border-radius: 5px;
 	background-color: #eef2f7;
-	padding: 35px 25px 9px 25px;
+	padding: 36px 25px 9px 25px;
 	border: none;
 	cursor: pointer;	
 	box-sizing: border-box;
 	font-size: 19px;
+}
+
+.form__time-input {
+	padding-left: 20px;
 }
 
 .form__friend-phone-input, 
