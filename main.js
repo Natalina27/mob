@@ -1,13 +1,20 @@
 const App = (function() {
 	const btn = document.querySelector(".bring-info__learn-more");
 	const text = document.querySelector(".bring-info__learn_more-text");
+	const inputPhone = document.querySelector(".js-phone-input");
 	const inputName = document.querySelector(".js-name-input");
 	const errorPlace = document.querySelector(".js-error-name");
+	const phoneError = document.querySelector(".js-phone-error");
 	const sel = document.querySelector(".form__citizenship-input");
 	const value = sel.options[sel.selectedIndex].value;
 	const countryOk = document.querySelector(".form__country");
 	const inputs = document.querySelectorAll(".js-ascent-text");
 	const clearField = document.querySelectorAll(".js-clear-field");
+	const shortAppSwitch = document.querySelector(".form__fill-short-app-input");
+	const recallForm = document.querySelector(".form__recall");
+	const citizenship = document.querySelector(".form__citizenship");
+	const incorrectPhoneMessage = "Некорректный номер телефона";
+	const emptyPhonemessage = "Необходимо указать номер телефона";
 
 
 	return {
@@ -22,6 +29,40 @@ const App = (function() {
 			this.toggleModal(".js-open-btn-conditions", ".js-popup--condition", ".js-close-btn-conditions");
 			this.toggleModal(".js-open-btn-friend", ".js-popup--friend-condition", ".js-close-btn-friend");
 			this.addPlaceholder();
+			this.recallCheckbox();
+			this.phoneError();
+		},
+
+		phoneError: function() {
+			inputPhone.addEventListener("blur", function(event) {
+				const isValidForm = event.target.checkValidity();
+				const regStr = "\\+7\\s\\d{3}\\s\\d{3}-\\d{2}-\\d{2}";
+				const regPhone = new RegExp(regStr, "u");
+
+				if (isValidForm && regPhone.test(inputPhone.value)) {
+					phoneError.innerHTML = "";
+				} else {
+					phoneError.innerHTML = incorrectPhoneMessage;
+				}
+				if (inputPhone.value == "+7(") {
+					inputPhone.innerHTML = emptyPhonemessage;
+				} else {
+					inputPhone.innerHTML = ""; 
+				}
+			});
+		},
+
+		recallCheckbox: function() {
+			shortAppSwitch.addEventListener("click", function() {
+				if (shortAppSwitch.checked) {
+					recallForm.style.display = "block";
+					citizenship.style.display = "none";
+				} else {
+					recallForm.style.display = "none";
+					citizenship.style.display = "block";
+				}
+			});
+
 		},
 
 		learnMoreBtn: function() { // объявляем функцию
