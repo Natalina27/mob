@@ -796,3 +796,50 @@ input:focus + .label,
 	width: 100%;
 }
 
+.popup--number-transfer {
+	max-width: 960px;
+	color: #333;
+}
+
+.form__agree-conditions-title_number-transfer {
+	margin-bottom: 26px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+}
+
+.popup__number-transfer-head {
+	border-top: 1px solid #dbd9d9;
+	border-bottom: 1px solid #dbd9d9;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.popup__subtitle {
+	max-width: 374px;
+	margin-left: 0px;
+}
+
+.form__agree-conditions-text_number-transfer,
+.popup__number-transfer-list {
+	max-width: 576px;
+}
+
+.popup__number-transfer-article {
+	display: flex;
+	justify-content: space-between;	
+	margin-top: 30px;
+}
+
+.popup__number-transfer-list{
+	padding: 0px;
+}
+
+.popup__number-transfer-item {
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+

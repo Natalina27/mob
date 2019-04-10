@@ -213,10 +213,11 @@
 				<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
 				<div class="form__phone input-parent">						
 					<input id="phone" class="form__phone-input pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
-					<label class="label-phone" for="phone">Контактный телефон*</label>
+					<label class="label-phone" for="phone">Номер телефона*</label>
 					<div class="input-close-btn js-clear-field"></div>
 					<div class="input-error js-phone-error"></div>
 				</div>
+				<button class="condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
 			</div>
 
 			<div class="appointment">
@@ -425,7 +426,29 @@
 				Я также подтверждаю, что мной получено согласие указанного третьего лица на получение им рассылок, в том числе по сети подвижной радиотелефонной связи, в том числе рекламных от Оператора и/или Банка, их контрагентов и аффилированных лиц.
 			</p>
 		</div>	
+	</div>
+	<div class="popup popup--number-transfer js-popup--number-transfer">
+		<div class="popup__close-btn-wrapper">
+			<button class="popup__close-btn js-close-btn-number-transfer" type="button"><span></span></button>
 		</div>
+		<div class="popup__number-transfer-body">
+			<h3 class="form__agree-conditions-title_number-transfer">Перенос номера</h3>
+			<div class="popup__number-transfer-head">
+				<h4 class="popup__subtitle subtitle">Про перенос номера</h4>
+				<p class="form__agree-conditions-text form__agree-conditions-text_number-transfer">Перенос номера — это бесплатная услуга, которая позволяет сменить оператора связи, сохранив при этом номер телефона</p>
+			</div>
+			<div class="popup__number-transfer-article">
+				<h4 class="popup__subtitle subtitle">Как перенести свой номер</h4>
+				<ol class="popup__number-transfer-list">
+					<li class="popup__number-transfer-item">Убедитесь, что договор с прежним оператором оформлен на ваше имя.</li>
+					<li class="popup__number-transfer-item">Оформите заявку на получение SIM-карты Тинькофф Мобайл и укажите, что хотите сохранить свой номер.</li>
+					<li class="popup__number-transfer-item">Проверьте, нет ли у вас задолженности перед предыдущим оператором. Если есть, погасите ее не позднее, чем через 4 дня после подачи заявления.</li>
+					<li class="popup__number-transfer-item">Дождитесь SMS о завершении переноса номера — обычно это занимает 8 дней. В течение этого времени желательно пользоваться SIM-картой предыдущего оператора.</li>
+					<li class="popup__number-transfer-item">После получения SMS ваша старая SIM-карта перестанет работать, и вы можете начать пользоваться Тинькофф Мобайл.</li>
+				</ol>
+			</div>	
+		</div>
+	</div>
 	<script src="main.js"></script>
 </body>
 </html>
