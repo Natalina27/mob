@@ -11,6 +11,7 @@ input {
 	border: none;
 	font-family: calibri;
 	outline: none;
+	color: #333;
 }
 
 input::-webkit-input-placeholder {
@@ -710,6 +711,7 @@ input:focus + .label,
 .application-internet {
 	margin: 30px auto;
 	max-width: 610px;
+	margin-bottom: 40px;
 }
 
 .application-internet__options-wrapper {
@@ -730,6 +732,11 @@ input:focus + .label,
 	vertical-align: bottom;
 	margin-right: 5px;
 	cursor: pointer;
+}
+
+.application-internet__options-wrapper {
+	font-size: 14px;
+	color: #333;
 }
 
 .application-internet__options {
@@ -758,3 +765,34 @@ input:focus + .label,
     margin: 0 12px 0 26px;
     display: none;
 }
+
+.application-internet__wrap-sms {
+	margin-top: 0px;
+	height: 20px;
+}
+
+.form__wrapper-number {
+	width: 285px;
+	border: 1px solid #dce3ea;
+	
+	border-radius: 5px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+
+.phone-number__subtitle {
+	text-align: left;
+	font-weight: 200;
+}
+
+.phone-number {
+	max-width: 610px;
+	margin: 0 auto;
+}
+
+.label-radio {
+	padding: 22px 17px 20px;
+	width: 100%;
+}
+
