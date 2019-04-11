@@ -142,7 +142,7 @@
 							<label class="label" for="date">Дата*</label>
 						</div>
 						<div class="form__time input-parent">						
-							<select id="time" class="form__time-input js-ascent-text pseudo-hover" name="time" selectied="06:30">		
+							<select id="time" class="form__time-input js-ascent-text pseudo-hover" name="time" selected="06:30">		
 									<option value="" selected hidden></option>					
 									<option>06:00</option>
 									<option>06:30</option>	
@@ -210,14 +210,41 @@
 							<input id="new-number" class="phone-number__new-number" type="radio" name="save-new-number" value="new-number">						
 						</div>
 					</div>
-					<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
-					<div class="form__phone input-parent">						
-						<input id="phone" class="form__phone-input pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
-						<label class="label-phone" for="phone">Номер телефона*</label>
-						<div class="input-close-btn js-clear-field"></div>
-						<div class="input-error js-phone-error"></div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">						
+							<input id="phone" class="form__phone-input pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<label class="label-phone" for="phone">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
 					</div>
-					<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					<div class="new-number__options">
+						<div class="form__wrapper input-parent">
+							<div class="form__search-by-numbers"> 
+								<input id="search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label" for="search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
+									<option value="" selected hidden></option>					
+									<option>Бесплатно</option>
+									<option>490 ₽</option>	
+									<option>990 ₽</option>	
+									<option>2 900 ₽</option>	
+									<option>6 900 ₽</option>	
+									<option>14 900 ₽</option>	
+									<option>24 900 ₽</option>	
+								</select>
+								<label class="label" for="price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>	
+					</div>
 				</div>
 				<div class="phone-number__footer">
 					<div class="phone-number__footer_prev-next">

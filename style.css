@@ -167,7 +167,9 @@ input:focus + .label,
 .form__street, 
 .form__comment,
 .form__phone,
-.form__email {
+.form__email,
+.form__search-by-numbers, 
+.form__price {
 	max-width: 610px;
 	margin: 30px auto;	
 }
@@ -188,7 +190,7 @@ input:focus + .label,
 .form__street-input, 
 .form__comment-input,
 .form__phone-input, 
-.form__email-input  {
+.form__email-input {
 	width: 100%;
 	display: block;
 	box-sizing: border-box;
@@ -267,7 +269,6 @@ input:focus + .label,
 .form__time-input,
 .form__calls-input,
 .form__internet-input {
-
 	width: 302px;
 	border-radius: 5px;
 	background-color: #eef2f7;
@@ -276,6 +277,19 @@ input:focus + .label,
 	cursor: pointer;	
 	box-sizing: border-box;
 	font-size: 19px;
+}
+
+.form__search-by-numbers-input, 
+.form__price-input {
+	width: 302px;
+	box-sizing: border-box;
+	font-size: 19px;
+	border: none;
+	cursor: pointer;
+	padding: 36px 25px 9px 25px;
+	border-radius: 5px;
+	background-color: #eef2f7;
+	outline: none;
 }
 
 .form__time-input {
@@ -896,4 +910,6 @@ input:focus + .label,
 	color: #207bc0;
 }	
 
-
+.save-number__options {
+	display: none;
+}
