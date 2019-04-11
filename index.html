@@ -195,31 +195,37 @@
 					<button class="form__next-btn" type="button">Далее</button>			
 				</div>					
 			</div>	
-
-			<div class="phone-number">
+			<div class="phone-number-wrap">
 				<header class="header">
 					<h3 class="header__title">Выберите номер телефона</h3>
 				</header>
-				<div class="form__wrapper">
-					<div class="form__wrapper-number form__wrapper-number_save">
-						<label class="label-radio" for="save-number">Сохранить номер</label>
-						<input id="save-number" class="phone-number__save-number" type="radio" name="save-new-number" value="save-number" checked>						
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="save-number">Сохранить номер</label>
+							<input id="save-number" class="phone-number__save-number" type="radio" name="save-new-number" value="save-number" checked>						
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="new-number">Получить новый номер</label>
+							<input id="new-number" class="phone-number__new-number" type="radio" name="save-new-number" value="new-number">						
+						</div>
 					</div>
-					<div class="form__wrapper-number form__wrapper-number_new">
-						<label class="label-radio" for="new-number">Получить новый номер</label>
-						<input id="new-number" class="phone-number__new-number" type="radio" name="save-new-number" value="new-number">						
+					<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+					<div class="form__phone input-parent">						
+						<input id="phone" class="form__phone-input pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
+						<label class="label-phone" for="phone">Номер телефона*</label>
+						<div class="input-close-btn js-clear-field"></div>
+						<div class="input-error js-phone-error"></div>
 					</div>
+					<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
 				</div>
-				<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
-				<div class="form__phone input-parent">						
-					<input id="phone" class="form__phone-input pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
-					<label class="label-phone" for="phone">Номер телефона*</label>
-					<div class="input-close-btn js-clear-field"></div>
-					<div class="input-error js-phone-error"></div>
-				</div>
-				<button class="condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<button class="phone-number__prev-btn">Назад</button>
+						<button class="phone-number__next-btn">Оформить</button>
+					</div>
+				</div>	
 			</div>
-
 			<div class="appointment">
 				<header class="header">
 					<h3 class="header__title">Назначение встречи</h3>

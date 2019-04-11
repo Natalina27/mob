@@ -81,7 +81,6 @@ input:focus + .label,
 	font-family: CALIBRI;
 	font-size: 24px;
 	font-weight: 100;
-	margin-top: 50px;
 }
 
 .label-phone {
@@ -345,7 +344,8 @@ input:focus + .label,
 
 .thank-you__more-btn:hover,
 .form__invite-submit:hover,
-.form__next-btn:hover {
+.form__next-btn:hover,
+.phone-number__next-btn:hover {
 	background: #f4d01b;
 	transition: 0.5s;
 }
@@ -377,7 +377,8 @@ input:focus + .label,
 
 .thank-you__more-btn:focus,
 .form__invite-submit:focus,
-.condition__button:focus {
+.condition__button:focus,
+.phone-number__next-btn:focus {
 	outline: none;
 }
 
@@ -410,7 +411,7 @@ input:focus + .label,
 .appointment {
 	margin-top: 90px;
 	border: 1px solid #dce3ea;
-	border-radius: 5px 5px 5px 5px;
+	border-radius: 10px 10px 5px 5px;
 }
 
 .appointment-end {
@@ -559,6 +560,18 @@ input:focus + .label,
 	font-family: calibri;
     font-weight: 100;
     font-size: 19px;    
+}
+
+.phone-number__next-btn {
+	width: 206px;
+    border-radius: 5px;
+    background-color: #ffdd2d;
+    padding: 22px 24px 22px 24px;
+    border: 1px solid #dce3ea;
+    cursor: pointer;
+	font-family: calibri;
+    font-weight: 100;
+    font-size: 19px;    	
 }
 
 .poput__condition-wrap {
@@ -842,4 +855,45 @@ input:focus + .label,
 	line-height: 1.5;
 	margin-bottom: 30px;
 }
+
+.phone-number-wrap {
+	border: 1px solid #dce3ea;
+	border-radius: 10px;
+}
+
+.phone-number__learn-more-btn {
+	margin-bottom: 40px;
+}
+
+
+.phone-number__footer{
+	margin: 30px auto;
+	border-top: 1px solid #dbd9d9;
+	width: 958px;
+}
+
+.phone-number__footer_prev-next {
+	display: flex;
+	justify-content: space-between;
+	max-width: 610px;
+	height: 66px;
+	margin: 30px auto 0;
+}
+
+.phone-number__prev-btn {
+	background-color: white;
+	border-style: none;
+	color: #74a3c7;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.phone-number__prev-btn:focus {
+	outline: none;
+}
+
+.phone-number__prev-btn:hover {
+	color: #207bc0;
+}	
+
 
