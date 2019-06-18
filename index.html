@@ -7,15 +7,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-	<header class="header">
-		<h3 class="header__title">Заполните контактную информацию</h3>
-	</header>
 	<main class="main">
 		<form class="form" action="" method="get">
 			<div class="application-form">
-				<div class="client-info visible">
+				<div class="client-info">
+					<header class="header">
+						<h3 class="header__title">Заполните контактную информацию</h3>
+					</header>
 					<div class="form__phone input-parent">						
-						<input id="phone" class="form__phone-input <!-- js-ascent-text --> pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
+						<input id="phone" class="form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
 						<label class="label-phone" for="phone">Контактный телефон*</label>
 						<div class="input-close-btn js-clear-field"></div>
 						<div class="input-error js-phone-error"></div>
@@ -27,7 +27,7 @@
 						<div class="input-error js-error-name"></div>
 					</div>	
 					<div class="form__region input-parent">					
-						<input id="region" class="form__region-input js-ascent-text pseudo-hover" type="text" name="region">
+						<input id="region" class="form__region-input js-ascent-text pseudo-hover js-open-tariff" type="text" name="region">
 						<label class="label" for="region">Ваш город или регион*</label>
 						<div class="input-close-btn js-clear-field"></div>
 						<div class="input-error js-error-region"></div>
@@ -224,7 +224,6 @@
 						</div>
 						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
 					</div>
-
 				</div>
 				<div class="new-number__options hidden">
 					<div class="form__wrapper-input input-parent">
@@ -263,7 +262,7 @@
 								<input type="checkbox" class="phone-number__mark-checkbox">
 							</div>
 						</div>		
-											<div class="phone-number__numbers-container">
+						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-98">
 								<label for="+7(999)999-99-98">+7(999)999-99-98</label>
@@ -275,7 +274,7 @@
 								<input type="checkbox" class="phone-number__mark-checkbox">
 							</div>
 						</div>	
-											<div class="phone-number__numbers-container">
+						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-97">
 								<label for="+7(999)999-99-97">+7(999)999-99-97</label>
@@ -287,7 +286,7 @@
 								<input type="checkbox" class="phone-number__mark-checkbox">
 							</div>
 						</div>	
-											<div class="phone-number__numbers-container">
+						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-96">
 								<label for="+7(999)999-99-96">+7(999)999-99-96</label>
@@ -299,7 +298,7 @@
 								<input type="checkbox" class="phone-number__mark-checkbox">
 							</div>
 						</div>	
-											<div class="phone-number__numbers-container">
+						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-95">
 								<label for="+7(999)999-99-95">+7(999)999-99-95</label>
@@ -311,7 +310,7 @@
 								<input type="checkbox" class="phone-number__mark-checkbox">
 							</div>
 						</div>	
-											<div class="phone-number__numbers-container">
+						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-94">
 								<label for="+7(999)999-99-94">+7(999)999-99-94</label>
@@ -323,7 +322,7 @@
 								<input type="checkbox" class="phone-number__mark-checkbox">
 							</div>
 						</div>	
-											<div class="phone-number__numbers-container">
+						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93">
 								<label for="+7(999)999-99-93">+7(999)999-99-93</label>
@@ -438,13 +437,14 @@
 							<div class="numbers-scroller__up-tick tick-style">&#9733;</div>
 						</button>
 					</div>
-					<div class="phone-number__footer">
-						<div class="phone-number__footer_prev-next">
-							<button class="phone-number__prev-btn">Назад</button>
-							<button class="phone-number__next-btn">Оформить</button>
-						</div>
-					</div>	
-				</div>	
+
+				</div>
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<button class="phone-number__prev-btn" type="button">Назад</button>
+						<button class="phone-number__next-btn" type="button">Оформить</button>
+					</div>
+				</div>		
 <!-- 				<div class="phone-number__numbers phone-number__numbers-block3 hidden">
 					<div class="phone-number__numbers-container">
 						<div class="phone-number__numbers-input-wrapper">
@@ -762,7 +762,7 @@
 			</div>	
 		</div>
 	</div>
-	<div class="application-done">
+	<div class="application-done hidden">
 		<div class="application-done__pic"></div>
 		<h1 class="application-done__title">Заявка отправлена!</h1>
 	</div>
