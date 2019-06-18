@@ -268,4 +268,17 @@ function nextToNumberOption() {
 nextToNumberOption();
 
 
+function nextPrevPage() {
+	const buttonPrevPage = document.querySelector(".phone-number__prev-btn");
+	const thatPage = document.querySelector(".phone-number-wrap");
+	const prevPage = document.querySelector(".client-info");
+
+	buttonPrevPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		prevPage.classList.remove("hidden");
+	});
+}
+
+
+nextPrevPage();
 
