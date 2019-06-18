@@ -1,57 +1,3 @@
-function saveNumberNewNumberToggle() {
-	const save = document.querySelector(".phone-number__save-number");
-	const saveBlock = document.querySelector(".save-number__options");
-	const newNumber = document.querySelector(".phone-number__new-number");	
-	const newNumberBlock = document.querySelector(".new-number__options");
-
-
-	save.addEventListener("click", function() {
-		if (save.checked) {
-			saveBlock.classList.add("visible");
-			saveBlock.classList.remove("hidden");
-			newNumberBlock.classList.add("hidden");
-			newNumberBlock.classList.remove("visible");
-		}
-	});
-
-	newNumber.addEventListener("click", function() {
-		if (newNumber.checked) {
-			saveBlock.classList.remove("visible");
-			saveBlock.classList.add("hidden");
-			newNumberBlock.classList.remove("hidden");			
-			newNumberBlock.classList.add("visible");		
-		}
-	});			
-}
-
-
-saveNumberNewNumberToggle();
-
-
-function showPrevNext() {
-	const block1 = document.querySelector(".phone-number__numbers-block1");
-	const block2 = document.querySelector(".phone-number__numbers-block2");
-	const nextBtn = document.querySelector(".js-block-nextBtn");
-	const prevBtn = document.querySelector(".js-block-prevBtn");
-
-	nextBtn.addEventListener("click", function() {
-		block1.classList.add("hidden");
-		block1.classList.remove("visible");
-		block2.classList.remove("hidden");		
-	});
-
-	prevBtn.addEventListener("click", function() {
-		block2.classList.add("hidden");
-		block2.classList.remove("visible");
-		block1.classList.remove("hidden");				
-	});
-}
-
-
-showPrevNext(); 
-
-
-
 const App = (function() {
 	const btn = document.querySelector(".bring-info__learn-more");
 	const text = document.querySelector(".bring-info__learn_more-text");
@@ -82,6 +28,7 @@ const App = (function() {
 			this.appearCross();
 			this.toggleModal(".js-open-btn-conditions", ".js-popup--condition", ".js-close-btn-conditions");
 			this.toggleModal(".js-open-btn-friend", ".js-popup--friend-condition", ".js-close-btn-friend");
+			this.toggleModal(".js-number-transfer", ".js-popup--number-transfer", ".js-close-btn-number-transfer");
 			this.addPlaceholder();
 			this.recallCheckbox();
 			this.phoneError();
@@ -222,5 +169,103 @@ const App = (function() {
 })();
 
 App.init();
+
+
+function showTariffOptions() {
+	const input = document.querySelector(".js-open-tariff");
+	const tariffBlock = document.querySelector(".additional-offer");
+
+	input.addEventListener("blur", function() {
+		if (input.value.length > 0) {
+			tariffBlock.classList.remove("hidden");
+		}
+	});
+}
+
+
+showTariffOptions();
+
+
+function saveNumberNewNumberToggle() {
+	const save = document.querySelector(".phone-number__save-number");
+	const saveBlock = document.querySelector(".save-number__options");
+	const newNumber = document.querySelector(".phone-number__new-number");	
+	const newNumberBlock = document.querySelector(".new-number__options");
+
+
+	save.addEventListener("click", function() {
+		if (save.checked) {
+			saveBlock.classList.add("visible");
+			saveBlock.classList.remove("hidden");
+			newNumberBlock.classList.add("hidden");
+			newNumberBlock.classList.remove("visible");
+		}
+	});
+
+	newNumber.addEventListener("click", function() {
+		if (newNumber.checked) {
+			saveBlock.classList.remove("visible");
+			saveBlock.classList.add("hidden");
+			newNumberBlock.classList.remove("hidden");			
+			newNumberBlock.classList.add("visible");		
+		}
+	});			
+}
+
+
+saveNumberNewNumberToggle();
+
+
+function showPrevNext() {
+	const block1 = document.querySelector(".phone-number__numbers-block1");
+	const block2 = document.querySelector(".phone-number__numbers-block2");
+	const nextBtn = document.querySelector(".js-block-nextBtn");
+	const prevBtn = document.querySelector(".js-block-prevBtn");
+
+	nextBtn.addEventListener("click", function() {
+		block1.classList.add("hidden");
+		block1.classList.remove("visible");
+		block2.classList.remove("hidden");		
+	});
+
+	prevBtn.addEventListener("click", function() {
+		block2.classList.add("hidden");
+		block2.classList.remove("visible");
+		block1.classList.remove("hidden");				
+	});
+}
+
+
+showPrevNext(); 
+
+
+function nextToNumberOption() {
+	const nextBtn = document.querySelector(".form__next-btn");
+	const clientInfo = document.querySelector(".client-info");
+	const numberOption = document.querySelector(".phone-number-wrap");
+	const checkBox = document.querySelector(".form__fill-short-app-input");
+	const endMessage = document.querySelector(".application-done");
+	const tariff = document.querySelector(".additional-offer");
+
+
+	nextBtn.addEventListener("click", function() {
+		if (checkBox.checked) {
+			clientInfo.classList.remove("visible");
+			clientInfo.classList.add("hidden");
+			endMessage.classList.remove("hidden");
+			tariffBlock.classList.add("hidden");
+			tariff.classList.add("hidden");
+		} else {
+			clientInfo.classList.remove("visible");
+			clientInfo.classList.add("hidden");
+			numberOption.classList.remove("hidden");
+			tariff.classList.remove("hidden");
+		}
+	});
+}
+
+
+nextToNumberOption();
+
 
 
