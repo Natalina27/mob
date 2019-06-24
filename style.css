@@ -731,8 +731,8 @@ input:focus + .label,
     overflow: auto;
 }
 
-.calculator-count__title {
-	margin: 0 auto;
+.non-header__title {
+	margin: 10px auto;
 	text-align: center;
 }
 
@@ -1018,3 +1018,9 @@ input:focus + .label,
     flex-direction: column;	
 }
 
+.bucket-wrapper {
+	width: 610px;
+	border: 1px solid #dddfe0;
+	background: #eef2f7;
+	border-radius: 6px;
+}

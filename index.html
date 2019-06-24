@@ -67,7 +67,7 @@
 					</div>
 					<div class="additional-offer hidden">
 						<div class="calculator-count">
-							<h3 class="form__title calculator-count__title">Общая цена:</h3>
+							<h3 class="form__title non-header__title">Общая цена:</h3>
 							<p class="subtitle">на 30 дней</p>
 						</div>
 						<div class="form__wrapper">
@@ -533,12 +533,46 @@
 				</div>	 -->							
 
 			</div>
+			<div class="numbers-bucket"> 
+				<header class="header">
+					<h3 class="header__title">Корзина номеров</h3>
+				</header>				
+				<h3 class="form__title non-header__title">Всего: ₽</h3>
+				<div class="bucket-wrapper">
+					<div class="bucket">
+						<div class="bucket-header__wrap">
+							<h5 class="bucket-header">Номер для переноса</h5>
+						</div>
+						<div class="bucket__options-menu">
+							<div class="options-menu__value-container">
+								<p class="options-menu__options-value">0 ГБ и 0 минут</p>								
+							</div>
+							<div class="options-menu__price-wrapper">
+								<div class="options-menu__price-container"> 
+									<p class="options-menu__price">0 ₽</p>	
+									<p class="options-menu__period">на 30 дней</p>	
+								</div>
+								<button type="button" class="options-menu__correction"></button>
+							</div>	
+						</div>
+						<div class="bucket__number-menu">
+							<div class="options-menu__number-container">
+								<p class="options-menu__number-value">0 ГБ и 0 минут</p>								
+							</div>
+							<div class="options-menu__number-wrapper">
+								<p class="options-menu__price">0 ₽</p>	
+								<button type="button" class="options-menu__correction"></button>
+							</div>								
+						</div>	
+						<button type="button" class="condition__button">+ ДОБАВИТЬ ЕЩЕ ОДИН НОМЕР ТЕЛЕФОНА</button>					
+					</div>
+				</div>
+			</div>
 			<div class="appointment hidden">
 				<header class="header">
 					<h3 class="header__title">Назначение встречи</h3>
 				</header>		
-				<h3 class="form__title">Куда и когда привезти</h3>
-
+				<h3 class="form__title">Куда и когда привезти</h3>	
 				<div class="form__postcode input-parent">
 					<input id="postcode" class="form__postcode-input js-ascent-text pseudo-hover" type="number" name="postcode">
 					<label class="label" for="postcode">Индекс</label>
