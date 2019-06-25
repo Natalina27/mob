@@ -1023,4 +1023,53 @@ input:focus + .label,
 	border: 1px solid #dddfe0;
 	background: #eef2f7;
 	border-radius: 6px;
+	margin: 0 auto;
+}
+
+.bucket-header {
+	font-family: calibri;
+	font-weight: 300;
+	padding: 15px 20px;
+	border: 1px solid #dddfe0;
+	margin: 0;
+	color: #9299a2;
+}
+
+.bucket__options-menu,
+.bucket__number-menu {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px;
+}
+
+.options-menu__period {
+	margin: 0;
+	position: absolute;	
+	width: max-content;
+	right: 12px;
+	font-size: 13px;
+	color: #9299a2;
+}
+
+.options-menu__price {
+	margin: 0;
+}
+
+.options-menu__price-wrapper,
+.options-menu__number-wrapper {
+	display: flex;
+}
+
+.options-menu__price-container {
+	position: relative;
+	width: 35px;
+}
+
+.options-menu__correction {
+	width: 50px;
+}
+
+.options-menu__options-value,
+.options-menu__number-value {
+	margin: 0;
 }
