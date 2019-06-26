@@ -1039,7 +1039,14 @@ input:focus + .label,
 .bucket__number-menu {
 	display: flex;
 	justify-content: space-between;
-	margin: 15px;
+	padding: 15px;
+	border: 1px solid #dddfe0;	
+}
+
+.numbers-bucket__btn-wrapper {
+	margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;	
 }
 
 .options-menu__period {
@@ -1053,6 +1060,7 @@ input:focus + .label,
 
 .options-menu__price {
 	margin: 0;
+	width: 35px;
 }
 
 .options-menu__price-wrapper,
@@ -1072,4 +1080,21 @@ input:focus + .label,
 .options-menu__options-value,
 .options-menu__number-value {
 	margin: 0;
+}
+
+.numbers-bucket {
+    border: 1px solid #dddfe0;
+    border-radius: 10px 10px 0 0;
+}
+
+.form__done-btn {
+    border: 1px solid #dddfe0;
+    border-radius: 0 0 10px 10px;
+}
+
+.form__done-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px auto;
+    max-width: 610px;	
 }
