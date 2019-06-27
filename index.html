@@ -101,13 +101,27 @@
 									<div class="application-internet__options application-internet__options-wrapper_messenger ">	
 										<input id="messenger" class="application-internet__options-messenger"  type="checkbox" name="messenger"> 
 										<label class="form__label" for="messenger">Мессенджеры (59 ₽)</label>
-										<div class="application-internet__hidden-info">?</div>								
+										<div class="tooltip">
+											<button type="button" class="tooltip__button">?</button>
+											<div class="tooltip__window">
+												<p>текст</p>
+											</div>
+										</div>
+<!--										<div class="application-internet__hidden-info">?</div>-->
+<!--										<div class="additional-offer__tooltip">-->
+<!--											<div></div>-->
+<!--										</div>-->
 									</div>
 									<div class="application-internet__hidden-info_mes application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 									<div class="application-internet__options application-internet__options-wrapper_social">	
 										<input id="social" class="application-internet__options-social"  type="checkbox" name="social"> 
 										<label class="form__label" for="social">Социальные сети (59 ₽)</label>
-										<div class="application-internet__hidden-info">?</div>
+										<div class="tooltip">
+											<button type="button" class="tooltip__button">?</button>
+											<div class="tooltip__window">
+												<p>текст</p>
+											</div>
+										</div>
 									</div>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
 								</div>
@@ -115,13 +129,23 @@
 									<div class="application-internet__options application-internet__options-wrapper_music">	
 										<input id="music" class="application-internet__options-music"  type="checkbox" name="music"> 
 										<label class="form__label" for="music">Музыка (59 ₽)</label>
-										<div class="application-internet__hidden-info">?</div>
+										<div class="tooltip">
+											<button type="button" class="tooltip__button">?</button>
+											<div class="tooltip__window">
+												<p>текст</p>
+											</div>
+										</div>
 									</div>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 									<div class="application-internet__options application-internet__options-wrapper_video">	
 										<input id="video" class="application-internet__options-video"  type="checkbox" name="video"> 
 										<label class="form__label" for="video">Видео (159 ₽)</label>
-										<div class="application-internet__hidden-info">?</div>
+										<div class="tooltip">
+											<button type="button" class="tooltip__button">?</button>
+											<div class="tooltip__window">
+												<p>текст</p>
+											</div>
+										</div>
 									</div>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
@@ -131,7 +155,12 @@
 							<div class="application-internet__options application-internet__options-wrapper_sms">	
 								<input id="sms" class="application-internet__options-sms"  type="checkbox" name="sms"> 
 								<label class="form__label" for="sms">Безлимитные СМС (49 ₽)</label>
-								<div class="application-internet__hidden-info">?</div>
+								<div class="tooltip">
+									<button type="button" class="tooltip__button">?</button>
+									<div class="tooltip__window">
+										<p>текст</p>
+									</div>
+								</div>
 							</div>
 							<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
 							<div class="application-internet__options"></div>							
@@ -533,48 +562,50 @@
 				</div>	 -->							
 
 			</div>
-			<div class="numbers-bucket"> 
-				<header class="header">
-					<h3 class="header__title">Корзина номеров</h3>
-				</header>				
-				<h3 class="form__title non-header__title">Всего: ₽</h3>
-				<div class="bucket-wrapper">
-					<div class="bucket">
-						<div class="bucket-header__wrap">
-							<h4 class="bucket-header">Номер для переноса</h4>
-						</div>
-						<div class="bucket__options-menu">
-							<div class="options-menu__value-container">
-								<p class="options-menu__options-value">0 ГБ и 0 минут</p>								
+			<div class="numbers-bucket hidden">
+				<div class="numbers-bucket__content">
+					<header class="header">
+						<h3 class="header__title">Корзина номеров</h3>
+					</header>
+					<h3 class="form__title non-header__title">Всего: ₽</h3>
+					<div class="bucket-wrapper">
+						<div class="bucket">
+							<div class="bucket-header__wrap">
+								<h4 class="bucket-header">Номер для переноса</h4>
 							</div>
-							<div class="options-menu__price-wrapper">
-								<div class="options-menu__price-container"> 
-									<p class="options-menu__price">0 ₽</p>	
-									<p class="options-menu__period">на 30 дней</p>	
+							<div class="bucket__options-menu">
+								<div class="options-menu__value-container">
+									<p class="options-menu__options-value">0 ГБ и 0 минут</p>
 								</div>
-								<button type="button" class="options-menu__correction">&#9997;</button>
-							</div>	
-						</div>
-						<div class="bucket__number-menu">
-							<div class="options-menu__number-container">
-								<p class="options-menu__number-value">0 ГБ и 0 минут</p>								
+								<div class="options-menu__price-wrapper">
+									<div class="options-menu__price-container">
+										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__period">на 30 дней</p>
+									</div>
+									<button type="button" class="options-menu__correction">&#9997;</button>
+								</div>
 							</div>
-							<div class="options-menu__number-wrapper">
-								<p class="options-menu__price">0 ₽</p>	
-								<button type="button" class="options-menu__correction">&#9997;</button>
-							</div>								
-						</div>											
-					</div>					
+							<div class="bucket__number-menu">
+								<div class="options-menu__number-container">
+									<p class="options-menu__number-value">0 ГБ и 0 минут</p>
+								</div>
+								<div class="options-menu__number-wrapper">
+									<p class="options-menu__price">0 ₽</p>
+									<button type="button" class="options-menu__correction">&#9997;</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="numbers-bucket__btn-wrapper">
+						<button type="button" class="condition__button numbers-bucket__add-number-btn">+ ДОБАВИТЬ ЕЩЕ ОДИН НОМЕР ТЕЛЕФОНА</button>
+					</div>
 				</div>
-				<div class="numbers-bucket__btn-wrapper">
-					<button type="button" class="condition__button numbers-bucket__add-number-btn">+ ДОБАВИТЬ ЕЩЕ ОДИН НОМЕР ТЕЛЕФОНА</button>	
-				</div>				
+				<div class="numbers-bucket__form form__done-btn">
+					<div class="form__done-btn-wrapper">
+						<button class="numbers-bucket__next-btn form__next-btn" type="button">Оформить</button>
+					</div>
+				</div>
 			</div>
-			<div class="form__done-btn">	
-				<div class="form__done-btn-wrapper">		
-					<button class="form__next-btn" type="button">Оформить</button>		
-				</div>	
-			</div>	
 			<div class="appointment hidden">
 				<header class="header">
 					<h3 class="header__title">Назначение встречи</h3>
@@ -665,7 +696,8 @@
 				</div>
 				<div class="form__wrapper form__wrapper-next">
 					<p class="form__wrapper-note">Мы заранее свяжемся с вами и уточним детали встречи</p>
-					<input class="form__request-submit" type="submit" value="Заказать доставку">					
+					<button class="appointment__next-btn form__next-btn" type="button">Заказать доставку</button>
+
 				</div>
 			</div>
 		</form>
@@ -676,11 +708,14 @@
 				Встреча с Вашим представителем пройдет 1 февраля <br>
 				с 10 до 19 по адресу г Ухта, ул Строительная, д 2а. <br>
 				Пожалуйста не забудьте паспорт. <br>
-				С утра в день доставки Вам прийдет СМС с телефоном представителя. <br>
-				Сам представитель позвонит Вам за час до встречи. <br>
-				На встрече Вам понадобится оригинал паспорта, представитель <br>
-				сфотографирует Вас и документы, поможет установить приложение и пополнить баланс. 
+
 			</p>
+			<div class="appointment-end__additional-info">
+				С утра в день доставки Вам прийдет СМС с телефоном представителя.
+				Сам представитель позвонит Вам за час до встречи.
+				На встрече Вам понадобится оригинал паспорта, представитель сфотографирует Вас и документы, поможет установить приложение и пополнить баланс.
+				Отмечу, что со всеми акциями и их полными условиями вы можете ознакомиться на сайте tinkoff.ru
+			</div>
 		</div>
 		<div class="bring hidden">
 			<div class="bring-info">
