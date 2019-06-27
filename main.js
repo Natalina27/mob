@@ -236,7 +236,9 @@ function showPrevNext() {
 }
 
 
-showPrevNext(); 
+showPrevNext();
+
+
 
 
 function nextToNumberOption() {
@@ -281,4 +283,110 @@ function nextPrevPage() {
 
 
 nextPrevPage();
+
+
+function issuePhoneNumber() {
+	const buttonNextPage = document.querySelector('.phone-number__next-btn');
+	const thatPage = document.querySelector('.phone-number-wrap');
+	const nextPage = document.querySelector('.numbers-bucket');
+
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPage.classList.remove("hidden");
+	});
+}
+
+issuePhoneNumber();
+
+
+function meetingAppointment() {
+	const buttonNextPage = document.querySelector('.numbers-bucket__next-btn');
+	const thatPage = document.querySelector('.numbers-bucket');
+	const nextPage = document.querySelector('.appointment');
+
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPage.classList.remove("hidden");
+	});
+}
+
+meetingAppointment();
+
+
+function issueDelivery() {
+	const buttonNextPage = document.querySelector('.appointment__next-btn');
+	const thatPage = document.querySelector('.appointment');
+	const nextPageEnd = document.querySelector('.appointment-end');
+	const nextPageBring = document.querySelector('.bring');
+
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPageEnd.classList.remove("hidden");
+		nextPageBring.classList.remove("hidden");
+	});
+}
+
+issueDelivery();
+
+
+document.querySelectorAll('.tooltip').forEach(item => {
+		item.Tooltip = new Tooltip(item);
+	});
+
+function Tooltip(block) {
+	this.block = block;
+
+	this.button = this.block.querySelector('.tooltip__button');
+	// this.tooltip = this.block.querySelector('.tooltip__window');
+
+	/**
+	 * Событие при клике на кнопку
+	 * @param e
+	 */
+	this.onClickButton = e => {
+		if (this.block.classList.contains('tooltip_open')) {
+			this.close();
+		} else {
+			this.open();
+		}
+		e.preventDefault();
+	};
+
+	/**
+	 * Событие при клике на документ
+	 * @param e
+	 */
+	this.onClickBody = e => {
+		// target - элемент на который произошёл клик
+		// closest - получение родительского элемента
+		// находится ли кликнутый элемент в блоке .tooltip__window
+		if (!e.target.closest('.tooltip__window')) {
+			this.close();
+		}
+	};
+
+	this.button.addEventListener('click', this.onClickButton);
+
+	/**
+	 * Открываю
+	 */
+	this.open = () => {
+		this.block.classList.add('tooltip_open');
+		setTimeout(() => {
+			document.body.addEventListener('click', this.onClickBody);
+		})
+	};
+
+	/**
+	 * Закрываю
+	 */
+	this.close = () => {
+		this.block.classList.remove('tooltip_open');
+		// удаляем событие при клике функции onClickBody
+		document.body.removeEventListener('click', this.onClickBody)
+	};
+}
+
+
+
 
