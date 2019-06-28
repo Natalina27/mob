@@ -329,15 +329,13 @@ function issueDelivery() {
 issueDelivery();
 
 
-document.querySelectorAll('.tooltip').forEach(item => {
-		item.Tooltip = new Tooltip(item);
+document.querySelectorAll('.tooltip').forEach(block => {
+		block.Tooltip = new Tooltip(block);
 	});
 
-function Tooltip(block) {
+function Tooltip( block) {
 	this.block = block;
-
 	this.button = this.block.querySelector('.tooltip__button');
-	// this.tooltip = this.block.querySelector('.tooltip__window');
 
 	/**
 	 * Событие при клике на кнопку
@@ -363,6 +361,7 @@ function Tooltip(block) {
 		if (!e.target.closest('.tooltip__window')) {
 			this.close();
 		}
+
 	};
 
 	this.button.addEventListener('click', this.onClickButton);
@@ -387,6 +386,30 @@ function Tooltip(block) {
 	};
 }
 
+document.querySelectorAll('.application-internet__options').forEach(item =>{
+	item.ApplicationInternet = new ApplicationInternet(item);
+});
 
+function ApplicationInternet(item) {
+	this.item = item;
+	this.button = this.item.querySelector('.application-internet__button');
+
+	this.onClickButton = () => {
+		if(this.item.classList.contains('application-internet__options_open')){
+			this.close();
+		}else{
+			this.open();
+		}
+	}
+
+	this.button.addEventListener('click', this.onClickButton);
+
+	this.open = () => {
+		this.item.classList.add('application-internet__options_open');
+	}
+	this.close = () => {
+		this.item.classList.remove('application-internet__options_open');
+	}
+}
 
 

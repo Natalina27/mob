@@ -12,6 +12,7 @@ input {
 	font-family: calibri;
 	outline: none;
 	color: #333;
+	-webkit-appearance: none;
 }
 
 input::-webkit-input-placeholder {
@@ -136,7 +137,8 @@ input:focus + .label,
 }
 
 .form__label {
-	cursor: pointer;	
+	cursor: pointer;
+	padding-bottom: 3px;
 }
 
 .form__agree-conditions {
@@ -505,7 +507,7 @@ input:focus + .label,
 }
 
 .bring {
-	border: 1px solid #dce3ea; 
+	border: 1px solid #dce3ea;
 	margin-top: ;
 }
 
@@ -750,30 +752,31 @@ input:focus + .label,
 }
 
 .application-internet {
-	margin: 30px auto;
-	max-width: 610px;
-	margin-bottom: 40px;
+	margin: 30px auto 0 auto;
+	max-width: 610px
 }
 
 .application-internet__options-wrapper {
 	display: flex;
+	flex-direction: column;
 }
 
 .application-internet__wrap-mes-soc,
 .application-internet__wrap-mus-vid {
-	width: 302px;
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
 }
 
 .application-internet__options-wrapper input[type=checkbox] {
-	margin: 0px;
-	margin-top: 30px;
+	margin: 0 5px 0 0;
 	width: 20px;
 	height: 20px;
-	display: inline-block;
-	vertical-align: bottom;
-	margin-right: 5px;
+	/*display: inline-block;*/
+	/*vertical-align: bottom;*/
 	cursor: pointer;
 }
+
 
 .application-internet__options-wrapper {
 	font-size: 14px;
@@ -781,11 +784,15 @@ input:focus + .label,
 }
 
 .application-internet__options {
+	width: 50%;
 	display: flex;
-	align-items: flex-end;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-top: 30px;
 }
 
 .application-internet__hidden-info {
+	max-width: 300px;
     color: #8e8e8e;
     display: inline-block;
 	padding: 0;
@@ -802,10 +809,24 @@ input:focus + .label,
 }
 
 
-.tooltip__window{
-	display: none;
-}
-.tooltip__button {
+/*.application-internet__info{*/
+/*	position: absolute;*/
+/*	top: 10px;*/
+/*	left: 0;*/
+/*	font-size: 13px;*/
+/*	margin: 0 15px 0 26px;*/
+/*	display: none;*/
+/*	color: #8e8e8e;*/
+/*	padding: 0;*/
+/*	width: 20px;*/
+/*	height: 20px;*/
+/*	line-height: 22px;*/
+/*	text-align: center;*/
+/*	cursor: pointer;*/
+/*	border: 1px solid #8e8e8e;*/
+/*}*/
+
+.application-internet__button {
 	color: #8e8e8e;
 	display: inline-block;
 	padding: 0;
@@ -821,10 +842,10 @@ input:focus + .label,
 	font-family: inherit;
 	font-size: inherit;
 }
-.tooltip_open .tooltip__window{
+
+.application-internet__options_open .application-internet__info{
 	display: block;
 }
-
 
 .application-internet__info {
 	color: #9299a2;
@@ -836,7 +857,7 @@ input:focus + .label,
 
 .application-internet__wrap-sms {
 	margin-top: 0px;
-	height: 20px;
+	margin-bottom: 40px;
 }
 
 .form__wrapper-number {
