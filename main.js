@@ -328,63 +328,63 @@ function issueDelivery() {
 
 issueDelivery();
 
+function correctionService() {
+	const buttonNextPage = document.querySelector('.correction-top');
+	const thatPage = document.querySelector('.numbers-bucket');
+	const nextPage = document.querySelector('.correct-service');
 
-document.querySelectorAll('.tooltip').forEach(block => {
-		block.Tooltip = new Tooltip(block);
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPage.classList.remove("hidden");
 	});
-
-function Tooltip( block) {
-	this.block = block;
-	this.button = this.block.querySelector('.tooltip__button');
-
-	/**
-	 * Событие при клике на кнопку
-	 * @param e
-	 */
-	this.onClickButton = e => {
-		if (this.block.classList.contains('tooltip_open')) {
-			this.close();
-		} else {
-			this.open();
-		}
-		e.preventDefault();
-	};
-
-	/**
-	 * Событие при клике на документ
-	 * @param e
-	 */
-	this.onClickBody = e => {
-		// target - элемент на который произошёл клик
-		// closest - получение родительского элемента
-		// находится ли кликнутый элемент в блоке .tooltip__window
-		if (!e.target.closest('.tooltip__window')) {
-			this.close();
-		}
-
-	};
-
-	this.button.addEventListener('click', this.onClickButton);
-
-	/**
-	 * Открываю
-	 */
-	this.open = () => {
-		this.block.classList.add('tooltip_open');
-		setTimeout(() => {
-			document.body.addEventListener('click', this.onClickBody);
-		})
-	};
-
-	/**
-	 * Закрываю
-	 */
-	this.close = () => {
-		this.block.classList.remove('tooltip_open');
-		// удаляем событие при клике функции onClickBody
-		document.body.removeEventListener('click', this.onClickBody)
-	};
 }
+
+correctionService()
+
+function correctionServiceComeback() {
+	const buttonNextPage = document.querySelector('.correct-service__prev-but');
+	const thatPage = document.querySelector('.correct-service');
+	const nextPage = document.querySelector('.numbers-bucket');
+
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPage.classList.remove("hidden");
+	});
+}
+
+correctionServiceComeback()
+
+
+function correctionNumber() {
+	const buttonNextPage = document.querySelector('.correction-bot');
+	const thatPage = document.querySelector('.numbers-bucket');
+	const nextPage = document.querySelector('.correct-number');
+
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPage.classList.remove("hidden");
+	});
+}
+
+
+correctionNumber()
+
+
+function correctionNumberComeback() {
+	const buttonNextPage = document.querySelector('.correct-number__prev-but');
+	const thatPage = document.querySelector('.correct-number');
+	const nextPage = document.querySelector('.numbers-bucket');
+
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPage.classList.remove("hidden");
+	});
+}
+
+correctionNumberComeback()
+
+
+
 
 document.querySelectorAll('.application-internet__options').forEach(item =>{
 	item.ApplicationInternet = new ApplicationInternet(item);
@@ -400,16 +400,30 @@ function ApplicationInternet(item) {
 		}else{
 			this.open();
 		}
-	}
+	};
 
 	this.button.addEventListener('click', this.onClickButton);
 
 	this.open = () => {
 		this.item.classList.add('application-internet__options_open');
-	}
+	};
+
 	this.close = () => {
 		this.item.classList.remove('application-internet__options_open');
-	}
+	};
 }
+
+// document.querySelectorAll('.application-internet__options').forEach(item => {
+// 	item.Calculate = new Calculate(item);
+// })
+// function Calculate(item){
+// 	this.item = item;
+// 	this.button = this.item.querySelector('.application-internet__options-check');
+// 	const start = document.querySelector('.additional-offer__price');
+//
+//
+//
+// }
+
 
 
