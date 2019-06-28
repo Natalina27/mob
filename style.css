@@ -444,6 +444,73 @@ input:focus + .label,
 	text-align: center;	
 }
 
+
+.bring{
+
+}
+.bring__picture{
+	position: relative;
+}
+
+.bring__picture-phone {
+	display: block;
+	position: absolute;
+	top: 60px;
+	left: calc(50% - 21px);
+	width: 1em;
+	height: 0;
+	border-bottom: 1.5em solid #2c2c2c;
+	border-left: 0.8em solid transparent;
+	border-right: 0.8em solid transparent;
+	border-radius: 0.5em;
+	margin-top: 0.5em;
+}
+
+.bring__picture-phone:before {
+	content: '';
+	position: absolute;
+	width: 1.4em;
+	height: 0em;
+	border-top: 0.2em solid #2c2c2c;
+	border-left: 0.4em solid #2c2c2c;
+	border-right: 0.4em solid #2c2c2c;
+	border-bottom: 0.5em solid transparent;
+	display: block;
+	top: 0;
+	left: 0;
+	margin: -0.4em 0 0 -0.6em;
+	border-radius: 0.2em;
+}
+
+.bring__picture-phone:after {
+	content: '';
+	position: absolute;
+	color: #2c2c2c;
+	font: bold 0.64em/1.2em sans-serif;
+	position: absolute;
+	top: 0.3em;
+	left: 0;
+	background: #FFF;
+	display: block;
+	width: 1.2em;
+	text-align: center;
+	height: 1.2em;
+	border-radius: 1.2em;
+	border: 0.3em dotted #2c2c2c;
+}
+
+.bring__picture-price{
+	position: absolute;
+	left: 52%;
+	top: 25px;
+	background-color: #1E90FF;
+	color: white;
+	font-size: 15px;
+	padding: 10px 15px;
+	border-radius: 25px 25px 25px 0 ;
+
+}
+
 .appointment-end__info, 
 .bring-info__title, 
 .subtitle {
@@ -508,7 +575,6 @@ input:focus + .label,
 
 .bring {
 	border: 1px solid #dce3ea;
-	margin-top: ;
 }
 
 .bring-info__conditions {
@@ -832,7 +898,6 @@ input:focus + .label,
 	padding: 0;
 	width: 22px;
 	height: 22px;
-	line-height: 22px;
 	background: transparent;
 	border-radius: 50%;
 	text-align: center;
@@ -1149,4 +1214,50 @@ input:focus + .label,
     justify-content: flex-end;
     margin: 30px auto;
     max-width: 610px;	
+}
+
+.correct-service .header{
+	margin-bottom: 30px;
+}
+
+.correct-service__prev-but{
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.correct-number__prev-but{
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.correct-number__next-bth{
+	width: auto;
+}
+
+.application-internet__options input{
+	cursor: pointer;
+	opacity: 0;
+}
+.application-internet__options input + label{
+	cursor: pointer;
+	position: relative;
+}
+.application-internet__options input + label:before{
+	position: absolute;
+	left: -25px;
+	top: 0;
+	content: '';
+	width: 15px;
+	height: 15px;
+	border: 1px solid #bcc0c4;
+	box-shadow: inset 0 0 1px #bcc0c4;
+	border-radius: 2px;
+	background-color: #eef2f7;
+}
+.application-internet__options input:checked + label:before{
+	content: '\2713';
+	color: #000;
+	font-size: 13px;
+	text-align: center;
+	line-height: 15px;
 }

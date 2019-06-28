@@ -554,16 +554,16 @@
 										<p class="options-menu__price">0 ₽</p>
 										<p class="options-menu__period">на 30 дней</p>
 									</div>
-									<button type="button" class="options-menu__correction">&#9997;</button>
+									<button type="button" class="options-menu__correction correction-top">&#9997;</button>
 								</div>
 							</div>
 							<div class="bucket__number-menu">
 								<div class="options-menu__number-container">
-									<p class="options-menu__number-value">0 ГБ и 0 минут</p>
+									<p class="options-menu__number-value">+7 (999) 999 - 99 - 99</p>
 								</div>
 								<div class="options-menu__number-wrapper">
 									<p class="options-menu__price">0 ₽</p>
-									<button type="button" class="options-menu__correction">&#9997;</button>
+									<button type="button" class="options-menu__correction correction-bot">&#9997;</button>
 								</div>
 							</div>
 						</div>
@@ -577,6 +577,422 @@
 						<button class="numbers-bucket__next-btn form__next-btn" type="button">Оформить</button>
 					</div>
 				</div>
+			</div>
+			<div class="correct-service application-form hidden">
+				<header class="header">
+					<h3 class="header__title">Редактирование пакетов услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title additional-offer__price">Общая цена: <span class="form__sum">0</span><span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper">
+						<div class="form__internet input-parent">
+							<select id="internet" class="form__internet-input js-ascent-text pseudo-hover" name="internet">
+								<option>0 ГБ 0 ₽</option>
+								<option selected>2 ГБ 99 ₽</option>
+								<option>4 ГБ 159 ₽</option>
+								<option>8 ГБ 229 ₽</option>
+								<option>16 ГБ 359 ₽</option>
+								<option>Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet">Интернет</label>
+						</div>
+						<div class="form__calls input-parent">
+							<select id="calls" class="form__calls-input js-ascent-text pseudo-hover" name="calls">
+								<option>0 минут 0 ₽</option>
+								<option selected>200 минут 99 ₽</option>
+								<option>400 минут 159 ₽</option>
+								<option>600 минут 199 ₽</option>
+								<option>1200 минут 299 ₽</option>
+								<option>Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="time">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input value="59" id="messenger" class="application-internet__options-messenger application-internet__options-check"  type="checkbox" name="messenger">
+									<label class="form__label" for="messenger" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input value="59" id="social" class="application-internet__options-social application-internet__options-check"  type="checkbox" name="social">
+									<label class="form__label" for="social">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input value="59" id="music" class="application-internet__options-music application-internet__options-check"  type="checkbox" name="music">
+									<label class="form__label" for="music">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input value="159" id="video" class="application-internet__options-video application-internet__options-check"  type="checkbox" name="video">
+									<label class="form__label" for="video">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms application-internet__options-check">
+								<input value="49" id="sms" class="application-internet__options-sms"  type="checkbox" name="sms">
+								<label class="form__label" for="sms">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					<button class="form__next-btn" type="button">Далее</button>
+				</div>
+			</div>
+			<div class="correct-number application-form hidden">
+				<header class="header">
+					<h3 class="header__title">Редактирование номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="save-number">Сохранить номер</label>
+							<input id="save-number" class="phone-number__save-number radio-btn-style" type="radio" name="save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="new-number">Получить новый номер</label>
+							<input id="new-number" class="phone-number__new-number radio-btn-style" type="radio" name="save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="phone" class="form__phone-input pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<label class="label-phone" for="phone">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+				</div>
+				<div class="new-number__options hidden">
+					<div class="form__wrapper-input input-parent">
+						<div class="form__search-by-numbers">
+							<input id="search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+							<label class="label" for="search-by-numbers">Поиск по цифрам</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-error"></div>
+						</div>
+						<div class="form__price input-parent">
+							<select id="price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
+								<option value="" selected hidden></option>
+								<option>Бесплатно</option>
+								<option>490 ₽</option>
+								<option>990 ₽</option>
+								<option>2 900 ₽</option>
+								<option>6 900 ₽</option>
+								<option>14 900 ₽</option>
+								<option>24 900 ₽</option>
+							</select>
+							<label class="label" for="price">Стоимость</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-error"></div>
+						</div>
+					</div>
+					<div class="phone-number__numbers phone-number__numbers-block1 js-block1">
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-99">
+								<label for="+7(999)999-99-99">+7(999)999-99-99</label>
+							</div>
+							<div class="phone-number__price">
+								Бесплатно
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-98">
+								<label for="+7(999)999-99-98">+7(999)999-99-98</label>
+							</div>
+							<div class="phone-number__price">
+								Бесплатно
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-97">
+								<label for="+7(999)999-99-97">+7(999)999-99-97</label>
+							</div>
+							<div class="phone-number__price">
+								490 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-96">
+								<label for="+7(999)999-99-96">+7(999)999-99-96</label>
+							</div>
+							<div class="phone-number__price">
+								990 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-95">
+								<label for="+7(999)999-99-95">+7(999)999-99-95</label>
+							</div>
+							<div class="phone-number__price">
+								2 900 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-94">
+								<label for="+7(999)999-99-94">+7(999)999-99-94</label>
+							</div>
+							<div class="phone-number__price">
+								14 900 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93">
+								<label for="+7(999)999-99-93">+7(999)999-99-93</label>
+							</div>
+							<div class="phone-number__price">
+								24 900 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+					</div>
+					<div class="phone-number__numbers phone-number__numbers-block2 js-block2 hidden">
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-92-99">
+								<label for="+7(999)999-92-99">+7(999)999-92-99</label>
+							</div>
+							<div class="phone-number__price">
+								Бесплатно
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-93-98">
+								<label for="+7(999)999-93-98">+7(999)999-93-98</label>
+							</div>
+							<div class="phone-number__price">
+								Бесплатно
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-94-97">
+								<label for="+7(999)999-94-97">+7(999)999-94-97</label>
+							</div>
+							<div class="phone-number__price">
+								490 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-95-96">
+								<label for="+7(999)999-95-96">+7(999)999-95-96</label>
+							</div>
+							<div class="phone-number__price">
+								990 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-96-95">
+								<label for="+7(999)999-96-95">+7(999)999-96-95</label>
+							</div>
+							<div class="phone-number__price">
+								2 900 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-97-94">
+								<label for="+7(999)999-97-94">+7(999)999-97-94</label>
+							</div>
+							<div class="phone-number__price">
+								14 900 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+						<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-input-wrapper">
+								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-98-93">
+								<label for="+7(999)999-98-93">+7(999)999-98-93</label>
+							</div>
+							<div class="phone-number__price">
+								24 900 ₽
+							</div>
+							<div class="phone-number__mark-checkbox-wrapper">
+								<input type="checkbox" class="phone-number__mark-checkbox">
+							</div>
+						</div>
+					</div>
+					<div class="numbers-scroller">
+						<div class="numbers-scroller-wrap">
+							<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+								<div class="numbers-scroller__up-tick tick-style">&#11014;</div>
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style">Предыдущие</p>
+							</button>
+							<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style">Следующие</p>
+								<div class="numbers-scroller__up-tick tick-style">&#11015;</div>
+							</button>
+						</div>
+						<button class="numbers-scroller__show-next numbers-scroller__shower" type="button">
+							<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style">Показать избранное</p>
+							<div class="numbers-scroller__up-tick tick-style">&#9733;</div>
+						</button>
+					</div>
+
+				</div>
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<button class="condition__button correct-number__prev-but" type="button">вернуться в корзину</button>
+						<button class="phone-number__next-btn correct-number__next-bth" type="button">Изменить на +7(999)999-99-99</button>
+					</div>
+				</div>
+				<!-- 				<div class="phone-number__numbers phone-number__numbers-block3 hidden">
+                                    <div class="phone-number__numbers-container">
+                                        <div class="phone-number__numbers-input-wrapper">
+                                            <input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-89">
+                                            <label for="+7(999)999-99-89">+7(999)999-99-89</label>
+                                        </div>
+                                        <div class="phone-number__price">
+                                            Бесплатно
+                                        </div>
+                                        <div class="phone-number__mark-checkbox-wrapper">
+                                            <input type="checkbox" class="phone-number__mark-checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="phone-number__numbers-container">
+                                        <div class="phone-number__numbers-input-wrapper">
+                                            <input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-78">
+                                            <label for="+7(999)999-99-78">+7(999)999-99-78</label>
+                                        </div>
+                                        <div class="phone-number__price">
+                                            Бесплатно
+                                        </div>
+                                        <div class="phone-number__mark-checkbox-wrapper">
+                                            <input type="checkbox" class="phone-number__mark-checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="phone-number__numbers-container">
+                                        <div class="phone-number__numbers-input-wrapper">
+                                            <input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-67">
+                                            <label for="+7(999)999-99-67">+7(999)999-99-67</label>
+                                        </div>
+                                        <div class="phone-number__price">
+                                            490 ₽
+                                        </div>
+                                        <div class="phone-number__mark-checkbox-wrapper">
+                                            <input type="checkbox" class="phone-number__mark-checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="phone-number__numbers-container">
+                                        <div class="phone-number__numbers-input-wrapper">
+                                            <input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-56">
+                                            <label for="+7(999)999-99-56">+7(999)999-99-56</label>
+                                        </div>
+                                        <div class="phone-number__price">
+                                            990 ₽
+                                        </div>
+                                        <div class="phone-number__mark-checkbox-wrapper">
+                                            <input type="checkbox" class="phone-number__mark-checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="phone-number__numbers-container">
+                                        <div class="phone-number__numbers-input-wrapper">
+                                            <input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-45">
+                                            <label for="+7(999)999-99-45">+7(999)999-99-45</label>
+                                        </div>
+                                        <div class="phone-number__price">
+                                            2 900 ₽
+                                        </div>
+                                        <div class="phone-number__mark-checkbox-wrapper">
+                                            <input type="checkbox" class="phone-number__mark-checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="phone-number__numbers-container">
+                                        <div class="phone-number__numbers-input-wrapper">
+                                            <input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-34">
+                                            <label for="+7(999)999-99-34">+7(999)999-99-34</label>
+                                        </div>
+                                        <div class="phone-number__price">
+                                            14 900 ₽
+                                        </div>
+                                        <div class="phone-number__mark-checkbox-wrapper">
+                                            <input type="checkbox" class="phone-number__mark-checkbox">
+                                        </div>
+                                    </div>
+                                    <div class="phone-number__numbers-container">
+                                        <div class="phone-number__numbers-input-wrapper">
+                                            <input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93">
+                                            <label for="+7(999)999-99-93">+7(999)999-99-93</label>
+                                        </div>
+                                        <div class="phone-number__price">
+                                            24 900 ₽
+                                        </div>
+                                        <div class="phone-number__mark-checkbox-wrapper">
+                                            <input type="checkbox" class="phone-number__mark-checkbox">
+                                        </div>
+                                    </div>
+                                </div>	 -->
+
 			</div>
 			<div class="appointment hidden">
 				<header class="header">
@@ -690,7 +1106,14 @@
 			</div>
 		</div>
 		<div class="bring hidden">
+			<div class="bring__picture">
+				<div class="bring__picture-phone"></div>
+				<div class="bring__picture-price">
+					+ 300 <span class="bring__picture-ruble">&#8381;</span>
+				</div>
+			</div>
 			<div class="bring-info">
+
 				<h3 class="bring-info__title">Пригласите друга и получите 300 <span class="bring-info__title-ruble">&#8381;</span> на связь</h3>
 				<p class="subtitle">А друг получит удвоение минут и интернета</p>
 				<div class="bring-info__wrap">
