@@ -67,69 +67,68 @@
 					</div>
 					<div class="additional-offer hidden">
 						<div class="calculator-count">
-							<h3 class="form__title non-header__title">Общая цена:</h3>
+							<h3 class="form__title non-header__title">Общая цена: <span class="additional-offer__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 							<p class="subtitle">на 30 дней</p>
 						</div>
-						<div class="form__wrapper">
-							<div class="form__internet input-parent">						
-								<select id="internet" class="form__internet-input js-ascent-text pseudo-hover" name="internet">	
-										<option>0 ГБ 0 ₽</option>
-										<option selected>2 ГБ 99 ₽</option>	
-										<option>4 ГБ 159 ₽</option>	
-										<option>8 ГБ 229 ₽</option>	
-										<option>16 ГБ 359 ₽</option>	
-										<option>Безлимитный интернет 999 ₽</option>	
+						<div class="form__wrapper additional-offer__form">
+							<div class="additional-offer__form-item form__internet input-parent">
+								<select id="internet" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" name="internet">
+									<option value="0">0 ГБ 0 ₽</option>
+									<option value="99" selected>2 ГБ 99 ₽</option>
+									<option value="159">4 ГБ 159 ₽</option>
+									<option value="229">8 ГБ 229 ₽</option>
+									<option value="359">16 ГБ 359 ₽</option>
+									<option value="999">Безлимитный интернет 999 ₽</option>
 								</select>
 								<label class="label-select" for="internet">Интернет</label>
-							</div>	
-							<div class="form__calls input-parent">						
-								<select id="calls" class="form__calls-input js-ascent-text pseudo-hover" name="calls">	
-										<option>0 минут 0 ₽</option>
-										<option selected>200 минут 99 ₽</option>	
-										<option>400 минут 159 ₽</option>	
-										<option>600 минут 199 ₽</option>	
-										<option>1200 минут 299 ₽</option>	
-										<option>Безлимитные минуты 999 ₽</option>	
+							</div>
+							<div class="additional-offer__form-item form__calls input-parent">
+								<select id="calls" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" name="calls">
+									<option value="0">0 минут 0 ₽</option>
+									<option value="159">400 минут 159 ₽</option>
+									<option value="199">600 минут 199 ₽</option>
+									<option value="299">1200 минут 299 ₽</option>
+									<option value="999">Безлимитные минуты 999 ₽</option>
 								</select>
 								<label class="label-select" for="time">Звонки</label>
 							</div>
 						</div>
 						<div class="application-internet">
 							<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-							<div class="application-internet__options-wrapper">
+							<div class="additional-offer__form-item application-internet__options-wrapper">
 								<div class="application-internet__wrap-mes-soc">
 									<div class="application-internet__options application-internet__options-wrapper_messenger ">
-										<input id="messenger" class="application-internet__options-messenger"  type="checkbox" name="messenger"> 
+										<input id="messenger" class="application-internet__options-messenger additional-offer__form-el"  type="checkbox" name="messenger" value="59">
 										<label class="form__label" for="messenger" >Мессенджеры (59 ₽)</label>
 										<button type="button" class="application-internet__button">?</button>
 										<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 									</div>
 
-									<div class="application-internet__options application-internet__options-wrapper_social">	
-										<input id="social" class="application-internet__options-social"  type="checkbox" name="social"> 
+									<div class="application-internet__options application-internet__options-wrapper_social">
+										<input id="social" class="application-internet__options-social additional-offer__form-el"  type="checkbox" name="social" value="59">
 										<label class="form__label" for="social">Социальные сети (59 ₽)</label>
 										<button type="button" class="application-internet__button">?</button>
 										<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
 									</div>
 								</div>
 								<div class="application-internet__wrap-mus-vid">
-									<div class="application-internet__options application-internet__options-wrapper_music">	
-										<input id="music" class="application-internet__options-music"  type="checkbox" name="music"> 
+									<div class="application-internet__options application-internet__options-wrapper_music">
+										<input id="music" class="application-internet__options-music additional-offer__form-el"  type="checkbox" name="music" value="59">
 										<label class="form__label" for="music">Музыка (59 ₽)</label>
 										<button type="button" class="application-internet__button">?</button>
 										<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 									</div>
 									<div class="application-internet__options application-internet__options-wrapper_video">
-										<input id="video" class="application-internet__options-video"  type="checkbox" name="video"> 
+										<input id="video" class="application-internet__options-video additional-offer__form-el"  type="checkbox" name="video" value="159">
 										<label class="form__label" for="video">Видео (159 ₽)</label>
 										<button type="button" class="application-internet__button">?</button>
 										<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 									</div>
 								</div>
 							</div>
-							<div class="application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 								<div class="application-internet__options application-internet__options-wrapper_sms">
-									<input id="sms" class="application-internet__options-sms"  type="checkbox" name="sms">
+									<input id="sms" class="application-internet__options-sms additional-offer__form-el"  type="checkbox" name="sms" value="49">
 									<label class="form__label" for="sms">Безлимитные СМС (49 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -192,7 +191,7 @@
 					<div class="form__wrapper form__wrapper-next">									
 						<div class="condition">
 							<input id="accept-cond" class="condition__checkbox" type="checkbox" name="accept-condition" checked>
-							<div class="input-error js-error__checkbox"></div>
+<!--							<div class="input-error js-error__checkbox"></div>-->
 							<label class="condition__label" for="accept-cond">Я принимаю </label>
 							<button class="condition__button js-open-btn-conditions" type="button">условия передачи информации</button>
 						</div>	
@@ -584,70 +583,69 @@
 				</header>
 				<div class="additional-offer">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title additional-offer__price">Общая цена: <span class="form__sum">0</span><span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
-					<div class="form__wrapper">
-						<div class="form__internet input-parent">
-							<select id="internet" class="form__internet-input js-ascent-text pseudo-hover" name="internet">
-								<option>0 ГБ 0 ₽</option>
-								<option selected>2 ГБ 99 ₽</option>
-								<option>4 ГБ 159 ₽</option>
-								<option>8 ГБ 229 ₽</option>
-								<option>16 ГБ 359 ₽</option>
-								<option>Безлимитный интернет 999 ₽</option>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-fare" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" name="internet">
+								<option value="0">0 ГБ 0 ₽</option>
+								<option value="99" selected>2 ГБ 99 ₽</option>
+								<option value="159">4 ГБ 159 ₽</option>
+								<option value="229">8 ГБ 229 ₽</option>
+								<option value="359">16 ГБ 359 ₽</option>
+								<option value="999">Безлимитный интернет 999 ₽</option>
 							</select>
-							<label class="label-select" for="internet">Интернет</label>
+							<label class="label-select" for="internet-fare">Интернет</label>
 						</div>
-						<div class="form__calls input-parent">
-							<select id="calls" class="form__calls-input js-ascent-text pseudo-hover" name="calls">
-								<option>0 минут 0 ₽</option>
-								<option selected>200 минут 99 ₽</option>
-								<option>400 минут 159 ₽</option>
-								<option>600 минут 199 ₽</option>
-								<option>1200 минут 299 ₽</option>
-								<option>Безлимитные минуты 999 ₽</option>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-fare" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" name="calls">
+								<option value="0">0 минут 0 ₽</option>
+								<option value="159">400 минут 159 ₽</option>
+								<option value="199">600 минут 199 ₽</option>
+								<option value="299">1200 минут 299 ₽</option>
+								<option value="999">Безлимитные минуты 999 ₽</option>
 							</select>
-							<label class="label-select" for="time">Звонки</label>
+							<label class="label-select" for="calls-fare">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="application-internet__options-wrapper">
+						<div class="correct-service__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input value="59" id="messenger" class="application-internet__options-messenger application-internet__options-check"  type="checkbox" name="messenger">
-									<label class="form__label" for="messenger" >Мессенджеры (59 ₽)</label>
+									<input id="messengers" class="application-internet__options-messenger correct-service__form-el"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input value="59" id="social" class="application-internet__options-social application-internet__options-check"  type="checkbox" name="social">
-									<label class="form__label" for="social">Социальные сети (59 ₽)</label>
+									<input id="social-networks" class="application-internet__options-social correct-service__form-el"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-networks">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
 								</div>
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input value="59" id="music" class="application-internet__options-music application-internet__options-check"  type="checkbox" name="music">
-									<label class="form__label" for="music">Музыка (59 ₽)</label>
+									<input id="item-music" class="application-internet__options-music correct-service__form-el"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="item-music">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input value="159" id="video" class="application-internet__options-video application-internet__options-check"  type="checkbox" name="video">
-									<label class="form__label" for="video">Видео (159 ₽)</label>
+									<input id="item-video" class="application-internet__options-video correct-service__form-el"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="item-video">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="application-internet__options-wrapper application-internet application-internet__wrap-sms">
-							<div class="application-internet__options application-internet__options-wrapper_sms application-internet__options-check">
-								<input value="49" id="sms" class="application-internet__options-sms"  type="checkbox" name="sms">
-								<label class="form__label" for="sms">Безлимитные СМС (49 ₽)</label>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages" class="application-internet__options-sms correct-service__form-el"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
 							</div>
@@ -657,7 +655,7 @@
 				</div>
 				<div class="form__wrapper form__wrapper-next">
 					<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
-					<button class="form__next-btn" type="button">Далее</button>
+					<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
 				</div>
 			</div>
 			<div class="correct-number application-form hidden">

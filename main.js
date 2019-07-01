@@ -270,6 +270,7 @@ function nextToNumberOption() {
 nextToNumberOption();
 
 
+
 function nextPrevPage() {
 	const buttonPrevPage = document.querySelector(".phone-number__prev-btn");
 	const thatPage = document.querySelector(".phone-number-wrap");
@@ -283,6 +284,8 @@ function nextPrevPage() {
 
 
 nextPrevPage();
+
+//L
 
 
 function issuePhoneNumber() {
@@ -352,7 +355,20 @@ function correctionServiceComeback() {
 	});
 }
 
-correctionServiceComeback()
+correctionServiceComeback();
+
+function correctionServiceNext() {
+	const buttonNextPage = document.querySelector('.correct-service__next-bth');
+	const thatPage = document.querySelector('.correct-service');
+	const nextPage = document.querySelector('.numbers-bucket');
+
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPage.classList.remove("hidden");
+	});
+}
+
+correctionServiceNext();
 
 
 function correctionNumber() {
@@ -367,7 +383,7 @@ function correctionNumber() {
 }
 
 
-correctionNumber()
+correctionNumber();
 
 
 function correctionNumberComeback() {
@@ -381,7 +397,20 @@ function correctionNumberComeback() {
 	});
 }
 
-correctionNumberComeback()
+correctionNumberComeback();
+
+function correctionNumberNext() {
+	const buttonNextPage = document.querySelector('.correct-number__next-bth');
+	const thatPage = document.querySelector('.correct-number');
+	const nextPage = document.querySelector('.numbers-bucket');
+
+	buttonNextPage.addEventListener("click", function() {
+		thatPage.classList.add("hidden");
+		nextPage.classList.remove("hidden");
+	});
+}
+
+correctionNumberNext();
 
 
 
@@ -413,17 +442,106 @@ function ApplicationInternet(item) {
 	};
 }
 
-// document.querySelectorAll('.application-internet__options').forEach(item => {
-// 	item.Calculate = new Calculate(item);
-// })
-// function Calculate(item){
-// 	this.item = item;
-// 	this.button = this.item.querySelector('.application-internet__options-check');
-// 	const start = document.querySelector('.additional-offer__price');
-//
-//
-//
-// }
+
+
+//находим форму
+const form = document.querySelector('.form');
+
+//находим все блоки калькулятора
+const block = form.querySelectorAll('.additional-offer__form-item');
+
+//в каждом блоке ищем функциональный элемент формы
+block.forEach( item => {
+	const el = item.querySelectorAll('.additional-offer__form-el');
+
+	//на каждый функциональный элемент формы навешиваем событие
+	el.forEach(item => {
+		item.addEventListener('input', () => calculator());
+
+	});
+});
+
+function calculator(){
+	let price = 0;
+
+	//в каждом блоке ищем функциональный элемент формы
+	block.forEach(item => {
+		const el = item.querySelectorAll('.additional-offer__form-el');
+
+		//проверяем каждый функц. эл. формы
+		el.forEach(item => {
+			if(item.type !== 'checkbox' || item.type === 'checkbox' && item.checked){
+				price += Number(item.value);
+			}
+		})
+	});
+
+	//вставляем значение price в разметку
+	form.querySelector('.additional-offer__form-sum').innerHTML = price;
+}
+
+calculator();
+
+
+
+//находим все блоки калькулятора в контейнере Редактирования пакутов услуг
+const correctBlock = form.querySelectorAll('.correct-service__form-item');
+
+//в каждом блоке ищем функциональный элемент формы
+correctBlock.forEach( item => {
+	const elem = item.querySelectorAll('.correct-service__form-el');
+
+	//на каждый функциональный элемент формы навешиваем событие
+	elem.forEach(item => {
+		item.addEventListener('input', () => calculatorCorrect());
+
+	});
+});
+
+function calculatorCorrect(){
+	let priceCorrect = 0;
+
+	//в каждом блоке ищем функциональный элемент формы
+	correctBlock.forEach(item => {
+		const elem = item.querySelectorAll('.correct-service__form-el');
+
+		//проверяем каждый функц. эл. формы
+		elem.forEach(item => {
+			if(item.type !== 'checkbox' || item.type === 'checkbox' && item.checked){
+				priceCorrect += Number(item.value);
+			}
+		})
+	});
+
+	//вставляем значение priceCorrect в разметку
+	form.querySelector('.correct-service__form-sum').innerHTML = priceCorrect;
+}
+
+calculatorCorrect();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
