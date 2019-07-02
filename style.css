@@ -20,6 +20,8 @@ input::-webkit-input-placeholder {
   font-size: 0;
 }
 
+
+
 input.is-active-placeholder::-webkit-input-placeholder {
   font-size: 19px;
   font-family: calibri;
@@ -1020,12 +1022,18 @@ input:focus + .label,
 	margin: 30px auto 0;
 }
 
+.phone-number__prev-btn-wrap{
+	display: flex;
+	text-decoration: none;
+}
+
 .phone-number__prev-btn {
 	background-color: white;
 	border-style: none;
 	color: #74a3c7;
 	cursor: pointer;
 	font-size: 17px;
+
 }
 
 .phone-number__prev-btn:focus {
@@ -1098,10 +1106,16 @@ input:focus + .label,
 	cursor: pointer;
 }
 
-.hidden {
-	visibility: hidden;
-	height: 0;
+/*.hidden {*/
+/*	visibility: hidden;*/
+/*	height: 0;*/
+/*}*/
+
+.hidden{
+	display: none;
 }
+
+
 
 .visible {
 	visibility: visible;
@@ -1270,4 +1284,10 @@ form input[type=checkbox]:checked + label:before{
 	background-color: #ffdd2d;
 	border-color: #ffdd2d;
 	box-shadow: none;
+}
+
+
+
+.page:not(.page_active) {
+	display: none;
 }

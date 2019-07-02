@@ -189,7 +189,7 @@ showTariffOptions();
 function saveNumberNewNumberToggle() {
 	const save = document.querySelector(".phone-number__save-number");
 	const saveBlock = document.querySelector(".save-number__options");
-	const newNumber = document.querySelector(".phone-number__new-number");	
+	const newNumber = document.querySelector(".phone-number__new-number");
 	const newNumberBlock = document.querySelector(".new-number__options");
 
 
@@ -206,10 +206,10 @@ function saveNumberNewNumberToggle() {
 		if (newNumber.checked) {
 			saveBlock.classList.remove("visible");
 			saveBlock.classList.add("hidden");
-			newNumberBlock.classList.remove("hidden");			
-			newNumberBlock.classList.add("visible");		
+			newNumberBlock.classList.remove("hidden");
+			newNumberBlock.classList.add("visible");
 		}
-	});			
+	});
 }
 
 
@@ -225,13 +225,13 @@ function showPrevNext() {
 	nextBtn.addEventListener("click", function() {
 		block1.classList.add("hidden");
 		block1.classList.remove("visible");
-		block2.classList.remove("hidden");		
+		block2.classList.remove("hidden");
 	});
 
 	prevBtn.addEventListener("click", function() {
 		block2.classList.add("hidden");
 		block2.classList.remove("visible");
-		block1.classList.remove("hidden");				
+		block1.classList.remove("hidden");
 	});
 }
 
@@ -271,146 +271,146 @@ nextToNumberOption();
 
 
 
-function nextPrevPage() {
-	const buttonPrevPage = document.querySelector(".phone-number__prev-btn");
-	const thatPage = document.querySelector(".phone-number-wrap");
-	const prevPage = document.querySelector(".client-info");
-
-	buttonPrevPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		prevPage.classList.remove("hidden");
-	});
-}
-
-
-nextPrevPage();
-
-//L
-
-
-function issuePhoneNumber() {
-	const buttonNextPage = document.querySelector('.phone-number__next-btn');
-	const thatPage = document.querySelector('.phone-number-wrap');
-	const nextPage = document.querySelector('.numbers-bucket');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPage.classList.remove("hidden");
-	});
-}
-
-issuePhoneNumber();
-
-
-function meetingAppointment() {
-	const buttonNextPage = document.querySelector('.numbers-bucket__next-btn');
-	const thatPage = document.querySelector('.numbers-bucket');
-	const nextPage = document.querySelector('.appointment');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPage.classList.remove("hidden");
-	});
-}
-
-meetingAppointment();
-
-
-function issueDelivery() {
-	const buttonNextPage = document.querySelector('.appointment__next-btn');
-	const thatPage = document.querySelector('.appointment');
-	const nextPageEnd = document.querySelector('.appointment-end');
-	const nextPageBring = document.querySelector('.bring');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPageEnd.classList.remove("hidden");
-		nextPageBring.classList.remove("hidden");
-	});
-}
-
-issueDelivery();
-
-function correctionService() {
-	const buttonNextPage = document.querySelector('.correction-top');
-	const thatPage = document.querySelector('.numbers-bucket');
-	const nextPage = document.querySelector('.correct-service');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPage.classList.remove("hidden");
-	});
-}
-
-correctionService()
-
-function correctionServiceComeback() {
-	const buttonNextPage = document.querySelector('.correct-service__prev-but');
-	const thatPage = document.querySelector('.correct-service');
-	const nextPage = document.querySelector('.numbers-bucket');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPage.classList.remove("hidden");
-	});
-}
-
-correctionServiceComeback();
-
-function correctionServiceNext() {
-	const buttonNextPage = document.querySelector('.correct-service__next-bth');
-	const thatPage = document.querySelector('.correct-service');
-	const nextPage = document.querySelector('.numbers-bucket');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPage.classList.remove("hidden");
-	});
-}
-
-correctionServiceNext();
-
-
-function correctionNumber() {
-	const buttonNextPage = document.querySelector('.correction-bot');
-	const thatPage = document.querySelector('.numbers-bucket');
-	const nextPage = document.querySelector('.correct-number');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPage.classList.remove("hidden");
-	});
-}
-
-
-correctionNumber();
-
-
-function correctionNumberComeback() {
-	const buttonNextPage = document.querySelector('.correct-number__prev-but');
-	const thatPage = document.querySelector('.correct-number');
-	const nextPage = document.querySelector('.numbers-bucket');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPage.classList.remove("hidden");
-	});
-}
-
-correctionNumberComeback();
-
-function correctionNumberNext() {
-	const buttonNextPage = document.querySelector('.correct-number__next-bth');
-	const thatPage = document.querySelector('.correct-number');
-	const nextPage = document.querySelector('.numbers-bucket');
-
-	buttonNextPage.addEventListener("click", function() {
-		thatPage.classList.add("hidden");
-		nextPage.classList.remove("hidden");
-	});
-}
-
-correctionNumberNext();
+// function nextPrevPage() {
+// 	const buttonPrevPage = document.querySelector(".phone-number__prev-btn");
+// 	const thatPage = document.querySelector(".phone-number-wrap");
+// 	const prevPage = document.querySelector(".client-info");
+//
+// 	buttonPrevPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		prevPage.classList.remove("hidden");
+// 	});
+// }
+//
+//
+// nextPrevPage();
+//
+// L
+//
+//
+// function issuePhoneNumber() {
+// 	const buttonNextPage = document.querySelector('.phone-number__next-btn');
+// 	const thatPage = document.querySelector('.phone-number-wrap');
+// 	const nextPage = document.querySelector('.numbers-bucket');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPage.classList.remove("hidden");
+// 	});
+// }
+//
+// issuePhoneNumber();
+//
+//
+// function meetingAppointment() {
+// 	const buttonNextPage = document.querySelector('.numbers-bucket__next-btn');
+// 	const thatPage = document.querySelector('.numbers-bucket');
+// 	const nextPage = document.querySelector('.appointment');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPage.classList.remove("hidden");
+// 	});
+// }
+//
+// meetingAppointment();
+//
+//
+// function issueDelivery() {
+// 	const buttonNextPage = document.querySelector('.appointment__next-btn');
+// 	const thatPage = document.querySelector('.appointment');
+// 	const nextPageEnd = document.querySelector('.appointment-end');
+// 	const nextPageBring = document.querySelector('.bring');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPageEnd.classList.remove("hidden");
+// 		nextPageBring.classList.remove("hidden");
+// 	});
+// }
+//
+// issueDelivery();
+//
+// function correctionService() {
+// 	const buttonNextPage = document.querySelector('.correction-top');
+// 	const thatPage = document.querySelector('.numbers-bucket');
+// 	const nextPage = document.querySelector('.correct-service');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPage.classList.remove("hidden");
+// 	});
+// }
+//
+// correctionService()
+//
+// function correctionServiceComeback() {
+// 	const buttonNextPage = document.querySelector('.correct-service__prev-but');
+// 	const thatPage = document.querySelector('.correct-service');
+// 	const nextPage = document.querySelector('.numbers-bucket');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPage.classList.remove("hidden");
+// 	});
+// }
+//
+// correctionServiceComeback();
+//
+// function correctionServiceNext() {
+// 	const buttonNextPage = document.querySelector('.correct-service__next-bth');
+// 	const thatPage = document.querySelector('.correct-service');
+// 	const nextPage = document.querySelector('.numbers-bucket');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPage.classList.remove("hidden");
+// 	});
+// }
+//
+// correctionServiceNext();
+//
+//
+// function correctionNumber() {
+// 	const buttonNextPage = document.querySelector('.correction-bot');
+// 	const thatPage = document.querySelector('.numbers-bucket');
+// 	const nextPage = document.querySelector('.correct-number');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPage.classList.remove("hidden");
+// 	});
+// }
+//
+//
+// correctionNumber();
+//
+//
+// function correctionNumberComeback() {
+// 	const buttonNextPage = document.querySelector('.correct-number__prev-but');
+// 	const thatPage = document.querySelector('.correct-number');
+// 	const nextPage = document.querySelector('.numbers-bucket');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPage.classList.remove("hidden");
+// 	});
+// }
+//
+// correctionNumberComeback();
+//
+// function correctionNumberNext() {
+// 	const buttonNextPage = document.querySelector('.correct-number__next-bth');
+// 	const thatPage = document.querySelector('.correct-number');
+// 	const nextPage = document.querySelector('.numbers-bucket');
+//
+// 	buttonNextPage.addEventListener("click", function() {
+// 		thatPage.classList.add("hidden");
+// 		nextPage.classList.remove("hidden");
+// 	});
+// }
+//
+// correctionNumberNext();
 
 
 
@@ -431,6 +431,7 @@ function ApplicationInternet(item) {
 		}
 	};
 
+	//навешиваем функцию при событии click
 	this.button.addEventListener('click', this.onClickButton);
 
 	this.open = () => {
@@ -520,6 +521,80 @@ function calculatorCorrect(){
 calculatorCorrect();
 
 
+
+//находим все страницы в документе
+const pages = document.querySelectorAll('.page')
+
+//навешиваем функцию при изменении хеша(событие hashchange)
+window.addEventListener("hashchange", () => {
+
+	//используем метод substring чтобы избавиться от #
+	const active = location.hash.substring(1);
+
+	//проверяем каждую страницу
+	pages.forEach(item => {
+		// dataset === data-page в разметке
+		if (item.dataset.page === active) {
+		  item.classList.add('page_active')
+		} else {
+		        item.classList.remove('page_active')
+		}
+	})
+});
+
+
+function testPhone(){
+	//находим все импуты, где должны записываться только цифры
+	const el = document.querySelectorAll(".form__phone-input");
+
+	el.forEach(item => {
+		//на каджый инпут навешиваем событие onkeyup
+		//(возникает в момент отпускания нажатой клавиши)
+		item.onkeyup = function test(){
+			const value = item.value;
+
+			const pattern = /[-\.;":'a-zA-Zа-яА-Я]/;
+
+			//делаем проверку с помощью метода test
+			//(выполняет поиск сопоставления)
+			if(pattern.test(value)){
+				//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+				item.value = value.replace(pattern, '');
+			}
+		}
+	})
+}
+
+testPhone();
+
+
+
+function testText(){
+	//находим все импуты, где должны записываться только цифры
+	const el = document.querySelectorAll(".form__text-input");
+
+	el.forEach(item => {
+		//на каджый инпут навешиваем событие onkeyup
+		//(возникает в момент отпускания нажатой клавиши)
+		item.onkeyup = function test(){
+			const value = item.value;
+
+			const pattern = /[0-9 -\.;":'a-zA-Zа]/;
+
+			//делаем проверку с помощью метода test
+			//(выполняет поиск сопоставления)
+			if(pattern.test(value)){
+				//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+				item.value = value.replace(pattern, '');
+			}
+		}
+	})
+}
+
+testText();
+
+
+console.log(location.hash);
 
 
 
