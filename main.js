@@ -241,180 +241,6 @@ showPrevNext();
 
 
 
-function nextToNumberOption() {
-	const nextBtn = document.querySelector(".form__next-btn");
-	const clientInfo = document.querySelector(".client-info");
-	const numberOption = document.querySelector(".phone-number-wrap");
-	const checkBox = document.querySelector(".form__fill-short-app-input");
-	const endMessage = document.querySelector(".application-done");
-	const tariff = document.querySelector(".additional-offer");
-
-
-	nextBtn.addEventListener("click", function() {
-		if (checkBox.checked) {
-			clientInfo.classList.remove("visible");
-			clientInfo.classList.add("hidden");
-			endMessage.classList.remove("hidden");
-			tariffBlock.classList.add("hidden");
-			tariff.classList.add("hidden");
-		} else {
-			clientInfo.classList.remove("visible");
-			clientInfo.classList.add("hidden");
-			numberOption.classList.remove("hidden");
-			tariff.classList.remove("hidden");
-		}
-	});
-}
-
-
-nextToNumberOption();
-
-
-
-// function nextPrevPage() {
-// 	const buttonPrevPage = document.querySelector(".phone-number__prev-btn");
-// 	const thatPage = document.querySelector(".phone-number-wrap");
-// 	const prevPage = document.querySelector(".client-info");
-//
-// 	buttonPrevPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		prevPage.classList.remove("hidden");
-// 	});
-// }
-//
-//
-// nextPrevPage();
-//
-// L
-//
-//
-// function issuePhoneNumber() {
-// 	const buttonNextPage = document.querySelector('.phone-number__next-btn');
-// 	const thatPage = document.querySelector('.phone-number-wrap');
-// 	const nextPage = document.querySelector('.numbers-bucket');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPage.classList.remove("hidden");
-// 	});
-// }
-//
-// issuePhoneNumber();
-//
-//
-// function meetingAppointment() {
-// 	const buttonNextPage = document.querySelector('.numbers-bucket__next-btn');
-// 	const thatPage = document.querySelector('.numbers-bucket');
-// 	const nextPage = document.querySelector('.appointment');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPage.classList.remove("hidden");
-// 	});
-// }
-//
-// meetingAppointment();
-//
-//
-// function issueDelivery() {
-// 	const buttonNextPage = document.querySelector('.appointment__next-btn');
-// 	const thatPage = document.querySelector('.appointment');
-// 	const nextPageEnd = document.querySelector('.appointment-end');
-// 	const nextPageBring = document.querySelector('.bring');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPageEnd.classList.remove("hidden");
-// 		nextPageBring.classList.remove("hidden");
-// 	});
-// }
-//
-// issueDelivery();
-//
-// function correctionService() {
-// 	const buttonNextPage = document.querySelector('.correction-top');
-// 	const thatPage = document.querySelector('.numbers-bucket');
-// 	const nextPage = document.querySelector('.correct-service');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPage.classList.remove("hidden");
-// 	});
-// }
-//
-// correctionService()
-//
-// function correctionServiceComeback() {
-// 	const buttonNextPage = document.querySelector('.correct-service__prev-but');
-// 	const thatPage = document.querySelector('.correct-service');
-// 	const nextPage = document.querySelector('.numbers-bucket');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPage.classList.remove("hidden");
-// 	});
-// }
-//
-// correctionServiceComeback();
-//
-// function correctionServiceNext() {
-// 	const buttonNextPage = document.querySelector('.correct-service__next-bth');
-// 	const thatPage = document.querySelector('.correct-service');
-// 	const nextPage = document.querySelector('.numbers-bucket');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPage.classList.remove("hidden");
-// 	});
-// }
-//
-// correctionServiceNext();
-//
-//
-// function correctionNumber() {
-// 	const buttonNextPage = document.querySelector('.correction-bot');
-// 	const thatPage = document.querySelector('.numbers-bucket');
-// 	const nextPage = document.querySelector('.correct-number');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPage.classList.remove("hidden");
-// 	});
-// }
-//
-//
-// correctionNumber();
-//
-//
-// function correctionNumberComeback() {
-// 	const buttonNextPage = document.querySelector('.correct-number__prev-but');
-// 	const thatPage = document.querySelector('.correct-number');
-// 	const nextPage = document.querySelector('.numbers-bucket');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPage.classList.remove("hidden");
-// 	});
-// }
-//
-// correctionNumberComeback();
-//
-// function correctionNumberNext() {
-// 	const buttonNextPage = document.querySelector('.correct-number__next-bth');
-// 	const thatPage = document.querySelector('.correct-number');
-// 	const nextPage = document.querySelector('.numbers-bucket');
-//
-// 	buttonNextPage.addEventListener("click", function() {
-// 		thatPage.classList.add("hidden");
-// 		nextPage.classList.remove("hidden");
-// 	});
-// }
-//
-// correctionNumberNext();
-
-
-
-
 document.querySelectorAll('.application-internet__options').forEach(item =>{
 	item.ApplicationInternet = new ApplicationInternet(item);
 });
@@ -522,25 +348,71 @@ calculatorCorrect();
 
 
 
-//находим все страницы в документе
-const pages = document.querySelectorAll('.page')
+if (location.hash) {
+	updatePage();
+}else{
+
+}
 
 //навешиваем функцию при изменении хеша(событие hashchange)
 window.addEventListener("hashchange", () => {
+	updatePage()
+});
+
+function updatePage() {
+	//находим все страницы в документе
+	const pages = document.querySelectorAll('.page');
 
 	//используем метод substring чтобы избавиться от #
 	const active = location.hash.substring(1);
 
 	//проверяем каждую страницу
 	pages.forEach(item => {
+
 		// dataset === data-page в разметке
 		if (item.dataset.page === active) {
-		  item.classList.add('page_active')
-		} else {
-		        item.classList.remove('page_active')
+			item.classList.add('page_active');
+		}else {
+			item.classList.remove('page_active');
 		}
 	})
-});
+}
+
+
+//ф-ция проверки согласия на условия передачи ин-ции
+function check(){
+	//находим все страницы в документе
+	const pages = document.querySelectorAll('.page');
+
+	//проверяем каждую страницу
+	pages.forEach(item => {
+		const checkbox = item.querySelector('.condition__checkbox');
+		const nextButton = item.querySelector('.form__next-btn');
+
+		//проверяем чтобы кнопка была активна
+		if(nextButton !== null){
+			//навешиваем событие клик
+			nextButton.addEventListener('click', () => {
+				//если галочка не стоит
+				if(!checkbox.checked){
+					//используем метод preventDefault() для отмены переключения стр
+					event.preventDefault();
+
+				}
+			})
+		}
+
+	})
+}
+
+check();
+
+
+
+
+
+
+
 
 
 function testPhone(){
@@ -570,22 +442,45 @@ testPhone();
 
 
 function testText(){
-	//находим все импуты, где должны записываться только цифры
+	//находим все импуты, где должны записываться только буквы
 	const el = document.querySelectorAll(".form__text-input");
 
 	el.forEach(item => {
 		//на каджый инпут навешиваем событие onkeyup
 		//(возникает в момент отпускания нажатой клавиши)
-		item.onkeyup = function test(){
-			const value = item.value;
+		item.onkeyup =function Auto() {
+			let value = item.value;
 
-			const pattern = /[0-9 -\.;":'a-zA-Zа]/;
+			//создаем объект для корректировки строки
+			const replacer = {
+				"q":"й", "w":"ц"  , "e":"у" , "r":"к" , "t":"е", "y":"н", "u":"г",
+				"i":"ш", "o":"щ", "p":"з" , "[":"х" , "]":"ъ", "a":"ф", "s":"ы",
+				"d":"в" , "f":"а"  , "g":"п" , "h":"р" , "j":"о", "k":"л", "l":"д",
+				";":"ж" , "'":"э"  , "z":"я", "x":"ч", "c":"с", "v":"м", "b":"и",
+				"n":"т" , "m":"ь"  , ",":"б" , ".":"ю" , "/":"."
+			};
 
-			//делаем проверку с помощью метода test
-			//(выполняет поиск сопоставления)
-			if(pattern.test(value)){
-				//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
-				item.value = value.replace(pattern, '');
+			let replace;
+
+			//создаем цикл,чтобы не потерять длину
+			for (let i = 0; i < value.length; i++) {
+
+				//проверяем, что значемние value приобразованное в нижний регистр определено
+				if (replacer[value[i].toLowerCase()] !== undefined) {
+
+					//если значение value в нижнем регистре
+					if (value[i] === value[i].toLowerCase()) {
+						//то в replace записывается значение value в низнем регистре
+						replace = replacer[value[i].toLowerCase()];
+					} else
+					// если значение value в верхнем регистре
+					if (value[i] === value[i].toUpperCase()) {
+						//то в replace записывается значение value в верхнем регистре
+						replace = replacer[value[i].toLowerCase()].toUpperCase();
+					}
+					// Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+					item.value = value.replace(value[i], replace);
+				}
 			}
 		}
 	})
@@ -594,7 +489,9 @@ function testText(){
 testText();
 
 
-console.log(location.hash);
+
+
+
 
 
 
