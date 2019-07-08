@@ -47,8 +47,8 @@
 				<!-- 
 					div class="form__save-number">				
 						<div class="form__save-number-wrapper">	
-							<input id="save-number" class="form__save-number-input"  type="checkbox" name="save-number" checked> 
-							<label class="form__label" for="save-number">Сохранить свой номер</label>
+							<input id="save-number-two" class="form__save-number-input"  type="checkbox" name="save-number" checked>
+							<label class="form__label" for="save-number-two">Сохранить свой номер</label>
 						</div>
 						<p class="form__save_number-text">Перенесите свой номер в Тинькофф Мобайл и получите 1000 Р</p>
 					</div> 
@@ -90,7 +90,7 @@
 									<option value="299">1200 минут 299 ₽</option>
 									<option value="999">Безлимитные минуты 999 ₽</option>
 								</select>
-								<label class="label-select" for="time">Звонки</label>
+								<label class="label-select" for="calls">Звонки</label>
 							</div>
 						</div>
 						<div class="application-internet">
@@ -141,14 +141,14 @@
 						<h3 class="form__title">Когда удобно перезвонить</h3>
 						<div class="form__wrapper">
 							<div class="form__date input-parent ">											
-								<input id="date" class="form__date-input js-ascent-text pseudo-hover" name="date" placeholder="30.03.2019">		
-								<label class="label" for="date">Дата*</label>
+								<input id="date-for-callback" class="form__date-input js-ascent-text pseudo-hover" name="date" placeholder="30.03.2019">
+								<label class="label" for="date-for-callback">Дата*</label>
 							</div>
 							<div class="form__time input-parent">						
-								<select id="time" class="form__time-input js-ascent-text pseudo-hover" name="time" selected="06:30">		
+								<select id="time-for-callback" class="form__time-input js-ascent-text pseudo-hover" name="time">
 										<option value="" selected hidden></option>					
 										<option>06:00</option>
-										<option>06:30</option>	
+										<option selected>06:30</option>
 										<option>07:00</option>	
 										<option>07:30</option>	
 										<option>08:00</option>	
@@ -184,7 +184,7 @@
 										<option>23:00</option>	
 										<option>23:30</option>	
 								</select>
-								<label class="label" for="time">Время*</label>
+								<label class="label" for="time-for-callback">Время*</label>
 							</div>
 						</div>
 					</div>
@@ -197,7 +197,7 @@
 								<button class="condition__button js-open-btn-conditions" type="button">условия передачи информации</button>
 							</a>
 						</div>
-						<a href="#phone-number-wrap">
+						<a href="#phone-number-wrap" class="form__next-link">
 							<button class="form__next-btn" type="button">Далее</button>
 						</a>
 					</div>					
@@ -210,12 +210,12 @@
 				<div class="phone-number">
 					<div class="form__wrapper">
 						<div class="form__wrapper-number form__wrapper-number_save">
-							<label class="label-radio" for="save-number">Сохранить номер</label>
-							<input id="save-number" class="phone-number__save-number radio-btn-style" type="radio" name="save-new-number" value="save-number" checked>						
+							<label class="label-radio" for="keep-number">Сохранить номер</label>
+							<input id="keep-number" class="phone-number__save-number radio-btn-style" type="radio" name="save-new-number" value="save-number" checked>
 						</div>
 						<div class="form__wrapper-number form__wrapper-number_new">
-							<label class="label-radio" for="new-number">Получить новый номер</label>
-							<input id="new-number" class="phone-number__new-number radio-btn-style" type="radio" name="save-new-number" value="new-number">						
+							<label class="label-radio" for="new-numb">Получить новый номер</label>
+							<input id="new-numb" class="phone-number__new-number radio-btn-style" type="radio" name="save-new-number" value="new-number">
 						</div>
 					</div>
 					<div class="save-number__options">
@@ -232,13 +232,13 @@
 				<div class="new-number__options hidden">
 					<div class="form__wrapper-input input-parent">
 						<div class="form__search-by-numbers"> 
-							<input id="search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
-							<label class="label" for="search-by-numbers">Поиск по цифрам</label>
+							<input id="phone-number-wrap-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+							<label class="label" for="phone-number-wrap-search-by-numbers">Поиск по цифрам</label>
 							<div class="input-close-btn js-clear-field"></div>
 							<div class="input-error js-error"></div>
 						</div>
 						<div class="form__price input-parent">
-							<select id="price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
+							<select id="phone-number-wrap-price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
 								<option value="" selected hidden></option>					
 								<option>Бесплатно</option>
 								<option>490 ₽</option>	
@@ -248,7 +248,7 @@
 								<option>14 900 ₽</option>	
 								<option>24 900 ₽</option>	
 							</select>
-							<label class="label" for="price">Стоимость</label>
+							<label class="label" for="phone-number-wrap-price">Стоимость</label>
 							<div class="input-close-btn js-clear-field"></div>
 							<div class="input-error js-error"></div>
 						</div>
@@ -256,80 +256,80 @@
 					<div class="phone-number__numbers phone-number__numbers-block1 js-block1">
 						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-99">
-								<label for="+7(999)999-99-99">+7(999)999-99-99</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-99">
+								<label for="block1+7(999)999-99-99">+7(999)999-99-99</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block1+7(999)999-99-99">
 								Бесплатно
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block1+7(999)999-99-99">
 							</div>
 						</div>		
 						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-98">
-								<label for="+7(999)999-99-98">+7(999)999-99-98</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-98">
+								<label for="block1+7(999)999-99-98">+7(999)999-99-98</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block1+7(999)999-99-98">
 								Бесплатно
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block1+7(999)999-99-98">
 							</div>
 						</div>	
 						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-97">
-								<label for="+7(999)999-99-97">+7(999)999-99-97</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-97">
+								<label for="block1+7(999)999-99-97">+7(999)999-99-97</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block1+7(999)999-99-97">
 								490 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block1+7(999)999-99-97">
 							</div>
 						</div>	
 						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-96">
-								<label for="+7(999)999-99-96">+7(999)999-99-96</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-96">
+								<label for="block1+7(999)999-99-96">+7(999)999-99-96</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block1+7(999)999-99-96">
 								990 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block1+7(999)999-99-96">
 							</div>
 						</div>	
 						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-95">
-								<label for="+7(999)999-99-95">+7(999)999-99-95</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-95">
+								<label for="block1+7(999)999-99-95">+7(999)999-99-95</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block1+7(999)999-99-95">
 								2 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block1+7(999)999-99-95">
 							</div>
 						</div>	
 						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-94">
-								<label for="+7(999)999-99-94">+7(999)999-99-94</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-94">
+								<label for="block1+7(999)999-99-94">+7(999)999-99-94</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block1+7(999)999-99-94">
 								14 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block1+7(999)999-99-94">
 							</div>
 						</div>	
 						<div class="phone-number__numbers-container">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93">
-								<label for="+7(999)999-99-93">+7(999)999-99-93</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-93">
+								<label for="block1+7(999)999-99-93">+7(999)999-99-93</label>
 							</div>
 							<div class="phone-number__price">
 								24 900 ₽
@@ -337,94 +337,178 @@
 							<div class="phone-number__mark-checkbox-wrapper">
 								<input type="checkbox" class="phone-number__mark-checkbox">
 							</div>
-						</div>				
-					</div>
-					<div class="phone-number__numbers phone-number__numbers-block2 js-block2 hidden">
-						<div class="phone-number__numbers-container">
+						</div>
+						<div class="phone-number__numbers-container hidden">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-92-99">
-								<label for="+7(999)999-92-99">+7(999)999-92-99</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-92-99">
+								<label for="block2+7(999)999-92-99">+7(999)999-92-99</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block2+7(999)999-92-99">
 								Бесплатно
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-92-99">
 							</div>
-						</div>		
-						<div class="phone-number__numbers-container">
+						</div>
+						<div class="phone-number__numbers-container hidden">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-93-98">
-								<label for="+7(999)999-93-98">+7(999)999-93-98</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-93-98">
+								<label for="block2+7(999)999-93-98">+7(999)999-93-98</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block2+7(999)999-93-98">
 								Бесплатно
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-93-98">
 							</div>
-						</div>	
-						<div class="phone-number__numbers-container">
+						</div>
+						<div class="phone-number__numbers-container hidden">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-94-97">
-								<label for="+7(999)999-94-97">+7(999)999-94-97</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-94-97">
+								<label for="block2+7(999)999-94-97">+7(999)999-94-97</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block2+7(999)999-94-97">
 								490 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-94-97">
 							</div>
-						</div>	
-						<div class="phone-number__numbers-container">
+						</div>
+						<div class="phone-number__numbers-container hidden">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-95-96">
-								<label for="+7(999)999-95-96">+7(999)999-95-96</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-95-96">
+								<label for="block2+7(999)999-95-96">+7(999)999-95-96</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block2+7(999)999-95-96">
 								990 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-95-96">
 							</div>
-						</div>	
-						<div class="phone-number__numbers-container">
+						</div>
+						<div class="phone-number__numbers-container hidden">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-96-95">
-								<label for="+7(999)999-96-95">+7(999)999-96-95</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-96-95">
+								<label for="block2+7(999)999-96-95">+7(999)999-96-95</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block2+7(999)999-96-95">
 								2 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-96-95">
 							</div>
-						</div>	
-						<div class="phone-number__numbers-container">
+						</div>
+						<div class="phone-number__numbers-container hidden">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-97-94">
-								<label for="+7(999)999-97-94">+7(999)999-97-94</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-97-94">
+								<label for="block2+7(999)999-97-94">+7(999)999-97-94</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block2+7(999)999-97-94">
 								14 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-97-94">
 							</div>
-						</div>	
-						<div class="phone-number__numbers-container">
+						</div>
+						<div class="phone-number__numbers-container hidden">
 							<div class="phone-number__numbers-input-wrapper">
-								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-98-93">
-								<label for="+7(999)999-98-93">+7(999)999-98-93</label>
+								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-98-93">
+								<label for="block2+7(999)999-98-93">+7(999)999-98-93</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites-block2+7(999)999-98-93">
 								24 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-98-93">
 							</div>
-						</div>				
+						</div>
 					</div>
+<!--					<div class="phone-number__numbers phone-number__numbers-block2 js-block2 hidden">-->
+<!--						<div class="phone-number__numbers-container">-->
+<!--							<div class="phone-number__numbers-input-wrapper">-->
+<!--								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-92-99">-->
+<!--								<label for="block2+7(999)999-92-99">+7(999)999-92-99</label>-->
+<!--							</div>-->
+<!--							<label class="phone-number__price" for="favorites-block2+7(999)999-92-99">-->
+<!--								Бесплатно-->
+<!--							</label>-->
+<!--							<div class="phone-number__mark-checkbox-wrapper">-->
+<!--								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-92-99">-->
+<!--							</div>-->
+<!--						</div>		-->
+<!--						<div class="phone-number__numbers-container">-->
+<!--							<div class="phone-number__numbers-input-wrapper">-->
+<!--								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-93-98">-->
+<!--								<label for="block2+7(999)999-93-98">+7(999)999-93-98</label>-->
+<!--							</div>-->
+<!--							<label class="phone-number__price" for="favorites-block2+7(999)999-93-98">-->
+<!--								Бесплатно-->
+<!--							</label>-->
+<!--							<div class="phone-number__mark-checkbox-wrapper">-->
+<!--								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-93-98">-->
+<!--							</div>-->
+<!--						</div>	-->
+<!--						<div class="phone-number__numbers-container">-->
+<!--							<div class="phone-number__numbers-input-wrapper">-->
+<!--								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-94-97">-->
+<!--								<label for="block2+7(999)999-94-97">+7(999)999-94-97</label>-->
+<!--							</div>-->
+<!--							<label class="phone-number__price" for="favorites-block2+7(999)999-94-97">-->
+<!--								490 ₽-->
+<!--							</label>-->
+<!--							<div class="phone-number__mark-checkbox-wrapper">-->
+<!--								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-94-97">-->
+<!--							</div>-->
+<!--						</div>	-->
+<!--						<div class="phone-number__numbers-container">-->
+<!--							<div class="phone-number__numbers-input-wrapper">-->
+<!--								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-95-96">-->
+<!--								<label for="block2+7(999)999-95-96">+7(999)999-95-96</label>-->
+<!--							</div>-->
+<!--							<label class="phone-number__price" for="favorites-block2+7(999)999-95-96">-->
+<!--								990 ₽-->
+<!--							</label>-->
+<!--							<div class="phone-number__mark-checkbox-wrapper">-->
+<!--								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-95-96">-->
+<!--							</div>-->
+<!--						</div>	-->
+<!--						<div class="phone-number__numbers-container">-->
+<!--							<div class="phone-number__numbers-input-wrapper">-->
+<!--								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-96-95">-->
+<!--								<label for="block2+7(999)999-96-95">+7(999)999-96-95</label>-->
+<!--							</div>-->
+<!--							<label class="phone-number__price" for="favorites-block2+7(999)999-96-95">-->
+<!--								2 900 ₽-->
+<!--							</label>-->
+<!--							<div class="phone-number__mark-checkbox-wrapper">-->
+<!--								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-96-95">-->
+<!--							</div>-->
+<!--						</div>	-->
+<!--						<div class="phone-number__numbers-container">-->
+<!--							<div class="phone-number__numbers-input-wrapper">-->
+<!--								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-97-94">-->
+<!--								<label for="block2+7(999)999-97-94">+7(999)999-97-94</label>-->
+<!--							</div>-->
+<!--							<label class="phone-number__price" for="favorites-block2+7(999)999-97-94">-->
+<!--								14 900 ₽-->
+<!--							</label>-->
+<!--							<div class="phone-number__mark-checkbox-wrapper">-->
+<!--								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-97-94">-->
+<!--							</div>-->
+<!--						</div>	-->
+<!--						<div class="phone-number__numbers-container">-->
+<!--							<div class="phone-number__numbers-input-wrapper">-->
+<!--								<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-98-93">-->
+<!--								<label for="block2+7(999)999-98-93">+7(999)999-98-93</label>-->
+<!--							</div>-->
+<!--							<label class="phone-number__price" for="favorites-block2+7(999)999-98-93">-->
+<!--								24 900 ₽-->
+<!--							</label>-->
+<!--							<div class="phone-number__mark-checkbox-wrapper">-->
+<!--								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites-block2+7(999)999-98-93">-->
+<!--							</div>-->
+<!--						</div>				-->
+<!--					</div>-->
 					<div class="numbers-scroller">
 						<div class="numbers-scroller-wrap">
 							<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
@@ -436,9 +520,9 @@
 								<div class="numbers-scroller__up-tick tick-style">&#11015;</div>
 							</button>	
 						</div>	
-						<button class="numbers-scroller__show-next numbers-scroller__shower" type="button">						
-							<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style">Показать избранное</p>
-							<div class="numbers-scroller__up-tick tick-style">&#9733;</div>
+						<button class="numbers-scroller__show-next numbers-scroller__shower favorites-btn" type="button">
+							<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites favorites-items">Показать избранное</p>
+							<div class="numbers-scroller__up-tick tick-style favorites favorites-items">&#9733;</div>
 						</button>
 					</div>
 
@@ -711,7 +795,7 @@
 							<div class="input-error js-error"></div>
 						</div>
 						<div class="form__price input-parent">
-							<select id="price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
+							<select id="price" class="form__price-input js-ascent-text pseudo-hover" name="price">
 								<option value="" selected hidden></option>
 								<option>Бесплатно</option>
 								<option>490 ₽</option>
@@ -732,11 +816,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-99">
 								<label for="+7(999)999-99-99">+7(999)999-99-99</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-99-99">
 								Бесплатно
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-99-99">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -744,11 +828,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-98">
 								<label for="+7(999)999-99-98">+7(999)999-99-98</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-99-98">
 								Бесплатно
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input id="favorites+7(999)999-99-98" type="checkbox" class="phone-number__mark-checkbox">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -756,11 +840,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-97">
 								<label for="+7(999)999-99-97">+7(999)999-99-97</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-99-97">
 								490 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-99-97">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -768,11 +852,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-96">
 								<label for="+7(999)999-99-96">+7(999)999-99-96</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-99-96">
 								990 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-99-96">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -780,11 +864,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-95">
 								<label for="+7(999)999-99-95">+7(999)999-99-95</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-99-95">
 								2 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-99-95">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -792,11 +876,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-94">
 								<label for="+7(999)999-99-94">+7(999)999-99-94</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-99-94">
 								14 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-99-94">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -804,11 +888,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93">
 								<label for="+7(999)999-99-93">+7(999)999-99-93</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-99-93">
 								24 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-99-93">
 							</div>
 						</div>
 					</div>
@@ -818,11 +902,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-92-99">
 								<label for="+7(999)999-92-99">+7(999)999-92-99</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-92-99">
 								Бесплатно
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-92-99">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -830,11 +914,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-93-98">
 								<label for="+7(999)999-93-98">+7(999)999-93-98</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-93-98">
 								Бесплатно
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-93-98">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -842,11 +926,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-94-97">
 								<label for="+7(999)999-94-97">+7(999)999-94-97</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-94-97">
 								490 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-94-97">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -854,11 +938,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-95-96">
 								<label for="+7(999)999-95-96">+7(999)999-95-96</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-95-96">
 								990 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-95-96">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -866,11 +950,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-96-95">
 								<label for="+7(999)999-96-95">+7(999)999-96-95</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-96-95">
 								2 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-96-95">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -878,11 +962,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-97-94">
 								<label for="+7(999)999-97-94">+7(999)999-97-94</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites+7(999)999-97-94">
 								14 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-97-94">
 							</div>
 						</div>
 						<div class="phone-number__numbers-container">
@@ -890,11 +974,11 @@
 								<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-98-93">
 								<label for="+7(999)999-98-93">+7(999)999-98-93</label>
 							</div>
-							<div class="phone-number__price">
+							<label class="phone-number__price" for="favorites7(999)999-98-93">
 								24 900 ₽
-							</div>
+							</label>
 							<div class="phone-number__mark-checkbox-wrapper">
-								<input type="checkbox" class="phone-number__mark-checkbox">
+								<input type="checkbox" class="phone-number__mark-checkbox" id="favorites7(999)999-98-93">
 							</div>
 						</div>
 					</div>
@@ -909,7 +993,7 @@
 								<div class="numbers-scroller__up-tick tick-style">&#11015;</div>
 							</button>
 						</div>
-						<button class="numbers-scroller__show-next numbers-scroller__shower" type="button">
+						<button class="numbers-scroller__show-next numbers-scroller__shower favorites-btn" type="button">
 							<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style">Показать избранное</p>
 							<div class="numbers-scroller__up-tick tick-style">&#9733;</div>
 						</button>
