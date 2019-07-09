@@ -1052,6 +1052,7 @@ input:focus + .label,
 }
 
 .phone-number__numbers-container {
+	position: relative;
 	display: flex;
     justify-content: space-between;
     width: 610px;
@@ -1082,7 +1083,7 @@ input:focus + .label,
 	padding-top: 20px;
 }
 
-.numbers-scroller__shower {
+.favorites-btn{
 	display: flex;
 	justify-content: flex-start;
 }
@@ -1251,6 +1252,7 @@ input:focus + .label,
 	margin: 0 15px 0 0;
 }
 
+
 form input[type=checkbox]{
 	margin: 0 5px 0 0;
 	width: 20px;
@@ -1286,8 +1288,36 @@ form input[type=checkbox]:checked + label:before{
 	box-shadow: none;
 }
 
+.phone-number__price:after{
+	content: "★";
+	position: absolute;
+	right: 18px;
+	top: 12px;
+	color: #dce3ea;
+	font-size: 17px;
+}
 
+.phone-number__price.color:after{
+	content: "★";
+	position: absolute;
+	right: 18px;
+	top: 12px;
+	color: #ffdd2d;
+	font-size: 17px;
+}
 
 .page:not(.page_active) {
 	display: none;
+}
+
+.removal{
+	pointer-events: none ;
+}
+
+.phone-number__mark-checkbox-wrapper{
+	display: flex;
+	flex-direction: row-reverse;
+}
+.favorites{
+	color: #dce3ea;
 }

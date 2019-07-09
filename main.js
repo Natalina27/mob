@@ -350,8 +350,6 @@ calculatorCorrect();
 
 if (location.hash) {
 	updatePage();
-}else{
-
 }
 
 //навешиваем функцию при изменении хеша(событие hashchange)
@@ -383,35 +381,43 @@ function updatePage() {
 function check(){
 	//находим все страницы в документе
 	const pages = document.querySelectorAll('.page');
-
+	// console.log(pages);
 	//проверяем каждую страницу
 	pages.forEach(item => {
+		// console.log(item);
+		// console.log(item.querySelector('.form__next-btn'));
 		const checkbox = item.querySelector('.condition__checkbox');
 		const nextButton = item.querySelector('.form__next-btn');
-
+		const nextPage = item.querySelector(('.form__next-link'))
+		// console.log(nextButton);
 		//проверяем чтобы кнопка была активна
-		if(nextButton !== null){
-			//навешиваем событие клик
+
+		if(nextButton !== null && checkbox){
+
+
+			checkbox.addEventListener('click', () => {
+				if(!checkbox.checked){
+					nextPage.classList.add('removal');
+				}else{
+					nextPage.classList.remove('removal');
+				}
+			});
+
+			// навешиваем на кнопку событие клик
 			nextButton.addEventListener('click', () => {
 				//если галочка не стоит
 				if(!checkbox.checked){
 					//используем метод preventDefault() для отмены переключения стр
 					event.preventDefault();
-
 				}
 			})
 		}
+
 
 	})
 }
 
 check();
-
-
-
-
-
-
 
 
 
@@ -491,8 +497,63 @@ testText();
 
 
 
+function paintingStars() {
+	const block = document.querySelectorAll('.phone-number__numbers-container');
+
+	block.forEach(item => {
+		const star = item.querySelector('.phone-number__price');
+		const checkbox = item.querySelector('input[type="checkbox"]');
 
 
+		checkbox.addEventListener('click', () => {
+			star.classList.toggle('color');
+			favorites();
+		})
+	})
+
+}
+paintingStars();
+
+function favorites() {
+	const block = document.querySelector('.phone-number__numbers');
+	const container = block.querySelectorAll('.phone-number__numbers-container');
+	const favoritesNumbers = document.querySelector('.favorites-btn');
+	const favoritesName = favoritesNumbers.querySelectorAll('.favorites-items');
+	const arr = Array.from(container);
+
+	function stars(el){
+		return el.querySelector('input[type="checkbox"]:checked');
+	}
+
+	console.log(arr.some(stars));
+
+	if(arr.some(stars) === true){
+		console.log('test');
+		favoritesName.forEach(item => {
+			item.classList.remove('favorites');
+		})
+	}else{
+		console.log('test1');
+		favoritesName.forEach(item => {
+			item.classList.add('favorites');
+		})
+	}
+}
+
+function onlyFavorites() {
+	const page = 0;
+	const block = document.querySelectorAll('.phone-number__numbers-block1');
+
+	block.forEach(item => {
+		const elem = item.querySelectorAll('.phone-number__numbers-container');
+
+	})
+
+	
+
+}
+
+onlyFavorites();
 
 
 
