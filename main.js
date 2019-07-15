@@ -347,9 +347,12 @@ function calculatorCorrect(){
 calculatorCorrect();
 
 
-
-if (location.hash) {
-	updatePage();
+if (location.hostname === 'localhost') {
+	if (location.hash) {
+		updatePage();
+	}
+} else {
+	location.hash = '#application-form';
 }
 
 //навешиваем функцию при изменении хеша(событие hashchange)

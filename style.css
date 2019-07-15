@@ -303,6 +303,7 @@ input:focus + .label,
 	outline: none;
 }
 
+
 .form__time-input {
 	padding-left: 20px;
 }
@@ -1103,6 +1104,12 @@ input:focus + .label,
 	display: flex;
 }
 
+.numbers-scroller__shower{
+	width: auto;
+	display: flex;
+	align-items: center;
+}
+
 .label-radio {
 	cursor: pointer;
 }
@@ -1320,4 +1327,8 @@ form input[type=checkbox]:checked + label:before{
 }
 .favorites{
 	color: #dce3ea;
+}
+
+.label-search-by-numbers-input{
+	top: calc(50% - 22px/2);
 }
