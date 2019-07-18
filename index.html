@@ -5,6 +5,8 @@
 	<title>Mobile Training</title>
 	<link href="style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
 </head>
 <body>
 	<main class="main">
@@ -15,7 +17,7 @@
 						<h3 class="header__title">Заполните контактную информацию</h3>
 					</header>
 					<div class="form__phone input-parent">						
-						<input id="phone" class="form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67" pattern="[0-9]{11}">
+						<input id="phone" class="form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(">
 						<label class="label-phone" for="phone">Контактный телефон*</label>
 						<div class="input-close-btn js-clear-field"></div>
 						<div class="input-error js-phone-error"></div>
@@ -141,8 +143,9 @@
 						<h3 class="form__title">Когда удобно перезвонить</h3>
 						<div class="form__wrapper">
 							<div class="form__date input-parent ">											
-								<input id="date-for-callback" class="form__date-input js-ascent-text pseudo-hover" name="date" placeholder="30.03.2019">
-								<label class="label" for="date-for-callback">Дата*</label>
+								<input id="datepicker"  type="text" class="form__date-input js-ascent-text pseudo-hover" name="date" data-position="right top">
+								<label class="label" for="datepicker">Дата*</label>
+<!--								date-for-callback-->
 							</div>
 							<div class="form__time input-parent">						
 								<select id="time-for-callback" class="form__time-input js-ascent-text pseudo-hover" name="time">
@@ -1237,7 +1240,7 @@
 				<div class="form-bring__wrapper">		
 					<div class="form-bring__phone input-parent">			
 						<input id="friend-phone" class="form__phone-input form__friend-phone-input js-ascent-text pseudo-hover" type="tel" name="friend-phone">
-						<label class="label" for="friend-phone">Контактный телефон друга*</label>		
+						<label class="label" for="friend-phone">Контактный телефон друга*</label>
 						<div class="input-close-btn js-clear-field"></div>
 						<div class="input-error js-error"></div>
 					</div>
@@ -1253,15 +1256,69 @@
 						<input id="accept-condition" class="condition__checkbox" type="checkbox" name="accept-condition" checked>
 						<label class="condition__label" for="accept-condition">Я принимаю </label>
 						<button class="condition__button condition__button-friend js-open-btn-friend" type="button">условия передачи информации</button>
-					</div>			
-					<input id="invite" class="form__invite-submit" type="submit" name="invite" value="Пригласить">
+					</div>
+					<a href="#invite">
+						<button type="button" class="form__invite-submit form__next-btn">Пригласить</button>
+					</a>
+<!--					<input id="invite" class="form__invite-submit" type="button" name="invite" value="Пригласить">-->
+
 				</div>
 			</form>
 			<h3 class="thank-you__title">Спасибо, что пригласили друга!</h3>
 				<div class="thank-you">					
 					<button class="thank-you__more-btn" type="button">Пригласить еще</button>
 				</div>			
-		</div>	
+		</div>
+
+		<div class="page appointment-end" data-page="invite">
+			<div class="appointment-end__wrap"></div>
+			<h3 class="appointment-end__title">Спасибо, что выбрали Тинькофф Мобайл!</h3>
+			<p class="appointment-end__info">
+				Встреча с Вашим представителем пройдет 1 февраля <br>
+				с 10 до 19 по адресу г Ухта, ул Строительная, д 2а. <br>
+				Пожалуйста не забудьте паспорт. <br>
+
+			</p>
+			<div class="appointment-end__additional-info">
+				С утра в день доставки Вам прийдет СМС с телефоном представителя.
+				Сам представитель позвонит Вам за час до встречи.
+				На встрече Вам понадобится оригинал паспорта, представитель сфотографирует Вас и документы, поможет установить приложение и пополнить баланс.
+				Отмечу, что со всеми акциями и их полными условиями вы можете ознакомиться на сайте tinkoff.ru
+			</div>
+		</div>
+		<div class="page bring" data-page="invite">
+			<div class="bring__picture">
+				<div class="bring__picture-phone"></div>
+				<div class="bring__picture-price">
+					+ 300 <span class="bring__picture-ruble">&#8381;</span>
+				</div>
+			</div>
+			<div class="bring-info">
+				<h3 class="bring-info__title">Пригласите друга и получите 300 <span class="bring-info__title-ruble">&#8381;</span> на связь</h3>
+				<p class="subtitle">А друг получит месфц бесплатной связи, музыки и кино</p>
+			</div>
+			<div class="bring__invite">
+				<p class="bring__invite-text">
+					Мы свяжемся с вашим другом, чтобы рассказать об условиях акции и тарифах Тинькофф Мобайл.
+					Как только друг получит сим-карту и в течении 90 дней воспользуется связью, мы зачислим на ваш баланс 300 &#8381;.
+					Чем больше вы пригласите друзей, тем больше мы подарим денег на связь.
+				</p>
+				<div class="bring__invite-more">
+<!--					<button class="bring-info__learn-more" type="button">Подробное описание акции</button>-->
+					<a class="bring-info__conditions" href="http://static.tcsbank.ru/documents/promo/mgm-form/baf-mobile.pdf" target="_blank">Подробное описание акции</a>
+				</div>
+				<p class="bring-info__learn_more-text">
+					Укажите контактный номер и имя друга, которого хотите пригласить в Тинькофф Мобайл.
+					Мы свяжемся с вашим другом и расскажем об условиях и тарифах. <br>
+					Мы зачислим вам 300 ₽ на связь, а другу на месяц удвоим пакеты минут и интернета после того, как он получит SIM-карту и оплатит любую услугу.
+					Важно, чтобы друг сделал это в пределах 90 дней после активации SIM-карты. <br>
+				</p>
+			</div>
+			<h3 class="thank-you__title">Спасибо, что пригласили друга!</h3>
+			<div class="thank-you">
+				<button class="thank-you__more-btn" type="button">Пригласить еще</button>
+			</div>
+		</div>
 	</main>	
 	<div class="popup popup--condition js-popup--condition">
 		<div class="popup__close-btn-wrapper">
@@ -1339,10 +1396,15 @@
 			</div>	
 		</div>
 	</div>
-	<div class="page application-done hidden">
-		<div class="application-done__pic"></div>
+	<div class="page application-done hidden" data-page="application-done">
+		<div class="application-done__pic circle ">
+			<div class="circle__screamer-top"></div>
+			<div class="circle__screamer-bot"></div>
+		</div>
 		<h1 class="application-done__title">Заявка отправлена!</h1>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+	<script src="https://unpkg.com/imask"></script>
 	<script src="main.js"></script>
 </body>
 </html>

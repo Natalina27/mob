@@ -90,13 +90,13 @@ input:focus + .label,
 
 .label-phone {
     font-size: 14px;
-    position: absolute;	
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
 	transition-duration: 1s;
 	transition-property: transform;
     color: grey;
-    width: 100%;	
+    width: 100%;
 	padding: 9px 25px 36px 25px;
 	pointer-events: none;
 }
@@ -436,7 +436,6 @@ input:focus + .label,
 }
 
 .appointment {
-	margin-top: 90px;
 	border: 1px solid #dce3ea;
 	border-radius: 10px 10px 5px 5px;
 }
@@ -1129,13 +1128,32 @@ input:focus + .label,
 	visibility: visible;
 }
 
-.application-done__circle {
+.circle {
 	background: #ffdd2d;
 	width: 10em;
   	height: 10em;
   	border-radius: 50%;
-  	margin: 0 auto;
+  	margin: 30px auto 0 auto;
   	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.circle__screamer-top{
+	height: 80px;
+	width: 10px;
+	border: 3px solid #000;
+	transform: perspective(150px)rotateX(-40deg);
+	margin: 25px 0 -5px 0;
+}
+
+.circle__screamer-bot{
+	height: 12px;
+	width: 12px;
+	border: 2px solid #000;
+	border-radius: 50%;
 }
 
 
@@ -1153,7 +1171,8 @@ input:focus + .label,
 	border-radius: 5px;
     display: flex;
     justify-content: center;
-    flex-direction: column;	
+    flex-direction: column;
+	margin-top: 50px
 }
 
 .bucket-wrapper {
@@ -1332,3 +1351,30 @@ form input[type=checkbox]:checked + label:before{
 .label-search-by-numbers-input{
 	top: calc(50% - 22px/2);
 }
+
+.bring__invite{
+	width: 750px;
+	margin: 0 auto 40px auto;
+	font-size: 15px;
+}
+.bring__invite-text{
+	margin-bottom: 0;
+}
+
+.bring__invite-more .bring-info__learn-more{
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
