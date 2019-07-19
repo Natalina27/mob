@@ -56,9 +56,21 @@ const App = (function() {
 		recallCheckbox: function() {
 			shortAppSwitch.addEventListener("click", function() {
 				if (shortAppSwitch.checked) {
+					const linkNextButton = document.querySelector('.form__next-link');
+					const nextButton = linkNextButton.querySelector('.form__next-btn');
+
+					nextButton.innerHTML = "Короткая заявка";
+					linkNextButton.href = "#application-done";
+
 					recallForm.style.display = "block";
 					citizenship.style.display = "none";
 				} else {
+					const linkNextButton = document.querySelector('.form__next-link');
+					const nextButton = linkNextButton.querySelector('.form__next-btn');
+
+					nextButton.innerHTML = "Далее";
+					linkNextButton.href = "#phone-number-wrap";
+
 					recallForm.style.display = "none";
 					citizenship.style.display = "block";
 				}
@@ -76,7 +88,7 @@ const App = (function() {
 		},
 
 		appearError: function() {  // объявляем функцию
-			inputName.addEventListener("blur", function() {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
+			inputName.addEventListener("click", function() {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
 				if (inputName.value.length == 0) {  // Если значение в условии истинно, то есть значение селектора "нестрого" равно нулю выполняется функция.
 					errorPlace.innerHTML = "Укажите Ваше ФИО";  // В переменную вставляем  строку
 					inputName.classList.add("error-border"); // добавляем класс к переменной через метод класс-лист
@@ -103,7 +115,7 @@ const App = (function() {
 
 		citizenship: function() {
 			sel.addEventListener("click", function() {
-				if (sel.selectedIndex == 0) {
+				if (sel.selectedIndex === 0) {
 					countryOk.style.display = "none";
 				} else {
 					countryOk.style.display = "block";
@@ -113,7 +125,7 @@ const App = (function() {
 
 		ascentText: function() { // объявляем функцию, в параметры записываем переменную labelClass
 			for (let i = 0; i < inputs.length; i++) {  //объявляем цикл, который начинается с переменной i, к которой присваиваем значение 0; переменная i меньше чем массив inputs.length и инкрементацией последовательно перебирает его, выполняя следующие команды.
-				inputs[i].addEventListener("blur", function() {  // к сметченной с массивом [i] переменной инпут, навешивается событие blur, при этом объявляется функция при которой
+				inputs[i].addEventListener("click", function() {  // к сметченной с массивом [i] переменной инпут, навешивается событие blur, при этом объявляется функция при которой
 					if (inputs[i].value.length > 0) { // если значение сметченной с массивом [i] переменной инпут больше чем 0
 						inputs[i].classList.add("form__input-up"); // то к сметченной с массивом [i] переменной инпут добавляется класс
 					} else {
@@ -431,46 +443,68 @@ function testPhone(){
 	el.forEach(item => {
 		//на каджый инпут навешиваем событие onkeyup
 		//(возникает в момент отпускания нажатой клавиши)
-		item.onkeyup = function test(){
-			const value = item.value;
+		// item.onkeyup = function test(){
+		//
+		// 	const value = item.value;
+		//
+		// 	const pattern = /[-\.;":'a-zA-Zа-яА-Я]/;
+		//
+		// 	//делаем проверку с помощью метода test
+		// 	//(выполняет поиск сопоставления)
+		// 	if(pattern.test(value)){
+		// 		//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+		// 		item.value = value.replace(pattern, '');
+		// 	}
+		// };
+		item.addEventListener('click', () => {
+			IMask(
+				item, {
+					mask: '+{7}(000)000-00-00',
+					lazy: false
+				});
+		});
 
-			const pattern = /[-\.;":'a-zA-Zа-яА-Я]/;
-
-			//делаем проверку с помощью метода test
-			//(выполняет поиск сопоставления)
-			if(pattern.test(value)){
-				//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
-				item.value = value.replace(pattern, '');
-			}
-		}
-	})
+	});
 }
 
 testPhone();
 
-function testData() {
-	//находим все импуты, где должны записываться только цифры и .
-	const el = document.querySelectorAll(".form__date-input");
+// function testData() {
+// 	//находим все импуты, где должны записываться только цифры и .
+// 	const el = document.querySelectorAll(".form__date-input");
+//
+// 	el.forEach(item => {
+// 		//на каджый инпут навешиваем событие onkeyup
+// 		//(возникает в момент отпускания нажатой клавиши)
+// 		item.onkeyup = function test(){
+// 			const value = item.value;
+//
+// 			const pattern = /[-\;":'a-zA-Zа-яА-Я]/;
+//
+// 			//делаем проверку с помощью метода test
+// 			//(выполняет поиск сопоставления)
+// 			if(pattern.test(value)){
+// 				//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+// 				item.value = value.replace(pattern, '');
+// 			}
+// 		}
+// 	})
+// }
+//
+// testData();
 
-	el.forEach(item => {
-		//на каджый инпут навешиваем событие onkeyup
-		//(возникает в момент отпускания нажатой клавиши)
-		item.onkeyup = function test(){
-			const value = item.value;
-
-			const pattern = /[-\;":'a-zA-Zа-яА-Я]/;
-
-			//делаем проверку с помощью метода test
-			//(выполняет поиск сопоставления)
-			if(pattern.test(value)){
-				//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
-				item.value = value.replace(pattern, '');
-			}
-		}
-	})
-}
-
-testData();
+new Pikaday({
+    field: document.getElementById('datepicker'),
+    format: 'D/M/YYYY',
+    toString(date, format) {
+        // you should do formatting based on the passed format,
+        // but we will just return 'D/M/YYYY' for simplicity
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        return `${day}.${month}.${year}`;
+    },
+});
 
 function testText(){
 	//находим все импуты, где должны записываться только буквы
@@ -524,6 +558,7 @@ testText();
 //выделяет избранное
 function paintingStars() {
 	const block = document.querySelectorAll('.phone-number__numbers-container');
+	const favoritesNumbers = document.querySelector('.favorites-btn');
 
 	block.forEach(item => {
 		const star = item.querySelector('.phone-number__price');
@@ -535,6 +570,14 @@ function paintingStars() {
 
 			//вызываес функцию,находящуюся ниже
 			favorites();
+			const starActive = star.classList.contains('color');
+			const active = favoritesNumbers.classList.contains('active');
+
+			//если при клике звезда снимается и мы находимся в только фаворитах
+			if(active && !starActive){
+				//скрываем номер
+				item.classList.add('hidden');
+			}
 		})
 	})
 
@@ -558,13 +601,28 @@ function favorites() {
 
 	//проверяем,что в arr есть хотя бы один активный чекбокс
 	if(arr.some(stars) === true){
+
 		//для каждого элемента кнопки
 		favoritesName.forEach(item => {
 			item.classList.remove('favorites');
 			favoritesNumbers.classList.remove('removal');
 		})
 	}else{
+		//для каждого номера
+		container.forEach(item => {
+			const result = item.classList.contains('hidden');
+			//если есть класс hidden
+			if(result === true){
+				//то удаляем
+				item.classList.remove('hidden');
+			}else{
+				//если нет,то добавляем
+				item.classList.add('hidden');
+			}
+		});
+
 		favoritesName.forEach(item => {
+			favoritesNumbers.classList.remove('active');
 			item.classList.add('favorites');
 		})
 	}
@@ -748,6 +806,7 @@ function onlyFavorites() {
 						showFavoritesItems[i].classList.add('hidden');
 					}
 				}
+
 				//кнопке "показать избранное" добавляем класс active
 				showFavorites.classList.add('active');
 			}
