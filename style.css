@@ -1125,7 +1125,8 @@ input:focus + .label,
 
 
 .visible {
-	visibility: visible;
+	/*visibility: visible;*/
+	display: block;
 }
 
 .circle {

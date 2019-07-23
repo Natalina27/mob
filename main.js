@@ -199,29 +199,35 @@ showTariffOptions();
 
 
 function saveNumberNewNumberToggle() {
-    const save = document.querySelector(".phone-number__save-number");
-    const saveBlock = document.querySelector(".save-number__options");
-    const newNumber = document.querySelector(".phone-number__new-number");
-    const newNumberBlock = document.querySelector(".new-number__options");
+    const block = document.querySelectorAll('.phone-number');
 
+    block.forEach(item => {
+        const save = item.querySelector(".phone-number__save-number");
+        const newNumber = item.querySelector(".phone-number__new-number");
+        const newNumberBlock = item.querySelector(".new-number__options");
+        const saveBlock = item.querySelector(".save-number__options");
 
-    save.addEventListener("click", function () {
-        if (save.checked) {
-            saveBlock.classList.add("visible");
-            saveBlock.classList.remove("hidden");
-            newNumberBlock.classList.add("hidden");
-            newNumberBlock.classList.remove("visible");
-        }
-    });
+        save.addEventListener("click", function () {
+            if (save.checked) {
+                saveBlock.classList.add("visible");
+                saveBlock.classList.remove("hidden");
+                newNumberBlock.classList.add("hidden");
+                newNumberBlock.classList.remove("visible");
+            }
+        });
 
-    newNumber.addEventListener("click", function () {
-        if (newNumber.checked) {
-            saveBlock.classList.remove("visible");
-            saveBlock.classList.add("hidden");
-            newNumberBlock.classList.remove("hidden");
-            newNumberBlock.classList.add("visible");
-        }
-    });
+        newNumber.addEventListener("click", function () {
+            if (newNumber.checked) {
+                console.log('test');
+                saveBlock.classList.remove("visible");
+                saveBlock.classList.add("hidden");
+
+                newNumberBlock.classList.remove("hidden");
+                newNumberBlock.classList.add("visible");
+
+            }
+        })
+    })
 }
 
 
@@ -316,10 +322,9 @@ function calculator() {
     });
 
     priceValue.forEach(item => {
+        //вставляем значение price в разметку
         item.innerHTML = price;
     })
-    //вставляем значение price в разметку
-    // form.querySelector('.additional-offer__form-sum').innerHTML = price;
 }
 
 calculator();
@@ -354,10 +359,9 @@ function calculatorCorrect() {
         })
     });
     priceValue.forEach(item => {
+        //вставляем значение priceCorrect в разметку
         item.innerHTML = priceCorrect;
     })
-    //вставляем значение priceCorrect в разметку
-    // form.querySelector('.correct-service__form-sum').innerHTML = priceCorrect;
 }
 
 calculatorCorrect();
@@ -828,26 +832,86 @@ const social = document.querySelectorAll('[data-name="social"]');
 const music = document.querySelectorAll('[data-name="music"]');
 const video = document.querySelectorAll('[data-name="video"]');
 const sms = document.querySelectorAll('[data-name="sms"]');
+// const number = document.querySelectorAll('[ data-name="phone-number"]');
+const blockNumber = document.querySelectorAll('.phone-number__numbers-block1');
+const bucketInternet = document.querySelector('.bucket__internet');
+const bucketCalls = document.querySelector('.bucket__calls');
 
 
-function valueTransfer(internet, calls, sms, messengers, social, music, video) {
-    const items = [internet, calls, sms, messengers, social, music, video];
+NodeList.prototype.indexOf = Array.prototype.indexOf;
+
+function valueTransfer(internet, calls, sms, messengers, social, music, video, blockNumber) {
+    const items = [internet, calls, sms, messengers, social, music, video, blockNumber];
     items.forEach(select => {
         select.forEach(item => {
             item.addEventListener('change', event => {
                 select.forEach(item => {
-                    if (item.type === 'checkbox') {
+                    if (item.type === 'checkbox' || item.type === 'radio') {
                         item.checked = event.target.checked;
                     } else {
                         item.value = event.target.value;
                     }
-                })
+                    if(select === blockNumber){
+                        const numbers = item.querySelectorAll('input[name="numbers"]');
+                        // console.log(numbers);
+                        const number = item.querySelector('input[name="numbers"]:checked');
+                        // console.log(number);
+                        const index = numbers.indexOf(number);
+                        console.log(index);
+                    }
+                });
+                if(item.value === '0'){
+                    let sum = item.querySelector('[value="0"]').dataset.number;
+                    if(select === internet){
+                        bucketInternet.innerHTML = sum;
+                    }else if(select === calls){
+                            bucketCalls.innerHTML = sum;
+                        }
+                    console.log('test');
+                }else if(item.value === '99'){
+                    sum = item.querySelector('[value="99"]').dataset.number;
+                    bucketInternet.innerHTML = sum;
+                    console.log('test');
+                }else if(item.value === '159' && item.type !== 'checkbox'){
+                    sum = item.querySelector('[value="159"]').dataset.number;
+                    if(select === internet){
+                        bucketInternet.innerHTML = sum;
+                    }else if(select === calls){
+                        bucketCalls.innerHTML = sum;
+                    }
+                    console.log('test');
+                }else if(item.value === '199'){
+                    sum = item.querySelector('[value="199"]').dataset.number;
+                    bucketCalls.innerHTML = sum;
+                    console.log('test');
+                }else if(item.value === '229'){
+                    sum = item.querySelector('[value="229"]').dataset.number;
+                    bucketInternet.innerHTML = sum;
+                    console.log('test');
+                }else if(item.value === '299'){
+                    sum = item.querySelector('[value="159"]').dataset.number;
+                    bucketCalls.innerHTML = sum;
+                    console.log('test');
+                }else if(item.value === '359'){
+                    sum = item.querySelector('[value="359"]').dataset.number;
+                    bucketInternet.innerHTML = sum;
+                    console.log('test');
+                }else if(item.value === '999'){
+                    let sum = item.querySelector('[value="999"]').dataset.number;
+                    if(select === internet){
+                        bucketInternet.innerHTML = sum;
+                    }else if(select === calls){
+                        bucketCalls.innerHTML = sum;
+                    }
+                    console.log('test');
+                }
+
             });
         })
     })
 }
 
-valueTransfer(internet, calls, sms, messengers, social, music, video);
+valueTransfer(internet, calls, sms, messengers, social, music, video, blockNumber);
 
 
 
