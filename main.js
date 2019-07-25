@@ -125,7 +125,7 @@ const App = (function () {
 
         ascentText: function () { // объявляем функцию, в параметры записываем переменную labelClass
             for (let i = 0; i < inputs.length; i++) {  //объявляем цикл, который начинается с переменной i, к которой присваиваем значение 0; переменная i меньше чем массив inputs.length и инкрементацией последовательно перебирает его, выполняя следующие команды.
-                inputs[i].addEventListener("click", function () {  // к сметченной с массивом [i] переменной инпут, навешивается событие blur, при этом объявляется функция при которой
+                inputs[i].addEventListener("input", function () {  // к сметченной с массивом [i] переменной инпут, навешивается событие blur, при этом объявляется функция при которой
                     if (inputs[i].value.length > 0) { // если значение сметченной с массивом [i] переменной инпут больше чем 0
                         inputs[i].classList.add("form__input-up"); // то к сметченной с массивом [i] переменной инпут добавляется класс
                     } else {
@@ -206,6 +206,7 @@ function saveNumberNewNumberToggle() {
         const newNumber = item.querySelector(".phone-number__new-number");
         const newNumberBlock = item.querySelector(".new-number__options");
         const saveBlock = item.querySelector(".save-number__options");
+        const correctBtn = document.querySelector('.correct-number__next-bth');
 
         save.addEventListener("click", function () {
             if (save.checked) {
@@ -213,6 +214,9 @@ function saveNumberNewNumberToggle() {
                 saveBlock.classList.remove("hidden");
                 newNumberBlock.classList.add("hidden");
                 newNumberBlock.classList.remove("visible");
+
+                const number = document.getElementById('phone-number');
+                correctBtn.innerHTML = number.value;
             }
         });
 
@@ -225,6 +229,11 @@ function saveNumberNewNumberToggle() {
                 newNumberBlock.classList.remove("hidden");
                 newNumberBlock.classList.add("visible");
 
+                const activeNumberOne = item.querySelector('.phone-number__numbers input:checked');
+
+                if(activeNumberOne){
+                    correctBtn.innerHTML = activeNumberOne.value;
+                }
             }
         })
     })
@@ -832,75 +841,89 @@ const social = document.querySelectorAll('[data-name="social"]');
 const music = document.querySelectorAll('[data-name="music"]');
 const video = document.querySelectorAll('[data-name="video"]');
 const sms = document.querySelectorAll('[data-name="sms"]');
-// const number = document.querySelectorAll('[ data-name="phone-number"]');
+const enterPhone = document.querySelectorAll('.form__phone-input');
 const blockNumber = document.querySelectorAll('.phone-number__numbers-block1');
 const bucketInternet = document.querySelector('.bucket__internet');
 const bucketCalls = document.querySelector('.bucket__calls');
+const bucketPhone = document.querySelector('.options-menu__number-value');
 
 
 NodeList.prototype.indexOf = Array.prototype.indexOf;
 
-function valueTransfer(internet, calls, sms, messengers, social, music, video, blockNumber) {
-    const items = [internet, calls, sms, messengers, social, music, video, blockNumber];
+function valueTransfer(internet, calls, sms, messengers, social, music, video, blockNumber, enterPhone) {
+    const items = [internet, calls, sms, messengers, social, music, video, blockNumber, enterPhone];
     items.forEach(select => {
         select.forEach(item => {
             item.addEventListener('change', event => {
                 select.forEach(item => {
-                    if (item.type === 'checkbox' || item.type === 'radio') {
+                    if (item.type === 'checkbox') {
                         item.checked = event.target.checked;
+
                     } else {
                         item.value = event.target.value;
                     }
-                    if(select === blockNumber){
-                        const numbers = item.querySelectorAll('input[name="numbers"]');
-                        // console.log(numbers);
-                        const number = item.querySelector('input[name="numbers"]:checked');
-                        // console.log(number);
-                        const index = numbers.indexOf(number);
-                        console.log(index);
-                    }
                 });
-                if(item.value === '0'){
+
+                if (select === blockNumber) {
+                    const number = function () {
+                        const nameChange = event.target.name;
+                        const nameOther = event.target.name === 'numbers' ? 'numbers-block1' : 'numbers';
+                        const numbersOne = document.querySelectorAll('input[name="' + nameChange + '"]');
+                        const numbersTwo = document.querySelectorAll('input[name="' + nameOther + '"]');
+                        const activeNumberOne = document.querySelector('input[name="' + nameChange + '"]:checked');
+                        const index = numbersOne.indexOf(activeNumberOne);
+                        numbersTwo[index].checked = true;
+
+                        const correctBtn = document.querySelector('.correct-number__next-bth');
+                        bucketPhone.innerHTML = activeNumberOne.value;
+                        correctBtn.innerHTML = activeNumberOne.value;
+
+                    };
+                    setTimeout(number, 100);
+                }
+
+
+                if (item.value === '0') {
                     let sum = item.querySelector('[value="0"]').dataset.number;
-                    if(select === internet){
+                    if (select === internet) {
                         bucketInternet.innerHTML = sum;
-                    }else if(select === calls){
-                            bucketCalls.innerHTML = sum;
-                        }
-                    console.log('test');
-                }else if(item.value === '99'){
-                    sum = item.querySelector('[value="99"]').dataset.number;
-                    bucketInternet.innerHTML = sum;
-                    console.log('test');
-                }else if(item.value === '159' && item.type !== 'checkbox'){
-                    sum = item.querySelector('[value="159"]').dataset.number;
-                    if(select === internet){
-                        bucketInternet.innerHTML = sum;
-                    }else if(select === calls){
+                    } else if (select === calls) {
                         bucketCalls.innerHTML = sum;
                     }
                     console.log('test');
-                }else if(item.value === '199'){
+                } else if (item.value === '99') {
+                    sum = item.querySelector('[value="99"]').dataset.number;
+                    bucketInternet.innerHTML = sum;
+                    console.log('test');
+                } else if (item.value === '159' && item.type !== 'checkbox') {
+                    sum = item.querySelector('[value="159"]').dataset.number;
+                    if (select === internet) {
+                        bucketInternet.innerHTML = sum;
+                    } else if (select === calls) {
+                        bucketCalls.innerHTML = sum;
+                    }
+                    console.log('test');
+                } else if (item.value === '199') {
                     sum = item.querySelector('[value="199"]').dataset.number;
                     bucketCalls.innerHTML = sum;
                     console.log('test');
-                }else if(item.value === '229'){
+                } else if (item.value === '229') {
                     sum = item.querySelector('[value="229"]').dataset.number;
                     bucketInternet.innerHTML = sum;
                     console.log('test');
-                }else if(item.value === '299'){
+                } else if (item.value === '299') {
                     sum = item.querySelector('[value="159"]').dataset.number;
                     bucketCalls.innerHTML = sum;
                     console.log('test');
-                }else if(item.value === '359'){
+                } else if (item.value === '359') {
                     sum = item.querySelector('[value="359"]').dataset.number;
                     bucketInternet.innerHTML = sum;
                     console.log('test');
-                }else if(item.value === '999'){
+                } else if (item.value === '999') {
                     let sum = item.querySelector('[value="999"]').dataset.number;
-                    if(select === internet){
+                    if (select === internet) {
                         bucketInternet.innerHTML = sum;
-                    }else if(select === calls){
+                    } else if (select === calls) {
                         bucketCalls.innerHTML = sum;
                     }
                     console.log('test');
@@ -911,13 +934,51 @@ function valueTransfer(internet, calls, sms, messengers, social, music, video, b
     })
 }
 
-valueTransfer(internet, calls, sms, messengers, social, music, video, blockNumber);
+valueTransfer(internet, calls, sms, messengers, social, music, video, blockNumber, enterPhone);
 
 
+function conditionError() {
+    const block = document.querySelectorAll('.condition');
+    block.forEach(item => {
+        const text = item.querySelector('.js-error__checkbox');
+        const checkbox = item.querySelector('.condition__checkbox');
+        checkbox.addEventListener('click', event => {
+            if (checkbox.checked !== true) {
+                checkbox.classList.add('condition__error');
+                text.classList.remove('hidden');
+            } else {
+                checkbox.classList.remove('condition__error');
+                text.classList.add('hidden');
+            }
+        });
+    })
+}
+
+conditionError();
 
 
+function number() {
+    const block = document.querySelectorAll('.container-phone-number');
+    console.log(block);
+    block.forEach(item => {
+        console.log(item);
+        const btn = item.querySelector('.phone-number__next-btn');
+        console.log(btn);
+        const saveNumber = item.querySelector('.phone-number__save-number');
+        btn.addEventListener('click', event =>{
+            const number = document.getElementById('phone-num');
+            const endNumber = document.querySelector('.options-menu__number-value');
+            const correctBtn = document .querySelector('.correct-number__next-bth');
+            if(saveNumber.checked === true){
+                endNumber.innerHTML = number.value;
+                correctBtn.innerHTML = number.value;
+            }
+        })
+    });
 
+}
 
+number();
 
 
 
