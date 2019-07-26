@@ -53,6 +53,7 @@
 							<label class="form__label" for="save-number-two">Сохранить свой номер</label>
 						</div>
 						<p class="form__save_number-text">Перенесите свой номер в Тинькофф Мобайл и получите 1000 Р</p>
+
 					</div> 
 				-->	
 					<div class="form__citizenship">		
@@ -194,11 +195,11 @@
 					<div class="form__wrapper form__wrapper-next">									
 						<div class="condition">
 							<input id="accept-cond" class="condition__checkbox" type="checkbox" name="accept-condition" checked>
-<!--							<div class="input-error js-error__checkbox"></div>-->
 							<label class="condition__label" for="accept-cond">Я принимаю </label>
 							<a href="">
 								<button class="condition__button js-open-btn-conditions" type="button">условия передачи информации</button>
 							</a>
+							<div class="input-error js-error__checkbox hidden">Для продолжения нужно согласие с условиями</div>
 						</div>
 						<a href="#phone-number-wrap" class="form__next-link">
 							<button class="form__next-btn" type="button">Далее</button>
@@ -206,7 +207,7 @@
 					</div>					
 				</div>	
 			</div>	
-			<div class="page phone-number-wrap" data-page="phone-number-wrap">
+			<div class="page phone-number-wrap container-phone-number" data-page="phone-number-wrap">
 				<header class="header">
 					<h3 class="header__title">Выберите номер телефона</h3>
 				</header>
@@ -258,7 +259,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-99" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-99" value="+7(999)999-99-99">
 									<label for="block1+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-99">
@@ -270,7 +271,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-98" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-98" value="+7(999)999-99-98">
 									<label for="block1+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-98">
@@ -282,7 +283,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-97" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-97" value="+7(999)999-99-97">
 									<label for="block1+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-97">
@@ -294,7 +295,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-96" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-96" value="+7(999)999-99-96">
 									<label for="block1+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-96">
@@ -306,7 +307,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-95" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-95" value="+7(999)999-99-95">
 									<label for="block1+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-95">
@@ -318,7 +319,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-94" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-94" value="+7(999)999-99-94">
 									<label for="block1+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-94">
@@ -330,7 +331,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block1+7(999)999-99-93" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-93" value="+7(999)999-99-93">
 									<label for="block1+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<div class="phone-number__price">
@@ -342,7 +343,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-92-99"> data-name="phone-number"
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-92-99" value="+7(999)999-92-99">
 									<label for="block2+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-92-99">
@@ -354,7 +355,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-93-98" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-93-98" value="+7(999)999-93-98">
 									<label for="block2+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-93-98">
@@ -366,7 +367,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-94-97" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-94-97" value="+7(999)999-94-97">
 									<label for="block2+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-94-97">
@@ -378,7 +379,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-95-96" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-95-96" value="+7(999)999-95-96">
 									<label for="block2+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-95-96">
@@ -390,7 +391,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-96-95" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-96-95" value="+7(999)999-96-95">
 									<label for="block2+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-96-95">
@@ -402,7 +403,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-97-94" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-97-94" value="+7(999)999-97-94">
 									<label for="block2+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-97-94">
@@ -414,7 +415,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="block2+7(999)999-98-93" data-name="phone-number">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-98-93" value="+7(999)999-98-93">
 									<label for="block2+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-98-93">
@@ -593,7 +594,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="page correct-number application-form" data-page="correct-number">
+			<div class="page correct-number application-form container-phone-number" data-page="correct-number">
 				<header class="header">
 					<h3 class="header__title">Редактирование номер телефона</h3>
 				</header>
@@ -645,7 +646,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-99" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-99" value="+7(999)999-99-99">
 									<label for="+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-99">
@@ -657,7 +658,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-98" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-98" value="+7(999)999-99-98">
 									<label for="+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-98">
@@ -669,7 +670,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-97" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-97" value="+7(999)999-99-97">
 									<label for="+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-97">
@@ -681,7 +682,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-96" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-96" value="+7(999)999-99-96">
 									<label for="+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-96">
@@ -693,7 +694,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-95" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-95" value="+7(999)999-99-95">
 									<label for="+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-95">
@@ -705,7 +706,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-94" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-94" value="+7(999)999-99-94">
 									<label for="+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-94">
@@ -717,7 +718,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93" value="+7(999)999-99-93">
 									<label for="+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-93">
@@ -727,11 +728,9 @@
 									<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-99-93">
 								</div>
 							</div>
-						</div>
-						<div class="phone-number__numbers phone-number__numbers-block2 js-block2 hidden">
-							<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-92-99" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-92-99" value="+7(999)999-92-99">
 									<label for="+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-92-99">
@@ -741,9 +740,9 @@
 									<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-92-99">
 								</div>
 							</div>
-							<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-93-98" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-93-98" value="+7(999)999-93-98">
 									<label for="+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-93-98">
@@ -753,9 +752,9 @@
 									<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-93-98">
 								</div>
 							</div>
-							<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-94-97" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-94-97" value="7(999)999-94-97">
 									<label for="+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-94-97">
@@ -765,9 +764,9 @@
 									<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-94-97">
 								</div>
 							</div>
-							<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-95-96" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-95-96" value="+7(999)999-95-96">
 									<label for="+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-95-96">
@@ -777,9 +776,9 @@
 									<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-95-96">
 								</div>
 							</div>
-							<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-96-95" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-96-95" value="+7(999)999-96-95">
 									<label for="+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-96-95">
@@ -789,9 +788,9 @@
 									<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-96-95">
 								</div>
 							</div>
-							<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-97-94" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-97-94" value="+7(999)999-97-94">
 									<label for="+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-97-94">
@@ -801,9 +800,9 @@
 									<input type="checkbox" class="phone-number__mark-checkbox" id="favorites+7(999)999-97-94">
 								</div>
 							</div>
-							<div class="phone-number__numbers-container">
+							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-98-93" data-name="phone-number">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-98-93" value="+7(999)999-98-93">
 									<label for="+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="favorites7(999)999-98-93">
@@ -1000,6 +999,8 @@
 						<input id="accept-condition" class="condition__checkbox" type="checkbox" name="accept-condition" checked>
 						<label class="condition__label" for="accept-condition">Я принимаю </label>
 						<button class="condition__button condition__button-friend js-open-btn-friend" type="button">условия передачи информации</button>
+						<div class="input-error js-error__checkbox hidden">Для продолжения нужно согласие с условиями</div>
+
 					</div>
 					<a href="#invite">
 						<button type="button" class="form__invite-submit form__next-btn">Пригласить</button>

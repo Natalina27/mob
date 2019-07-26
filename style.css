@@ -52,8 +52,7 @@ input:focus + .label,
 	position: relative;
 }
 
-.input-error,
-.input-error__checkbox {
+.input-error{
 	color: red;
     position: absolute;
     top: 70px;
@@ -62,8 +61,14 @@ input:focus + .label,
     width: inherit;
 }
 
-.input-error__checkbox {
-	top: 55px;
+input .input-error__checkbox {
+	color: red;
+	position: absolute;
+	font-family: calibri;
+	font-size: 14px;
+	width: inherit;
+	bottom: -10px;
+	left: 10px;
 }
 
 .application-form {
@@ -1279,7 +1284,6 @@ input:focus + .label,
 	margin: 0 15px 0 0;
 }
 
-
 form input[type=checkbox]{
 	margin: 0 5px 0 0;
 	width: 20px;
@@ -1313,6 +1317,13 @@ form input[type=checkbox]:checked + label:before{
 	background-color: #ffdd2d;
 	border-color: #ffdd2d;
 	box-shadow: none;
+}
+
+form input[type=checkbox].condition__error + label:before{
+	background-color: red;
+	opacity: 0.1;
+	box-shadow: none;
+	border: 0;
 }
 
 .phone-number__price:after{
