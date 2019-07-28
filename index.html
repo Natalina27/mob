@@ -225,7 +225,7 @@
 					<div class="save-number__options">
 						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
 						<div class="form__phone input-parent">						
-							<input id="phone-num" class="form__phone-input pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<input id="phone-num" class="form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
 							<label class="label-phone" for="phone-num">Номер телефона*</label>
 							<div class="input-close-btn js-clear-field"></div>
 							<div class="input-error js-phone-error"></div>
@@ -480,7 +480,7 @@
 										<p class="options-menu__period">на 30 дней</p>
 									</div>
 									<a href="#correct-service">
-										<button type="button" class="options-menu__correction correction-top">&#9997;</button>
+										<button type="button" class="options-menu__correction correction-top">✏️</button>
 									</a>
 								</div>
 							</div>
@@ -491,15 +491,15 @@
 								<div class="options-menu__number-wrapper">
 									<p class="options-menu__price">0 ₽</p>
 									<a href="#correct-number">
-										<button type="button" class="options-menu__correction correction-bot">&#9997;</button>
+										<button type="button" class="options-menu__correction correction-bot">✏️</button>
 									</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="numbers-bucket__btn-wrapper">
+					<a href="#" class="numbers-bucket__btn-wrapper">
 						<button type="button" class="condition__button numbers-bucket__add-number-btn">+ ДОБАВИТЬ ЕЩЕ ОДИН НОМЕР ТЕЛЕФОНА</button>
-					</div>
+					</a>
 				</div>
 				<div class="numbers-bucket__form form__done-btn">
 					<div class="form__done-btn-wrapper">
@@ -612,7 +612,7 @@
 					<div class="save-number__options">
 						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
 						<div class="form__phone input-parent">
-							<input id="phone-number" class="form__phone-input pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<input id="phone-number" class="form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(">
 							<label class="label-phone" for="phone-number">Номер телефона*</label>
 							<div class="input-close-btn js-clear-field"></div>
 							<div class="input-error js-phone-error"></div>
@@ -623,7 +623,7 @@
 						<div class="form__wrapper-input input-parent">
 							<div class="form__search-by-numbers">
 								<input id="search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
-								<label class="label" for="search-by-numbers">Поиск по цифрам</label>
+								<label class="label label-search-by-numbers-input" for="search-by-numbers">Поиск по цифрам</label>
 								<div class="input-close-btn js-clear-field"></div>
 								<div class="input-error js-error"></div>
 							</div>
@@ -1009,10 +1009,6 @@
 
 				</div>
 			</form>
-			<h3 class="thank-you__title">Спасибо, что пригласили друга!</h3>
-				<div class="thank-you">					
-					<button class="thank-you__more-btn" type="button">Пригласить еще</button>
-				</div>			
 		</div>
 
 		<div class="page appointment-end" data-page="invite">
@@ -1059,9 +1055,11 @@
 					Важно, чтобы друг сделал это в пределах 90 дней после активации SIM-карты. <br>
 				</p>
 			</div>
-			<h3 class="thank-you__title">Спасибо, что пригласили друга!</h3>
-			<div class="thank-you">
-				<button class="thank-you__more-btn" type="button">Пригласить еще</button>
+			<div class="application-internet__options-wrapper">
+				<h3 class="thank-you__title">Спасибо, что пригласили друга!</h3>
+				<a href="#appointment-end" class="thank-you">
+					<button class="thank-you__more-btn" type="button">Пригласить еще</button>
+				</a>
 			</div>
 		</div>
 	</main>	
