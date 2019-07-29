@@ -324,13 +324,13 @@ input .input-error__checkbox {
     font-family: calibri;
 }
 
-/*.display-none {
+.display-none {
 	display: none;
 }
 
 .display-block {
 	display: block;
-}*/
+}
 
 
 
@@ -715,7 +715,6 @@ input .input-error__checkbox {
     padding: 10px 20px 10px 0px;
     cursor: pointer;
     border-radius: 50%;
-    display: none;
 }
 
 .input-close-btn:before,
@@ -1238,6 +1237,9 @@ input .input-error__checkbox {
 
 .options-menu__correction {
 	width: 50px;
+}
+.options-menu__correction:hover{
+	cursor: pointer;
 }
 
 .options-menu__options-value,

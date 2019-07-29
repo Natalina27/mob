@@ -16,7 +16,6 @@ const App = (function () {
     const incorrectPhoneMessage = "Некорректный номер телефона";
     const emptyPhonemessage = "Необходимо указать номер телефона";
 
-
     return {
         init: function () {
             this.learnMoreBtn();
@@ -24,8 +23,8 @@ const App = (function () {
             this.citizenship();
             this.ascentText();
             this.ascentText();
-            this.clearField();
-            this.appearCross();
+            // this.clearField();
+            // this.appearCross();
             this.toggleModal(".js-open-btn-conditions", ".js-popup--condition", ".js-close-btn-conditions");
             this.toggleModal(".js-open-btn-friend", ".js-popup--friend-condition", ".js-close-btn-friend");
             this.toggleModal(".js-number-transfer", ".js-popup--number-transfer", ".js-close-btn-number-transfer");
@@ -54,12 +53,15 @@ const App = (function () {
         },
 
         recallCheckbox: function () {
+            //При клике на "короткая заявка"
             shortAppSwitch.addEventListener("click", function () {
                 if (shortAppSwitch.checked) {
                     const linkNextButton = document.querySelector('.form__next-link');
                     const nextButton = linkNextButton.querySelector('.form__next-btn');
 
+                    //меняется текст на кнопке переключения стр
                     nextButton.innerHTML = "Короткая заявка";
+                    //меняется хеш на кнопке переключения стр
                     linkNextButton.href = "#application-done";
 
                     recallForm.style.display = "block";
@@ -68,7 +70,9 @@ const App = (function () {
                     const linkNextButton = document.querySelector('.form__next-link');
                     const nextButton = linkNextButton.querySelector('.form__next-btn');
 
+                    //меняется текст на кнопке переключения стр
                     nextButton.innerHTML = "Далее";
+                    //меняется хеш на кнопке переключения стр
                     linkNextButton.href = "#phone-number-wrap";
 
                     recallForm.style.display = "none";
@@ -131,36 +135,38 @@ const App = (function () {
                     } else {
                         inputs[i].classList.remove("form__input-up");	// или убирается класс
                     }
+                    clearCross();
 
-                    App.appearCross(); // если сметчилось, то так же выполняется функция ниже appear cross
+                    // App.appearCross(); // если сметчилось, то так же выполняется функция ниже appear cross
                 });
             }
         },
 
-        clearField: function () {  // объявляем функцию
-            for (let i = 0; i < clearField.length; i++) {
-                clearField[i].addEventListener("click", function () {
-                    inputs[i].value = "";
-                    if (inputs[i].value.length > 0) {
-                        inputs[i].classList.add("form__input-up");
-                    } else {
-                        inputs[i].classList.remove("form__input-up");
-                    }
-
-                    App.appearCross();
-                });
-            }
-        },
-
-        appearCross: function () {
-            for (let i = 0; i < clearField.length; i++) {
-                if (inputs[i].value.length > 0) {
-                    clearField[i].style.display = "block";
-                } else {
-                    clearField[i].style.display = "none";
-                }
-            }
-        },
+        // clearField: function () {  // объявляем функцию
+        //
+        //     for (let i = 0; i < clearField.length; i++) {
+        //         clearField[i].addEventListener("click", function () {
+        //             inputs[i].value = "";
+        //             if (inputs[i].value.length > 0) {
+        //                 inputs[i].classList.add("form__input-up");
+        //             } else {
+        //                 inputs[i].classList.remove("form__input-up");
+        //             }
+        //
+        //             App.appearCross();
+        //         });
+        //     }
+        // },
+        //
+        // appearCross: function () {
+        //     for (let i = 0; i < clearField.length; i++) {
+        //         if (inputs[i].value.length > 0) {
+        //             clearField[i].style.display = "block";
+        //         } else {
+        //             clearField[i].style.display = "none";
+        //         }
+        //     }
+        // },
 
         toggleModal: function (button, popup, closeButton) {
             const conditionInfo = document.querySelector(button);
@@ -170,7 +176,7 @@ const App = (function () {
             conditionInfo.addEventListener("click", function () {
                 modal.classList.add("modal");
                 modal.classList.remove("popup");
-            })
+            });
 
             closeBtn.addEventListener("click", function () {
                 modal.classList.add("popup");
@@ -375,12 +381,14 @@ function calculatorCorrect() {
 
 calculatorCorrect();
 
-
+//если на localhost
 if (location.hostname === 'localhost') {
+    //если есть хеш
     if (location.hash) {
         updatePage();
     }
 } else {
+    //если не localhost, то старт всегда с этого хеша
     location.hash = '#application-form';
 }
 
@@ -618,7 +626,7 @@ function favorites() {
     //проверяем,что в arr есть хотя бы один активный чекбокс
     if (arr.some(stars) === true) {
 
-        //для каждого элемента кнопки
+        //для каждого элемента кнопки "Показать избранное"
         favoritesName.forEach(item => {
             item.classList.remove('favorites');
             favoritesNumbers.classList.remove('removal');
@@ -636,7 +644,7 @@ function favorites() {
                 item.classList.add('hidden');
             }
         });
-
+        //для каждого элемента кнопки
         favoritesName.forEach(item => {
             favoritesNumbers.classList.remove('active');
             item.classList.add('favorites');
@@ -847,86 +855,91 @@ const bucketInternet = document.querySelector('.bucket__internet');
 const bucketCalls = document.querySelector('.bucket__calls');
 const bucketPhone = document.querySelector('.options-menu__number-value');
 
-
 NodeList.prototype.indexOf = Array.prototype.indexOf;
 
 function valueTransfer(internet, calls, sms, messengers, social, music, video, blockNumber, enterPhone) {
     const items = [internet, calls, sms, messengers, social, music, video, blockNumber, enterPhone];
     items.forEach(select => {
+        //для каждого элемента селеста(их всегда 2)
         select.forEach(item => {
+            //для элемента сеелеста, навешиваем событие
             item.addEventListener('change', event => {
+                //для каждого элемента селеста
                 select.forEach(item => {
                     if (item.type === 'checkbox') {
+                        //присваиваем элементу,тот checked, который имеется у элемента,
+                        //который мы изменили в рамках события
                         item.checked = event.target.checked;
-
                     } else {
+                        //присваиваем элементу,тот value, который имеется у элемента,
+                        //который мы изменили в рамках события
                         item.value = event.target.value;
                     }
                 });
 
+                //блок со списком нтелефонных номеров
                 if (select === blockNumber) {
+
                     const number = function () {
+                        //в переменную записывается name измененного эл
                         const nameChange = event.target.name;
+                        //в переменную записывается name другого эл
+                        //находим этот name.
+                        // если name измененного эл = numbers, то name другого эл = numbers-block1,
+                        // если name измененного эл != numbers, то name другого эл = numbers
                         const nameOther = event.target.name === 'numbers' ? 'numbers-block1' : 'numbers';
+                        //находим все эл блока, в котором было изменение
                         const numbersOne = document.querySelectorAll('input[name="' + nameChange + '"]');
+                        //находим все эл другого блока
                         const numbersTwo = document.querySelectorAll('input[name="' + nameOther + '"]');
+                        //находим эл :checked в блоке, в котором проихзошло изменение
                         const activeNumberOne = document.querySelector('input[name="' + nameChange + '"]:checked');
+                        //находим индекс :checked элемента
                         const index = numbersOne.indexOf(activeNumberOne);
+                        //делаем эл с таким же индексом в другом блоке :checked
                         numbersTwo[index].checked = true;
 
+                        //кнопка с номером телефона
                         const correctBtn = document.querySelector('.correct-number__next-bth');
+                        //в корзине номеров в инпут записываем значение :checked эл
                         bucketPhone.innerHTML = activeNumberOne.value;
+                        //в кнопку с номером телефона записываем значение :checked эл
                         correctBtn.innerHTML = activeNumberOne.value;
 
                     };
+                    //значение меняется только после выполнения функции(event),
+                    //поэтому, когда  number запускается, изменения еще не произошли
                     setTimeout(number, 100);
                 }
 
-
+                //перенос калькуляции и минут в корзину номеров
                 if (item.value === '0') {
                     let sum = item.querySelector('[value="0"]').dataset.number;
-                    if (select === internet) {
-                        bucketInternet.innerHTML = sum;
-                    } else if (select === calls) {
-                        bucketCalls.innerHTML = sum;
-                    }
-                    console.log('test');
+                    bucketInternet.innerHTML = sum;
+                    bucketCalls.innerHTML = sum;
                 } else if (item.value === '99') {
                     sum = item.querySelector('[value="99"]').dataset.number;
                     bucketInternet.innerHTML = sum;
-                    console.log('test');
                 } else if (item.value === '159' && item.type !== 'checkbox') {
                     sum = item.querySelector('[value="159"]').dataset.number;
-                    if (select === internet) {
-                        bucketInternet.innerHTML = sum;
-                    } else if (select === calls) {
-                        bucketCalls.innerHTML = sum;
-                    }
-                    console.log('test');
+                    bucketInternet.innerHTML = sum;
+                    bucketCalls.innerHTML = sum;
                 } else if (item.value === '199') {
                     sum = item.querySelector('[value="199"]').dataset.number;
                     bucketCalls.innerHTML = sum;
-                    console.log('test');
                 } else if (item.value === '229') {
                     sum = item.querySelector('[value="229"]').dataset.number;
                     bucketInternet.innerHTML = sum;
-                    console.log('test');
                 } else if (item.value === '299') {
                     sum = item.querySelector('[value="159"]').dataset.number;
                     bucketCalls.innerHTML = sum;
-                    console.log('test');
                 } else if (item.value === '359') {
                     sum = item.querySelector('[value="359"]').dataset.number;
                     bucketInternet.innerHTML = sum;
-                    console.log('test');
                 } else if (item.value === '999') {
-                    let sum = item.querySelector('[value="999"]').dataset.number;
-                    if (select === internet) {
-                        bucketInternet.innerHTML = sum;
-                    } else if (select === calls) {
-                        bucketCalls.innerHTML = sum;
-                    }
-                    console.log('test');
+                    sum = item.querySelector('[value="999"]').dataset.number;
+                    bucketInternet.innerHTML = sum;
+                    bucketCalls.innerHTML = sum;
                 }
 
             });
@@ -942,9 +955,12 @@ function conditionError() {
     block.forEach(item => {
         const text = item.querySelector('.js-error__checkbox');
         const checkbox = item.querySelector('.condition__checkbox');
+        //при клике на чекбокс с условиями
         checkbox.addEventListener('click', event => {
             if (checkbox.checked !== true) {
+                //меняется цвет
                 checkbox.classList.add('condition__error');
+                //появляется текст
                 text.classList.remove('hidden');
             } else {
                 checkbox.classList.remove('condition__error');
@@ -959,18 +975,18 @@ conditionError();
 
 function number() {
     const block = document.querySelectorAll('.container-phone-number');
-    console.log(block);
     block.forEach(item => {
-        console.log(item);
         const btn = item.querySelector('.phone-number__next-btn');
-        console.log(btn);
         const saveNumber = item.querySelector('.phone-number__save-number');
-        btn.addEventListener('click', event =>{
+        //при клике на кнопку далее в блоке с выбором телефона
+        btn.addEventListener('click', event => {
             const number = document.getElementById('phone-num');
-            const endNumber = document.querySelector('.options-menu__number-value');
             const correctBtn = document .querySelector('.correct-number__next-bth');
+            //если выбран "Сохранить номер"
             if(saveNumber.checked === true){
-                endNumber.innerHTML = number.value;
+                //то в корзине номеров в инпут записываем значение введенное пользователем
+                bucketPhone.innerHTML = number.value;
+                //в кнопку с номером телефона записываем значение введенное пользователем
                 correctBtn.innerHTML = number.value;
             }
         })
@@ -982,15 +998,68 @@ number();
 
 
 
+function clearInput(){
+    const blocks = document.querySelectorAll('.input-parent');
+    blocks.forEach(item => {
+        const clear = item.querySelector('.js-clear-field');
+        if(clear !== null){
+            clear.addEventListener('click', event => {
+                const field = item.querySelector('.js-ascent-text');
+                field.value="";
+                if (field.value.length > 0) {
+                    field.classList.add("form__input-up");
+                } else {
+                    field.classList.remove("form__input-up");
+                }
+                clearCross();
+            })
+        }
+
+    });
+}
 
 
+clearInput();
 
 
+function clearCross(){
+    const blocks = document.querySelectorAll('.input-parent');
+    blocks.forEach(item => {
+        const clear = item.querySelector('.js-clear-field');
+        if(clear !== null){
+            const field = item.querySelector('.js-ascent-text');
+            if (field.value.length > 0) {
+                // console.log(clear);
+                clear.classList.add('display-block');
+                clear.classList.remove('display-none');
+                // console.log(clear.style);
+            } else {
+                clear.classList.add('display-none');
+                clear.classList.remove('display-block');
+            }
+        }
+
+    })
+}
+
+clearCross();
 
 
+function correct(){
+    const block = document.querySelectorAll('.options-menu__correction');
+    block.forEach(item => {
+        //onmouseover - событие, когда курсор мыши наводится на элемент
+        item.onmouseover = function(){
+            item.innerHTML = '&#9997;️';
+        };
+        //onmouseout - событие, когда курсор мыши выходит за пределы элемента
+        item.onmouseout = function(){
+            item.innerHTML = '✏️';
+        }
+    })
+}
 
-
-
+correct();
 
 
 
