@@ -214,8 +214,8 @@
 				<div class="phone-number">
 					<div class="form__wrapper">
 						<div class="form__wrapper-number form__wrapper-number_save">
-							<label class="label-radio" for="keep-number">Сохранить номер</label>
-							<input id="keep-number" class="phone-number__save-number radio-btn-style" type="radio" name="save-new-number" value="save-number" checked>
+							<label class="label-radio" for="save-numb">Сохранить номер</label>
+							<input id="save-numb" class="phone-number__save-number radio-btn-style" type="radio" name="save-new-number" value="save-number" checked>
 						</div>
 						<div class="form__wrapper-number form__wrapper-number_new">
 							<label class="label-radio" for="new-numb">Получить новый номер</label>
@@ -225,8 +225,8 @@
 					<div class="save-number__options">
 						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
 						<div class="form__phone input-parent">						
-							<input id="phone-num" class="form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
-							<label class="label-phone" for="phone-num">Номер телефона*</label>
+							<input id="phone-numb" class="enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<label class="label-phone" for="phone-numb">Номер телефона*</label>
 							<div class="input-close-btn js-clear-field"></div>
 							<div class="input-error js-phone-error"></div>
 						</div>
@@ -497,7 +497,147 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="numbers-bucket__btn-wrapper">
+					<div class="bucket-wrapper bucket-new-number hidden">
+						<div class="bucket">
+							<div class="bucket-header__wrap">
+								<h4 class="bucket-header">Новый номер</h4>
+								<div class="close-block"></div>
+							</div>
+							<div class="bucket__options-menu">
+								<div class="options-menu__value-container">
+									<p class="options-menu__options-value">
+										<span class="bucket-new-number__internet">2</span> ГБ и
+										<span class="bucket-new-number__calls">0</span> минут</p>
+								</div>
+								<div class="options-menu__price-wrapper">
+									<div class="options-menu__price-container">
+										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__period">на 30 дней</p>
+									</div>
+									<a href="#correct-add-more-service">
+										<button type="button" class="options-menu__correction correction-top">✏️</button>
+									</a>
+								</div>
+							</div>
+							<div class="bucket__number-menu">
+								<div class="options-menu__number-container">
+									<p class="options-menu__new-number-value">+7 (999) 999 - 99 - 99</p>
+								</div>
+								<div class="options-menu__number-wrapper">
+									<p class="options-menu__price">0 ₽</p>
+									<a href="#correct-add-more-number">
+										<button type="button" class="options-menu__correction correction-bot">✏️</button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bucket-wrapper bucket-new-two-number hidden">
+						<div class="bucket">
+							<div class="bucket-header__wrap">
+								<h4 class="bucket-header">Новый номер</h4>
+								<div class="close-block"></div>
+							</div>
+							<div class="bucket__options-menu">
+								<div class="options-menu__value-container">
+									<p class="options-menu__options-value">
+										<span class="bucket-new-number__internet">2</span> ГБ и
+										<span class="bucket-new-number__calls">0</span> минут</p>
+								</div>
+								<div class="options-menu__price-wrapper">
+									<div class="options-menu__price-container">
+										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__period">на 30 дней</p>
+									</div>
+									<a href="#correct-add-more-service">
+										<button type="button" class="options-menu__correction correction-top">✏️</button>
+									</a>
+								</div>
+							</div>
+							<div class="bucket__number-menu">
+								<div class="options-menu__number-container">
+									<p class="options-menu__new-number-value">+7 (999) 999 - 99 - 99</p>
+								</div>
+								<div class="options-menu__number-wrapper">
+									<p class="options-menu__price">0 ₽</p>
+									<a href="#correct-add-more-number">
+										<button type="button" class="options-menu__correction correction-bot">✏️</button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bucket-wrapper bucket-new-three-number hidden">
+						<div class="bucket">
+							<div class="bucket-header__wrap">
+								<h4 class="bucket-header">Новый номер</h4>
+								<div class="close-block"></div>
+							</div>
+							<div class="bucket__options-menu">
+								<div class="options-menu__value-container">
+									<p class="options-menu__options-value">
+										<span class="bucket-new-number__internet">2</span> ГБ и
+										<span class="bucket-new-number__calls">0</span> минут</p>
+								</div>
+								<div class="options-menu__price-wrapper">
+									<div class="options-menu__price-container">
+										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__period">на 30 дней</p>
+									</div>
+									<a href="#correct-add-more-service">
+										<button type="button" class="options-menu__correction correction-top">✏️</button>
+									</a>
+								</div>
+							</div>
+							<div class="bucket__number-menu">
+								<div class="options-menu__number-container">
+									<p class="options-menu__new-number-value">+7 (999) 999 - 99 - 99</p>
+								</div>
+								<div class="options-menu__number-wrapper">
+									<p class="options-menu__price">0 ₽</p>
+									<a href="#correct-add-more-number">
+										<button type="button" class="options-menu__correction correction-bot">✏️</button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bucket-wrapper bucket-new-four-number hidden">
+						<div class="bucket">
+							<div class="bucket-header__wrap">
+								<h4 class="bucket-header">Новый номер</h4>
+								<div class="close-block"></div>
+							</div>
+							<div class="bucket__options-menu">
+								<div class="options-menu__value-container">
+									<p class="options-menu__options-value">
+										<span class="bucket-new-number__internet">2</span> ГБ и
+										<span class="bucket-new-number__calls">0</span> минут</p>
+								</div>
+								<div class="options-menu__price-wrapper">
+									<div class="options-menu__price-container">
+										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__period">на 30 дней</p>
+									</div>
+									<a href="#correct-add-more-service">
+										<button type="button" class="options-menu__correction correction-top">✏️</button>
+									</a>
+								</div>
+							</div>
+							<div class="bucket__number-menu">
+								<div class="options-menu__number-container">
+									<p class="options-menu__new-number-value">+7 (999) 999 - 99 - 99</p>
+								</div>
+								<div class="options-menu__number-wrapper">
+									<p class="options-menu__price">0 ₽</p>
+									<a href="#correct-add-more-number">
+										<button type="button" class="options-menu__correction correction-bot">✏️</button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#add-more-service" class="numbers-bucket__btn-wrapper">
 						<button type="button" class="condition__button numbers-bucket__add-number-btn">+ ДОБАВИТЬ ЕЩЕ ОДИН НОМЕР ТЕЛЕФОНА</button>
 					</a>
 				</div>
@@ -612,7 +752,7 @@
 					<div class="save-number__options">
 						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
 						<div class="form__phone input-parent">
-							<input id="phone-number" class="form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(">
+							<input id="phone-number" class="correct-number__phone-number enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="phone" value="+7(">
 							<label class="label-phone" for="phone-number">Номер телефона*</label>
 							<div class="input-close-btn js-clear-field"></div>
 							<div class="input-error js-phone-error"></div>
@@ -844,6 +984,2691 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="page add-more-service application-form" data-page="add-more-service">
+				<header class="header">
+					<h3 class="header__title">Выберите пакеты услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-more" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+								<option value="0" data-number="0">0 ГБ 0 ₽</option>
+								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
+								<option value="159" data-number="4">4 ГБ 159 ₽</option>
+								<option value="229" data-number="8">8 ГБ 229 ₽</option>
+								<option value="359" data-number="16">16 ГБ 359 ₽</option>
+								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet-more">Интернет</label>
+						</div>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-more" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+								<option value="0" data-number="0">0 минут 0 ₽</option>
+								<option value="159" data-number="400">400 минут 159 ₽</option>
+								<option value="199" data-number="600">600 минут 199 ₽</option>
+								<option value="299" data-number="1200">1200 минут 299 ₽</option>
+								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="calls-more">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="correct-service__form-item application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input id="messengers-more" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers-more" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input id="social-more" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-more">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input id="music-more" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="music-more">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input id="video-more" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="video-more">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages-more" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages-more">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+						<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					</a>
+					<a href="#add-more-number">
+						<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
+					</a>
+				</div>
+			</div>
+			<div class="page add-more-number phone-number-wrap container-new-phone-number" data-page="add-more-number">
+				<header class="header">
+					<h3 class="header__title">Выберите номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="add-more-save-numb">Сохранить номер</label>
+							<input id="add-more-save-numb" class="phone-number__save-number radio-btn-style" type="radio" name="add-more-save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="add-more-new-numb">Получить новый номер</label>
+							<input id="add-more-new-numb" class="phone-number__new-number radio-btn-style" type="radio" name="add-more-save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="add-more-phone-numb" class="enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="add-more-phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<label class="label-phone" for="add-more-phone-numb">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+					<div class="new-number__options hidden">
+						<div class="form__wrapper-input input-parent">
+							<div class="form__search-by-numbers">
+								<input id="add-more-phone-number-wrap-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label label-search-by-numbers-input" for="add-more-phone-number-wrap-search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="add-more-phone-number-wrap-price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
+									<option value="" selected hidden></option>
+									<option>Бесплатно</option>
+									<option>490 ₽</option>
+									<option>990 ₽</option>
+									<option>2 900 ₽</option>
+									<option>6 900 ₽</option>
+									<option>14 900 ₽</option>
+									<option>24 900 ₽</option>
+								</select>
+								<label class="label" for="add-more-phone-number-wrap-price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>
+						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<label for="add-more-block1+7(999)999-99-99">+7(999)999-99-99</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block1+7(999)999-99-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<label for="add-more-block1+7(999)999-99-98">+7(999)999-99-98</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block1+7(999)999-99-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<label for="add-more-block1+7(999)999-99-97">+7(999)999-99-97</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block1+7(999)999-99-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<label for="add-more-block1+7(999)999-99-96">+7(999)999-99-96</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block1+7(999)999-99-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<label for="add-more-block1+7(999)999-99-95">+7(999)999-99-95</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block1+7(999)999-99-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<label for="add-more-block1+7(999)999-99-94">+7(999)999-99-94</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block1+7(999)999-99-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<label for="add-more-block1+7(999)999-99-93">+7(999)999-99-93</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block1+7(999)999-99-93">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<label for="add-more-block2+7(999)999-92-99">+7(999)999-92-99</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-92-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block2+7(999)999-92-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<label for="add-more-block2+7(999)999-93-98">+7(999)999-93-98</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-93-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block2+7(999)999-93-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<label for="add-more-block2+7(999)999-94-97">+7(999)999-94-97</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-94-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block2+7(999)999-94-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<label for="add-more-block2+7(999)999-95-96">+7(999)999-95-96</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-95-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block2+7(999)999-95-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<label for="add-more-block2+7(999)999-96-95">+7(999)999-96-95</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-96-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block2+7(999)999-96-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<label for="add-more-block2+7(999)999-97-94">+7(999)999-97-94</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-97-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block2+7(999)999-97-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<label for="add-more-block2+7(999)999-98-93">+7(999)999-98-93</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-98-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-favorites-block2+7(999)999-98-93">
+								</div>
+							</div>
+						</div>
+						<div class="numbers-scroller">
+							<div class="numbers-scroller-wrap">
+								<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+									<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#11014;</div>
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Предыдущие</p>
+								</button>
+								<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items">Следующие</p>
+									<div class="numbers-scroller__up-tick tick-style favorites-items">&#11015;</div>
+								</button>
+							</div>
+							<button class="numbers-scroller__shower favorites-btn removal" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites favorites-items ">Показать избранное</p>
+								<div class="numbers-scroller__up-tick tick-style favorites favorites-items" >&#9733;</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<a href="#add-more-service" class="phone-number__prev-btn-wrap">
+							<button class="phone-number__prev-btn" type="button">Назад</button>
+						</a>
+						<a href="#numbers-bucket">
+							<button class="phone-number__next-btn add-more-number__next-btn" type="button">Оформить</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="page correct-add-more-service application-form" data-page="correct-add-more-service">
+				<header class="header">
+					<h3 class="header__title">Выберите пакеты услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-correct-add-more" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+								<option value="0" data-number="0">0 ГБ 0 ₽</option>
+								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
+								<option value="159" data-number="4">4 ГБ 159 ₽</option>
+								<option value="229" data-number="8">8 ГБ 229 ₽</option>
+								<option value="359" data-number="16">16 ГБ 359 ₽</option>
+								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet-correct-add-more">Интернет</label>
+						</div>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-correct-add-more" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+								<option value="0" data-number="0">0 минут 0 ₽</option>
+								<option value="159" data-number="400">400 минут 159 ₽</option>
+								<option value="199" data-number="600">600 минут 199 ₽</option>
+								<option value="299" data-number="1200">1200 минут 299 ₽</option>
+								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="calls-correct-add-more">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="correct-service__form-item application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input id="messengers-correct-add-more" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers-correct-add-more" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input id="social-correct-add-more" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-correct-add-more">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input id="music-correct-add-more" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="music-correct-add-more">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input id="video-correct-add-more" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="video-correct-add-more">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages-correct-add-more" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages-correct-add-more">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+						<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					</a>
+					<a href="#numbers-bucket">
+						<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
+					</a>
+				</div>
+			</div>
+			<div class="page correct-add-more-number application-form container-new-phone-number" data-page="correct-add-more-number">
+				<header class="header">
+					<h3 class="header__title">Выберите номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="save">Сохранить номер</label>
+							<input id="save" class="phone-number__save-number radio-btn-style" type="radio" name="correct-add-more-save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="new">Получить новый номер</label>
+							<input id="new" class="phone-number__new-number radio-btn-style" type="radio" name="correct-add-more-save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="number" class="correct-number__phone-number enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="add-more-phone" value="+7(">
+							<label class="label-phone" for="number">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+					<div class="new-number__options hidden">
+						<div class="form__wrapper-input input-parent">
+							<div class="form__search-by-numbers">
+								<input id="correct-add-more-number-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label label-search-by-numbers-input" for="correct-add-more-number-search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="correct-add-more-number-price" class="form__price-input js-ascent-text pseudo-hover" name="price">
+									<option value="" selected hidden></option>
+									<option>Бесплатно</option>
+									<option>490 ₽</option>
+									<option>990 ₽</option>
+									<option>2 900 ₽</option>
+									<option>6 900 ₽</option>
+									<option>14 900 ₽</option>
+									<option>24 900 ₽</option>
+								</select>
+								<label class="label" for="correct-add-more-number-price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>
+						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-99" value="+7(999)999-99-99">
+									<label for="correct-add-more-number-+7(999)999-99-99">+7(999)999-99-99</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-99-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-98" value="+7(999)999-99-98">
+									<label for="correct-add-more-number-+7(999)999-99-98">+7(999)999-99-98</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input id="correct-add-more-number-favorites+7(999)999-99-98" type="checkbox" class="phone-number__mark-checkbox">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-97" value="+7(999)999-99-97">
+									<label for="correct-add-more-number-+7(999)999-99-97">+7(999)999-99-97</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-99-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-96" value="+7(999)999-99-96">
+									<label for="correct-add-more-number-+7(999)999-99-96">+7(999)999-99-96</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-99-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-95" value="+7(999)999-99-95">
+									<label for="correct-add-more-number-+7(999)999-99-95">+7(999)999-99-95</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-99-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-94" value="+7(999)999-99-94">
+									<label for="correct-add-more-number-+7(999)999-99-94">+7(999)999-99-94</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-99-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-93" value="+7(999)999-99-93">
+									<label for="correct-add-more-number-+7(999)999-99-93">+7(999)999-99-93</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-99-93">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-92-99" value="+7(999)999-92-99">
+									<label for="correct-add-more-number-+7(999)999-92-99">+7(999)999-92-99</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-92-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-92-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-93-98" value="+7(999)999-93-98">
+									<label for="correct-add-more-number-+7(999)999-93-98">+7(999)999-93-98</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-93-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-93-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-94-97" value="7(999)999-94-97">
+									<label for="correct-add-more-number-+7(999)999-94-97">+7(999)999-94-97</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-94-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-94-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-95-96" value="+7(999)999-95-96">
+									<label for="correct-add-more-number-+7(999)999-95-96">+7(999)999-95-96</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-95-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-95-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-96-95" value="+7(999)999-96-95">
+									<label for="correct-add-more-number-+7(999)999-96-95">+7(999)999-96-95</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-96-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-96-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-97-94" value="+7(999)999-97-94">
+									<label for="correct-add-more-number-+7(999)999-97-94">+7(999)999-97-94</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-97-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites+7(999)999-97-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-98-93" value="+7(999)999-98-93">
+									<label for="correct-add-more-number-+7(999)999-98-93">+7(999)999-98-93</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites7(999)999-98-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-number-favorites7(999)999-98-93">
+								</div>
+							</div>
+						</div>
+						<div class="numbers-scroller">
+							<div class="numbers-scroller-wrap">
+								<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+									<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#11014;</div>
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Предыдущие</p>
+								</button>
+								<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items">Следующие</p>
+									<div class="numbers-scroller__up-tick tick-style favorites-items">&#11015;</div>
+								</button>
+							</div>
+							<button class="numbers-scroller__shower favorites-btn" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Показать избранное</p>
+								<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#9733;</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+							<button class="condition__button correct-number__prev-but" type="button">вернуться в корзину</button>
+						</a>
+						<a href="#numbers-bucket">
+							<button class="phone-number__next-btn correct-number__add-more-next-bth" type="button">Изменить на +7(999)999-99-99</button>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="page add-more-two-service application-form" data-page="add-more-two-service">
+				<header class="header">
+					<h3 class="header__title">Выберите пакеты услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-more-two" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+								<option value="0" data-number="0">0 ГБ 0 ₽</option>
+								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
+								<option value="159" data-number="4">4 ГБ 159 ₽</option>
+								<option value="229" data-number="8">8 ГБ 229 ₽</option>
+								<option value="359" data-number="16">16 ГБ 359 ₽</option>
+								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet-more-two">Интернет</label>
+						</div>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-more-two" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+								<option value="0" data-number="0">0 минут 0 ₽</option>
+								<option value="159" data-number="400">400 минут 159 ₽</option>
+								<option value="199" data-number="600">600 минут 199 ₽</option>
+								<option value="299" data-number="1200">1200 минут 299 ₽</option>
+								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="calls-more-two">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="correct-service__form-item application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input id="messengers-more-two" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers-more-two" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input id="social-more-two" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-more-two">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input id="music-more-two" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="music-more-two">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input id="video-more-two" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="video-more-two">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages-more-two" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages-more-two">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+						<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					</a>
+					<a href="#add-more-two-number">
+						<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
+					</a>
+				</div>
+			</div>
+			<div class="page add-more-two-number phone-number-wrap container-new-phone-number" data-page="add-more-two-number">
+				<header class="header">
+					<h3 class="header__title">Выберите номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="add-more-two-save-numb">Сохранить номер</label>
+							<input id="add-more-two-save-numb" class="phone-number__save-number radio-btn-style" type="radio" name="add-more-two-save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="add-more-two-new-numb">Получить новый номер</label>
+							<input id="add-more-two-new-numb" class="phone-number__new-number radio-btn-style" type="radio" name="add-more-two-save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="add-more-two-phone-numb" class="enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="add-more-phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<label class="label-phone" for="add-more-two-phone-numb">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+					<div class="new-number__options hidden">
+						<div class="form__wrapper-input input-parent">
+							<div class="form__search-by-numbers">
+								<input id="add-more-two-phone-number-wrap-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label label-search-by-numbers-input" for="add-more-two-phone-number-wrap-search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="add-more-two-phone-number-wrap-price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
+									<option value="" selected hidden></option>
+									<option>Бесплатно</option>
+									<option>490 ₽</option>
+									<option>990 ₽</option>
+									<option>2 900 ₽</option>
+									<option>6 900 ₽</option>
+									<option>14 900 ₽</option>
+									<option>24 900 ₽</option>
+								</select>
+								<label class="label" for="add-more-two-phone-number-wrap-price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>
+						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<label for="add-more-two-block1+7(999)999-99-99">+7(999)999-99-99</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block1+7(999)999-99-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<label for="add-more-two-block1+7(999)999-99-98">+7(999)999-99-98</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block1+7(999)999-99-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<label for="add-more-two-block1+7(999)999-99-97">+7(999)999-99-97</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block1+7(999)999-99-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<label for="add-more-two-block1+7(999)999-99-96">+7(999)999-99-96</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block1+7(999)999-99-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<label for="add-more-two-block1+7(999)999-99-95">+7(999)999-99-95</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block1+7(999)999-99-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<label for="add-more-two-block1+7(999)999-99-94">+7(999)999-99-94</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block1+7(999)999-99-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<label for="add-more-two-block1+7(999)999-99-93">+7(999)999-99-93</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block1+7(999)999-99-93">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<label for="add-more-two-block2+7(999)999-92-99">+7(999)999-92-99</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-92-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block2+7(999)999-92-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<label for="add-more-two-block2+7(999)999-93-98">+7(999)999-93-98</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-93-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block2+7(999)999-93-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<label for="add-more-two-block2+7(999)999-94-97">+7(999)999-94-97</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-94-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block2+7(999)999-94-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<label for="add-more-two-block2+7(999)999-95-96">+7(999)999-95-96</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-95-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block2+7(999)999-95-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<label for="add-more-two-block2+7(999)999-96-95">+7(999)999-96-95</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-96-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block2+7(999)999-96-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<label for="add-more-two-block2+7(999)999-97-94">+7(999)999-97-94</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-97-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block2+7(999)999-97-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<label for="add-more-two-block2+7(999)999-98-93">+7(999)999-98-93</label>
+								</div>
+								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-98-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-two-favorites-block2+7(999)999-98-93">
+								</div>
+							</div>
+						</div>
+						<div class="numbers-scroller">
+							<div class="numbers-scroller-wrap">
+								<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+									<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#11014;</div>
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Предыдущие</p>
+								</button>
+								<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items">Следующие</p>
+									<div class="numbers-scroller__up-tick tick-style favorites-items">&#11015;</div>
+								</button>
+							</div>
+							<button class="numbers-scroller__shower favorites-btn removal" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites favorites-items ">Показать избранное</p>
+								<div class="numbers-scroller__up-tick tick-style favorites favorites-items" >&#9733;</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<a href="#add-more-two-service" class="phone-number__prev-btn-wrap">
+							<button class="phone-number__prev-btn" type="button">Назад</button>
+						</a>
+						<a href="#numbers-bucket">
+							<button class="phone-number__next-btn add-more-number__next-btn" type="button">Оформить</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="page correct-add-more-two-service application-form" data-page="correct-add-more-two-service">
+				<header class="header">
+					<h3 class="header__title">Выберите пакеты услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-correct-add-more-two" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+								<option value="0" data-number="0">0 ГБ 0 ₽</option>
+								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
+								<option value="159" data-number="4">4 ГБ 159 ₽</option>
+								<option value="229" data-number="8">8 ГБ 229 ₽</option>
+								<option value="359" data-number="16">16 ГБ 359 ₽</option>
+								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet-correct-add-more-two">Интернет</label>
+						</div>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-correct-add-more-two" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+								<option value="0" data-number="0">0 минут 0 ₽</option>
+								<option value="159" data-number="400">400 минут 159 ₽</option>
+								<option value="199" data-number="600">600 минут 199 ₽</option>
+								<option value="299" data-number="1200">1200 минут 299 ₽</option>
+								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="calls-correct-add-more-two">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="correct-service__form-item application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input id="messengers-correct-add-more-two" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers-correct-add-more-two" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input id="social-correct-add-more-two" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-correct-add-more-two">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input id="music-correct-add-more-two" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="music-correct-add-more-two">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input id="video-correct-add-more-two" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="video-correct-add-more-two">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages-correct-add-more-two" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages-correct-add-more-two">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+						<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					</a>
+					<a href="#numbers-bucket">
+						<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
+					</a>
+				</div>
+			</div>
+			<div class="page correct-add-more-two-number application-form container-new-phone-number" data-page="correct-add-more-two-number">
+				<header class="header">
+					<h3 class="header__title">Выберите номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="save-more-two">Сохранить номер</label>
+							<input id="save-more-two" class="phone-number__save-number radio-btn-style" type="radio" name="correct-add-more-two-save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="new-more-two">Получить новый номер</label>
+							<input id="new-more-two" class="phone-number__new-number radio-btn-style" type="radio" name="correct-add-more-two-save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="number-more-two" class="correct-number__phone-number enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="add-more-phone" value="+7(">
+							<label class="label-phone" for="number-more-two">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+					<div class="new-number__options hidden">
+						<div class="form__wrapper-input input-parent">
+							<div class="form__search-by-numbers">
+								<input id="correct-add-more-two-number-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label label-search-by-numbers-input" for="correct-add-more-two-number-search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="correct-add-more-two-number-price" class="form__price-input js-ascent-text pseudo-hover" name="price">
+									<option value="" selected hidden></option>
+									<option>Бесплатно</option>
+									<option>490 ₽</option>
+									<option>990 ₽</option>
+									<option>2 900 ₽</option>
+									<option>6 900 ₽</option>
+									<option>14 900 ₽</option>
+									<option>24 900 ₽</option>
+								</select>
+								<label class="label" for="correct-add-more-two-number-price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>
+						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-99" value="+7(999)999-99-99">
+									<label for="correct-add-more-two-number-+7(999)999-99-99">+7(999)999-99-99</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-99-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-98" value="+7(999)999-99-98">
+									<label for="correct-add-more-two-number-+7(999)999-99-98">+7(999)999-99-98</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input id="correct-add-more-two-number-favorites+7(999)999-99-98" type="checkbox" class="phone-number__mark-checkbox">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-97" value="+7(999)999-99-97">
+									<label for="correct-add-more-two-number-+7(999)999-99-97">+7(999)999-99-97</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-99-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-96" value="+7(999)999-99-96">
+									<label for="correct-add-more-two-number-+7(999)999-99-96">+7(999)999-99-96</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-99-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-95" value="+7(999)999-99-95">
+									<label for="correct-add-more-two-number-+7(999)999-99-95">+7(999)999-99-95</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-99-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-94" value="+7(999)999-99-94">
+									<label for="correct-add-more-two-number-+7(999)999-99-94">+7(999)999-99-94</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-99-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-93" value="+7(999)999-99-93">
+									<label for="correct-add-more-two-number-+7(999)999-99-93">+7(999)999-99-93</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-99-93">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-92-99" value="+7(999)999-92-99">
+									<label for="correct-add-more-two-number-+7(999)999-92-99">+7(999)999-92-99</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-92-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-92-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-93-98" value="+7(999)999-93-98">
+									<label for="correct-add-more-two-number-+7(999)999-93-98">+7(999)999-93-98</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-93-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-93-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-94-97" value="7(999)999-94-97">
+									<label for="correct-add-more-two-number-+7(999)999-94-97">+7(999)999-94-97</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-94-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-94-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-95-96" value="+7(999)999-95-96">
+									<label for="correct-add-more-two-number-+7(999)999-95-96">+7(999)999-95-96</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-95-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-95-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-96-95" value="+7(999)999-96-95">
+									<label for="correct-add-more-two-number-+7(999)999-96-95">+7(999)999-96-95</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-96-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-96-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-97-94" value="+7(999)999-97-94">
+									<label for="correct-add-more-two-number-+7(999)999-97-94">+7(999)999-97-94</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-97-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites+7(999)999-97-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-98-93" value="+7(999)999-98-93">
+									<label for="correct-add-more-two-number-+7(999)999-98-93">+7(999)999-98-93</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-two-number-favorites7(999)999-98-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-two-number-favorites7(999)999-98-93">
+								</div>
+							</div>
+						</div>
+						<div class="numbers-scroller">
+							<div class="numbers-scroller-wrap">
+								<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+									<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#11014;</div>
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Предыдущие</p>
+								</button>
+								<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items">Следующие</p>
+									<div class="numbers-scroller__up-tick tick-style favorites-items">&#11015;</div>
+								</button>
+							</div>
+							<button class="numbers-scroller__shower favorites-btn" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Показать избранное</p>
+								<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#9733;</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+							<button class="condition__button correct-number__prev-but" type="button">вернуться в корзину</button>
+						</a>
+						<a href="#numbers-bucket">
+							<button class="phone-number__next-btn correct-number__add-more-next-bth" type="button">Изменить на +7(999)999-99-99</button>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="page add-more-three-service application-form" data-page="add-more-three-service">
+				<header class="header">
+					<h3 class="header__title">Выберите пакеты услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-more-three" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+								<option value="0" data-number="0">0 ГБ 0 ₽</option>
+								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
+								<option value="159" data-number="4">4 ГБ 159 ₽</option>
+								<option value="229" data-number="8">8 ГБ 229 ₽</option>
+								<option value="359" data-number="16">16 ГБ 359 ₽</option>
+								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet-more-three">Интернет</label>
+						</div>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-more-three" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+								<option value="0" data-number="0">0 минут 0 ₽</option>
+								<option value="159" data-number="400">400 минут 159 ₽</option>
+								<option value="199" data-number="600">600 минут 199 ₽</option>
+								<option value="299" data-number="1200">1200 минут 299 ₽</option>
+								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="calls-more-three">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="correct-service__form-item application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input id="messengers-more-three" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers-more-three" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input id="social-more-three" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-more-three">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input id="music-more-three" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="music-more-three">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input id="video-more-three" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="video-more-three">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages-more-three" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages-more-three">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+						<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					</a>
+					<a href="#add-more-three-number">
+						<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
+					</a>
+				</div>
+			</div>
+			<div class="page add-more-three-number phone-number-wrap container-new-phone-number" data-page="add-more-three-number">
+				<header class="header">
+					<h3 class="header__title">Выберите номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="add-more-three-save-numb">Сохранить номер</label>
+							<input id="add-more-three-save-numb" class="phone-number__save-number radio-btn-style" type="radio" name="add-more-three-save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="add-more-three-new-numb">Получить новый номер</label>
+							<input id="add-more-three-new-numb" class="phone-number__new-number radio-btn-style" type="radio" name="add-more-three-save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="add-more-three-phone-numb" class="enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="add-more-phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<label class="label-phone" for="add-more-three-phone-numb">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+					<div class="new-number__options hidden">
+						<div class="form__wrapper-input input-parent">
+							<div class="form__search-by-numbers">
+								<input id="add-more-three-phone-number-wrap-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label label-search-by-numbers-input" for="add-more-three-phone-number-wrap-search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="add-more-three-phone-number-wrap-price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
+									<option value="" selected hidden></option>
+									<option>Бесплатно</option>
+									<option>490 ₽</option>
+									<option>990 ₽</option>
+									<option>2 900 ₽</option>
+									<option>6 900 ₽</option>
+									<option>14 900 ₽</option>
+									<option>24 900 ₽</option>
+								</select>
+								<label class="label" for="add-more-three-phone-number-wrap-price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>
+						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<label for="add-more-three-block1+7(999)999-99-99">+7(999)999-99-99</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block1+7(999)999-99-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<label for="add-more-three-block1+7(999)999-99-98">+7(999)999-99-98</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block1+7(999)999-99-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<label for="add-more-three-block1+7(999)999-99-97">+7(999)999-99-97</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block1+7(999)999-99-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<label for="add-more-three-block1+7(999)999-99-96">+7(999)999-99-96</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block1+7(999)999-99-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<label for="add-more-three-block1+7(999)999-99-95">+7(999)999-99-95</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block1+7(999)999-99-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<label for="add-more-three-block1+7(999)999-99-94">+7(999)999-99-94</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block1+7(999)999-99-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<label for="add-more-three-block1+7(999)999-99-93">+7(999)999-99-93</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block1+7(999)999-99-93">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<label for="add-more-three-block2+7(999)999-92-99">+7(999)999-92-99</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-92-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block2+7(999)999-92-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<label for="add-more-three-block2+7(999)999-93-98">+7(999)999-93-98</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-93-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block2+7(999)999-93-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<label for="add-more-three-block2+7(999)999-94-97">+7(999)999-94-97</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-94-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block2+7(999)999-94-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<label for="add-more-three-block2+7(999)999-95-96">+7(999)999-95-96</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-95-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block2+7(999)999-95-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<label for="add-more-three-block2+7(999)999-96-95">+7(999)999-96-95</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-96-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block2+7(999)999-96-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<label for="add-more-three-block2+7(999)999-97-94">+7(999)999-97-94</label>
+								</div>
+								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-97-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block2+7(999)999-97-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<label for="add-more-three-block2+7(999)999-98-93">+7(999)999-98-93</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-98-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-three-favorites-block2+7(999)999-98-93">
+								</div>
+							</div>
+						</div>
+						<div class="numbers-scroller">
+							<div class="numbers-scroller-wrap">
+								<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+									<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#11014;</div>
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Предыдущие</p>
+								</button>
+								<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items">Следующие</p>
+									<div class="numbers-scroller__up-tick tick-style favorites-items">&#11015;</div>
+								</button>
+							</div>
+							<button class="numbers-scroller__shower favorites-btn removal" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites favorites-items ">Показать избранное</p>
+								<div class="numbers-scroller__up-tick tick-style favorites favorites-items" >&#9733;</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<a href="#add-more-three-service" class="phone-number__prev-btn-wrap">
+							<button class="phone-number__prev-btn" type="button">Назад</button>
+						</a>
+						<a href="#numbers-bucket">
+							<button class="phone-number__next-btn add-more-number__next-btn" type="button">Оформить</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="page correct-add-more-three-service application-form" data-page="correct-add-more-three-service">
+				<header class="header">
+					<h3 class="header__title">Выберите пакеты услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-correct-add-more-three" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+								<option value="0" data-number="0">0 ГБ 0 ₽</option>
+								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
+								<option value="159" data-number="4">4 ГБ 159 ₽</option>
+								<option value="229" data-number="8">8 ГБ 229 ₽</option>
+								<option value="359" data-number="16">16 ГБ 359 ₽</option>
+								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet-correct-add-more-three">Интернет</label>
+						</div>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-correct-add-more-three" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+								<option value="0" data-number="0">0 минут 0 ₽</option>
+								<option value="159" data-number="400">400 минут 159 ₽</option>
+								<option value="199" data-number="600">600 минут 199 ₽</option>
+								<option value="299" data-number="1200">1200 минут 299 ₽</option>
+								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="calls-correct-add-more-three">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="correct-service__form-item application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input id="messengers-correct-add-more-three" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers-correct-add-more-three" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input id="social-correct-add-more-three" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-correct-add-more-three">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input id="music-correct-add-more-three" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="music-correct-add-more-three">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input id="video-correct-add-more-three" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="video-correct-add-more-three">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages-correct-add-more-three" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages-correct-add-more-three">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+						<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					</a>
+					<a href="#numbers-bucket">
+						<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
+					</a>
+				</div>
+			</div>
+			<div class="page correct-add-more-three-number application-form container-new-phone-number" data-page="correct-add-more-three-number">
+				<header class="header">
+					<h3 class="header__title">Выберите номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="save-more-three">Сохранить номер</label>
+							<input id="save-more-three" class="phone-number__save-number radio-btn-style" type="radio" name="correct-add-more-three-save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="new-more-three">Получить новый номер</label>
+							<input id="new-more-three" class="phone-number__new-number radio-btn-style" type="radio" name="correct-add-more-three-save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="number-more-three" class="correct-number__phone-number enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="add-more-phone" value="+7(">
+							<label class="label-phone" for="number-more-three">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+					<div class="new-number__options hidden">
+						<div class="form__wrapper-input input-parent">
+							<div class="form__search-by-numbers">
+								<input id="correct-add-more-three-number-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label label-search-by-numbers-input" for="correct-add-more-three-number-search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="correct-add-more-three-number-price" class="form__price-input js-ascent-text pseudo-hover" name="price">
+									<option value="" selected hidden></option>
+									<option>Бесплатно</option>
+									<option>490 ₽</option>
+									<option>990 ₽</option>
+									<option>2 900 ₽</option>
+									<option>6 900 ₽</option>
+									<option>14 900 ₽</option>
+									<option>24 900 ₽</option>
+								</select>
+								<label class="label" for="correct-add-more-three-number-price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>
+						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-99" value="+7(999)999-99-99">
+									<label for="correct-add-more-three-number-+7(999)999-99-99">+7(999)999-99-99</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-99-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-98" value="+7(999)999-99-98">
+									<label for="correct-add-more-three-number-+7(999)999-99-98">+7(999)999-99-98</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input id="correct-add-more-three-number-favorites+7(999)999-99-98" type="checkbox" class="phone-number__mark-checkbox">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-97" value="+7(999)999-99-97">
+									<label for="correct-add-more-three-number-+7(999)999-99-97">+7(999)999-99-97</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-99-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-96" value="+7(999)999-99-96">
+									<label for="correct-add-more-three-number-+7(999)999-99-96">+7(999)999-99-96</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-99-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-95" value="+7(999)999-99-95">
+									<label for="correct-add-more-three-number-+7(999)999-99-95">+7(999)999-99-95</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-99-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-94" value="+7(999)999-99-94">
+									<label for="correct-add-more-three-number-+7(999)999-99-94">+7(999)999-99-94</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-99-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-93" value="+7(999)999-99-93">
+									<label for="correct-add-more-three-number-+7(999)999-99-93">+7(999)999-99-93</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-99-93">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-92-99" value="+7(999)999-92-99">
+									<label for="correct-add-more-three-number-+7(999)999-92-99">+7(999)999-92-99</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-92-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-92-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-93-98" value="+7(999)999-93-98">
+									<label for="correct-add-more-three-number-+7(999)999-93-98">+7(999)999-93-98</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-93-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-93-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-94-97" value="7(999)999-94-97">
+									<label for="correct-add-more-three-number-+7(999)999-94-97">+7(999)999-94-97</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-94-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-94-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-95-96" value="+7(999)999-95-96">
+									<label for="correct-add-more-three-number-+7(999)999-95-96">+7(999)999-95-96</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-95-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-95-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-96-95" value="+7(999)999-96-95">
+									<label for="correct-add-more-three-number-+7(999)999-96-95">+7(999)999-96-95</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-96-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-96-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-97-94" value="+7(999)999-97-94">
+									<label for="correct-add-more-three-number-+7(999)999-97-94">+7(999)999-97-94</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-97-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites+7(999)999-97-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-98-93" value="+7(999)999-98-93">
+									<label for="correct-add-more-three-number-+7(999)999-98-93">+7(999)999-98-93</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-three-number-favorites7(999)999-98-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-three-number-favorites7(999)999-98-93">
+								</div>
+							</div>
+						</div>
+						<div class="numbers-scroller">
+							<div class="numbers-scroller-wrap">
+								<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+									<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#11014;</div>
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Предыдущие</p>
+								</button>
+								<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items">Следующие</p>
+									<div class="numbers-scroller__up-tick tick-style favorites-items">&#11015;</div>
+								</button>
+							</div>
+							<button class="numbers-scroller__shower favorites-btn" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Показать избранное</p>
+								<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#9733;</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+							<button class="condition__button correct-number__prev-but" type="button">вернуться в корзину</button>
+						</a>
+						<a href="#numbers-bucket">
+							<button class="phone-number__next-btn correct-number__add-more-next-bth" type="button">Изменить на +7(999)999-99-99</button>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="page add-more-four-service application-form" data-page="add-more-four-service">
+				<header class="header">
+					<h3 class="header__title">Выберите пакеты услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-more-four" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+								<option value="0" data-number="0">0 ГБ 0 ₽</option>
+								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
+								<option value="159" data-number="4">4 ГБ 159 ₽</option>
+								<option value="229" data-number="8">8 ГБ 229 ₽</option>
+								<option value="359" data-number="16">16 ГБ 359 ₽</option>
+								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet-more-four">Интернет</label>
+						</div>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-more-four" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+								<option value="0" data-number="0">0 минут 0 ₽</option>
+								<option value="159" data-number="400">400 минут 159 ₽</option>
+								<option value="199" data-number="600">600 минут 199 ₽</option>
+								<option value="299" data-number="1200">1200 минут 299 ₽</option>
+								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="calls-more-four">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="correct-service__form-item application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input id="messengers-more-four" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers-more-four" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input id="social-more-four" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-more-four">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input id="music-more-four" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="music-more-four">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input id="video-more-four" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="video-more-four">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages-more-four" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages-more-four">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+						<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					</a>
+					<a href="#add-more-four-number">
+						<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
+					</a>
+				</div>
+			</div>
+			<div class="page add-more-four-number phone-number-wrap container-new-phone-number" data-page="add-more-four-number">
+				<header class="header">
+					<h3 class="header__title">Выберите номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="add-more-four-save-numb">Сохранить номер</label>
+							<input id="add-more-four-save-numb" class="phone-number__save-number radio-btn-style" type="radio" name="add-more-four-save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="add-more-four-new-numb">Получить новый номер</label>
+							<input id="add-more-four-new-numb" class="phone-number__new-number radio-btn-style" type="radio" name="add-more-four-save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="add-more-four-phone-numb" class="enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="add-more-phone" value="+7(" placeholder="+7(921) 123-45-67">
+							<label class="label-phone" for="add-more-four-phone-numb">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+					<div class="new-number__options hidden">
+						<div class="form__wrapper-input input-parent">
+							<div class="form__search-by-numbers">
+								<input id="add-more-four-phone-number-wrap-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label label-search-by-numbers-input" for="add-more-four-phone-number-wrap-search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="add-more-four-phone-number-wrap-price" class="form__price-input js-ascent-text pseudo-hover" type="select" name="price">
+									<option value="" selected hidden></option>
+									<option>Бесплатно</option>
+									<option>490 ₽</option>
+									<option>990 ₽</option>
+									<option>2 900 ₽</option>
+									<option>6 900 ₽</option>
+									<option>14 900 ₽</option>
+									<option>24 900 ₽</option>
+								</select>
+								<label class="label" for="add-more-four-phone-number-wrap-price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>
+						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<label for="add-more-four-block1+7(999)999-99-99">+7(999)999-99-99</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block1+7(999)999-99-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<label for="add-more-four-block1+7(999)999-99-98">+7(999)999-99-98</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block1+7(999)999-99-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<label for="add-more-four-block1+7(999)999-99-97">+7(999)999-99-97</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block1+7(999)999-99-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<label for="add-more-four-block1+7(999)999-99-96">+7(999)999-99-96</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block1+7(999)999-99-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<label for="add-more-four-block1+7(999)999-99-95">+7(999)999-99-95</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block1+7(999)999-99-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<label for="add-more-four-block1+7(999)999-99-94">+7(999)999-99-94</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block1+7(999)999-99-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<label for="add-more-four-block1+7(999)999-99-93">+7(999)999-99-93</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block1+7(999)999-99-93">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<label for="add-more-four-block2+7(999)999-92-99">+7(999)999-92-99</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-92-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block2+7(999)999-92-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<label for="add-more-four-block2+7(999)999-93-98">+7(999)999-93-98</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-93-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block2+7(999)999-93-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<label for="add-more-four-block2+7(999)999-94-97">+7(999)999-94-97</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-94-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block2+7(999)999-94-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<label for="add-more-four-block2+7(999)999-95-96">+7(999)999-95-96</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-95-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block2+7(999)999-95-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<label for="add-more-four-block2+7(999)999-96-95">+7(999)999-96-95</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-96-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block2+7(999)999-96-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<label for="add-more-four-block2+7(999)999-97-94">+7(999)999-97-94</label>
+								</div>
+								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-97-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block2+7(999)999-97-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<label for="add-more-four-block2+7(999)999-98-93">+7(999)999-98-93</label>
+								</div>
+								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-98-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="add-more-four-favorites-block2+7(999)999-98-93">
+								</div>
+							</div>
+						</div>
+						<div class="numbers-scroller">
+							<div class="numbers-scroller-wrap">
+								<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+									<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#11014;</div>
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Предыдущие</p>
+								</button>
+								<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items">Следующие</p>
+									<div class="numbers-scroller__up-tick tick-style favorites-items">&#11015;</div>
+								</button>
+							</div>
+							<button class="numbers-scroller__shower favorites-btn removal" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites favorites-items ">Показать избранное</p>
+								<div class="numbers-scroller__up-tick tick-style favorites favorites-items" >&#9733;</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<a href="#add-more-four-service" class="phone-number__prev-btn-wrap">
+							<button class="phone-number__prev-btn" type="button">Назад</button>
+						</a>
+						<a href="#numbers-bucket">
+							<button class="phone-number__next-btn add-more-number__next-btn" type="button">Оформить</button>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="page correct-add-more-four-service application-form" data-page="correct-add-more-four-service">
+				<header class="header">
+					<h3 class="header__title">Выберите пакеты услуг</h3>
+				</header>
+				<div class="additional-offer">
+					<div class="calculator-count">
+						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<p class="subtitle">на 30 дней</p>
+					</div>
+					<div class="form__wrapper additional-offer__form">
+						<div class="correct-service__form-item form__internet input-parent">
+							<select id="internet-correct-add-more-four" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+								<option value="0" data-number="0">0 ГБ 0 ₽</option>
+								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
+								<option value="159" data-number="4">4 ГБ 159 ₽</option>
+								<option value="229" data-number="8">8 ГБ 229 ₽</option>
+								<option value="359" data-number="16">16 ГБ 359 ₽</option>
+								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+							</select>
+							<label class="label-select" for="internet-correct-add-more-four">Интернет</label>
+						</div>
+						<div class="correct-service__form-item form__calls input-parent">
+							<select id="calls-correct-add-more-four" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+								<option value="0" data-number="0">0 минут 0 ₽</option>
+								<option value="159" data-number="400">400 минут 159 ₽</option>
+								<option value="199" data-number="600">600 минут 199 ₽</option>
+								<option value="299" data-number="1200">1200 минут 299 ₽</option>
+								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+							</select>
+							<label class="label-select" for="calls-correct-add-more-four">Звонки</label>
+						</div>
+					</div>
+					<div class="application-internet">
+						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
+						<div class="correct-service__form-item application-internet__options-wrapper">
+							<div class="application-internet__wrap-mes-soc">
+								<div class="application-internet__options application-internet__options-wrapper_messenger ">
+									<input id="messengers-correct-add-more-four" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<label class="form__label" for="messengers-correct-add-more-four" >Мессенджеры (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
+								</div>
+
+								<div class="application-internet__options application-internet__options-wrapper_social">
+									<input id="social-correct-add-more-four" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<label class="form__label" for="social-correct-add-more-four">Социальные сети (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
+								</div>
+							</div>
+							<div class="application-internet__wrap-mus-vid">
+								<div class="application-internet__options application-internet__options-wrapper_music">
+									<input id="music-correct-add-more-four" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<label class="form__label" for="music-correct-add-more-four">Музыка (59 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
+								</div>
+								<div class="application-internet__options application-internet__options-wrapper_video">
+									<input id="video-correct-add-more-four" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<label class="form__label" for="video-correct-add-more-four">Видео (159 ₽)</label>
+									<button type="button" class="application-internet__button">?</button>
+									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
+								</div>
+							</div>
+						</div>
+						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+							<div class="application-internet__options application-internet__options-wrapper_sms">
+								<input id="messages-correct-add-more-four" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<label class="form__label" for="messages-correct-add-more-four">Безлимитные СМС (49 ₽)</label>
+								<button type="button" class="application-internet__button">?</button>
+								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
+							</div>
+							<!--							<div class="application-internet__options"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper-next">
+					<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+						<button class="condition__button correct-service__prev-but" type="button">вернуться в корзину</button>
+					</a>
+					<a href="#numbers-bucket">
+						<button class="form__next-btn correct-service__next-bth" type="button">Далее</button>
+					</a>
+				</div>
+			</div>
+			<div class="page correct-add-more-four-number application-form container-new-phone-number" data-page="correct-add-more-four-number">
+				<header class="header">
+					<h3 class="header__title">Выберите номер телефона</h3>
+				</header>
+				<div class="phone-number">
+					<div class="form__wrapper">
+						<div class="form__wrapper-number form__wrapper-number_save">
+							<label class="label-radio" for="save-more-four">Сохранить номер</label>
+							<input id="save-more-four" class="phone-number__save-number radio-btn-style" type="radio" name="correct-add-more-four-save-new-number" value="save-number" checked>
+						</div>
+						<div class="form__wrapper-number form__wrapper-number_new">
+							<label class="label-radio" for="new-more-four">Получить новый номер</label>
+							<input id="new-more-four" class="phone-number__new-number radio-btn-style" type="radio" name="correct-add-more-four-save-new-number" value="new-number">
+						</div>
+					</div>
+					<div class="save-number__options">
+						<h4 class="phone-number__subtitle subtitle">Введите номер телефона для переноса в Тинькофф Мобайл</h4>
+						<div class="form__phone input-parent">
+							<input id="number-more-four" class="correct-number__phone-number enter-number form__phone-input js-ascent-text pseudo-hover js-phone-input" type="tel" name="add-more-phone" value="+7(">
+							<label class="label-phone" for="number-more-four">Номер телефона*</label>
+							<div class="input-close-btn js-clear-field"></div>
+							<div class="input-error js-phone-error"></div>
+						</div>
+						<button class="phone-number__learn-more-btn condition__button js-number-transfer" type="button">Подробнее о переносе номера</button>
+					</div>
+					<div class="new-number__options hidden">
+						<div class="form__wrapper-input input-parent">
+							<div class="form__search-by-numbers">
+								<input id="correct-add-more-four-number-search-by-numbers" class="form__search-by-numbers-input js-ascent-text pseudo-hover" type="number" name="search-by-numbers">
+								<label class="label label-search-by-numbers-input" for="correct-add-more-four-number-search-by-numbers">Поиск по цифрам</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+							<div class="form__price input-parent">
+								<select id="correct-add-more-four-number-price" class="form__price-input js-ascent-text pseudo-hover" name="price">
+									<option value="" selected hidden></option>
+									<option>Бесплатно</option>
+									<option>490 ₽</option>
+									<option>990 ₽</option>
+									<option>2 900 ₽</option>
+									<option>6 900 ₽</option>
+									<option>14 900 ₽</option>
+									<option>24 900 ₽</option>
+								</select>
+								<label class="label" for="correct-add-more-four-number-price">Стоимость</label>
+								<div class="input-close-btn js-clear-field"></div>
+								<div class="input-error js-error"></div>
+							</div>
+						</div>
+						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-99" value="+7(999)999-99-99">
+									<label for="correct-add-more-four-number-+7(999)999-99-99">+7(999)999-99-99</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-99-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-98" value="+7(999)999-99-98">
+									<label for="correct-add-more-four-number-+7(999)999-99-98">+7(999)999-99-98</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input id="correct-add-more-four-number-favorites+7(999)999-99-98" type="checkbox" class="phone-number__mark-checkbox">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-97" value="+7(999)999-99-97">
+									<label for="correct-add-more-four-number-+7(999)999-99-97">+7(999)999-99-97</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-99-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-96" value="+7(999)999-99-96">
+									<label for="correct-add-more-four-number-+7(999)999-99-96">+7(999)999-99-96</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-99-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-95" value="+7(999)999-99-95">
+									<label for="correct-add-more-four-number-+7(999)999-99-95">+7(999)999-99-95</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-99-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-94" value="+7(999)999-99-94">
+									<label for="correct-add-more-four-number-+7(999)999-99-94">+7(999)999-99-94</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-99-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-93" value="+7(999)999-99-93">
+									<label for="correct-add-more-four-number-+7(999)999-99-93">+7(999)999-99-93</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-99-93">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-92-99" value="+7(999)999-92-99">
+									<label for="correct-add-more-four-number-+7(999)999-92-99">+7(999)999-92-99</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-92-99">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-92-99">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-93-98" value="+7(999)999-93-98">
+									<label for="correct-add-more-four-number-+7(999)999-93-98">+7(999)999-93-98</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-93-98">
+									Бесплатно
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-93-98">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-94-97" value="7(999)999-94-97">
+									<label for="correct-add-more-four-number-+7(999)999-94-97">+7(999)999-94-97</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-94-97">
+									490 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-94-97">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-95-96" value="+7(999)999-95-96">
+									<label for="correct-add-more-four-number-+7(999)999-95-96">+7(999)999-95-96</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-95-96">
+									990 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-95-96">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-96-95" value="+7(999)999-96-95">
+									<label for="correct-add-more-four-number-+7(999)999-96-95">+7(999)999-96-95</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-96-95">
+									2 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-96-95">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-97-94" value="+7(999)999-97-94">
+									<label for="correct-add-more-four-number-+7(999)999-97-94">+7(999)999-97-94</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-97-94">
+									14 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites+7(999)999-97-94">
+								</div>
+							</div>
+							<div class="phone-number__numbers-container hidden">
+								<div class="phone-number__numbers-input-wrapper">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-98-93" value="+7(999)999-98-93">
+									<label for="correct-add-more-four-number-+7(999)999-98-93">+7(999)999-98-93</label>
+								</div>
+								<label class="phone-number__price" for="correct-add-more-four-number-favorites7(999)999-98-93">
+									24 900 ₽
+								</label>
+								<div class="phone-number__mark-checkbox-wrapper">
+									<input type="checkbox" class="phone-number__mark-checkbox" id="correct-add-more-four-number-favorites7(999)999-98-93">
+								</div>
+							</div>
+						</div>
+						<div class="numbers-scroller">
+							<div class="numbers-scroller-wrap">
+								<button class="numbers-scroller__show-prev numbers-scroller__shower js-block-prevBtn" type="button">
+									<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#11014;</div>
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Предыдущие</p>
+								</button>
+								<button class="numbers-scroller__show-next numbers-scroller__shower js-block-nextBtn" type="button">
+									<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items">Следующие</p>
+									<div class="numbers-scroller__up-tick tick-style favorites-items">&#11015;</div>
+								</button>
+							</div>
+							<button class="numbers-scroller__shower favorites-btn" type="button">
+								<p class="numbers-scroller__prev-btn numbers-scroller__text-btn tick-style favorites-items favorites">Показать избранное</p>
+								<div class="numbers-scroller__up-tick tick-style favorites-items favorites">&#9733;</div>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="phone-number__footer">
+					<div class="phone-number__footer_prev-next">
+						<a href="#numbers-bucket" class="phone-number__prev-btn-wrap">
+							<button class="condition__button correct-number__prev-but" type="button">вернуться в корзину</button>
+						</a>
+						<a href="#numbers-bucket">
+							<button class="phone-number__next-btn correct-number__add-more-next-bth" type="button">Изменить на +7(999)999-99-99</button>
+						</a>
+					</div>
+				</div>
+			</div>
+
 			<div class="page appointment" data-page="appointment">
 				<header class="header">
 					<h3 class="header__title">Назначение встречи</h3>
