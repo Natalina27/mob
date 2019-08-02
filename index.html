@@ -29,7 +29,7 @@
 						<div class="input-error js-error-name"></div>
 					</div>	
 					<div class="form__region input-parent">					
-						<input id="region" class="form__text-input form__region-input js-ascent-text pseudo-hover js-open-tariff" type="text" name="region">
+						<input id="region" class="form__text-input form__region-input js-ascent-text pseudo-hover js-open-tariff" type="text" name="region" required>
 						<label class="label" for="region">Ваш город или регион*</label>
 						<div class="input-close-btn js-clear-field"></div>
 						<div class="input-error js-error-region"></div>
@@ -144,7 +144,7 @@
 						<h3 class="form__title">Когда удобно перезвонить</h3>
 						<div class="form__wrapper">
 							<div class="form__date input-parent ">											
-								<input id="datepicker"  type="text" class="form__date-input js-ascent-text pseudo-hover" name="date" data-position="right top">
+								<input id="datepicker"  type="text" class="form__date-input js-date js-ascent-text pseudo-hover" name="date" data-position="right top">
 								<label class="label" for="datepicker">Дата*</label>
 <!--								date-for-callback-->
 							</div>
@@ -196,9 +196,9 @@
 						<div class="condition">
 							<input id="accept-cond" class="condition__checkbox" type="checkbox" name="accept-condition" checked>
 							<label class="condition__label" for="accept-cond">Я принимаю </label>
-							<a href="">
+							<div>
 								<button class="condition__button js-open-btn-conditions" type="button">условия передачи информации</button>
-							</a>
+							</div>
 							<div class="input-error js-error__checkbox hidden">Для продолжения нужно согласие с условиями</div>
 						</div>
 						<a href="#phone-number-wrap" class="form__next-link">
@@ -3807,8 +3807,8 @@
 			<form class="form-bring">
 				<div class="form-bring__wrapper">		
 					<div class="form-bring__phone input-parent">			
-						<input id="friend-phone" class="form__phone-input form__friend-phone-input js-ascent-text pseudo-hover" type="tel" name="friend-phone">
-						<label class="label" for="friend-phone">Контактный телефон друга*</label>
+						<input id="friend-phone" class="form__phone-input form__friend-phone-input js-ascent-text pseudo-hover" value="+7(" type="tel" name="friend-phone">
+						<label class="label-phone" for="friend-phone">Контактный телефон друга*</label>
 						<div class="input-close-btn js-clear-field"></div>
 						<div class="input-error js-error"></div>
 					</div>
@@ -3861,7 +3861,7 @@
 			</div>
 			<div class="bring-info">
 				<h3 class="bring-info__title">Пригласите друга и получите 300 <span class="bring-info__title-ruble">&#8381;</span> на связь</h3>
-				<p class="subtitle">А друг получит месфц бесплатной связи, музыки и кино</p>
+				<p class="subtitle">А друг получит месяц бесплатной связи, музыки и кино</p>
 			</div>
 			<div class="bring__invite">
 				<p class="bring__invite-text">
@@ -3889,9 +3889,9 @@
 		</div>
 	</main>	
 	<div class="popup popup--condition js-popup--condition">
-		<div class="popup__close-btn-wrapper">
+		<a class="popup__close-btn-wrapper" data-page="application-form">
 			<button class="popup__close-btn js-close-btn-conditions" type="button"><span></span></button>
-		</div>
+		</a>
 		<h3 class="form__agree-conditions-title">Условия передачи информации</h3>
 		<div class="poput__condition-wrap">
 			<p class="form__agree-conditions-text">
@@ -3918,7 +3918,7 @@
 			</p>
 		</div>
 	</div>	
-	<div class="popup popup--friend-condition js-popup--friend-condition">
+	<div class="popup popup--friend-condition js-popup--friend-condition" data-page="popup-friend-condition">
 		<div class="popup__close-btn-wrapper">
 			<button class="popup__close-btn js-close-btn-friend" type="button"><span></span></button>
 		</div>
