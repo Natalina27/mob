@@ -93,6 +93,7 @@ input .input-error__checkbox {
 	font-weight: 100;
 }
 
+
 .label-phone {
     font-size: 14px;
     position: absolute;
@@ -1156,6 +1157,9 @@ input .input-error__checkbox {
 	display: none;
 }
 
+.bring{
+	margin-bottom: 50px;
+}
 
 
 .visible {
@@ -1236,6 +1240,7 @@ input .input-error__checkbox {
 }
 
 .numbers-bucket__btn-wrapper {
+	text-decoration: none;
 	margin: 40px 0 20px 0;
     display: flex;
     justify-content: center;	

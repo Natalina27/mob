@@ -3,6 +3,7 @@ const App = (function () {
     const text = document.querySelector(".bring-info__learn_more-text");
     const inputPhone = document.querySelector(".js-phone-input");
     const inputName = document.querySelector(".js-name-input");
+    const inputDate = document.querySelector('.js-date');
     const errorPlace = document.querySelector(".js-error-name");
     const phoneError = document.querySelector(".js-phone-error");
     const sel = document.querySelector(".form__citizenship-input");
@@ -14,7 +15,7 @@ const App = (function () {
     const recallForm = document.querySelector(".form__recall");
     const citizenship = document.querySelector(".form__citizenship");
     const incorrectPhoneMessage = "Некорректный номер телефона";
-    const emptyPhonemessage = "Необходимо указать номер телефона";
+    const emptyPhoneMessage = "Необходимо указать номер телефона";
 
     return {
         init: function () {
@@ -45,7 +46,7 @@ const App = (function () {
                     phoneError.innerHTML = incorrectPhoneMessage;
                 }
                 if (inputPhone.value == "+7(") {
-                    inputPhone.innerHTML = emptyPhonemessage;
+                    inputPhone.innerHTML = emptyPhoneMessage;
                 } else {
                     inputPhone.innerHTML = "";
                 }
@@ -103,9 +104,13 @@ const App = (function () {
                     inputName.classList.add("pseudo-hover"); // добавляем класс к переменной через метод класс-лист
                 }
             });
+
+
         },
 
+
         addPlaceholder: function () {
+
             for (let i = 0; i < inputs.length; i++) {
                 inputs[i].addEventListener("focus", function () {
                     inputs[i].classList.add("is-active-placeholder");
@@ -169,19 +174,22 @@ const App = (function () {
         // },
 
         toggleModal: function (button, popup, closeButton) {
-            const conditionInfo = document.querySelector(button);
+            const conditionInfo = document.querySelectorAll(button);
             const modal = document.querySelector(popup);
             const closeBtn = document.querySelector(closeButton);
+            conditionInfo.forEach(item => {
+                item.addEventListener("click", function () {
+                    modal.classList.add("modal");
+                    modal.classList.remove("popup");
+                });
 
-            conditionInfo.addEventListener("click", function () {
-                modal.classList.add("modal");
-                modal.classList.remove("popup");
-            });
-
-            closeBtn.addEventListener("click", function () {
-                modal.classList.add("popup");
-                modal.classList.remove("modal");
+                closeBtn.addEventListener("click", function () {
+                    modal.classList.add("popup");
+                    modal.classList.remove("modal");
+                })
             })
+
+
         }
     }
 })();
@@ -493,30 +501,6 @@ function testPhone() {
 
 testPhone();
 
-// function testData() {
-// 	//находим все импуты, где должны записываться только цифры и .
-// 	const el = document.querySelectorAll(".form__date-input");
-//
-// 	el.forEach(item => {
-// 		//на каджый инпут навешиваем событие onkeyup
-// 		//(возникает в момент отпускания нажатой клавиши)
-// 		item.onkeyup = function test(){
-// 			const value = item.value;
-//
-// 			const pattern = /[-\;":'a-zA-Zа-яА-Я]/;
-//
-// 			//делаем проверку с помощью метода test
-// 			//(выполняет поиск сопоставления)
-// 			if(pattern.test(value)){
-// 				//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
-// 				item.value = value.replace(pattern, '');
-// 			}
-// 		}
-// 	})
-// }
-//
-// testData();
-
 new Pikaday({
     field: document.getElementById('datepicker'),
     format: 'D/M/YYYY',
@@ -526,9 +510,46 @@ new Pikaday({
         const day = date.getDate();
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
-        return `${day}.${month}.${year}`;
+        const value = `${day}.${month}.${year}`;
+        date.value = value;
+        const block = document.getElementById('datepicker');
+        block.value = value;
+        if (block.value.length > 0) {
+            block.classList.add("form__input-up");
+        } else {
+            block.classList.remove("form__input-up");
+        }
+        return value;
+
     },
+
 });
+
+function testData() {
+	//находим все импуты, где должны записываться только цифры и .
+	const el = document.querySelectorAll(".form__date-input");
+
+	el.forEach(item => {
+		// на каджый инпут навешиваем событие onkeyup
+        // (возникает в момент отпускания нажатой клавиши)
+        item.onkeyup = function test(){
+            const value = item.value;
+
+            const pattern = /[()&^$?/%#\!@;+_*=":'a-zA-Zа-яА-Я]/;
+
+            //делаем проверку с помощью метода test
+            //(выполняет поиск сопоставления)
+            if(pattern.test(value)){
+                //Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+                item.value = value.replace(pattern, '');
+            }
+
+        }
+	})
+}
+
+testData();
+
 
 function testText() {
     //находим все импуты, где должны записываться только буквы
@@ -580,30 +601,33 @@ testText();
 
 //выделяет избранное
 function paintingStars() {
-    const block = document.querySelectorAll('.phone-number__numbers-container');
-    const favoritesNumbers = document.querySelector('.favorites-btn');
+    const block = document.querySelectorAll('.new-number__options');
 
     block.forEach(item => {
-        const star = item.querySelector('.phone-number__price');
-        const checkbox = item.querySelector('input[type="checkbox"]');
+        const container = item.querySelectorAll('.phone-number__numbers-container');
+        const favoritesNumbers = item.querySelector('.favorites-btn');
 
-        checkbox.addEventListener('click', () => {
-            //добавляем метод toggle. Если класс color есть, он удаляется, если нет, то добавляется;
-            star.classList.toggle('color');
+        container.forEach(item => {
+            const star = item.querySelector('.phone-number__price');
+            const checkbox = item.querySelector('input[type="checkbox"]');
 
-            //вызываес функцию,находящуюся ниже
-            favorites();
-            const starActive = star.classList.contains('color');
-            const active = favoritesNumbers.classList.contains('active');
+            checkbox.addEventListener('click', () => {
+                //добавляем метод toggle. Если класс color есть, он удаляется, если нет, то добавляется;
+                star.classList.toggle('color');
 
-            //если при клике звезда снимается и мы находимся в только фаворитах
-            if (active && !starActive) {
-                //скрываем номер
-                item.classList.add('hidden');
-            }
+                //вызываес функцию,находящуюся ниже
+                favorites();
+                const starActive = star.classList.contains('color');
+                const active = favoritesNumbers.classList.contains('active');
+
+                //если при клике звезда снимается и мы находимся в только фаворитах
+                if (active && !starActive) {
+                    //скрываем номер
+                    item.classList.add('hidden');
+                }
+            })
         })
     })
-
 }
 
 paintingStars();
@@ -611,45 +635,82 @@ paintingStars();
 
 //активирует кнопку "показать избранное"
 function favorites() {
-    const block = document.querySelector('.phone-number__numbers');
-    const container = block.querySelectorAll('.phone-number__numbers-container');
-    const favoritesNumbers = document.querySelector('.favorites-btn');
-    const favoritesName = favoritesNumbers.querySelectorAll('.favorites-items');
-    const arr = Array.from(container);
+    const block = document.querySelectorAll('.new-number__options');
 
-    //ф-ция для метода some
-    function stars(el) {
-        //возвращает элементы у которых есть активные чекбоксы
-        return el.querySelector('input[type="checkbox"]:checked');
-    }
 
-    //проверяем,что в arr есть хотя бы один активный чекбокс
-    if (arr.some(stars) === true) {
+    block.forEach(item => {
+        const blockNumbers = item.querySelector('.phone-number__numbers');
+        const container = blockNumbers.querySelectorAll('.phone-number__numbers-container');
 
-        //для каждого элемента кнопки "Показать избранное"
-        favoritesName.forEach(item => {
-            item.classList.remove('favorites');
-            favoritesNumbers.classList.remove('removal');
-        })
-    } else {
-        //для каждого номера
-        container.forEach(item => {
-            const result = item.classList.contains('hidden');
-            //если есть класс hidden
-            if (result === true) {
-                //то удаляем
-                item.classList.remove('hidden');
-            } else {
-                //если нет,то добавляем
-                item.classList.add('hidden');
+        const favoritesNumbers = item.querySelector('.favorites-btn');
+        const favoritesName = favoritesNumbers.querySelectorAll('.favorites-items');
+
+        const nextNumbers = item.querySelector('.numbers-scroller__show-next');
+        const nextNumbersItems = nextNumbers.querySelectorAll('.favorites-items');
+
+        const prevNumbers = item.querySelector('.numbers-scroller__show-prev');
+        const prevNumbersItem = prevNumbers.querySelectorAll('.favorites-items');
+
+        const arr = Array.from(container);
+
+        //ф-ция для метода some
+        function stars(el) {
+            //возвращает элементы у которых есть активные чекбоксы
+            return el.querySelector('input[type="checkbox"]:checked');
+        }
+
+        //проверяем,что в arr есть хотя бы один активный чекбокс
+        if (arr.some(stars) === true) {
+
+            //для каждого элемента кнопки "Показать избранное"
+            favoritesName.forEach(item => {
+                item.classList.remove('favorites');
+                favoritesNumbers.classList.remove('removal');
+            })
+        } else {
+            //для каждого номера
+            for (let i = 0; i < container.length; i++) {
+                console.log('stars');
+                if (i < 7) {
+                    //удаляем, скрывающий класс с первых 7 номеров
+                    container[i].classList.remove('hidden');
+                } else {
+                    //добавляем всем остальным
+                    container[i].classList.add('hidden');
+                }
             }
-        });
-        //для каждого элемента кнопки
-        favoritesName.forEach(item => {
-            favoritesNumbers.classList.remove('active');
-            item.classList.add('favorites');
-        })
-    }
+            //снимаем блокировку события с кнопки "предыдущие"
+            prevNumbers.classList.remove('removal');
+            //снимаем блокировку события с кнопки "следующие"
+            nextNumbers.classList.remove('removal');
+
+            //у каждого элемента кнопки "следующие"
+            nextNumbersItems.forEach(item => {
+                //удаляем обесцвечивающий класс
+                item.classList.remove('favorites');
+            });
+
+            //для каждого элемента кнопки "показать избранное"
+            favoritesName.forEach(item => {
+                favoritesNumbers.classList.remove('active');
+                item.classList.add('favorites');
+
+            });
+
+            //находим элементы кнопки "показать избранное"
+            for (let i = 0; i < favoritesName.length; i++) {
+                //для первого элемента
+                if (i === 0) {
+                    //меняем текст
+                    favoritesName[i].innerHTML = "Показать избранное";
+                } else if (i === 1) {
+                    //у второго удаляем скрывающий класс
+                    favoritesName[i].classList.remove('hidden');
+                }
+            }
+
+        }
+    })
 }
 
 //активация/блокировка кнопок переключения номеров
@@ -780,8 +841,6 @@ function onlyFavorites() {
 
                 //у кнопки "показать избранное" удаляем класс active
                 showFavorites.classList.remove('active');
-                // и добавляем класс блокирующий события
-                showFavorites.classList.add('removal');
 
 
             } else {//если класса active нет
@@ -1076,7 +1135,7 @@ valueTransfer(internet, addMoreInternet, calls, addMoreCalls, sms, addMoreSms, m
 
 function newNumber() {
     const addBtn = document.querySelector('.numbers-bucket__btn-wrapper');
-    const btn = addBtn.querySelector('button')
+    const btn = addBtn.querySelector('button');
     const block1 = document.querySelector('.bucket-new-number');
     const block2 = document.querySelector('.bucket-new-two-number');
     const block3 = document.querySelector('.bucket-new-three-number');
