@@ -1254,7 +1254,6 @@ input .input-error__checkbox {
 
 .options-menu__period {
 	margin: 0;
-	position: absolute;	
 	width: max-content;
 	right: 12px;
 	font-size: 13px;
@@ -1263,17 +1262,18 @@ input .input-error__checkbox {
 
 .options-menu__price {
 	margin: 0;
-	width: 35px;
 }
 
 .options-menu__price-wrapper,
 .options-menu__number-wrapper{
 	display: flex;
+	margin-bottom: -13px;
 }
 
-.options-menu__price-container {
-	position: relative;
-	width: 35px;
+.options-menu__price-container{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .options-menu__correction {
