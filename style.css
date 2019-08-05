@@ -1242,9 +1242,15 @@ input .input-error__checkbox {
 .numbers-bucket__btn-wrapper {
 	text-decoration: none;
 	margin: 40px 0 20px 0;
-    display: flex;
-    justify-content: center;	
+    justify-content: center;
+	display: none;
 }
+
+
+.bucket-wrapper.hidden ~ .numbers-bucket__btn-wrapper {
+	display: flex;
+}
+
 
 .options-menu__period {
 	margin: 0;
@@ -1279,7 +1285,10 @@ input .input-error__checkbox {
 
 .options-menu__options-value,
 .options-menu__number-value,
-.options-menu__new-number-value{
+.options-menu__new-number-value,
+.options-menu__new-number-two-value,
+.options-menu__new-number-three-value,
+.options-menu__new-number-four-value{
 	margin: 0;
 }
 
