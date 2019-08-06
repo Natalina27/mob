@@ -308,85 +308,86 @@ function ApplicationInternet(item) {
 }
 
 
-//находим форму
-const form = document.querySelector('.form');
+function calc(){
+    //находим форму
+    const form = document.querySelector('.form');
+    const page = form.querySelectorAll('.additional-offer');
+    const pageBlockZero = document.querySelector('.block-zero');
+    const pageBlockOne = document.querySelector('.block-one');
+    const pageBlockTwo = document.querySelector('.block-two');
+    const pageBlockThree = document.querySelector('.block-three');
+    const pageBlockFour = document.querySelector('.block-four');
 
-//находим все блоки калькулятора
-const block = form.querySelectorAll('.additional-offer__form-item');
+    const bucketZero = document.querySelector('.bucket__price-zero');
+    const bucketOne = document.querySelector('.bucket__price-one');
+    const bucketTwo = document.querySelector('.bucket__price-two');
+    const bucketThree = document.querySelector('.bucket__price-three');
+    const bucketFour = document.querySelector('.bucket__price-four');
 
-const priceValue = document.querySelectorAll('[data-name="price"]');
+    const bucket = document.querySelectorAll('.bucket-wrapper');
+    const totalPrice = document.querySelector('[data-name="price"]');
 
-//в каждом блоке ищем функциональный элемент формы
-block.forEach(item => {
-    const el = item.querySelectorAll('.additional-offer__form-el');
 
-    //на каждый функциональный элемент формы навешиваем событие
-    el.forEach(item => {
-        item.addEventListener('input', () => calculator());
+    page.forEach(item => {
+        //находим все элементы калькулятора
+        const block = item.querySelectorAll('.additional-offer__form-item');
+        const priceValue =  item.querySelector('.price');
+        //в каждом элементе калькулятора ищем функциональный элемент формы
+        block.forEach(item => {
+            const el = item.querySelectorAll('.additional-offer__form-el');
+            //на каждый функциональный элемент формы навешиваем событие
+            el.forEach(item => {
+                item.addEventListener('input', () => calculator());
 
-    });
-});
+            });
+        });
 
-function calculator() {
-    let price = 0;
-    // const priceValue = document.querySelectorAll('[data-name="price]');
+        function calculator(){
+            let price = 0;
 
-    //в каждом блоке ищем функциональный элемент формы
-    block.forEach(item => {
-        const el = item.querySelectorAll('.additional-offer__form-el');
-
-        //проверяем каждый функц. эл. формы
-        el.forEach(item => {
-            if (item.type !== 'checkbox' || item.type === 'checkbox' && item.checked) {
-                price += Number(item.value);
+            //в каждом блоке ищем функциональный элемент формы
+            block.forEach(item => {
+                const el = item.querySelectorAll('.additional-offer__form-el');
+                //проверяем каждый функц. эл. формы
+                el.forEach(item => {
+                    if (item.type !== 'checkbox' || item.type === 'checkbox' && item.checked) {
+                        price += Number(item.value);
+                    }
+                });
+            });
+            priceValue.innerHTML = price;
+            if(item === pageBlockZero){
+                bucketZero.innerHTML = price;
+            }else if(item === pageBlockOne){
+                bucketOne.innerHTML = price;
+            }else if(item === pageBlockTwo){
+                bucketTwo.innerHTML = price;
+            }else if(item === pageBlockThree){
+                bucketThree.innerHTML = price;
+            }else if(item === pageBlockFour){
+                bucketFour.innerHTML = price;
             }
-        })
+        }
+        calculator();
     });
+    let sum = 0;
+    bucket.forEach(item => {
+        if(!item.classList.contains('hidden')){
+            const price = item.querySelectorAll('.bucket__price');
+            console.log(item);
 
-    priceValue.forEach(item => {
-        //вставляем значение price в разметку
-        item.innerHTML = price;
-    })
+            for(let i = 0; i < price.length; i++){
+                console.log(price[i]);
+                sum += Number(price[i].innerHTML);
+                console.log(sum);
+            }
+        }
+    });
+    totalPrice.innerHTML = String(`${sum}`);
 }
 
-calculator();
+calc();
 
-
-//находим все блоки калькулятора в контейнере Редактирования пакутов услуг
-const correctBlock = form.querySelectorAll('.correct-service__form-item');
-
-//в каждом блоке ищем функциональный элемент формы
-correctBlock.forEach(item => {
-    const elem = item.querySelectorAll('.correct-service__form-el');
-
-    //на каждый функциональный элемент формы навешиваем событие
-    elem.forEach(item => {
-        item.addEventListener('input', () => calculatorCorrect());
-
-    });
-});
-
-function calculatorCorrect() {
-    let priceCorrect = 0;
-
-    //в каждом блоке ищем функциональный элемент формы
-    correctBlock.forEach(item => {
-        const elem = item.querySelectorAll('.correct-service__form-el');
-
-        //проверяем каждый функц. эл. формы
-        elem.forEach(item => {
-            if (item.type !== 'checkbox' || item.type === 'checkbox' && item.checked) {
-                priceCorrect += Number(item.value);
-            }
-        })
-    });
-    priceValue.forEach(item => {
-        //вставляем значение priceCorrect в разметку
-        item.innerHTML = priceCorrect;
-    })
-}
-
-calculatorCorrect();
 
 //если на localhost
 if (location.hostname === 'localhost') {
@@ -472,21 +473,6 @@ function testPhone() {
     const el = document.querySelectorAll(".form__phone-input");
 
     el.forEach(item => {
-        //на каджый инпут навешиваем событие onkeyup
-        //(возникает в момент отпускания нажатой клавиши)
-        // item.onkeyup = function test(){
-        //
-        // 	const value = item.value;
-        //
-        // 	const pattern = /[-\.;":'a-zA-Zа-яА-Я]/;
-        //
-        // 	//делаем проверку с помощью метода test
-        // 	//(выполняет поиск сопоставления)
-        // 	if(pattern.test(value)){
-        // 		//Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
-        // 		item.value = value.replace(pattern, '');
-        // 	}
-        // };
         item.addEventListener('click', () => {
             IMask(
                 item, {
@@ -948,7 +934,11 @@ const addMoreTwoBucketPhone = document.querySelector('.options-menu__new-number-
 const addMoreThreeBucketPhone = document.querySelector('.options-menu__new-number-three-value');
 const addMoreFourBucketPhone = document.querySelector('.options-menu__new-number-four-value');
 
-
+const bucketNumberZero = document.querySelector('.bucket__number-price-zero');
+const bucketNumberOne = document.querySelector('.bucket__number-price-one');
+const bucketNumberTwo = document.querySelector('.bucket__number-price-two');
+const bucketNumberThree = document.querySelector('.bucket__number-price-three');
+const bucketNumberFour = document.querySelector('.bucket__number-price-four');
 
 
 NodeList.prototype.indexOf = Array.prototype.indexOf;
@@ -972,7 +962,6 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         item.value = event.target.value;
                     }
                 });
-
                 //блок со списком нтелефонных номеров
                 if (select === blockNumber) {
                     const number = function () {
@@ -996,10 +985,13 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
 
                         //кнопка с номером телефона
                         const correctBtn = document.querySelector('.correct-number__next-bth');
+
                         //в корзине номеров в инпут записываем значение :checked эл
                         bucketPhone.innerHTML = activeNumberOne.value;
                         //в кнопку с номером телефона записываем значение :checked эл
                         correctBtn.innerHTML = activeNumberOne.value;
+                        //в корзине номеров в инпут записываем стоимость номера
+                        bucketNumberZero.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
 
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1031,6 +1023,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         addMoreBucketPhone.innerHTML = activeNumberOne.value;
                         //в кнопку с номером телефона записываем значение :checked эл
                         correctBtn.innerHTML = activeNumberOne.value;
+                        //в корзине номеров в инпут записываем стоимость номера
+                        bucketNumberOne.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
 
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1062,6 +1056,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         addMoreTwoBucketPhone.innerHTML = activeNumberOne.value;
                         //в кнопку с номером телефона записываем значение :checked эл
                         correctBtn.innerHTML = activeNumberOne.value;
+                        //в корзине номеров в инпут записываем стоимость номера
+                        bucketNumberTwo.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
 
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1093,6 +1089,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         addMoreThreeBucketPhone.innerHTML = activeNumberOne.value;
                         //в кнопку с номером телефона записываем значение :checked эл
                         correctBtn.innerHTML = activeNumberOne.value;
+                        //в корзине номеров в инпут записываем стоимость номера
+                        bucketNumberThree.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
 
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1124,6 +1122,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         addMoreFourBucketPhone.innerHTML = activeNumberOne.value;
                         //в кнопку с номером телефона записываем значение :checked эл
                         correctBtn.innerHTML = activeNumberOne.value;
+                        //в корзине номеров в инпут записываем стоимость номера
+                        bucketNumberFour.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
 
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1154,7 +1154,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                 }else if(select === addMoreFourCalls){
                     addMoreFourBucketCalls.innerHTML = value;
                 }
-
+                setTimeout(() => calc(), 100)
             });
         })
     })
@@ -1170,27 +1170,48 @@ function newNumber() {
     const block3 = document.querySelector('.bucket-new-three-number');
     const block4 = document.querySelector('.bucket-new-four-number');
 
-    console.log(block4.classList.contains('hidden'));
-    if (block4.classList.contains('hidden')) {
-        addBtn.addEventListener('click', event => {
-            if(block1.classList.contains('hidden')){
+    addBtn.addEventListener('click', event =>{
+        const wrap = document.querySelector('.numbers-bucket__content');
+        const bucket = wrap.querySelector('.hidden');
+        if(bucket === block1){
+            console.log(bucket);
+            addBtn.href = "#add-more-service";
+            const pageNumber = document.querySelector('[data-page="add-more-number"]');
+            const btn = pageNumber.querySelector('.phone-number__next-btn');
+            btn.addEventListener('click', event =>{
                 block1.classList.remove('hidden');
-                addBtn.href = "#add-more-service";
-            }else if (!block1.classList.contains('hidden') && !block2.classList.contains('hidden') && !block3.classList.contains('hidden')) {
-                addBtn.href = "#add-more-four-service";
-                block4.classList.remove('hidden');
-            } else if (!block1.classList.contains('hidden') && !block2.classList.contains('hidden')) {
-                addBtn.href = "#add-more-three-service";
-                block3.classList.remove('hidden');
-            }else if (!block1.classList.contains('hidden')) {
-                addBtn.href = "#add-more-two-service";
+                calc();
+            })
+        }else if(bucket === block2){
+            console.log(bucket);
+            addBtn.href = "#add-more-two-service";
+            const pageNumber = document.querySelector('[data-page="add-more-two-number"]');
+            const btn = pageNumber.querySelector('.phone-number__next-btn');
+            btn.addEventListener('click', event =>{
                 block2.classList.remove('hidden');
-            }
-        })
-    }else{
-        console.log('yep');
-        btn.classList.add('hidden');
-    }
+                calc();
+            })
+        }else if(bucket === block3){
+            console.log(bucket);
+            addBtn.href = "#add-more-three-service";
+            const pageNumber = document.querySelector('[data-page="add-more-three-number"]');
+            const btn = pageNumber.querySelector('.phone-number__next-btn');
+            btn.addEventListener('click', event =>{
+                block3.classList.remove('hidden');
+                calc();
+
+            })
+        }else if(bucket === block4){
+            console.log(bucket);
+            addBtn.href = "#add-more-four-service";
+            const pageNumber = document.querySelector('[data-page="add-more-four-number"]');
+            const btn = pageNumber.querySelector('.phone-number__next-btn');
+            btn.addEventListener('click', event =>{
+                block4.classList.remove('hidden');
+                calc();
+            })
+        }
+    });
 }
 
 newNumber();

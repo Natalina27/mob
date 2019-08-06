@@ -68,9 +68,9 @@
 						<label for="country" class="label">Укажите страну</label>
 						<div class="input-close-btn js-clear-field"></div>
 					</div>
-					<div class="additional-offer hidden">
+					<div class="additional-offer block-zero hidden">
 						<div class="calculator-count">
-							<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="additional-offer__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+							<h3 class="form__title non-header__title">Общая цена: <span class="additional-offer__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 							<p class="subtitle">на 30 дней</p>
 						</div>
 						<div class="form__wrapper additional-offer__form">
@@ -81,7 +81,7 @@
 									<option value="159" data-number="4">4 ГБ 159 ₽</option>
 									<option value="229" data-number="8">8 ГБ 229 ₽</option>
 									<option value="359" data-number="16">16 ГБ 359 ₽</option>
-									<option value="999" data-number="Безлиминое количество ">Безлимитный интернет 999 ₽</option>
+									<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 								</select>
 								<label class="label-select" for="internet">Интернет</label>
 							</div>
@@ -91,7 +91,7 @@
 									<option value="159" data-number="400">400 минут 159 ₽</option>
 									<option value="199" data-number="600">600 минут 199 ₽</option>
 									<option value="299" data-number="1200">1200 минут 299 ₽</option>
-									<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+									<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 								</select>
 								<label class="label-select" for="calls">Звонки</label>
 							</div>
@@ -259,7 +259,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="block1+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-99">
@@ -271,7 +271,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="block1+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-98">
@@ -283,7 +283,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="block1+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-97">
@@ -295,7 +295,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="block1+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-96">
@@ -307,7 +307,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="block1+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-95">
@@ -319,7 +319,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="block1+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block1+7(999)999-99-94">
@@ -331,7 +331,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block1+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="block1+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<div class="phone-number__price">
@@ -343,7 +343,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="block2+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-92-99">
@@ -355,7 +355,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="block2+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-93-98">
@@ -367,7 +367,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-94-97" value="+7(999)999-94-97" data-price="490">
 									<label for="block2+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-94-97">
@@ -379,7 +379,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="block2+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-95-96">
@@ -391,7 +391,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="block2+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-96-95">
@@ -403,7 +403,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="block2+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-97-94">
@@ -415,7 +415,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="numbers-block1" class="phone-number__number-input" id="block2+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="block2+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="favorites-block2+7(999)999-98-93">
@@ -476,7 +476,7 @@
 								</div>
 								<div class="options-menu__price-wrapper">
 									<div class="options-menu__price-container">
-										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__price"><span class="bucket__price bucket__price-zero">0</span> ₽</p>
 										<p class="options-menu__period">на 30 дней</p>
 									</div>
 									<a href="#correct-service">
@@ -489,7 +489,7 @@
 									<p class="options-menu__number-value">+7 (999) 999 - 99 - 99</p>
 								</div>
 								<div class="options-menu__number-wrapper">
-									<p class="options-menu__price">0 ₽</p>
+									<p class="options-menu__price"><span class="bucket__price bucket__number-price-zero">0</span> ₽</p>
 									<a href="#correct-number">
 										<button type="button" class="options-menu__correction correction-bot">✏️</button>
 									</a>
@@ -511,7 +511,7 @@
 								</div>
 								<div class="options-menu__price-wrapper">
 									<div class="options-menu__price-container">
-										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__price"><span class="bucket__price bucket__price-one">0</span> ₽</p>
 										<p class="options-menu__period">на 30 дней</p>
 									</div>
 									<a href="#correct-add-more-service">
@@ -524,7 +524,7 @@
 									<p class="options-menu__new-number-value">+7 (999) 999 - 99 - 99</p>
 								</div>
 								<div class="options-menu__number-wrapper">
-									<p class="options-menu__price">0 ₽</p>
+									<p class="options-menu__price"><span class="bucket__price bucket__number-price-one">0</span> ₽</p>
 									<a href="#correct-add-more-number">
 										<button type="button" class="options-menu__correction correction-bot">✏️</button>
 									</a>
@@ -546,10 +546,10 @@
 								</div>
 								<div class="options-menu__price-wrapper">
 									<div class="options-menu__price-container">
-										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__price"><span class="bucket__price bucket__price-two">0</span> ₽</p>
 										<p class="options-menu__period">на 30 дней</p>
 									</div>
-									<a href="#correct-add-more-service">
+									<a href="#correct-add-more-two-service">
 										<button type="button" class="options-menu__correction correction-top">✏️</button>
 									</a>
 								</div>
@@ -559,8 +559,8 @@
 									<p class="options-menu__new-number-two-value">+7 (999) 999 - 99 - 99</p>
 								</div>
 								<div class="options-menu__number-wrapper">
-									<p class="options-menu__price">0 ₽</p>
-									<a href="#correct-add-more-number">
+									<p class="options-menu__price"><span class="bucket__price bucket__number-price-two">0</span> ₽</p>
+									<a href="#correct-add-more-two-number">
 										<button type="button" class="options-menu__correction correction-bot">✏️</button>
 									</a>
 								</div>
@@ -581,10 +581,10 @@
 								</div>
 								<div class="options-menu__price-wrapper">
 									<div class="options-menu__price-container">
-										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__price"><span class="bucket__price bucket__price-three">0</span> ₽</p>
 										<p class="options-menu__period">на 30 дней</p>
 									</div>
-									<a href="#correct-add-more-service">
+									<a href="#correct-add-more-three-service">
 										<button type="button" class="options-menu__correction correction-top">✏️</button>
 									</a>
 								</div>
@@ -594,8 +594,8 @@
 									<p class="options-menu__new-number-three-value">+7 (999) 999 - 99 - 99</p>
 								</div>
 								<div class="options-menu__number-wrapper">
-									<p class="options-menu__price">0 ₽</p>
-									<a href="#correct-add-more-number">
+									<p class="options-menu__price"><span class="bucket__price bucket__number-price-three">0</span> ₽</p>
+									<a href="#correct-add-more-three-number">
 										<button type="button" class="options-menu__correction correction-bot">✏️</button>
 									</a>
 								</div>
@@ -616,10 +616,10 @@
 								</div>
 								<div class="options-menu__price-wrapper">
 									<div class="options-menu__price-container">
-										<p class="options-menu__price">0 ₽</p>
+										<p class="options-menu__price"><span class="bucket__price bucket__price-four">0</span> ₽</p>
 										<p class="options-menu__period">на 30 дней</p>
 									</div>
-									<a href="#correct-add-more-service">
+									<a href="#correct-add-more-four-service">
 										<button type="button" class="options-menu__correction correction-top">✏️</button>
 									</a>
 								</div>
@@ -629,8 +629,8 @@
 									<p class="options-menu__new-number-four-value">+7 (999) 999 - 99 - 99</p>
 								</div>
 								<div class="options-menu__number-wrapper">
-									<p class="options-menu__price">0 ₽</p>
-									<a href="#correct-add-more-number">
+									<p class="options-menu__price"><span class="bucket__price bucket__number-price-four">0</span> ₽</p>
+									<a href="#correct-add-more-four-number">
 										<button type="button" class="options-menu__correction correction-bot">✏️</button>
 									</a>
 								</div>
@@ -653,47 +653,47 @@
 				<header class="header">
 					<h3 class="header__title">Редактирование пакетов услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-zero">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-fare" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-fare" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-fare">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-fare" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-fare" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-fare">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers" class="application-internet__options-messenger correct-service__form-el" data-name="messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers" class="application-internet__options-messenger additional-offer__form-el" data-name="messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-networks" class="application-internet__options-social correct-service__form-el" data-name="social"  type="checkbox" name="social" value="59">
+									<input id="social-networks" class="application-internet__options-social additional-offer__form-el" data-name="social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-networks">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -701,22 +701,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="item-music" class="application-internet__options-music correct-service__form-el" data-name="music"  type="checkbox" name="music" value="59">
+									<input id="item-music" class="application-internet__options-music additional-offer__form-el" data-name="music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="item-music">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="item-video" class="application-internet__options-video correct-service__form-el" data-name="video"  type="checkbox" name="video" value="159">
+									<input id="item-video" class="application-internet__options-video additional-offer__form-el" data-name="video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="item-video">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages" class="application-internet__options-sms correct-service__form-el" data-name="sms"  type="checkbox" name="sms" value="49">
+								<input id="messages" class="application-internet__options-sms additional-offer__form-el" data-name="sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -786,7 +786,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-99">
@@ -798,7 +798,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-98">
@@ -810,7 +810,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-97">
@@ -822,7 +822,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-96">
@@ -834,7 +834,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-95">
@@ -846,7 +846,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-94">
@@ -858,7 +858,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-99-93">
@@ -870,7 +870,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-92-99">
@@ -882,7 +882,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-93-98">
@@ -894,7 +894,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-94-97" value="7(999)999-94-97">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-94-97" value="7(999)999-94-97" data-price="490">
 									<label for="+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-94-97">
@@ -906,7 +906,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-95-96">
@@ -918,7 +918,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-96-95">
@@ -930,7 +930,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="favorites+7(999)999-97-94">
@@ -942,7 +942,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="numbers" class="phone-number__number-input" id="+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="favorites7(999)999-98-93">
@@ -989,47 +989,47 @@
 				<header class="header">
 					<h3 class="header__title">Выберите пакеты услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-one">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-more" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-more" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-more">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-more" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-more" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-more">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers-more" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers-more" class="application-internet__options-messenger additional-offer__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers-more" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-more" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<input id="social-more" class="application-internet__options-social additional-offer__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-more">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -1037,22 +1037,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="music-more" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<input id="music-more" class="application-internet__options-music additional-offer__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="music-more">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="video-more" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<input id="video-more" class="application-internet__options-video additional-offer__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="video-more">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages-more" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<input id="messages-more" class="application-internet__options-sms additional-offer__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages-more">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -1122,7 +1122,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="add-more-block1+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-99">
@@ -1134,7 +1134,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="add-more-block1+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-98">
@@ -1146,7 +1146,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="add-more-block1+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-97">
@@ -1158,7 +1158,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="add-more-block1+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-96">
@@ -1170,7 +1170,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="add-more-block1+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-95">
@@ -1182,7 +1182,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="add-more-block1+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-94">
@@ -1194,7 +1194,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block1+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="add-more-block1+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block1+7(999)999-99-93">
@@ -1206,7 +1206,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="add-more-block2+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-92-99">
@@ -1218,7 +1218,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="add-more-block2+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-93-98">
@@ -1230,7 +1230,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-94-97" value="+7(999)999-94-97" data-price="490">
 									<label for="add-more-block2+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-94-97">
@@ -1242,7 +1242,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="add-more-block2+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-95-96">
@@ -1254,7 +1254,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="add-more-block2+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-96-95">
@@ -1266,7 +1266,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="add-more-block2+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-97-94">
@@ -1278,7 +1278,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-block2+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="add-more-block2+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-98-93">
@@ -1324,47 +1324,47 @@
 				<header class="header">
 					<h3 class="header__title">Выберите пакеты услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-one">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-correct-add-more" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-correct-add-more" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-correct-add-more">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-correct-add-more" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-correct-add-more" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-correct-add-more">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers-correct-add-more" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers-correct-add-more" class="application-internet__options-messenger additional-offer__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers-correct-add-more" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-correct-add-more" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<input id="social-correct-add-more" class="application-internet__options-social additional-offer__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-correct-add-more">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -1372,22 +1372,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="music-correct-add-more" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<input id="music-correct-add-more" class="application-internet__options-music additional-offer__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="music-correct-add-more">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="video-correct-add-more" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<input id="video-correct-add-more" class="application-internet__options-video additional-offer__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="video-correct-add-more">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages-correct-add-more" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<input id="messages-correct-add-more" class="application-internet__options-sms additional-offer__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages-correct-add-more">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -1457,7 +1457,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 add-more-js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-99" value="+7(999)999-99-99"  data-price="0">
 									<label for="correct-add-more-number-+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-99">
@@ -1469,7 +1469,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="correct-add-more-number-+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-98">
@@ -1481,7 +1481,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="correct-add-more-number-+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-97">
@@ -1493,7 +1493,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="correct-add-more-number-+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-96">
@@ -1505,7 +1505,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="correct-add-more-number-+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-95">
@@ -1517,7 +1517,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="correct-add-more-number-+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-94">
@@ -1529,7 +1529,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="correct-add-more-number-+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-99-93">
@@ -1541,7 +1541,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="correct-add-more-number-+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-92-99">
@@ -1553,7 +1553,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="correct-add-more-number-+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-93-98">
@@ -1565,7 +1565,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-94-97" value="7(999)999-94-97">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-94-97" value="7(999)999-94-97" data-price="490">
 									<label for="correct-add-more-number-+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-94-97">
@@ -1577,7 +1577,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="correct-add-more-number-+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-95-96">
@@ -1589,7 +1589,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="correct-add-more-number-+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-96-95">
@@ -1601,7 +1601,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="correct-add-more-number-+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-97-94">
@@ -1613,7 +1613,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-number-+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="correct-add-more-number-+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites7(999)999-98-93">
@@ -1660,47 +1660,47 @@
 				<header class="header">
 					<h3 class="header__title">Выберите пакеты услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-two">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-more-two" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-two-internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-more-two" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-two-internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-more-two">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-more-two" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-two-calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-more-two" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-two-calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-more-two">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers-more-two" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers-more-two" class="application-internet__options-messenger additional-offer__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers-more-two" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-more-two" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<input id="social-more-two" class="application-internet__options-social additional-offer__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-more-two">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -1708,22 +1708,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="music-more-two" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<input id="music-more-two" class="application-internet__options-music additional-offer__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="music-more-two">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="video-more-two" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<input id="video-more-two" class="application-internet__options-video additional-offer__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="video-more-two">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages-more-two" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<input id="messages-more-two" class="application-internet__options-sms additional-offer__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages-more-two">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -1793,7 +1793,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 add-more-two-js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="add-more-two-block1+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-99">
@@ -1805,7 +1805,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="add-more-two-block1+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-98">
@@ -1817,7 +1817,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="add-more-two-block1+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-97">
@@ -1829,7 +1829,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="add-more-two-block1+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-96">
@@ -1841,7 +1841,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="add-more-two-block1+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-95">
@@ -1853,7 +1853,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="add-more-two-block1+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-94">
@@ -1865,7 +1865,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block1+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="add-more-two-block1+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block1+7(999)999-99-93">
@@ -1877,7 +1877,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="add-more-two-block2+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-92-99">
@@ -1889,7 +1889,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="add-more-two-block2+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-93-98">
@@ -1901,7 +1901,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-94-97" value="+7(999)999-94-97" data-price="490">
 									<label for="add-more-two-block2+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-94-97">
@@ -1913,7 +1913,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="add-more-two-block2+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-95-96">
@@ -1925,7 +1925,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="add-more-two-block2+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-96-95">
@@ -1937,7 +1937,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="add-more-two-block2+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-97-94">
@@ -1949,7 +1949,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-two-block2+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="add-more-two-block2+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="add-more-two-favorites-block2+7(999)999-98-93">
@@ -1995,47 +1995,47 @@
 				<header class="header">
 					<h3 class="header__title">Выберите пакеты услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-two">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-correct-add-more-two" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-two-internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-correct-add-more-two" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-two-internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-correct-add-more-two">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-correct-add-more-two" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-two-calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-correct-add-more-two" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-two-calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-correct-add-more-two">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers-correct-add-more-two" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers-correct-add-more-two" class="application-internet__options-messenger additional-offer__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers-correct-add-more-two" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-correct-add-more-two" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<input id="social-correct-add-more-two" class="application-internet__options-social additional-offer__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-correct-add-more-two">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -2043,22 +2043,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="music-correct-add-more-two" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<input id="music-correct-add-more-two" class="application-internet__options-music additional-offer__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="music-correct-add-more-two">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="video-correct-add-more-two" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<input id="video-correct-add-more-two" class="application-internet__options-video additional-offer__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="video-correct-add-more-two">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages-correct-add-more-two" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<input id="messages-correct-add-more-two" class="application-internet__options-sms additional-offer__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages-correct-add-more-two">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -2128,7 +2128,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 add-more-two-js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="correct-add-more-two-number-+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-99">
@@ -2140,7 +2140,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="correct-add-more-two-number-+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-98">
@@ -2152,7 +2152,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="correct-add-more-two-number-+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-97">
@@ -2164,7 +2164,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="correct-add-more-two-number-+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-96">
@@ -2176,7 +2176,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="correct-add-more-two-number-+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-95">
@@ -2188,7 +2188,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="correct-add-more-two-number-+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-94">
@@ -2200,7 +2200,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="correct-add-more-two-number-+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-99-93">
@@ -2212,7 +2212,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="correct-add-more-two-number-+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-92-99">
@@ -2224,7 +2224,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="correct-add-more-two-number-+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-93-98">
@@ -2236,7 +2236,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-94-97" value="7(999)999-94-97">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-94-97" value="7(999)999-94-97" data-price="490">
 									<label for="correct-add-more-two-number-+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-94-97">
@@ -2248,7 +2248,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="correct-add-more-two-number-+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-95-96">
@@ -2260,7 +2260,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="correct-add-more-two-number-+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-96-95">
@@ -2272,7 +2272,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="correct-add-more-two-number-+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites+7(999)999-97-94">
@@ -2284,7 +2284,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-two-number-+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="correct-add-more-two-number-+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-two-number-favorites7(999)999-98-93">
@@ -2331,47 +2331,47 @@
 				<header class="header">
 					<h3 class="header__title">Выберите пакеты услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-three">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-more-three" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-three-internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-more-three" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-three-internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-more-three">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-more-three" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-three-calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-more-three" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-three-calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-more-three">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers-more-three" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers-more-three" class="application-internet__options-messenger additional-offer__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers-more-three" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-more-three" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<input id="social-more-three" class="application-internet__options-social additional-offer__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-more-three">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -2379,22 +2379,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="music-more-three" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<input id="music-more-three" class="application-internet__options-music additional-offer__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="music-more-three">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="video-more-three" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<input id="video-more-three" class="application-internet__options-video additional-offer__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="video-more-three">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages-more-three" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<input id="messages-more-three" class="application-internet__options-sms additional-offer__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages-more-three">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -2464,7 +2464,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 add-more-three-js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="add-more-three-block1+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-99">
@@ -2476,7 +2476,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="add-more-three-block1+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-98">
@@ -2488,7 +2488,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="add-more-three-block1+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-97">
@@ -2500,7 +2500,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="add-more-three-block1+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-96">
@@ -2512,7 +2512,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="add-more-three-block1+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-95">
@@ -2524,7 +2524,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="add-more-three-block1+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-94">
@@ -2536,7 +2536,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block1+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="add-more-three-block1+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block1+7(999)999-99-93">
@@ -2548,7 +2548,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="add-more-three-block2+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-92-99">
@@ -2560,7 +2560,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="add-more-three-block2+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-93-98">
@@ -2572,7 +2572,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-94-97" value="+7(999)999-94-97" data-price="490">
 									<label for="add-more-three-block2+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-94-97">
@@ -2584,7 +2584,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="add-more-three-block2+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-95-96">
@@ -2596,7 +2596,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="add-more-three-block2+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-96-95">
@@ -2608,7 +2608,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="add-more-three-block2+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="add-more-three-favorites-block2+7(999)999-97-94">
@@ -2620,7 +2620,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-three-block2+7(999)999-98-93" value="+7(999)999-98-93" data-price="24 900">
 									<label for="add-more-three-block2+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-98-93">
@@ -2666,47 +2666,47 @@
 				<header class="header">
 					<h3 class="header__title">Выберите пакеты услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-three">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-correct-add-more-three" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-three-internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-correct-add-more-three" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-three-internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-correct-add-more-three">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-correct-add-more-three" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-three-calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-correct-add-more-three" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-three-calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-correct-add-more-three">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers-correct-add-more-three" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers-correct-add-more-three" class="application-internet__options-messenger additional-offer__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers-correct-add-more-three" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-correct-add-more-three" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<input id="social-correct-add-more-three" class="application-internet__options-social additional-offer__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-correct-add-more-three">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -2714,22 +2714,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="music-correct-add-more-three" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<input id="music-correct-add-more-three" class="application-internet__options-music additional-offer__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="music-correct-add-more-three">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="video-correct-add-more-three" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<input id="video-correct-add-more-three" class="application-internet__options-video additional-offer__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="video-correct-add-more-three">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages-correct-add-more-three" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<input id="messages-correct-add-more-three" class="application-internet__options-sms additional-offer__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages-correct-add-more-three">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -2799,7 +2799,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 add-more-three-js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="correct-add-more-three-number-+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-99">
@@ -2811,7 +2811,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="correct-add-more-three-number-+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-98">
@@ -2823,7 +2823,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="correct-add-more-three-number-+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-97">
@@ -2835,7 +2835,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="correct-add-more-three-number-+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-96">
@@ -2847,7 +2847,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="correct-add-more-three-number-+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-95">
@@ -2859,7 +2859,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="correct-add-more-three-number-+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-94">
@@ -2871,7 +2871,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="correct-add-more-three-number-+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-99-93">
@@ -2883,7 +2883,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="correct-add-more-three-number-+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-92-99">
@@ -2895,7 +2895,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="correct-add-more-three-number-+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-93-98">
@@ -2907,7 +2907,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-94-97" value="7(999)999-94-97">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-94-97" value="7(999)999-94-97" data-price="490">
 									<label for="correct-add-more-three-number-+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-94-97">
@@ -2919,7 +2919,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="correct-add-more-three-number-+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-95-96">
@@ -2931,7 +2931,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="correct-add-more-three-number-+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-96-95">
@@ -2943,7 +2943,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="correct-add-more-three-number-+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites+7(999)999-97-94">
@@ -2955,7 +2955,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-three-number-+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="correct-add-more-three-number-+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-three-number-favorites7(999)999-98-93">
@@ -3002,47 +3002,47 @@
 				<header class="header">
 					<h3 class="header__title">Выберите пакеты услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-four">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-more-four" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-four-internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-more-four" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-four-internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-more-four">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-more-four" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-four-calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-more-four" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-four-calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-more-four">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers-more-four" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers-more-four" class="application-internet__options-messenger additional-offer__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers-more-four" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-more-four" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<input id="social-more-four" class="application-internet__options-social additional-offer__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-more-four">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -3050,22 +3050,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="music-more-four" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<input id="music-more-four" class="application-internet__options-music additional-offer__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="music-more-four">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="video-more-four" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<input id="video-more-four" class="application-internet__options-video additional-offer__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="video-more-four">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages-more-four" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<input id="messages-more-four" class="application-internet__options-sms additional-offer__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages-more-four">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -3135,7 +3135,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 add-more-four-js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="add-more-four-block1+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-99">
@@ -3147,7 +3147,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="add-more-four-block1+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-98">
@@ -3159,7 +3159,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="add-more-four-block1+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-97">
@@ -3171,7 +3171,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="add-more-four-block1+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-96">
@@ -3183,7 +3183,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="add-more-four-block1+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-95">
@@ -3195,7 +3195,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="add-more-four-block1+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-94">
@@ -3207,7 +3207,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block1+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="add-more-four-block1+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block1+7(999)999-99-93">
@@ -3219,7 +3219,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="add-more-four-block2+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-92-99">
@@ -3231,7 +3231,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="add-more-four-block2+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-93-98">
@@ -3243,7 +3243,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-94-97" value="+7(999)999-94-97">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-94-97" value="+7(999)999-94-97" data-price="490">
 									<label for="add-more-four-block2+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-94-97">
@@ -3255,7 +3255,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="add-more-four-block2+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-95-96">
@@ -3267,7 +3267,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="add-more-four-block2+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-96-95">
@@ -3279,7 +3279,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="add-more-four-block2+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="add-more-four-favorites-block2+7(999)999-97-94">
@@ -3291,7 +3291,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="add-more-numbers-block1" class="phone-number__number-input" id="add-more-four-block2+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="add-more-four-block2+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="add-more-favorites-block2+7(999)999-98-93">
@@ -3337,47 +3337,47 @@
 				<header class="header">
 					<h3 class="header__title">Выберите пакеты услуг</h3>
 				</header>
-				<div class="additional-offer">
+				<div class="additional-offer block-four">
 					<div class="calculator-count">
-						<h3 class="form__title non-header__title">Общая цена: <span data-name="price" class="correct-service__form-sum"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
+						<h3 class="form__title non-header__title">Общая цена: <span class="correct-service__form-sum price"></span> <span class="bring-info__title-ruble">&#8381;</span></h3>
 						<p class="subtitle">на 30 дней</p>
 					</div>
 					<div class="form__wrapper additional-offer__form">
-						<div class="correct-service__form-item form__internet input-parent">
-							<select id="internet-correct-add-more-four" class="form__internet-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-four-internet" name="internet">
+						<div class="additional-offer__form-item form__internet input-parent">
+							<select id="internet-correct-add-more-four" class="form__internet-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-four-internet" name="internet">
 								<option value="0" data-number="0">0 ГБ 0 ₽</option>
 								<option value="99" data-number="2" selected>2 ГБ 99 ₽</option>
 								<option value="159" data-number="4">4 ГБ 159 ₽</option>
 								<option value="229" data-number="8">8 ГБ 229 ₽</option>
 								<option value="359" data-number="16">16 ГБ 359 ₽</option>
-								<option value="999" data-number="Безлимитное количество">Безлимитный интернет 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитный интернет 999 ₽</option>
 							</select>
 							<label class="label-select" for="internet-correct-add-more-four">Интернет</label>
 						</div>
-						<div class="correct-service__form-item form__calls input-parent">
-							<select id="calls-correct-add-more-four" class="form__calls-input js-ascent-text pseudo-hover correct-service__form-el" data-name="add-more-four-calls" name="calls">
+						<div class="additional-offer__form-item form__calls input-parent">
+							<select id="calls-correct-add-more-four" class="form__calls-input js-ascent-text pseudo-hover additional-offer__form-el" data-name="add-more-four-calls" name="calls">
 								<option value="0" data-number="0">0 минут 0 ₽</option>
 								<option value="159" data-number="400">400 минут 159 ₽</option>
 								<option value="199" data-number="600">600 минут 199 ₽</option>
 								<option value="299" data-number="1200">1200 минут 299 ₽</option>
-								<option value="999" data-number="Безлиминое количество ">Безлимитные минуты 999 ₽</option>
+								<option value="999" data-number="Безлимитное кол-во">Безлимитные минуты 999 ₽</option>
 							</select>
 							<label class="label-select" for="calls-correct-add-more-four">Звонки</label>
 						</div>
 					</div>
 					<div class="application-internet">
 						<h4 class="application-internet__subtitle subtitle">Безлимитный интернет в приложениях</h4>
-						<div class="correct-service__form-item application-internet__options-wrapper">
+						<div class="additional-offer__form-item application-internet__options-wrapper">
 							<div class="application-internet__wrap-mes-soc">
 								<div class="application-internet__options application-internet__options-wrapper_messenger ">
-									<input id="messengers-correct-add-more-four" class="application-internet__options-messenger correct-service__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
+									<input id="messengers-correct-add-more-four" class="application-internet__options-messenger additional-offer__form-el" data-name="add-more-messengers"  type="checkbox" name="messenger" value="59">
 									<label class="form__label" for="messengers-correct-add-more-four" >Мессенджеры (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">WhatsApp, Viber, Facebook Messenger, iMessage, Tam Tam, imo.im</div>
 								</div>
 
 								<div class="application-internet__options application-internet__options-wrapper_social">
-									<input id="social-correct-add-more-four" class="application-internet__options-social correct-service__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
+									<input id="social-correct-add-more-four" class="application-internet__options-social additional-offer__form-el" data-name="add-more-social"  type="checkbox" name="social" value="59">
 									<label class="form__label" for="social-correct-add-more-four">Социальные сети (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_soc application-internet__info">ВКонтакте, Facebook, Одноклассники, Instagram, IGTV, Snapchat, Twitter, Tinder</div>
@@ -3385,22 +3385,22 @@
 							</div>
 							<div class="application-internet__wrap-mus-vid">
 								<div class="application-internet__options application-internet__options-wrapper_music">
-									<input id="music-correct-add-more-four" class="application-internet__options-music correct-service__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
+									<input id="music-correct-add-more-four" class="application-internet__options-music additional-offer__form-el" data-name="add-more-music"  type="checkbox" name="music" value="59">
 									<label class="form__label" for="music-correct-add-more-four">Музыка (59 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_mus application-internet__info">Apple Music, Яндекс.Музыка, Яндекс.Радио, Google Play Music, Soundcloud, Boom, Zvooq, Deezer Music, Shazam, Spotify</div>
 								</div>
 								<div class="application-internet__options application-internet__options-wrapper_video">
-									<input id="video-correct-add-more-four" class="application-internet__options-video correct-service__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
+									<input id="video-correct-add-more-four" class="application-internet__options-video additional-offer__form-el" data-name="add-more-video"  type="checkbox" name="video" value="159">
 									<label class="form__label" for="video-correct-add-more-four">Видео (159 ₽)</label>
 									<button type="button" class="application-internet__button">?</button>
 									<div class="application-internet__hidden-info_vid application-internet__info">Youtube, Twitch, iTunes Видео, Google Play Фильмы, YouTube Детям, Rutube, Vimeo</div>
 								</div>
 							</div>
 						</div>
-						<div class="correct-service__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
+						<div class="additional-offer__form-item application-internet__options-wrapper application-internet application-internet__wrap-sms">
 							<div class="application-internet__options application-internet__options-wrapper_sms">
-								<input id="messages-correct-add-more-four" class="application-internet__options-sms correct-service__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
+								<input id="messages-correct-add-more-four" class="application-internet__options-sms additional-offer__form-el" data-name="add-more-sms"  type="checkbox" name="sms" value="49">
 								<label class="form__label" for="messages-correct-add-more-four">Безлимитные СМС (49 ₽)</label>
 								<button type="button" class="application-internet__button">?</button>
 								<div class="application-internet__hidden-info_sms application-internet__info">или каждая SMS по 2,9 руб</div>
@@ -3470,7 +3470,7 @@
 						<div class="phone-number__numbers phone-number__numbers-block1 add-more-four-js-block1">
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-99" value="+7(999)999-99-99">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-99" value="+7(999)999-99-99" data-price="0">
 									<label for="correct-add-more-four-number-+7(999)999-99-99">+7(999)999-99-99</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-99">
@@ -3482,7 +3482,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-98" value="+7(999)999-99-98">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-98" value="+7(999)999-99-98" data-price="0">
 									<label for="correct-add-more-four-number-+7(999)999-99-98">+7(999)999-99-98</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-98">
@@ -3494,7 +3494,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-97" value="+7(999)999-99-97">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-97" value="+7(999)999-99-97" data-price="490">
 									<label for="correct-add-more-four-number-+7(999)999-99-97">+7(999)999-99-97</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-97">
@@ -3506,7 +3506,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-96" value="+7(999)999-99-96">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-96" value="+7(999)999-99-96" data-price="990">
 									<label for="correct-add-more-four-number-+7(999)999-99-96">+7(999)999-99-96</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-96">
@@ -3518,7 +3518,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-95" value="+7(999)999-99-95">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-95" value="+7(999)999-99-95" data-price="2900">
 									<label for="correct-add-more-four-number-+7(999)999-99-95">+7(999)999-99-95</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-95">
@@ -3530,7 +3530,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-94" value="+7(999)999-99-94">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-94" value="+7(999)999-99-94" data-price="14900">
 									<label for="correct-add-more-four-number-+7(999)999-99-94">+7(999)999-99-94</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-94">
@@ -3542,7 +3542,7 @@
 							</div>
 							<div class="phone-number__numbers-container">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-93" value="+7(999)999-99-93">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-99-93" value="+7(999)999-99-93" data-price="24900">
 									<label for="correct-add-more-four-number-+7(999)999-99-93">+7(999)999-99-93</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-99-93">
@@ -3554,7 +3554,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-92-99" value="+7(999)999-92-99">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-92-99" value="+7(999)999-92-99" data-price="0">
 									<label for="correct-add-more-four-number-+7(999)999-92-99">+7(999)999-92-99</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-92-99">
@@ -3566,7 +3566,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-93-98" value="+7(999)999-93-98">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-93-98" value="+7(999)999-93-98" data-price="0">
 									<label for="correct-add-more-four-number-+7(999)999-93-98">+7(999)999-93-98</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-93-98">
@@ -3578,7 +3578,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-94-97" value="7(999)999-94-97">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-94-97" value="7(999)999-94-97" data-price="490">
 									<label for="correct-add-more-four-number-+7(999)999-94-97">+7(999)999-94-97</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-94-97">
@@ -3590,7 +3590,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-95-96" value="+7(999)999-95-96">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-95-96" value="+7(999)999-95-96" data-price="990">
 									<label for="correct-add-more-four-number-+7(999)999-95-96">+7(999)999-95-96</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-95-96">
@@ -3602,7 +3602,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-96-95" value="+7(999)999-96-95">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-96-95" value="+7(999)999-96-95" data-price="2900">
 									<label for="correct-add-more-four-number-+7(999)999-96-95">+7(999)999-96-95</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites+7(999)999-96-95">
@@ -3614,7 +3614,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-97-94" value="+7(999)999-97-94">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-97-94" value="+7(999)999-97-94" data-price="14900">
 									<label for="correct-add-more-four-number-+7(999)999-97-94">+7(999)999-97-94</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-number-favorites+7(999)999-97-94">
@@ -3626,7 +3626,7 @@
 							</div>
 							<div class="phone-number__numbers-container hidden">
 								<div class="phone-number__numbers-input-wrapper">
-									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-98-93" value="+7(999)999-98-93">
+									<input type="radio" name="add-more-numbers" class="phone-number__number-input" id="correct-add-more-four-number-+7(999)999-98-93" value="+7(999)999-98-93" data-price="24900">
 									<label for="correct-add-more-four-number-+7(999)999-98-93">+7(999)999-98-93</label>
 								</div>
 								<label class="phone-number__price" for="correct-add-more-four-number-favorites7(999)999-98-93">
