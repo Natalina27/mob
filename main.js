@@ -3,9 +3,11 @@ const App = (function () {
     const text = document.querySelector(".bring-info__learn_more-text");
     const inputPhone = document.querySelector(".js-phone-input");
     const inputName = document.querySelector(".js-name-input");
+    const inputRegion = document.querySelector('.form__region-input');
     const inputDate = document.querySelector('.js-date');
     const errorPlace = document.querySelector(".js-error-name");
     const phoneError = document.querySelector(".js-phone-error");
+    const regionError = document.querySelector('.js-error-region');
     const sel = document.querySelector(".form__citizenship-input");
     const value = sel.options[sel.selectedIndex].value;
     const countryOk = document.querySelector(".form__country");
@@ -21,6 +23,7 @@ const App = (function () {
         init: function () {
             this.learnMoreBtn();
             this.appearError();
+            this.regionError();
             this.citizenship();
             this.ascentText();
             this.ascentText();
@@ -45,7 +48,7 @@ const App = (function () {
                 } else {
                     phoneError.innerHTML = incorrectPhoneMessage;
                 }
-                if (inputPhone.value == "+7(") {
+                if (inputPhone.value === "+7(") {
                     inputPhone.innerHTML = emptyPhoneMessage;
                 } else {
                     inputPhone.innerHTML = "";
@@ -93,8 +96,9 @@ const App = (function () {
         },
 
         appearError: function () {  // объявляем функцию
-            inputName.addEventListener("click", function () {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
-                if (inputName.value.length == 0) {  // Если значение в условии истинно, то есть значение селектора "нестрого" равно нулю выполняется функция.
+            inputName.addEventListener("change", function () {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
+                console.log(inputName.value.length);
+                if (inputName.value.length === 0) {  // Если значение в условии истинно, то есть значение селектора "нестрого" равно нулю выполняется функция.
                     errorPlace.innerHTML = "Укажите Ваше ФИО";  // В переменную вставляем  строку
                     inputName.classList.add("error-border"); // добавляем класс к переменной через метод класс-лист
                     inputName.classList.remove("pseudo-hover");   // снимаем с переменной класс, через метод класс-лист
@@ -104,10 +108,22 @@ const App = (function () {
                     inputName.classList.add("pseudo-hover"); // добавляем класс к переменной через метод класс-лист
                 }
             });
-
-
         },
 
+        regionError: function () {  // объявляем функцию
+            inputRegion.addEventListener("change", function () {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
+                console.log(inputName.value.length);
+                if (inputRegion.value.length === 0) {  // Если значение в условии истинно, то есть значение селектора "нестрого" равно нулю выполняется функция.
+                    regionError.innerHTML = "Укажите Ваше город или регион";  // В переменную вставляем  строку
+                    inputRegion.classList.add("error-border"); // добавляем класс к переменной через метод класс-лист
+                    inputRegion.classList.remove("pseudo-hover");   // снимаем с переменной класс, через метод класс-лист
+                } else {  // если значение вышеуказанного условия не истинно, выполняется другая функция, нижеследующая
+                    regionError.innerHTML = ""; // в переменную также вставляется строка, с другими значениями
+                    inputRegion.classList.remove("error-border");  // снимаем с переменной класс, через метод класс-лист
+                    inputRegion.classList.add("pseudo-hover"); // добавляем класс к переменной через метод класс-лист
+                }
+            });
+        },
 
         addPlaceholder: function () {
 
@@ -307,17 +323,16 @@ function ApplicationInternet(item) {
     };
 }
 
+const pageBlockZero = document.querySelector('.block-zero');
+const pageBlockOne = document.querySelector('.block-one');
+const pageBlockTwo = document.querySelector('.block-two');
+const pageBlockThree = document.querySelector('.block-three');
+const pageBlockFour = document.querySelector('.block-four');
 
 function calc(){
     //находим форму
     const form = document.querySelector('.form');
     const page = form.querySelectorAll('.additional-offer');
-    const pageBlockZero = document.querySelector('.block-zero');
-    const pageBlockOne = document.querySelector('.block-one');
-    const pageBlockTwo = document.querySelector('.block-two');
-    const pageBlockThree = document.querySelector('.block-three');
-    const pageBlockFour = document.querySelector('.block-four');
-
     const bucketZero = document.querySelector('.bucket__price-zero');
     const bucketOne = document.querySelector('.bucket__price-one');
     const bucketTwo = document.querySelector('.bucket__price-two');
@@ -374,12 +389,8 @@ function calc(){
     bucket.forEach(item => {
         if(!item.classList.contains('hidden')){
             const price = item.querySelectorAll('.bucket__price');
-            console.log(item);
-
             for(let i = 0; i < price.length; i++){
-                console.log(price[i]);
                 sum += Number(price[i].innerHTML);
-                console.log(sum);
             }
         }
     });
@@ -900,14 +911,34 @@ const addMoreFourCalls = document.querySelectorAll('[data-name="add-more-four-ca
 
 const messengers = document.querySelectorAll('[data-name="messengers"]');
 const addMoreMessengers = document.querySelectorAll('[data-name="add-more-messengers"]');
+const addMoreTwoMessengers = document.querySelectorAll('[data-name="add-more-two-messengers"]');
+const addMoreThreeMessengers = document.querySelectorAll('[data-name="add-more-three-messengers"]');
+const addMoreFourMessengers = document.querySelectorAll('[data-name="add-more-four-messengers"]');
+
 const social = document.querySelectorAll('[data-name="social"]');
 const addMoreSocial = document.querySelectorAll('[data-name="add-more-social"]');
+const addMoreTwoSocial = document.querySelectorAll('[data-name="add-more-two-social"]');
+const addMoreThreeSocial = document.querySelectorAll('[data-name="add-more-three-social"]');
+const addMoreFourSocial = document.querySelectorAll('[data-name="add-more-four-social"]');
+
 const music = document.querySelectorAll('[data-name="music"]');
 const addMoreMusic = document.querySelectorAll('[data-name="add-more-music"]');
+const addMoreTwoMusic = document.querySelectorAll('[data-name="add-more-two-music"]');
+const addMoreThreeMusic = document.querySelectorAll('[data-name="add-more-three-music"]');
+const addMoreFourMusic = document.querySelectorAll('[data-name="add-more-four-music"]');
+
 const video = document.querySelectorAll('[data-name="video"]');
 const addMoreVideo = document.querySelectorAll('[data-name="add-more-video"]');
+const addMoreTwoVideo = document.querySelectorAll('[data-name="add-more-two-video"]');
+const addMoreThreeVideo = document.querySelectorAll('[data-name="add-more-three-video"]');
+const addMoreFourVideo = document.querySelectorAll('[data-name="add-more-four-video"]');
+
 const sms = document.querySelectorAll('[data-name="sms"]');
 const addMoreSms = document.querySelectorAll('[data-name="add-more-sms"]');
+const addMoreTwoSms = document.querySelectorAll('[data-name="add-more-two-sms"]');
+const addMoreThreeSms = document.querySelectorAll('[data-name="add-more-three-sms"]');
+const addMoreFourSms = document.querySelectorAll('[data-name="add-more-four-sms"]');
+
 const enterPhone = document.querySelectorAll('.enter-number ');
 
 const blockNumber = document.querySelectorAll('.js-block1');
@@ -934,6 +965,13 @@ const addMoreTwoBucketPhone = document.querySelector('.options-menu__new-number-
 const addMoreThreeBucketPhone = document.querySelector('.options-menu__new-number-three-value');
 const addMoreFourBucketPhone = document.querySelector('.options-menu__new-number-four-value');
 
+const bucketMoreValue = document.querySelector('.options-menu__more-value');
+const bucketMoreOneValue = document.querySelector('.options-menu__more-one-value');
+const bucketMoreTwoValue = document.querySelector('.options-menu__more-two-value');
+const bucketMoreThreeValue = document.querySelector('.options-menu__more-three-value');
+const bucketMoreFourValue = document.querySelector('.options-menu__more-four-value');
+
+
 const bucketNumberZero = document.querySelector('.bucket__number-price-zero');
 const bucketNumberOne = document.querySelector('.bucket__number-price-one');
 const bucketNumberTwo = document.querySelector('.bucket__number-price-two');
@@ -943,8 +981,24 @@ const bucketNumberFour = document.querySelector('.bucket__number-price-four');
 
 NodeList.prototype.indexOf = Array.prototype.indexOf;
 
-function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInternet, addMoreFourInternet, calls, addMoreCalls, addMoreTwoCalls, addMoreThreeCalls, addMoreFourCalls, sms, addMoreSms, messengers, addMoreMessengers, social, addMoreSocial, music, addMoreMusic, video, addMoreVideo, blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber, enterPhone) {
-    const items = [internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInternet, addMoreFourInternet, calls, addMoreCalls, addMoreTwoCalls, addMoreThreeCalls, addMoreFourCalls, sms, addMoreSms, messengers, addMoreMessengers, social, addMoreSocial, music, addMoreMusic, video, addMoreVideo, blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber, enterPhone];
+function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInternet, addMoreFourInternet,
+                       calls, addMoreCalls, addMoreTwoCalls, addMoreThreeCalls, addMoreFourCalls,
+                       sms, addMoreSms, addMoreTwoSms, addMoreThreeSms, addMoreFourSms,
+                       messengers, addMoreMessengers, addMoreTwoMessengers, addMoreThreeMessengers, addMoreFourMessengers,
+                       social, addMoreSocial, addMoreTwoSocial, addMoreThreeSocial, addMoreFourSocial,
+                       music, addMoreMusic, addMoreTwoMusic, addMoreThreeMusic, addMoreFourMusic,
+                       video, addMoreVideo, addMoreTwoVideo, addMoreThreeVideo, addMoreFourVideo,
+                       blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber,
+                       enterPhone) {
+    const items = [internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInternet, addMoreFourInternet,
+        calls, addMoreCalls, addMoreTwoCalls, addMoreThreeCalls, addMoreFourCalls,
+        sms, addMoreSms, addMoreTwoSms, addMoreThreeSms, addMoreFourSms,
+        messengers, addMoreMessengers, addMoreTwoMessengers, addMoreThreeMessengers, addMoreFourMessengers,
+        social, addMoreSocial, addMoreTwoSocial, addMoreThreeSocial, addMoreFourSocial,
+        music, addMoreMusic, addMoreTwoMusic, addMoreThreeMusic, addMoreFourMusic,
+        video, addMoreVideo, addMoreTwoVideo, addMoreThreeVideo, addMoreFourVideo,
+        blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber,
+        enterPhone];
     items.forEach(select => {
         //для каждого элемента селеста(их всегда 2)
         select.forEach(item => {
@@ -956,6 +1010,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         //присваиваем элементу,тот checked, который имеется у элемента,
                         //который мы изменили в рамках события
                         item.checked = event.target.checked;
+                        calc();
                     } else {
                         //присваиваем элементу,тот value, который имеется у элемента,
                         //который мы изменили в рамках события
@@ -992,7 +1047,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberZero.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
-
+                        calc();
                     };
                     //значение меняется только после выполнения функции(event),
                     //поэтому, когда  number запускается, изменения еще не произошли
@@ -1025,7 +1080,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberOne.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
-
+                        calc();
                     };
                     //значение меняется только после выполнения функции(event),
                     //поэтому, когда  number запускается, изменения еще не произошли
@@ -1058,7 +1113,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberTwo.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
-
+                        calc();
                     };
                     //значение меняется только после выполнения функции(event),
                     //поэтому, когда  number запускается, изменения еще не произошли
@@ -1091,7 +1146,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberThree.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
-
+                        calc();
                     };
                     //значение меняется только после выполнения функции(event),
                     //поэтому, когда  number запускается, изменения еще не произошли
@@ -1124,47 +1179,118 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberFour.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
-
+                        calc();
                     };
                     //значение меняется только после выполнения функции(event),
                     //поэтому, когда  number запускается, изменения еще не произошли
                     setTimeout(number, 100);
                 }
 
-                const value = item.querySelector(`[value="${item.value}"]`).dataset.number;
+                // console.log(item);
+                // console.log(item.dataset.number);
+                // console.log(item.classList.contains(`[value="${item.value}"]`));
+                if(item.type !== 'checkbox'){
+                    const value = item.querySelector(`[value="${item.value}"]`).dataset.number;
 
-                if(select === internet){
-                    bucketInternet.innerHTML = value;
-                }else if(select === calls){
-                    bucketCalls.innerHTML = value;
-                }else if(select === addMoreInternet){
-                    addMoreBucketInternet.innerHTML = value;
-                }else if(select === addMoreCalls){
-                    addMoreBucketCalls.innerHTML = value;
-                }else if(select === addMoreTwoInternet){
-                    addMoreTwoBucketInternet.innerHTML = value;
-                }else if(select === addMoreTwoCalls){
-                    addMoreTwoBucketCalls.innerHTML = value;
-                }else if(select === addMoreThreeInternet){
-                    addMoreThreeBucketInternet.innerHTML = value;
-                }else if(select === addMoreThreeCalls){
-                    addMoreThreeBucketCalls.innerHTML = value;
-                }else if(select === addMoreFourInternet){
-                    addMoreFourBucketInternet.innerHTML = value;
-                }else if(select === addMoreFourCalls){
-                    addMoreFourBucketCalls.innerHTML = value;
+                    console.log(value);
+
+                    if(select === internet){
+                        bucketInternet.innerHTML = value;
+                    }else if(select === calls){
+                        bucketCalls.innerHTML = value;
+                    }else if(select === addMoreInternet){
+                        addMoreBucketInternet.innerHTML = value;
+                    }else if(select === addMoreCalls){
+                        addMoreBucketCalls.innerHTML = value;
+                    }else if(select === addMoreTwoInternet){
+                        addMoreTwoBucketInternet.innerHTML = value;
+                    }else if(select === addMoreTwoCalls){
+                        addMoreTwoBucketCalls.innerHTML = value;
+                    }else if(select === addMoreThreeInternet){
+                        addMoreThreeBucketInternet.innerHTML = value;
+                    }else if(select === addMoreThreeCalls){
+                        addMoreThreeBucketCalls.innerHTML = value;
+                    }else if(select === addMoreFourInternet){
+                        addMoreFourBucketInternet.innerHTML = value;
+                    }else if(select === addMoreFourCalls){
+                        addMoreFourBucketCalls.innerHTML = value;
+                    }
+                    setTimeout(() => calc(), 100);
+                }else{
+                    // moreZero.forEach(item => {
+                    //     bucketMoreValue.innerHTML = item.dataset.number;
+                    // })
+                    if(item.classList.contains('block-zero__checkbox')){
+                        const moreZero = pageBlockZero.querySelectorAll('input:checked');
+                        console.log(moreZero);
+                        bucketMoreValue.innerHTML = '';
+                        for(let i = 0; i < moreZero.length; i++){
+                            console.log('test');
+                            if(i === 0){
+                                bucketMoreValue.innerHTML += moreZero[i].dataset.number;
+                            }else{
+                                bucketMoreValue.innerHTML += ', ' + moreZero[i].dataset.number;
+                            }
+                        }
+                    }else if(item.classList.contains('block-one__checkbox')){
+                        const moreOne = pageBlockOne.querySelectorAll('input:checked');
+                        bucketMoreOneValue.innerHTML = '';
+                        for(let i = 0; i < moreOne.length; i++){
+                            if(i === 0){
+                                bucketMoreOneValue.innerHTML += moreOne[i].dataset.number;
+                            }else{
+                                bucketMoreOneValue.innerHTML += ', ' + moreOne[i].dataset.number;
+                            }
+                        }
+                    }else if(item.classList.contains('block-two__checkbox')){
+                        const moreTwo = pageBlockTwo.querySelectorAll('input:checked');
+                        bucketMoreTwoValue.innerHTML = '';
+                        for(let i = 0; i < moreTwo.length; i++){
+                            if(i === 0){
+                                bucketMoreTwoValue.innerHTML += moreTwo[i].dataset.number;
+                            }else{
+                                bucketMoreTwoValue.innerHTML += ', ' + moreTwo[i].dataset.number;
+                            }
+                        }
+                    }else if(item.classList.contains('block-three__checkbox')){
+                        const moreThree = pageBlockThree.querySelectorAll('input:checked');
+                        bucketMoreThreeValue.innerHTML = '';
+                        for(let i = 0; i < moreThree.length; i++){
+                            if(i === 0){
+                                bucketMoreThreeValue.innerHTML += moreThree[i].dataset.number;
+                            }else{
+                                bucketMoreThreeValue.innerHTML += ', ' + moreThree[i].dataset.number;
+                            }
+                        }
+                    }else if(item.classList.contains('block-four__checkbox')){
+                        const moreFour = pageBlockFour.querySelectorAll('input:checked');
+                        bucketMoreFourValue.innerHTML = '';
+                        for(let i = 0; i < moreFour.length; i++){
+                            if(i === 0){
+                                bucketMoreFourValue.innerHTML += moreFour[i].dataset.number;
+                            }else{
+                                bucketMoreFourValue.innerHTML += ', ' + moreFour[i].dataset.number;
+                            }
+                        }
+                    }
                 }
-                setTimeout(() => calc(), 100)
             });
         })
     })
 }
 
-valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInternet, addMoreFourInternet, calls, addMoreCalls, addMoreTwoCalls, addMoreThreeCalls, addMoreFourCalls, sms, addMoreSms, messengers, addMoreMessengers, social, addMoreSocial, music, addMoreMusic, video, addMoreVideo, blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber, enterPhone);
+valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInternet, addMoreFourInternet,
+    calls, addMoreCalls, addMoreTwoCalls, addMoreThreeCalls, addMoreFourCalls,
+    sms, addMoreSms, addMoreTwoSms, addMoreThreeSms, addMoreFourSms,
+    messengers, addMoreMessengers, addMoreTwoMessengers, addMoreThreeMessengers, addMoreFourMessengers,
+    social, addMoreSocial, addMoreTwoSocial, addMoreThreeSocial, addMoreFourSocial,
+    music, addMoreMusic, addMoreTwoMusic, addMoreThreeMusic, addMoreFourMusic,
+    video, addMoreVideo, addMoreTwoVideo, addMoreThreeVideo, addMoreFourVideo,
+    blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber,
+    enterPhone);
 
 function newNumber() {
     const addBtn = document.querySelector('.numbers-bucket__btn-wrapper');
-    const btn = addBtn.querySelector('button');
     const block1 = document.querySelector('.bucket-new-number');
     const block2 = document.querySelector('.bucket-new-two-number');
     const block3 = document.querySelector('.bucket-new-three-number');
@@ -1174,41 +1300,32 @@ function newNumber() {
         const wrap = document.querySelector('.numbers-bucket__content');
         const bucket = wrap.querySelector('.hidden');
         if(bucket === block1){
-            console.log(bucket);
             addBtn.href = "#add-more-service";
             const pageNumber = document.querySelector('[data-page="add-more-number"]');
             const btn = pageNumber.querySelector('.phone-number__next-btn');
             btn.addEventListener('click', event =>{
                 block1.classList.remove('hidden');
-                calc();
             })
         }else if(bucket === block2){
-            console.log(bucket);
             addBtn.href = "#add-more-two-service";
             const pageNumber = document.querySelector('[data-page="add-more-two-number"]');
             const btn = pageNumber.querySelector('.phone-number__next-btn');
             btn.addEventListener('click', event =>{
                 block2.classList.remove('hidden');
-                calc();
             })
         }else if(bucket === block3){
-            console.log(bucket);
             addBtn.href = "#add-more-three-service";
             const pageNumber = document.querySelector('[data-page="add-more-three-number"]');
             const btn = pageNumber.querySelector('.phone-number__next-btn');
             btn.addEventListener('click', event =>{
                 block3.classList.remove('hidden');
-                calc();
-
             })
         }else if(bucket === block4){
-            console.log(bucket);
             addBtn.href = "#add-more-four-service";
             const pageNumber = document.querySelector('[data-page="add-more-four-number"]');
             const btn = pageNumber.querySelector('.phone-number__next-btn');
             btn.addEventListener('click', event =>{
                 block4.classList.remove('hidden');
-                calc();
             })
         }
     });
