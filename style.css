@@ -1282,7 +1282,9 @@ input .input-error__checkbox {
 .options-menu__correction:hover{
 	cursor: pointer;
 }
-
+.options-menu__value-container{
+	margin-bottom: -13px;
+}
 .options-menu__options-value,
 .options-menu__number-value,
 .options-menu__new-number-value,
@@ -1292,6 +1294,15 @@ input .input-error__checkbox {
 	margin: 0;
 }
 
+.options-menu__more-value,
+.options-menu__more-one-value,
+.options-menu__more-two-value,
+.options-menu__more-three-value,
+.options-menu__more-four-value{
+	margin: 0;
+	font-size: 13px;
+	color: #9299a2;
+}
 .numbers-bucket__content {
     border: 1px solid #dddfe0;
     border-radius: 10px 10px 0 0;
