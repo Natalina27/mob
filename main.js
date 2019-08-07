@@ -1627,8 +1627,6 @@ function clearInput(){
 clearInput();
 
 
-// а этот кусок кода когда вызывается?
-//хз просто , ты ж видел там сразу все +7 показывает
 function clearCross(){
     const blocks = document.querySelectorAll('.input-parent');
     blocks.forEach(item => {
