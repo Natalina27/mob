@@ -22,8 +22,8 @@ const App = (function () {
     return {
         init: function () {
             this.learnMoreBtn();
-            this.appearError();
-            this.regionError();
+            // this.appearError();
+            // this.regionError();
             this.citizenship();
             this.ascentText();
             this.ascentText();
@@ -34,27 +34,29 @@ const App = (function () {
             this.toggleModal(".js-number-transfer", ".js-popup--number-transfer", ".js-close-btn-number-transfer");
             this.addPlaceholder();
             this.recallCheckbox();
-            this.phoneError();
+            // this.phoneError();
         },
 
-        phoneError: function () {
-            inputPhone.addEventListener("blur", function (event) {
-                const isValidForm = event.target.checkValidity();
-                const regStr = "\\+7\\s\\d{3}\\s\\d{3}-\\d{2}-\\d{2}";
-                const regPhone = new RegExp(regStr, "u");
-
-                if (isValidForm && regPhone.test(inputPhone.value)) {
-                    phoneError.innerHTML = "";
-                } else {
-                    phoneError.innerHTML = incorrectPhoneMessage;
-                }
-                if (inputPhone.value === "+7(") {
-                    inputPhone.innerHTML = emptyPhoneMessage;
-                } else {
-                    inputPhone.innerHTML = "";
-                }
-            });
-        },
+        // phoneError: function () {
+        //     inputPhone.addEventListener("input", function (event) {
+        //         const isValidForm = event.target.checkValidity();
+        //         const regStr = "\\+7\\s\\d{3}\\s\\d{3}-\\d{2}-\\d{2}";
+        //         const regPhone = new RegExp(regStr, "u");
+        //         console.log('value');
+        //         console.log(inputPhone.value);
+        //         console.log(inputPhone.unmaskedValue.length);
+        //         if (isValidForm && regPhone.test(inputPhone.value)) {
+        //             phoneError.innerHTML = "";
+        //         } else {
+        //             phoneError.innerHTML = incorrectPhoneMessage;
+        //         }
+        //         if (inputPhone.value === "+7(") {
+        //             inputPhone.innerHTML = emptyPhoneMessage;
+        //         } else {
+        //             inputPhone.innerHTML = "";
+        //         }
+        //     });
+        // },
 
         recallCheckbox: function () {
             //При клике на "короткая заявка"
@@ -95,35 +97,35 @@ const App = (function () {
             });
         },
 
-        appearError: function () {  // объявляем функцию
-            inputName.addEventListener("change", function () {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
-                console.log(inputName.value.length);
-                if (inputName.value.length === 0) {  // Если значение в условии истинно, то есть значение селектора "нестрого" равно нулю выполняется функция.
-                    errorPlace.innerHTML = "Укажите Ваше ФИО";  // В переменную вставляем  строку
-                    inputName.classList.add("error-border"); // добавляем класс к переменной через метод класс-лист
-                    inputName.classList.remove("pseudo-hover");   // снимаем с переменной класс, через метод класс-лист
-                } else {  // если значение вышеуказанного условия не истинно, выполняется другая функция, нижеследующая
-                    errorPlace.innerHTML = ""; // в переменную также вставляется строка, с другими значениями
-                    inputName.classList.remove("error-border");  // снимаем с переменной класс, через метод класс-лист
-                    inputName.classList.add("pseudo-hover"); // добавляем класс к переменной через метод класс-лист
-                }
-            });
-        },
+        // appearError: function () {  // объявляем функцию
+        //     inputName.addEventListener("change", function () {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
+        //         console.log(inputName.value.length);
+        //         if (inputName.value.length === 0) {  // Если значение в условии истинно, то есть значение селектора "нестрого" равно нулю выполняется функция.
+        //             errorPlace.innerHTML = "Укажите Ваше ФИО";  // В переменную вставляем  строку
+        //             inputName.classList.add("error-border"); // добавляем класс к переменной через метод класс-лист
+        //             inputName.classList.remove("pseudo-hover");   // снимаем с переменной класс, через метод класс-лист
+        //         } else {  // если значение вышеуказанного условия не истинно, выполняется другая функция, нижеследующая
+        //             errorPlace.innerHTML = ""; // в переменную также вставляется строка, с другими значениями
+        //             inputName.classList.remove("error-border");  // снимаем с переменной класс, через метод класс-лист
+        //             inputName.classList.add("pseudo-hover"); // добавляем класс к переменной через метод класс-лист
+        //         }
+        //     });
+        // },
 
-        regionError: function () {  // объявляем функцию
-            inputRegion.addEventListener("change", function () {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
-                console.log(inputName.value.length);
-                if (inputRegion.value.length === 0) {  // Если значение в условии истинно, то есть значение селектора "нестрого" равно нулю выполняется функция.
-                    regionError.innerHTML = "Укажите Ваше город или регион";  // В переменную вставляем  строку
-                    inputRegion.classList.add("error-border"); // добавляем класс к переменной через метод класс-лист
-                    inputRegion.classList.remove("pseudo-hover");   // снимаем с переменной класс, через метод класс-лист
-                } else {  // если значение вышеуказанного условия не истинно, выполняется другая функция, нижеследующая
-                    regionError.innerHTML = ""; // в переменную также вставляется строка, с другими значениями
-                    inputRegion.classList.remove("error-border");  // снимаем с переменной класс, через метод класс-лист
-                    inputRegion.classList.add("pseudo-hover"); // добавляем класс к переменной через метод класс-лист
-                }
-            });
-        },
+        // regionError: function () {  // объявляем функцию
+        //     inputRegion.addEventListener("change", function () {  // добавляем к переменной input обработчик событий, который реагирует, в случае если с элемента снимается фокус, и вызывает функцию
+        //         console.log(inputName.value.length);
+        //         if (inputRegion.value.length === 0) {  // Если значение в условии истинно, то есть значение селектора "нестрого" равно нулю выполняется функция.
+        //             regionError.innerHTML = "Укажите Ваше город или регион";  // В переменную вставляем  строку
+        //             inputRegion.classList.add("error-border"); // добавляем класс к переменной через метод класс-лист
+        //             inputRegion.classList.remove("pseudo-hover");   // снимаем с переменной класс, через метод класс-лист
+        //         } else {  // если значение вышеуказанного условия не истинно, выполняется другая функция, нижеследующая
+        //             regionError.innerHTML = ""; // в переменную также вставляется строка, с другими значениями
+        //             inputRegion.classList.remove("error-border");  // снимаем с переменной класс, через метод класс-лист
+        //             inputRegion.classList.add("pseudo-hover"); // добавляем класс к переменной через метод класс-лист
+        //         }
+        //     });
+        // },
 
         addPlaceholder: function () {
 
@@ -157,9 +159,8 @@ const App = (function () {
                         inputs[i].classList.remove("form__input-up");	// или убирается класс
                     }
                     clearCross();
-
-                    // App.appearCross(); // если сметчилось, то так же выполняется функция ниже appear cross
                 });
+
             }
         },
 
@@ -268,32 +269,7 @@ function saveNumberNewNumberToggle() {
     })
 }
 
-
 saveNumberNewNumberToggle();
-
-
-// function showPrevNext() {
-// 	const block1 = document.querySelector(".phone-number__numbers-block1");
-// 	const block2 = document.querySelector(".phone-number__numbers-block2");
-// 	const nextBtn = document.querySelector(".js-block-nextBtn");
-// 	const prevBtn = document.querySelector(".js-block-prevBtn");
-//
-// 	nextBtn.addEventListener("click", function() {
-// 		block1.classList.add("hidden");
-// 		block1.classList.remove("visible");
-// 		block2.classList.remove("hidden");
-// 	});
-//
-// 	prevBtn.addEventListener("click", function() {
-// 		block2.classList.add("hidden");
-// 		block2.classList.remove("visible");
-// 		block1.classList.remove("hidden");
-// 	});
-// }
-//
-//
-// showPrevNext();
-
 
 document.querySelectorAll('.application-internet__options').forEach(item => {
     item.ApplicationInternet = new ApplicationInternet(item);
@@ -492,10 +468,37 @@ function testPhone() {
                 });
         });
 
+
     });
 }
 
 testPhone();
+
+function errorPhone(){
+    const block = document.querySelectorAll('.form__phone');
+    block.forEach(item => {
+        const el = item.querySelector(".form__phone-input");
+        const phoneError = item.querySelector(".js-phone-error");
+        const incorrectPhoneMessage = "Некорректный номер телефона";
+        const emptyPhoneMessage = "Необходимо указать номер телефона";
+        phoneError.innerHTML = "";
+        el.addEventListener("input", function (event) {
+            // если длина value === 11 с учетом только цифр(replace)
+            if(el.value.replace(/[^0-9]/g, '').length === 11){
+                //то никакая надпись не выводится
+                phoneError.innerHTML = "";
+            }else if(el.value === "+7("){
+                phoneError.innerHTML = emptyPhoneMessage;
+            }else{
+                phoneError.innerHTML = incorrectPhoneMessage;
+            }
+        });
+    })
+}
+
+errorPhone();
+
+
 
 new Pikaday({
     field: document.getElementById('datepicker'),
@@ -593,6 +596,171 @@ function testText() {
 }
 
 testText();
+
+function testName() {
+    const block = document.querySelectorAll('.form__name');
+    block.forEach(item => {
+        const name = item.querySelector('.form__name-input');
+        name.onkeyup = function test(){
+            const value = name.value;
+            const pattern = /[()&^$?/%#\!@;+_*=":'0-9]/;
+            //делаем проверку с помощью метода test
+            //(выполняет поиск сопоставления)
+            if(pattern.test(value)){
+                //Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+                name.value = value.replace(pattern, '');
+            }
+            //создаем объект для корректировки строки
+            const replacer = {
+                "q": "й", "w": "ц", "e": "у", "r": "к", "t": "е", "y": "н", "u": "г",
+                "i": "ш", "o": "щ", "p": "з", "[": "х", "]": "ъ", "a": "ф", "s": "ы",
+                "d": "в", "f": "а", "g": "п", "h": "р", "j": "о", "k": "л", "l": "д",
+                ";": "ж", "'": "э", "z": "я", "x": "ч", "c": "с", "v": "м", "b": "и",
+                "n": "т", "m": "ь", ",": "б", ".": "ю", "/": "."
+            };
+
+            let replace;
+
+            //создаем цикл,чтобы не потерять длину
+            for (let i = 0; i < value.length; i++) {
+
+                //проверяем, что значемние value приобразованное в нижний регистр определено
+                if (replacer[value[i].toLowerCase()] !== undefined) {
+
+                    //если значение value в нижнем регистре
+                    if (value[i] === value[i].toLowerCase()) {
+                        //то в replace записывается значение value в низнем регистре
+                        replace = replacer[value[i].toLowerCase()];
+                    } else
+                    // если значение value в верхнем регистре
+                    if (value[i] === value[i].toUpperCase()) {
+                        //то в replace записывается значение value в верхнем регистре
+                        replace = replacer[value[i].toLowerCase()].toUpperCase();
+                    }
+                    // Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+                    name.value = value.replace(value[i], replace);
+                }
+            }
+            const formatName = /^[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)? [А-ЯЁ][а-яё]+( [А-ЯЁ][а-яё]+)?$/.test(name.value);
+            const errorPlace = item.querySelector(".js-error-name");
+            if (formatName !== true) {
+                // В переменную вставляем  строку
+                errorPlace.innerHTML = "Укажите Ваше ФИО";
+                // добавляем класс к переменной через метод класс-лист
+                name.classList.add("error-border");
+                // снимаем с переменной класс, через метод класс-лист
+                name.classList.remove("pseudo-hover");
+            } else {
+                // в переменную также вставляется строка, с пустым значениями
+                errorPlace.innerHTML = "";
+                // снимаем с переменной класс, через метод класс-лист
+                name.classList.remove("error-border");
+                // добавляем класс к переменной через метод класс-лист
+                name.classList.add("pseudo-hover");
+            }
+            clearCross();
+        };
+    })
+
+}
+testName();
+
+function errorRegion(){
+    const block = document.querySelectorAll('.form__region');
+    block.forEach(item => {
+        const inputRegion = item.querySelector('.form__region-input');
+        const regionError = item.querySelector('.js-error-region');
+        inputRegion.onkeyup = function test(){
+            const value = inputRegion.value;
+            //создаем объект для корректировки строки
+            const replacer = {
+                "q": "й", "w": "ц", "e": "у", "r": "к", "t": "е", "y": "н", "u": "г",
+                "i": "ш", "o": "щ", "p": "з", "[": "х", "]": "ъ", "a": "ф", "s": "ы",
+                "d": "в", "f": "а", "g": "п", "h": "р", "j": "о", "k": "л", "l": "д",
+                ";": "ж", "'": "э", "z": "я", "x": "ч", "c": "с", "v": "м", "b": "и",
+                "n": "т", "m": "ь", ",": "б", ".": "ю", "/": "."
+            };
+
+            let replace;
+
+            //создаем цикл,чтобы не потерять длину
+            for (let i = 0; i < value.length; i++) {
+
+                //проверяем, что значемние value приобразованное в нижний регистр определено
+                if (replacer[value[i].toLowerCase()] !== undefined) {
+
+                    //если значение value в нижнем регистре
+                    if (value[i] === value[i].toLowerCase()) {
+                        //то в replace записывается значение value в низнем регистре
+                        replace = replacer[value[i].toLowerCase()];
+                    } else
+                    // если значение value в верхнем регистре
+                    if (value[i] === value[i].toUpperCase()) {
+                        //то в replace записывается значение value в верхнем регистре
+                        replace = replacer[value[i].toLowerCase()].toUpperCase();
+                    }
+                    // Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+                    inputRegion.value = value.replace(value[i], replace);
+                }
+            }
+            const formatRegion = /^[А-ЯЁ]/.test(inputRegion.value);
+            //если значение не соответствует заданному формату
+            if (formatRegion !== true || inputRegion.value.length < 2){
+                // В переменную вставляем  строку
+                regionError.innerHTML = "Укажите Ваше город или регион";
+                // добавляем класс к переменной через метод класс-лист
+                inputRegion.classList.add("error-border");
+                // снимаем с переменной класс, через метод класс-лист
+                inputRegion.classList.remove("pseudo-hover");
+            } else {
+                // если значение вышеуказанного условия не истинно, выполняется другая функция, нижеследующая
+                // в переменную также вставляется строка, с другими значениями
+                regionError.innerHTML = "";
+                // снимаем с переменной класс, через метод класс-лист
+                inputRegion.classList.remove("error-border");
+                // добавляем класс к переменной через метод класс-лист
+                inputRegion.classList.add("pseudo-hover");
+            }
+            clearCross();
+        };
+    })
+}
+errorRegion();
+
+function testPostcode(){
+     IMask(
+        document.getElementById('regexp-mask'),
+        {
+            mask: /^[1-6]\d{0,5}$/
+        });
+}
+testPostcode();
+
+function errorPostcode(){
+    const inputPostcode = document.querySelector('.form__postcode-input');
+    const postcodeError = document.querySelector('.js-error-postcode');
+    inputPostcode.addEventListener('input', event => {
+        if(inputPostcode.value.replace(/[^0-9]/g, '').length !== 6){
+            // В переменную вставляем  строку
+            postcodeError.innerHTML = "Укажите индекс Вашего города";
+            // добавляем класс к переменной через метод класс-лист
+            inputPostcode.classList.add("error-border");
+            // снимаем с переменной класс, через метод класс-лист
+            inputPostcode.classList.remove("pseudo-hover");
+        }else {
+            // если значение вышеуказанного условия не истинно, выполняется другая функция, нижеследующая
+            // в переменную также вставляется строка, с другими значениями
+            postcodeError.innerHTML = "";
+            // снимаем с переменной класс, через метод класс-лист
+            inputPostcode.classList.remove("error-border");
+            // добавляем класс к переменной через метод класс-лист
+            inputPostcode.classList.add("pseudo-hover");
+        }
+        clearCross();
+    })
+
+}
+errorPostcode();
 
 
 //выделяет избранное
@@ -1435,7 +1603,14 @@ function clearInput(){
         if(clear !== null){
             clear.addEventListener('click', event => {
                 const field = item.querySelector('.js-ascent-text');
-                field.value="";
+                if(field.classList.contains('form__phone-input')){
+                    field.value="+7(";
+                    //чтобы при очищении поля удалялся и "Некорректный номер телефона"
+                    errorPhone();
+                }else{
+                    field.value="";
+                }
+
                 if (field.value.length > 0) {
                     field.classList.add("form__input-up");
                 } else {
@@ -1452,28 +1627,83 @@ function clearInput(){
 clearInput();
 
 
+// а этот кусок кода когда вызывается?
+//хз просто , ты ж видел там сразу все +7 показывает
 function clearCross(){
     const blocks = document.querySelectorAll('.input-parent');
     blocks.forEach(item => {
         const clear = item.querySelector('.js-clear-field');
+        const filled = item.querySelector('.input-filled');
+        //если у инпута предусмотрен очищающий крестик
         if(clear !== null){
             const field = item.querySelector('.js-ascent-text');
+            const formatName = /^[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)? [А-ЯЁ][а-яё]+( [А-ЯЁ][а-яё]+)?$/.test(field.value);
             if (field.value.length > 0) {
-                // console.log(clear);
-                clear.classList.add('display-block');
-                clear.classList.remove('display-none');
-                // console.log(clear.style);
-            } else {
+                //и если это инпут телефона и длина его value равна 11 с учетом только цифр(полный номер)
+                if(field.classList.contains('form__phone-input') && field.value.replace(/[^0-9]/g, '').length === 11){
+                    //то добавляем класс скрывающий крестик
+                    clear.classList.add('display-none');
+                    //удаляем класс скрывающий галочку
+                    filled.classList.remove('display-none');
+                    //удаляем показывающий крустик
+                    clear.classList.remove('display-block');
+                    //добавляем класс показывающий галочку
+                    filled.classList.add('display-block');
+
+                }else if(field.classList.contains('form__phone-input') && field.value === '+7('){
+                    //если это номер телефона и его value равно +7(
+                    //то добавляем класс скрывающий крестик
+                    clear.classList.add('display-none');
+                    //удаляем показывающий крустик
+                    clear.classList.remove('display-block');
+                }else if(field.classList.contains('form__name-input') && formatName === true){
+                    //то добавляем класс скрывающий крестик
+                    clear.classList.add('display-none');
+                    //удаляем класс скрывающий галочку
+                    filled.classList.remove('display-none');
+                    //удаляем показывающий крустик
+                    clear.classList.remove('display-block');
+                    //добавляем класс показывающий галочку
+                    filled.classList.add('display-block');
+                }else if(field.classList.contains('form__region-input') && /^[А-ЯЁ]/.test(field.value) === true && field.value.length > 1){
+                    //то добавляем класс скрывающий крестик
+                    clear.classList.add('display-none');
+                    //удаляем класс скрывающий галочку
+                    filled.classList.remove('display-none');
+                    //удаляем показывающий крустик
+                    clear.classList.remove('display-block');
+                    //добавляем класс показывающий галочку
+                    filled.classList.add('display-block');
+                }else if(field.classList.contains('form__postcode-input') && field.value.replace(/[^0-9]/g, '').length === 6){
+                    //то добавляем класс скрывающий крестик
+                    clear.classList.add('display-none');
+                    //удаляем класс скрывающий галочку
+                    filled.classList.remove('display-none');
+                    //удаляем показывающий крустик
+                    clear.classList.remove('display-block');
+                    //добавляем класс показывающий галочку
+                    filled.classList.add('display-block');
+                }else {
+                    //если это инпут не телефона
+                    //то добавляем класс показывающий крестик
+                    clear.classList.add('display-block');
+                    //удаляем класс скрывающий крестик
+                    clear.classList.remove('display-none');
+
+                    //удаляем класс показывающий галочку
+                    filled.classList.remove('display-block');
+                    //добавляем класс скрывающий галочку
+                    filled.classList.add('display-none');
+                }
+            }else {
                 clear.classList.add('display-none');
                 clear.classList.remove('display-block');
             }
         }
-
     })
 }
 
 clearCross();
-
 
 function correct(){
     const block = document.querySelectorAll('.options-menu__correction');
