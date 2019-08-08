@@ -394,6 +394,13 @@ input .input-error__checkbox {
 	outline: none;
 }
 
+
+.form__all-data-submit{
+	width: 235px;
+	margin: 0 auto;
+
+}
+
 .form__wrapper-next {
 	border-top: 1px solid #dce3ea;
 	border-radius: 0 0 5px 5px;
