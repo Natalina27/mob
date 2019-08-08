@@ -215,16 +215,31 @@ App.init();
 
 
 function showTariffOptions() {
-    const input = document.querySelector(".js-open-tariff");
-    const tariffBlock = document.querySelector(".additional-offer");
+    const block = document.querySelector('.application-form ');
+    const fields = block.querySelectorAll('.input-filled');
+    const tariffBlock = block.querySelector(".additional-offer");
+    const btn = block.querySelector('.form__next-link');
+    const arr = Array.from(fields);
 
-    input.addEventListener("blur", function () {
-        if (input.value.length > 0) {
-            tariffBlock.classList.remove("hidden");
-        }
-    });
+    //ф-ция для метода every
+    function check(item){
+        return item.classList.contains('display-block') === true;
+    }
+
+    //если все поля заполненны корректно
+    if(arr.every(check) === true){
+        //то открываем блок с тарифами
+        tariffBlock.classList.remove("hidden");
+        //и снимаем с кнопки "Далее" класс блокирующий события
+        btn.classList.remove("removal");
+    }else{
+        //если не все поля заполненны коррекстно
+        //то скрываем блок с тарифами
+        tariffBlock.classList.add("hidden");
+        //и добавляем "Далее" класс блокирующий события
+        btn.classList.add("removal");
+    }
 }
-
 
 showTariffOptions();
 
@@ -1699,6 +1714,7 @@ function clearCross(){
             }
         }
     })
+    showTariffOptions();
 }
 
 clearCross();
