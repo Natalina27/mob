@@ -65,11 +65,12 @@
 							<option value="value2">Не имею гражданства РФ</option>
 						</select>
 					</div>	
-					<div class="form__country input-parent">
-						<input id="country" class="form__country-input js-ascent-text pseudo-hover"  type="text" name="country">
+					<div class="form__region form__country input-parent">
+						<input id="country" class="form__text-input form__country-input js-ascent-text pseudo-hover"  type="text" name="country">
 						<label for="country" class="label">Укажите страну</label>
 						<div class="input-close-btn js-clear-field"></div>
-<!--						<div class="input-filled display-none">✔</div>-->
+						<div class="input-filled display-none">✔</div>
+						<div class="input-error js-error-region"></div>
 					</div>
 					<div class="additional-offer block-zero hidden">
 						<div class="calculator-count">
@@ -3700,32 +3701,32 @@
 					<div class="input-error js-error-postcode"></div>
 				</div>
 				<div class="form__region form__appointment-region input-parent">
-					<input id="appointment-region" class="form__text-input form__region-input form__appointment-region-input js-ascent-text pseudo-hover" type="text" name="appointment-region">
+					<input id="appointment-region" class="form__text-input form__region-two-input form__appointment-region-input js-ascent-text pseudo-hover" type="text" name="appointment-region">
 					<label class="label" for="appointment-region">Регион</label>
 					<div class="input-close-btn js-clear-field"></div>
 					<div class="input-filled display-none">✔</div>
 					<div class="input-error js-error-region"></div>
 				</div>
 				<div class="form__region form__district-or-city input-parent">
-					<input id="district-or-city" class="form__text-input form__region-input form__district-or-city-input js-ascent-text pseudo-hover" type="text" name="district-or-city">
+					<input id="district-or-city" class="form__text-input form__city-input form__district-or-city-input js-ascent-text pseudo-hover" type="text" name="district-or-city">
 					<label class="label" for="district-or-city">Район или город</label>
 					<div class="input-close-btn js-clear-field"></div>
 					<div class="input-filled display-none">✔</div>
 					<div class="input-error js-error-region"></div>
 				</div>	
 				<div class="form__region form__settlement input-parent">
-					<input id="settlement" class="form__text-input form__region-input form__settlement-input js-ascent-text pseudo-hover" type="text" name="settlement">
+					<input id="settlement" class="form__text-input form__locality-input form__settlement-input js-ascent-text pseudo-hover" type="text" name="settlement">
 					<label class="label" for="settlement">Населенный пункт</label>
 					<div class="input-close-btn js-clear-field"></div>
 					<div class="input-filled display-none">✔</div>
 					<div class="input-error js-error-region"></div>
 				</div>
-				<div class="form__street input-parent">					
+				<div class="form__region input-parent">
 					<input id="street" class="form__text-input form__street-input js-ascent-text pseudo-hover" type="text" name="street">
 					<label class="label" for="street">Улица</label>
 					<div class="input-close-btn js-clear-field"></div>
 					<div class="input-filled display-none">✔</div>
-					<div class="input-error js-error"></div>
+					<div class="input-error js-error-region"></div>
 				</div>
 				<div class="form__wrapper form__wrapper__address">
 					<div class="form__house input-parent">
@@ -3781,7 +3782,7 @@
 				</div>
 				<div class="form__comment input-parent ">					
 					<input id="comment" class="form__text-input form__comment-input js-ascent-text pseudo-hover" type="text" name="comment">
-					<label class="label" for="comment">Комментарий</label>
+					<label class="label" for="comment">Комментарий для представителя</label>
 					<div class="input-close-btn js-clear-field"></div>
 				</div>
 				<div class="form__wrapper form__wrapper-next">
@@ -3860,12 +3861,14 @@
 						<button type="button" class="form__invite-submit form__next-btn">Пригласить</button>
 					</a>
 <!--					<input id="invite" class="form__invite-submit" type="button" name="invite" value="Пригласить">-->
-<!--					<a href="#all-data">-->
-<!--						<button type="button" class="form__all-data-submit form__next-btn">Посмотреть все данные</button>-->
-<!--					</a>-->
+
 				</div>
 
 			</form>
+
+			<a href="#invite" class="all-data-btn">
+				<button type="button" class="form__all-data-submit form__next-btn">Посмотреть все данные</button>
+			</a>
 
 		</div>
 
