@@ -196,7 +196,15 @@ input .input-error__checkbox {
 	margin-top: 0px;
 }
 
-
+.form__region-input,
+.form__name-input,
+.form__country-input,
+.form__region-two-input,
+.form__city-input,
+.form__locality-input,
+.form__street-input{
+	text-transform: capitalize;
+}
 
 .form__region-input, 
 .form__name-input, 
@@ -394,10 +402,12 @@ input .input-error__checkbox {
 	outline: none;
 }
 
-
+.all-data-btn{
+	margin: 0 auto;
+}
 .form__all-data-submit{
 	width: 235px;
-	margin: 0 auto;
+
 
 }
 
@@ -423,6 +433,7 @@ input .input-error__checkbox {
 }
 
 .thank-you__more-btn:focus,
+.form__invite-submit:focus,
 .form__invite-submit:focus,
 .condition__button:focus,
 .phone-number__next-btn:focus {
@@ -460,6 +471,7 @@ input .input-error__checkbox {
 
 
 .bring{
+
 
 }
 .bring__picture{
