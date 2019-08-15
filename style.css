@@ -224,7 +224,7 @@ input[type='number']::-webkit-inner-spin-button {
 .form__settlement-input, 
 .form__street-input, 
 .form__comment-input,
-.form__phone-input, 
+.form__phone-input,
 .form__email-input {
 	width: 100%;
 	display: block;
@@ -1028,6 +1028,9 @@ input[type='number']::-webkit-inner-spin-button {
 	max-width: 960px;
 	color: #333;
 }
+.popup--friend-condition .popup__all-info-body{
+	padding-bottom: 60px;
+}
 
 .form__agree-conditions-title_number-transfer {
 	margin-bottom: 26px;
@@ -1375,7 +1378,10 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 .correct-number__next-bth,
-.correct-number__add-more-next-bth{
+.correct-number__add-more-next-bth,
+.correct-number__add-more-two-next-bth,
+.correct-number__add-more-three-next-bth,
+.correct-number__add-more-four-next-bth{
 	width: auto;
 }
 
@@ -1477,13 +1483,45 @@ form input[type=checkbox].condition__error + label:before{
 }
 
 .all-info-body__item{
+	width: 100%;
 	display: flex;
+	margin-bottom: 15px;
+}
+.all-info-body__item h2,
+.all-info-body__item h3{
+	margin: 0;
+}
+.all-info-body__number{
+	flex-direction: column;
+}
+.number-data{
+	margin: 15px 0;
+	display: flex;
+	flex-direction: column;
 }
 
+.number-data__top,
+.number-service,
+.number-phone,
+.number-data__bot{
+	display: flex;
+	vertical-align: center;
+}
 
+.number-data__top{
+	justify-content: space-between;
+}
+.number-data__bot{
+	margin-top: 15px;
+}
 
-
-
+.data-text{
+	text-transform: capitalize;
+}
+.data{
+	margin-top: 3px;
+	margin-left: 10px;
+}
 
 
 
