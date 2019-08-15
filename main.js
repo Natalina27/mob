@@ -132,9 +132,9 @@ const App = (function () {
 
 App.init();
 
-
+//показывает тарифный блок
 function showTariffOptions() {
-    const block = document.querySelector('.application-form ');
+    const block = document.querySelector('.application-form');
     const fields = block.querySelectorAll('.input-filled');
     const tariffBlock = block.querySelector(".additional-offer");
     const btn = block.querySelector('.form__next-link');
@@ -144,6 +144,7 @@ function showTariffOptions() {
     const region = block.querySelector('.form__text-input');
     const textRegion = block.querySelector('.js-error-region');
     const arr = Array.from(fields);
+
     //в массиве инпутов, вырезаю последний из 4
     arr.splice(3,1);
 
@@ -307,8 +308,10 @@ function calc(){
                     }
                 });
             });
+            //записываем цену в локальный калькулятор
             priceValue.innerHTML = price;
             if(item === pageBlockZero){
+                //записываем цену в корзину
                 bucketZero.innerHTML = price;
             }else if(item === pageBlockOne){
                 bucketOne.innerHTML = price;
@@ -323,14 +326,18 @@ function calc(){
         calculator();
     });
     let sum = 0;
+    //для каждого блока корзины
     bucket.forEach(item => {
+        //если он не скрыт
         if(!item.classList.contains('hidden')){
             const price = item.querySelectorAll('.bucket__price');
+            //добавляем цену, записанную в нем в переменную sum
             for(let i = 0; i < price.length; i++){
                 sum += Number(price[i].innerHTML);
             }
         }
     });
+    //записываем получившеееся значение в общую цену на стр с корзинами
     totalPrice.innerHTML = String(`${sum}`);
 
     //добавляем общую цену на стр со всеми данными
@@ -380,27 +387,15 @@ function updatePage() {
 function check() {
     //находим все страницы в документе
     const pages = document.querySelectorAll('.page');
-    // console.log(pages);
-    //проверяем каждую страницу
+    //для каждой стр
     pages.forEach(item => {
-        // console.log(item);
-        // console.log(item.querySelector('.form__next-btn'));
         const checkbox = item.querySelector('.condition__checkbox');
         const nextButton = item.querySelector('.form__next-btn');
-        const nextPage = item.querySelector(('.form__next-link'))
-        // console.log(nextButton);
-        //проверяем чтобы кнопка была активна
 
+        //проверяем чтобы кнопка согласия была активна
         if (nextButton !== null && checkbox) {
-            checkbox.addEventListener('click', () => {
-                if (!checkbox.checked) {
-                    nextPage.classList.add('removal');
-                } else {
-                    nextPage.classList.remove('removal');
-                }
-            });
 
-            // навешиваем на кнопку событие клик
+            // навешиваем на кнопку переключения стр событие клик
             nextButton.addEventListener('click', () => {
                 //если галочка не стоит
                 if (!checkbox.checked) {
@@ -430,11 +425,11 @@ function testPhone() {
                 });
         });
 
-
     });
 }
 
 testPhone();
+
 
 function errorPhone(){
     const block = document.querySelectorAll('.form__phone');
@@ -659,11 +654,13 @@ function testName() {
                     clear.classList.remove('display-block');
                     //добавляем класс показывающий галочку
                     filled.classList.add('display-block');
+
+                    //если это инпут не "укажите имя друга"
                     if(!name.classList.contains('form__friends-name-input')){
                         //добавляем значение на стр со всеми данными
                         allInfoName.innerHTML = name.value;
                     }else{
-                        // В переменную вставляем  строку
+                        //добавляем значение на стр со всеми данными
                         allInfoFriendName.innerHTML = name.value;
                     }
 
@@ -685,7 +682,6 @@ function testName() {
                 //удаляем показывающий крестик
                 clear.classList.remove('display-block');
             }
-
             clearCross();
         })
     })
@@ -774,7 +770,7 @@ function errorRegion(){
                         item.classList.remove("pseudo-hover");
 
                     } else {
-                        // если значение вышеуказанного условия не истинно, выполняется другая функция, нижеследующая
+                        // если значение вышеуказанного условия не истинно
 
                         if(item.classList.contains('form__region-input')){
                             //записываем значение на стр со всеми данными
@@ -843,7 +839,6 @@ function errorRegion(){
                     //удаляем показывающий крестик
                     clear.classList.remove('display-block');
                 }
-
                 clearCross();
             })
         });
@@ -857,7 +852,6 @@ function  errorHouse() {
     const house = block.querySelector('input');
     const textHouse = block.querySelector('.js-error-house');
     house.addEventListener('blur', e => {
-        // console.log(house.value.length);
         if(house.value.length > 0){
             // снимаем с переменной класс, через метод класс-лист
             house.classList.remove("error-border");
@@ -878,6 +872,7 @@ function  errorHouse() {
 
 errorHouse();
 
+
 function hidingCross(){
     const block = document.querySelector('.form__wrapper__address');
     const el = block.querySelectorAll('.input-parent');
@@ -886,12 +881,10 @@ function hidingCross(){
         const clear = item.querySelector('.js-clear-field');
         const field = item.querySelector('input');
         field.addEventListener('blur', e => {
-            if(field.value.length === 0){
-                //удаляем показывающий крестик
-                clear.classList.remove('display-block');
-                //то добавляем класс скрывающий крестик
-                clear.classList.add('display-none');
-            }
+            //удаляем показывающий крестик
+            clear.classList.remove('display-block');
+            //добавляем класс скрывающий крестик
+            clear.classList.add('display-none');
         })
     })
 }
@@ -916,6 +909,7 @@ function errorPostcode(){
 
     const allInfoPostcode = document.querySelector('.postcode__data');
     inputPostcode.addEventListener('blur', event => {
+        //если длина значения не равна 6
         if(inputPostcode.value.replace(/[^0-9]/g, '').length !== 6){
             // В переменную вставляем  строку
             postcodeError.innerHTML = "Неверный формат индекса";
@@ -949,108 +943,126 @@ function errorPostcode(){
 }
 errorPostcode();
 
+//селекты выбора ГБ
 const internet = document.querySelectorAll('[data-name="internet"]');
 const addMoreInternet = document.querySelectorAll('[data-name="add-more-internet"]');
 const addMoreTwoInternet = document.querySelectorAll('[data-name="add-more-two-internet"]');
 const addMoreThreeInternet = document.querySelectorAll('[data-name="add-more-three-internet"]');
 const addMoreFourInternet = document.querySelectorAll('[data-name="add-more-four-internet"]');
 
+//селекты выбора еоличества минут
 const calls = document.querySelectorAll('[data-name="calls"]');
 const addMoreCalls = document.querySelectorAll('[data-name="add-more-calls"]');
 const addMoreTwoCalls = document.querySelectorAll('[data-name="add-more-two-calls"]');
 const addMoreThreeCalls = document.querySelectorAll('[data-name="add-more-three-calls"]');
 const addMoreFourCalls = document.querySelectorAll('[data-name="add-more-four-calls"]');
 
+//чекбоксы Мессенджеры
 const messengers = document.querySelectorAll('[data-name="messengers"]');
 const addMoreMessengers = document.querySelectorAll('[data-name="add-more-messengers"]');
 const addMoreTwoMessengers = document.querySelectorAll('[data-name="add-more-two-messengers"]');
 const addMoreThreeMessengers = document.querySelectorAll('[data-name="add-more-three-messengers"]');
 const addMoreFourMessengers = document.querySelectorAll('[data-name="add-more-four-messengers"]');
 
+//чекбоксы Социальные сети
 const social = document.querySelectorAll('[data-name="social"]');
 const addMoreSocial = document.querySelectorAll('[data-name="add-more-social"]');
 const addMoreTwoSocial = document.querySelectorAll('[data-name="add-more-two-social"]');
 const addMoreThreeSocial = document.querySelectorAll('[data-name="add-more-three-social"]');
 const addMoreFourSocial = document.querySelectorAll('[data-name="add-more-four-social"]');
 
+//чекбоксы Музыка
 const music = document.querySelectorAll('[data-name="music"]');
 const addMoreMusic = document.querySelectorAll('[data-name="add-more-music"]');
 const addMoreTwoMusic = document.querySelectorAll('[data-name="add-more-two-music"]');
 const addMoreThreeMusic = document.querySelectorAll('[data-name="add-more-three-music"]');
 const addMoreFourMusic = document.querySelectorAll('[data-name="add-more-four-music"]');
 
+//чекбоксы Видео
 const video = document.querySelectorAll('[data-name="video"]');
 const addMoreVideo = document.querySelectorAll('[data-name="add-more-video"]');
 const addMoreTwoVideo = document.querySelectorAll('[data-name="add-more-two-video"]');
 const addMoreThreeVideo = document.querySelectorAll('[data-name="add-more-three-video"]');
 const addMoreFourVideo = document.querySelectorAll('[data-name="add-more-four-video"]');
 
+//чекбоксы Безлимитные СМС
 const sms = document.querySelectorAll('[data-name="sms"]');
 const addMoreSms = document.querySelectorAll('[data-name="add-more-sms"]');
 const addMoreTwoSms = document.querySelectorAll('[data-name="add-more-two-sms"]');
 const addMoreThreeSms = document.querySelectorAll('[data-name="add-more-three-sms"]');
 const addMoreFourSms = document.querySelectorAll('[data-name="add-more-four-sms"]');
 
+//номера телефонов, которые вводит пользователь в блоке "Сохранить номер"
 const enterPhone = document.querySelectorAll('.enter-number');
 const enterPhoneOne = document.querySelectorAll('.enter-number-one');
 const enterPhoneTwo = document.querySelectorAll('.enter-number-two');
 const enterPhoneThree = document.querySelectorAll('.enter-number-three');
 const enterPhoneFour = document.querySelectorAll('.enter-number-four');
 
+//блоки выбора номера из списка
 const blockNumber = document.querySelectorAll('.js-block1');
 const addMoreBlockNumber = document.querySelectorAll('.add-more-js-block1');
 const addMoreTwoBlockNumber = document.querySelectorAll('.add-more-two-js-block1');
 const addMoreThreeBlockNumber = document.querySelectorAll('.add-more-three-js-block1');
 const addMoreFourBlockNumber = document.querySelectorAll('.add-more-four-js-block1');
 
+//место в корзине, куда записывать выбранные ГБ
 const bucketInternet = document.querySelector('.bucket__internet');
 const addMoreBucketInternet = document.querySelector('.bucket-new-number__internet');
 const addMoreTwoBucketInternet = document.querySelector('.bucket-new-two-number__internet');
 const addMoreThreeBucketInternet = document.querySelector('.bucket-new-three-number__internet');
 const addMoreFourBucketInternet = document.querySelector('.bucket-new-four-number__internet');
 
+//место в блоке со всеми данными, куда записывать выбранные ГБ
 const allInfoInternet = document.querySelector('.transfer-number__internet-value');
 const allInfoInternetOne = document.querySelector('.new-number__internet-value');
 const allInfoInternetTwo = document.querySelector('.new-number-two__internet-value');
 const allInfoInternetThree = document.querySelector('.new-number-three__internet-value');
 const allInfoInternetFour = document.querySelector('.new-number-four__internet-value');
 
+//место в корзине, куда записывать выбранные минуты
 const bucketCalls = document.querySelector('.bucket__calls');
 const addMoreBucketCalls = document.querySelector('.bucket-new-number__calls');
 const addMoreTwoBucketCalls = document.querySelector('.bucket-new-two-number__calls');
 const addMoreThreeBucketCalls = document.querySelector('.bucket-new-three-number__calls');
 const addMoreFourBucketCalls = document.querySelector('.bucket-new-four-number__calls');
 
+//место в блоке со всеми данными, куда записывать выбранные минуты
 const allInfoCalls = document.querySelector('.transfer-number__calls-value');
 const allInfoCallsOne = document.querySelector('.new-number__calls-value');
 const allInfoCallsTwo = document.querySelector('.new-number-two__calls-value');
 const allInfoCallsThree = document.querySelector('.new-number-three__calls-value');
 const allInfoCallsFour = document.querySelector('.new-number-four__calls-value');
 
+//место в корзине, куда записывать выбранные номера телефонов
 const bucketPhone = document.querySelector('.options-menu__number-value');
 const addMoreBucketPhone = document.querySelector('.options-menu__new-number-value');
 const addMoreTwoBucketPhone = document.querySelector('.options-menu__new-number-two-value');
 const addMoreThreeBucketPhone = document.querySelector('.options-menu__new-number-three-value');
 const addMoreFourBucketPhone = document.querySelector('.options-menu__new-number-four-value');
 
+//место в блоке со всеми данными, куда записывать выбранные номера телефонов
 const allInfoPhone = document.querySelector('.transfer-number__number');
 const allInfoNewPhone = document.querySelector('.new-number__number');
 const allInfoNewPhoneTwo = document.querySelector('.new-number-two__number');
 const allInfoNewPhoneThree = document.querySelector('.new-number-three__number');
 const allInfoNewPhoneFour = document.querySelector('.new-number-four__number');
 
+//место в корзине, куда записывать выбранные дополнительные услуги(смс, музыка и тд)
 const bucketMoreValue = document.querySelector('.options-menu__more-value');
 const bucketMoreOneValue = document.querySelector('.options-menu__more-one-value');
 const bucketMoreTwoValue = document.querySelector('.options-menu__more-two-value');
 const bucketMoreThreeValue = document.querySelector('.options-menu__more-three-value');
 const bucketMoreFourValue = document.querySelector('.options-menu__more-four-value');
 
+//место в блоке со всеми данными, куда записывать выбранные дополнительные услуги(смс, музыка и тд)
 const allInfoValue = document.querySelector('.transfer-number__more-value');
 const allInfoOneValue = document.querySelector('.new-number__more-value');
 const allInfoTwoValue = document.querySelector('.new-number-two__more-value');
 const allInfoThreeValue = document.querySelector('.new-number-three__more-value');
 const allInfoFourValue = document.querySelector('.new-number-four__more-value');
 
+//место в корзине, куда записывать цену выбранного номера
 const bucketNumberZero = document.querySelector('.bucket__number-price-zero');
 const bucketNumberOne = document.querySelector('.bucket__number-price-one');
 const bucketNumberTwo = document.querySelector('.bucket__number-price-two');
@@ -1096,7 +1108,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         item.value = event.target.value;
                     }
                 });
-                //блок со списком нтелефонных номеров
+                //блок со списком телефонных номеров
                 if (select === blockNumber) {
                     const number = function () {
                         //в переменную записывается name измененного эл
@@ -1117,12 +1129,16 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         //делаем эл с таким же индексом в другом блоке :checked
                         numbersTwo[index].checked = true;
 
+                        //находим все выбранные номера
                         const container = document.querySelectorAll(`[data-value="${activeNumberOne.value}"]`);
                         const arr = Array.from(container);
+                        //удаляем первые 2 номера - в том блоке, в котором мы его выбрали и в корректирующем
                         arr.splice(0,2);
+                        //для каждого такого номера в остальных блоках
                         arr.forEach(item => {
                             item.classList.add('display-none');
                         });
+
                         //кнопка с номером телефона
                         const correctBtn = document.querySelector('.correct-number__next-bth');
 
@@ -1134,7 +1150,6 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberZero.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoPhone.innerHTML = activeNumberOne.value;
-
                         onlyFavorites();
                         calc();
                     };
@@ -1161,8 +1176,11 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         //делаем эл с таким же индексом в другом блоке :checked
                         numbersTwo[index].checked = true;
 
+                        //находим все выбранные номера
                         const container = document.querySelectorAll(`[data-value="${activeNumberOne.value}"]`);
                         const arr = Array.from(container);
+                        //удаляем первые 2 номера - в том блоке, в котором мы его выбрали и в корректирующем
+                        //т.к addMoreBlockNumber второй блок, то его номера в общем списке будут 3,4 - их мы и удаляем
                         arr.splice(1,2);
                         arr.forEach(item => {
                             item.classList.add('display-none');
@@ -1317,10 +1335,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                     setTimeout(number, 100);
                 }
 
-                // console.log(item);
-                // console.log(item.dataset.number);
-                // console.log(item.classList.contains(`[value="${item.value}"]`));
                 if(item.type !== 'checkbox'){
+                    //номер телефона
                     const value = item.querySelector(`[value="${item.value}"]`).dataset.number;
 
                     if(select === internet){
@@ -1376,27 +1392,30 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                     }
                     setTimeout(() => calc(), 100);
                 }else{
-                    // moreZero.forEach(item => {
-                    //     bucketMoreValue.innerHTML = item.dataset.number;
-                    // })
+                    //если это чекбокс
+                    //если эти чекбоксы относятся к первому номеру
                     if(item.classList.contains('block-zero__checkbox')){
+                        //находим все отмеченные доп услуги(видео,музыку)
                         const moreZero = pageBlockZero.querySelectorAll('input:checked');
-                        console.log(moreZero);
                         bucketMoreValue.innerHTML = '';
                         allInfoValue.innerHTML = '';
+
                         for(let i = 0; i < moreZero.length; i++){
-                            console.log('test');
+                            //если выбранный чекбокс 1
                             if(i === 0){
                                 bucketMoreValue.innerHTML += moreZero[i].dataset.number;
                                 allInfoValue.innerHTML += moreZero[i].dataset.number;
 
                             }else{
+                                //если выбранный чекбокс не 1, то добавляем запятную
                                 bucketMoreValue.innerHTML += ', ' + moreZero[i].dataset.number;
                                 allInfoValue.innerHTML += ', ' + moreZero[i].dataset.number;
 
                             }
                         }
                     }else if(item.classList.contains('block-one__checkbox')){
+                        //если эти чекбоксы относятся ко первому номеру
+                        //находим все отмеченные доп услуги(видео,музыку)
                         const moreOne = pageBlockOne.querySelectorAll('input:checked');
                         bucketMoreOneValue.innerHTML = '';
                         allInfoOneValue.innerHTML = '';
@@ -1412,6 +1431,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                             }
                         }
                     }else if(item.classList.contains('block-two__checkbox')){
+                        //если эти чекбоксы относятся к третьему  номеру
+                        //находим все отмеченные доп услуги(видео,музыку)
                         const moreTwo = pageBlockTwo.querySelectorAll('input:checked');
                         bucketMoreTwoValue.innerHTML = '';
                         allInfoTwoValue.innerHTML = '';
@@ -1427,6 +1448,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                             }
                         }
                     }else if(item.classList.contains('block-three__checkbox')){
+                        //если эти чекбоксы относятся к четвертому номеру
+                        //находим все отмеченные доп услуги(видео,музыку)
                         const moreThree = pageBlockThree.querySelectorAll('input:checked');
                         bucketMoreThreeValue.innerHTML = '';
                         allInfoThreeValue.innerHTML = '';
@@ -1442,6 +1465,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                             }
                         }
                     }else if(item.classList.contains('block-four__checkbox')){
+                        //если эти чекбоксы относятся к пятому номеру
+                        //находим все отмеченные доп услуги(видео,музыку)
                         const moreFour = pageBlockFour.querySelectorAll('input:checked');
                         bucketMoreFourValue.innerHTML = '';
                         allInfoFourValue.innerHTML = '';
@@ -1477,28 +1502,38 @@ valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInterne
 
 //выделяет избранное
 function paintingStars() {
+    //блок с номерами
     const block = document.querySelectorAll('.new-number__options');
 
+    // для каждого блока
     block.forEach(item => {
+        //находим все контейнеры номеров
         const container = item.querySelectorAll('.phone-number__numbers-container');
+        //находим кнопку "Показать избранное"
         const favoritesNumbers = item.querySelector('.favorites-btn');
 
+        //для каждого контейнера
         container.forEach(item => {
+            //находим звезду
             const star = item.querySelector('.phone-number__price');
+            //находим чекбокс относящийся к звезде
             const checkbox = item.querySelector('input[type="checkbox"]');
 
+            //при клике на этот чекбокс
             checkbox.addEventListener('click', () => {
                 //добавляем метод toggle. Если класс color есть, он удаляется, если нет, то добавляется;
                 star.classList.toggle('color');
 
                 //вызываес функцию,находящуюся ниже
                 favorites();
+                //если у звезды есть класс color
                 const starActive = star.classList.contains('color');
+                //если кнопка "Показать избранное" активна
                 const active = favoritesNumbers.classList.contains('active');
 
-                //если при клике звезда снимается и мы находимся в только фаворитах
+                //если при клике на чекбок звезды, цвет убирается снимается и мы находимся в блоке "только фавориты"
                 if (active && !starActive) {
-                    //скрываем номер
+                    //то скрываем номер, у которого сняли звезду
                     item.classList.add('hidden');
                 }
             })
@@ -1511,25 +1546,30 @@ paintingStars();
 
 //активирует кнопку "показать избранное"
 function favorites() {
+    //блок "новый номер"
     const block = document.querySelectorAll('.new-number__options');
 
-
+    //для каждого блока
     block.forEach(item => {
+        //блок со списком номеров
         const blockNumbers = item.querySelector('.phone-number__numbers');
+        //контейнер номера
         const container = blockNumbers.querySelectorAll('.phone-number__numbers-container');
-
+        //кнопка "Показать избранное"
         const favoritesNumbers = item.querySelector('.favorites-btn');
+        //части кнопки (текст + звездочка)
         const favoritesName = favoritesNumbers.querySelectorAll('.favorites-items');
-
+        //кнопка "Следующие"
         const nextNumbers = item.querySelector('.numbers-scroller__show-next');
         const nextNumbersItems = nextNumbers.querySelectorAll('.favorites-items');
-
+        // кнопка "Предыдущие"
         const prevNumbers = item.querySelector('.numbers-scroller__show-prev');
         const prevNumbersItem = prevNumbers.querySelectorAll('.favorites-items');
 
         const arr = Array.from(container);
-
+        //отфильтровываем номера, которые еще не были выбранны
         const availableNumbers = arr.filter(function(item){
+            //если нет класса display-none
             if(item.classList.contains('display-none') !== true){
                 return item;
             }
@@ -1541,9 +1581,8 @@ function favorites() {
             return el.querySelector('input[type="checkbox"]:checked');
         }
 
-        //проверяем,что в arr есть хотя бы один активный чекбокс
+        //проверяем,что в отфильтрованных номерах есть хотя бы один активный чекбокс звездочки
         if (availableNumbers.some(stars) === true) {
-
             //для каждого элемента кнопки "Показать избранное"
             favoritesName.forEach(item => {
                 //удаляем обесцвечивающий класс
@@ -1551,9 +1590,10 @@ function favorites() {
                 //снимаем блокировку события
                 favoritesNumbers.classList.remove('removal');
             })
-        } else {
-            //для каждого номера
+        } else {//если ни одного избранного номера нет, то
+            //для отфильтрованных номеров
             for (let i = 0; i < availableNumbers.length; i++) {
+                //для первых 7
                 if (i < 7) {
                     //удаляем, скрывающий класс с первых 7 номеров
                     availableNumbers[i].classList.remove('hidden');
@@ -1575,7 +1615,10 @@ function favorites() {
 
             //для каждого элемента кнопки "показать избранное"
             favoritesName.forEach(item => {
+                //класс добавляющийся,когда показываются только избранные номера и мы его удаляем
+                //это для развития событий, когда мы находимся в блоке только избранных номеров и нажимая на звездочки удаляем все номера
                 favoritesNumbers.classList.remove('active');
+                //добавляем обесцвечивающий класс
                 item.classList.add('favorites');
                 //добавляем блокировку события
                 favoritesNumbers.classList.add('removal');
@@ -1583,6 +1626,7 @@ function favorites() {
             });
 
             //находим элементы кнопки "показать избранное"
+            //это для развития событий, когда мы находимся в блоке только избранных номеров и нажимая на звездочки удаляем все номера
             for (let i = 0; i < favoritesName.length; i++) {
                 //для первого элемента
                 if (i === 0) {
@@ -1601,29 +1645,37 @@ function favorites() {
 //активация/блокировка кнопок переключения номеров
 //что происходит при нажатии "показать избранное"
 function onlyFavorites() {
+    //блок "Получить новый номер"
     const block = document.querySelectorAll('.new-number__options');
 
     block.forEach(item => {
+        //блок с номерами
         const numbers = item.querySelector('.phone-number__numbers-block1');
+        //контейнер номера
         const elem = numbers.querySelectorAll('.phone-number__numbers-container');
+        //кнопка "Следующие"
         const nextNumbersBtn = item.querySelector('.numbers-scroller__show-next');
+        //части кнопки"Следующие"
         const nextNumbersBtnItems = nextNumbersBtn.querySelectorAll('.favorites-items');
-
+        // кнопка "Предыдущие"
         const prevNumbersBtn = item.querySelector('.numbers-scroller__show-prev');
         const prevNumbersBtnItems = prevNumbersBtn.querySelectorAll('.favorites-items');
-
+        //кнопка "Показать избранное"
         const showFavorites = item.querySelector('.favorites-btn');
         const showFavoritesItems = showFavorites.querySelectorAll('.favorites-items');
 
         const arr = Array.from(elem);
 
-
+        //отфильтровываем номера, которые еще не были выбранны
         const availableNumbers = arr.filter(function(item){
             if(item.classList.contains('display-none') !== true){
                 return item;
             }
         });
 
+        //в блоке с номерами показываем первые 7 номеров, остальные скрываем
+        //сейчас это не привязано ни к какому событию, потому что нужно чтоб этот кусок кода срабатывал,
+        // когда мы будем вызывать эту ф-цию на клик по кнопке "Оформить"
         for(let i = 0; i < availableNumbers.length; i++){
             if(i < 7){
                 availableNumbers[i].classList.remove('hidden');
@@ -1635,6 +1687,7 @@ function onlyFavorites() {
         //при нажатии на "следующие"
         nextNumbersBtn.addEventListener('click', () => {
 
+            //скрываем первые 7 и показываем след 7
             for(let i = 0; i < availableNumbers.length; i++){
                 if(i < 7){
                     availableNumbers[i].classList.add('hidden');
@@ -1642,8 +1695,6 @@ function onlyFavorites() {
                     availableNumbers[i].classList.remove('hidden');
                 }
             }
-
-
             //для каждого элемента кнопки "следующие"
             nextNumbersBtnItems.forEach(item => {
                 //добавляем обесцвечивающий класс
@@ -1665,6 +1716,7 @@ function onlyFavorites() {
 
         //при нажатии на "предыдущие"
         prevNumbersBtn.addEventListener('click', () => {
+            //показываем первые 7, остальные скрываем
             for(let i = 0; i < availableNumbers.length; i++){
                 if(i < 7){
                     availableNumbers[i].classList.remove('hidden');
@@ -1695,16 +1747,15 @@ function onlyFavorites() {
 
             //если имеется класс active
             if (showFavorites.classList.contains('active')) {
-                console.log(availableNumbers);
+
+                //показываем первые 7
                 for(let i = 0; i < availableNumbers.length; i++){
                     if(i < 7){
                         availableNumbers[i].classList.remove('hidden');
-                        console.log(availableNumbers[i]);
                     }else if(i >= 7 && i < 14){
                         availableNumbers[i].classList.add('hidden');
                     }
                 }
-
                 //снимаем блокировку события с кнопки "предыдущие"
                 prevNumbersBtn.classList.remove('removal');
                 //снимаем блокировку события с кнопки "следующие"
@@ -1735,22 +1786,21 @@ function onlyFavorites() {
 
                 //для каждого номера
                 availableNumbers.forEach(item => {
+                    //находим чекбокс звездочки
                     const checkbox = item.querySelector('input[type="checkbox"]');
+                    //номер скрыт
                     const result = item.classList.contains('hidden');
 
-                    //если чекбокс активен и блок скрыт
+                    //если чекбокс активен и номер скрыт
                     if (checkbox.checked && result === true) {
                         //то удаляем класс, скрывающий блок
                         item.classList.remove('hidden');
                     } else if(!checkbox.checked && result === false) {
                         //если чекбокс не активен и блок не скрыт
                         //то добавляем класс, скрывающий блок
-
                         item.classList.add('hidden');
-                        console.log('hh');
                     }
                 });
-
                 //для кнопки  "предыдущие" добавляем класс, блокирующий события
                 prevNumbersBtn.classList.add('removal');
                 //для кнопки  "следующие" добавляем класс, блокирующий события
@@ -1790,8 +1840,11 @@ function onlyFavorites() {
 
 onlyFavorites();
 
+//нужна для своевременного обновления списка номеров, если в первом блоке будет выбран номер из списка,то он скроется
 function numbersUpdate(){
+    //кнопка "Оформить" в самом первом блоке номеров
     const btn = document.getElementById('first-number-next-btn');
+
     btn.addEventListener('click', e => {
         onlyFavorites();
     })
@@ -1799,7 +1852,9 @@ function numbersUpdate(){
 }
 numbersUpdate();
 
+//показывает корзины номеров
 function newNumber() {
+    //кнопка ДОБАВИТЬ ЕЩЕ ОДИН НОМЕР ТЕЛЕФОНА
     const addBtn = document.querySelector('.numbers-bucket__btn-wrapper');
     const block1 = document.querySelector('.bucket-new-number');
     const block2 = document.querySelector('.bucket-new-two-number');
@@ -1807,14 +1862,19 @@ function newNumber() {
     const block4 = document.querySelector('.bucket-new-four-number');
 
     addBtn.addEventListener('click', event =>{
+        //стр с корзинами
         const wrap = document.querySelector('.numbers-bucket__content');
+        //скрытая корзина
         const bucket = wrap.querySelector('.hidden');
         if(bucket === block1){
             addBtn.href = "#add-more-service";
             const pageNumber = document.querySelector('[data-page="add-more-number"]');
             const btn = pageNumber.querySelector('.phone-number__next-btn');
+            //при клике на  "Оформить"
             btn.addEventListener('click', event =>{
+                //корзина перестает быть скрытой
                 block1.classList.remove('hidden');
+                //происходит обновление списка номеров
                 onlyFavorites();
             })
         }else if(bucket === block2){
@@ -1848,7 +1908,7 @@ function newNumber() {
 newNumber();
 
 
-
+//принятие условий
 function conditionError() {
     const block = document.querySelectorAll('.condition');
     block.forEach(item => {
@@ -1873,6 +1933,7 @@ conditionError();
 
 
 function number() {
+    //блок выбора номера
     const block = document.querySelectorAll('.container-phone-number');
 
     const blockNewPhone = document.querySelectorAll('.container-new-phone-number');
@@ -1887,8 +1948,9 @@ function number() {
     const contactPhoneFriend = document.getElementById('friend-phone');
 
     block.forEach(item => {
+        //блок "Сохранить номер" в выборе номера
         const saveNumber = item.querySelector('.phone-number__save-number');
-        // const number = item.querySelector('.enter-number');
+        //enterPhone - номера телефонов, которые вводит пользователь в блоке "Сохранить номер"
         enterPhone.forEach(item => {
             //при клике на кнопку далее в блоке с выбором телефона
             item.addEventListener('change', event => {
@@ -1982,14 +2044,15 @@ function number() {
         })
     });
 
+    //контактный телефон
     contactPhone.addEventListener('change', e => {
         //добавляем номер на стр со всеми данными
         allInfoContactNumber.innerHTML = contactPhone.value;
     });
+    //контактный телефон друга
     contactPhoneFriend.addEventListener('change', e => {
         //добавляем номер на стр со всеми данными
         allInfoNumberFriend.innerHTML = contactPhoneFriend.value;
-        console.log(contactPhoneFriend.value);
     })
 
 }
@@ -1997,46 +2060,58 @@ function number() {
 number();
 
 
-
+//очищение поля при нажатии на крестик
 function clearInput(){
+    //контейнеры инпутов
     const blocks = document.querySelectorAll('.input-parent');
     blocks.forEach(item => {
+        //крустик
         const clear = item.querySelector('.js-clear-field');
+        //если у поля есть крестик
         if(clear !== null){
+            //при нажатии на крестик
             clear.onmousedown = function(event){
+                //само поле
                 const field = item.querySelector('.js-ascent-text');
+                //если поле номера
                 if(field.classList.contains('form__phone-input')){
+                    //то оставляем семерку
                     field.value="+7(";
-                    //чтобы при очищении поля удалялся и "Некорректный номер телефона"
-                    // errorPhone();
                 }else{
+                    //если другое поле, то стираем все
                     field.value="";
                 }
 
+                //если в поле, что-то написано
                 if (field.value.length > 0) {
+                    //то текст наверх
                     field.classList.add("form__input-up");
                 } else {
+                    //если нет, то вниз
                     field.classList.remove("form__input-up");
                 }
-                clearCross();
             }
         }
 
     });
 }
-
-
 clearInput();
 
 
 function clearCross(){
     const blocks = document.querySelectorAll('.input-parent');
+    //для каждого инпута
     blocks.forEach(item => {
+        //крестик
         const clear = item.querySelector('.js-clear-field');
+        //галочка
         const filled = item.querySelector('.input-filled');
-        //если у инпута предусмотрен очищающий крестик
+
+        //если у инпута предусмотрен очищающий крестик и галочка
         if(clear !== null && filled !== null){
+            //то находим инпут
             const field = item.querySelector('.js-ascent-text');
+            //если инпут в фокусе
             field.addEventListener('focus', e => {
                 // то добавляем класс показывающий крестик
                 clear.classList.add('display-block');
@@ -2048,14 +2123,25 @@ function clearCross(){
                 //добавляем класс скрывающий галочку
                 filled.classList.add('display-none');
             });
+        }else if(clear !== null && filled === null){
+            const field = item.querySelector('.js-ascent-text');
+            //если инпут в фокусе
+            field.addEventListener('focus', e => {
+                // то добавляем класс показывающий крестик
+                clear.classList.add('display-block');
+                //удаляем класс скрывающий крестик
+                clear.classList.remove('display-none');
+            });
         }
+
     });
-    showTariffOptions();
     orderDelivery();
+    showTariffOptions();
 }
 
 clearCross();
 
+//изменение карандаша на руку
 function correct(){
     const block = document.querySelectorAll('.options-menu__correction');
     block.forEach(item => {
@@ -2072,6 +2158,7 @@ function correct(){
 
 correct();
 
+//заполненны ли все обязательные поля на стр заказа доставки
 function orderDelivery(){
     const btn = document.querySelector('.appointment__next-link');
     const block = document.querySelector('.appointment');
@@ -2083,7 +2170,9 @@ function orderDelivery(){
     const allInfoHouse = document.querySelector('.house__data');
     const arr = Array.from(checkMark);
     const array = Array.from(fields);
+    //удаляем первый инпут
     array.splice(0,1);
+    //и последнии 4
     array.splice(4,7);
 
     //в массиве галочек, вырезаю первую
