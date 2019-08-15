@@ -279,7 +279,7 @@ function calc(){
     const bucket = document.querySelectorAll('.bucket-wrapper');
     const totalPrice = document.querySelector('[data-name="price"]');
 
-
+    const infoAllPrice = document.querySelector('.price__data');
     page.forEach(item => {
         //находим все элементы калькулятора
         const block = item.querySelectorAll('.additional-offer__form-item');
@@ -332,6 +332,9 @@ function calc(){
         }
     });
     totalPrice.innerHTML = String(`${sum}`);
+
+    //добавляем общую цену на стр со всеми данными
+    infoAllPrice.innerHTML = String(`${sum}`);
 }
 
 calc();
@@ -435,7 +438,6 @@ testPhone();
 
 function errorPhone(){
     const block = document.querySelectorAll('.form__phone');
-    const allInfo = document.querySelector('.contact-number__data');
     block.forEach(item => {
         const el = item.querySelector(".form__phone-input");
         const clear = item.querySelector('.js-clear-field');
@@ -460,8 +462,6 @@ function errorPhone(){
                 clear.classList.remove('display-block');
                 //добавляем класс показывающий галочку
                 filled.classList.add('display-block');
-                //добавляем номер на стр со всеми данными
-                allInfo.innerHTML = el.value;
 
             }else if(el.value === "+7("){
                 phoneError.innerHTML = emptyPhoneMessage;
@@ -577,7 +577,8 @@ testText();
 
 function testName() {
     const block = document.querySelectorAll('.form__name');
-    const allInfo = document.querySelector('.name__data');
+    const allInfoName = document.querySelector('.name__data');
+    const allInfoFriendName = document.querySelector('.name-friends__data');
     block.forEach(item => {
         const name = item.querySelector('.form__name-input');
         const clear = item.querySelector('.js-clear-field');
@@ -629,8 +630,13 @@ function testName() {
             errorPlace.innerHTML = "";
             if(name.value.length > 0){
                 if (formatName !== true) {
-                    // В переменную вставляем  строку
-                    errorPlace.innerHTML = "Укажите Ваше ФИО";
+                    if(!name.classList.contains('form__friends-name-input')){
+                        // В переменную вставляем  строку
+                        errorPlace.innerHTML = "Укажите Ваше ФИО";
+                    }else{
+                        // В переменную вставляем  строку
+                        errorPlace.innerHTML = "Укажите ФИО Вашего друга";
+                    }
                     // добавляем класс к переменной через метод класс-лист
                     name.classList.add("error-border");
                     // снимаем с переменной класс, через метод класс-лист
@@ -653,12 +659,23 @@ function testName() {
                     clear.classList.remove('display-block');
                     //добавляем класс показывающий галочку
                     filled.classList.add('display-block');
-                    //добавляем значение на стр со всеми данными
-                    allInfo.innerHTML = name.value;
+                    if(!name.classList.contains('form__friends-name-input')){
+                        //добавляем значение на стр со всеми данными
+                        allInfoName.innerHTML = name.value;
+                    }else{
+                        // В переменную вставляем  строку
+                        allInfoFriendName.innerHTML = name.value;
+                    }
+
                 }
             }else{
-                // В переменную вставляем  строку
-                errorPlace.innerHTML = "Укажите Ваше ФИО";
+                if(!name.classList.contains('form__friends-name-input')){
+                    // В переменную вставляем  строку
+                    errorPlace.innerHTML = "Укажите Ваше ФИО";
+                }else{
+                    // В переменную вставляем  строку
+                    errorPlace.innerHTML = "Укажите ФИО Вашего друга";
+                }
                 // добавляем класс к переменной через метод класс-лист
                 name.classList.add("error-border");
                 // снимаем с переменной класс, через метод класс-лист
@@ -896,6 +913,8 @@ function errorPostcode(){
     const postcodeError = block.querySelector('.js-error-postcode');
     const clear = block.querySelector('.js-clear-field');
     const filled = block.querySelector('.input-filled');
+
+    const allInfoPostcode = document.querySelector('.postcode__data');
     inputPostcode.addEventListener('blur', event => {
         if(inputPostcode.value.replace(/[^0-9]/g, '').length !== 6){
             // В переменную вставляем  строку
@@ -920,42 +939,15 @@ function errorPostcode(){
             clear.classList.remove('display-block');
             //добавляем класс показывающий галочку
             filled.classList.add('display-block');
+
+            //добавляем индекс на стр со всеми данными
+            allInfoPostcode.innerHTML = inputPostcode.value;
         }
         clearCross();
     })
 
 }
 errorPostcode();
-
-
-
-// function hideNumbers(){
-//     const block = document.querySelectorAll('.new-number__options');
-//     block.forEach(item => {
-//         const numbers = item.querySelector('.phone-number__numbers-block1');
-//         const elem = numbers.querySelectorAll('.phone-number__numbers-container');
-//         const arr = Array.from(elem);
-//
-//         const availableNumbers = arr.filter(function(item){
-//             if(!item.classList.contains('display-block')){
-//                 return item;
-//             }
-//         });
-//         console.log('jnvtnrf', item);
-//         for(let i = 0; i < availableNumbers.length; i++){
-//             if(i < 8){
-//                 console.log(availableNumbers[i]);
-//                 availableNumbers[i].classList.add('hidden');
-//             }else if(i > 8 && i <= 14){
-//                 availableNumbers[i].classList.remove('hidden');
-//             }
-//         }
-//     })
-//
-// }
-
-
-
 
 const internet = document.querySelectorAll('[data-name="internet"]');
 const addMoreInternet = document.querySelectorAll('[data-name="add-more-internet"]');
@@ -999,7 +991,11 @@ const addMoreTwoSms = document.querySelectorAll('[data-name="add-more-two-sms"]'
 const addMoreThreeSms = document.querySelectorAll('[data-name="add-more-three-sms"]');
 const addMoreFourSms = document.querySelectorAll('[data-name="add-more-four-sms"]');
 
-const enterPhone = document.querySelectorAll('.enter-number ');
+const enterPhone = document.querySelectorAll('.enter-number');
+const enterPhoneOne = document.querySelectorAll('.enter-number-one');
+const enterPhoneTwo = document.querySelectorAll('.enter-number-two');
+const enterPhoneThree = document.querySelectorAll('.enter-number-three');
+const enterPhoneFour = document.querySelectorAll('.enter-number-four');
 
 const blockNumber = document.querySelectorAll('.js-block1');
 const addMoreBlockNumber = document.querySelectorAll('.add-more-js-block1');
@@ -1013,11 +1009,23 @@ const addMoreTwoBucketInternet = document.querySelector('.bucket-new-two-number_
 const addMoreThreeBucketInternet = document.querySelector('.bucket-new-three-number__internet');
 const addMoreFourBucketInternet = document.querySelector('.bucket-new-four-number__internet');
 
+const allInfoInternet = document.querySelector('.transfer-number__internet-value');
+const allInfoInternetOne = document.querySelector('.new-number__internet-value');
+const allInfoInternetTwo = document.querySelector('.new-number-two__internet-value');
+const allInfoInternetThree = document.querySelector('.new-number-three__internet-value');
+const allInfoInternetFour = document.querySelector('.new-number-four__internet-value');
+
 const bucketCalls = document.querySelector('.bucket__calls');
 const addMoreBucketCalls = document.querySelector('.bucket-new-number__calls');
 const addMoreTwoBucketCalls = document.querySelector('.bucket-new-two-number__calls');
 const addMoreThreeBucketCalls = document.querySelector('.bucket-new-three-number__calls');
 const addMoreFourBucketCalls = document.querySelector('.bucket-new-four-number__calls');
+
+const allInfoCalls = document.querySelector('.transfer-number__calls-value');
+const allInfoCallsOne = document.querySelector('.new-number__calls-value');
+const allInfoCallsTwo = document.querySelector('.new-number-two__calls-value');
+const allInfoCallsThree = document.querySelector('.new-number-three__calls-value');
+const allInfoCallsFour = document.querySelector('.new-number-four__calls-value');
 
 const bucketPhone = document.querySelector('.options-menu__number-value');
 const addMoreBucketPhone = document.querySelector('.options-menu__new-number-value');
@@ -1025,12 +1033,23 @@ const addMoreTwoBucketPhone = document.querySelector('.options-menu__new-number-
 const addMoreThreeBucketPhone = document.querySelector('.options-menu__new-number-three-value');
 const addMoreFourBucketPhone = document.querySelector('.options-menu__new-number-four-value');
 
+const allInfoPhone = document.querySelector('.transfer-number__number');
+const allInfoNewPhone = document.querySelector('.new-number__number');
+const allInfoNewPhoneTwo = document.querySelector('.new-number-two__number');
+const allInfoNewPhoneThree = document.querySelector('.new-number-three__number');
+const allInfoNewPhoneFour = document.querySelector('.new-number-four__number');
+
 const bucketMoreValue = document.querySelector('.options-menu__more-value');
 const bucketMoreOneValue = document.querySelector('.options-menu__more-one-value');
 const bucketMoreTwoValue = document.querySelector('.options-menu__more-two-value');
 const bucketMoreThreeValue = document.querySelector('.options-menu__more-three-value');
 const bucketMoreFourValue = document.querySelector('.options-menu__more-four-value');
 
+const allInfoValue = document.querySelector('.transfer-number__more-value');
+const allInfoOneValue = document.querySelector('.new-number__more-value');
+const allInfoTwoValue = document.querySelector('.new-number-two__more-value');
+const allInfoThreeValue = document.querySelector('.new-number-three__more-value');
+const allInfoFourValue = document.querySelector('.new-number-four__more-value');
 
 const bucketNumberZero = document.querySelector('.bucket__number-price-zero');
 const bucketNumberOne = document.querySelector('.bucket__number-price-one');
@@ -1049,7 +1068,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                        music, addMoreMusic, addMoreTwoMusic, addMoreThreeMusic, addMoreFourMusic,
                        video, addMoreVideo, addMoreTwoVideo, addMoreThreeVideo, addMoreFourVideo,
                        blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber,
-                       enterPhone) {
+                       enterPhone, enterPhoneOne, enterPhoneTwo, enterPhoneThree, enterPhoneFour) {
     const items = [internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInternet, addMoreFourInternet,
         calls, addMoreCalls, addMoreTwoCalls, addMoreThreeCalls, addMoreFourCalls,
         sms, addMoreSms, addMoreTwoSms, addMoreThreeSms, addMoreFourSms,
@@ -1058,7 +1077,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
         music, addMoreMusic, addMoreTwoMusic, addMoreThreeMusic, addMoreFourMusic,
         video, addMoreVideo, addMoreTwoVideo, addMoreThreeVideo, addMoreFourVideo,
         blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber,
-        enterPhone];
+        enterPhone, enterPhoneOne, enterPhoneTwo, enterPhoneThree, enterPhoneFour];
     items.forEach(select => {
         //для каждого элемента селеста(их всегда 2)
         select.forEach(item => {
@@ -1113,6 +1132,9 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberZero.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
+                        //записываем значение на стр со всеми данными
+                        allInfoPhone.innerHTML = activeNumberOne.value;
+
                         onlyFavorites();
                         calc();
                     };
@@ -1154,6 +1176,8 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberOne.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
+                        //записываем значение на стр со всеми данными
+                        allInfoNewPhone.innerHTML = activeNumberOne.value;
                         onlyFavorites();
                         calc();
                     };
@@ -1195,6 +1219,9 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberTwo.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
+                        //записываем значение на стр со всеми данными
+                        allInfoNewPhoneTwo.innerHTML = activeNumberOne.value;
+
                         onlyFavorites();
                         calc();
                     };
@@ -1236,6 +1263,9 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberThree.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
+                        //записываем значение на стр со всеми данными
+                        allInfoNewPhoneThree.innerHTML = activeNumberOne.value;
+
                         onlyFavorites();
                         calc();
                     };
@@ -1276,6 +1306,9 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         correctBtn.innerHTML = activeNumberOne.value;
                         //в корзине номеров в инпут записываем стоимость номера
                         bucketNumberFour.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
+                        //записываем значение на стр со всеми данными
+                        allInfoNewPhoneFour.innerHTML = activeNumberOne.value;
+
                         onlyFavorites();
                         calc();
                     };
@@ -1291,25 +1324,55 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                     const value = item.querySelector(`[value="${item.value}"]`).dataset.number;
 
                     if(select === internet){
+                        //добавляем интернет первого номера в корзину
                         bucketInternet.innerHTML = value;
+                        //добавляем интернет первого номера на стр со всеми данными
+                        allInfoInternet.innerHTML = value;
                     }else if(select === calls){
+                        //добавляем звонки первого номера в корзину
                         bucketCalls.innerHTML = value;
+                        //добавляем звонки первого номера на стр со всеми данными
+                        allInfoCalls.innerHTML = value;
                     }else if(select === addMoreInternet){
+                        //добавляем интернет второго номера в корзину
                         addMoreBucketInternet.innerHTML = value;
+                        //добавляем интернет второго номера на стр со всеми данными
+                        allInfoInternetOne.innerHTML = value;
                     }else if(select === addMoreCalls){
+                        //добавляем звонки второго номера в корзину
                         addMoreBucketCalls.innerHTML = value;
+                        //добавляем звонки второго номера на стр со всеми данными
+                        allInfoCallsOne.innerHTML = value;
                     }else if(select === addMoreTwoInternet){
+                        //добавляем интернет третьего номера в корзину
                         addMoreTwoBucketInternet.innerHTML = value;
+                        //добавляем интернет третьего номера на стр со всеми данными
+                        allInfoInternetTwo.innerHTML = value;
                     }else if(select === addMoreTwoCalls){
+                        //добавляем звонки третьего номера в корзину
                         addMoreTwoBucketCalls.innerHTML = value;
+                        //добавляем звонки третьего номера на стр со всеми данными
+                        allInfoCallsTwo.innerHTML = value;
                     }else if(select === addMoreThreeInternet){
+                        //добавляем интернет четвертого номера в корзину
                         addMoreThreeBucketInternet.innerHTML = value;
+                        //добавляем интернет четвертого номера на стр со всеми данными
+                        allInfoInternetThree.innerHTML = value;
                     }else if(select === addMoreThreeCalls){
+                        //добавляем звонки четвертого номера в корзину
                         addMoreThreeBucketCalls.innerHTML = value;
+                        //добавляем звонки четвертого номера на стр со всеми данными
+                        allInfoCallsThree.innerHTML = value;
                     }else if(select === addMoreFourInternet){
+                        //добавляем интернет пятого номера в корзину
                         addMoreFourBucketInternet.innerHTML = value;
+                        //добавляем интернет пятого номера на стр со всеми данными
+                        allInfoInternetFour.innerHTML = value;
                     }else if(select === addMoreFourCalls){
+                        //добавляем звонки пятого номера в корзину
                         addMoreFourBucketCalls.innerHTML = value;
+                        //добавляем звонки пятого номера на стр со всеми данными
+                        allInfoCallsFour.innerHTML = value;
                     }
                     setTimeout(() => calc(), 100);
                 }else{
@@ -1320,52 +1383,77 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         const moreZero = pageBlockZero.querySelectorAll('input:checked');
                         console.log(moreZero);
                         bucketMoreValue.innerHTML = '';
+                        allInfoValue.innerHTML = '';
                         for(let i = 0; i < moreZero.length; i++){
                             console.log('test');
                             if(i === 0){
                                 bucketMoreValue.innerHTML += moreZero[i].dataset.number;
+                                allInfoValue.innerHTML += moreZero[i].dataset.number;
+
                             }else{
                                 bucketMoreValue.innerHTML += ', ' + moreZero[i].dataset.number;
+                                allInfoValue.innerHTML += ', ' + moreZero[i].dataset.number;
+
                             }
                         }
                     }else if(item.classList.contains('block-one__checkbox')){
                         const moreOne = pageBlockOne.querySelectorAll('input:checked');
                         bucketMoreOneValue.innerHTML = '';
+                        allInfoOneValue.innerHTML = '';
                         for(let i = 0; i < moreOne.length; i++){
                             if(i === 0){
                                 bucketMoreOneValue.innerHTML += moreOne[i].dataset.number;
+                                allInfoOneValue.innerHTML += moreOne[i].dataset.number;
+
                             }else{
                                 bucketMoreOneValue.innerHTML += ', ' + moreOne[i].dataset.number;
+                                allInfoOneValue.innerHTML += ', ' + moreOne[i].dataset.number;
+
                             }
                         }
                     }else if(item.classList.contains('block-two__checkbox')){
                         const moreTwo = pageBlockTwo.querySelectorAll('input:checked');
                         bucketMoreTwoValue.innerHTML = '';
+                        allInfoTwoValue.innerHTML = '';
                         for(let i = 0; i < moreTwo.length; i++){
                             if(i === 0){
                                 bucketMoreTwoValue.innerHTML += moreTwo[i].dataset.number;
+                                allInfoTwoValue.innerHTML += moreTwo[i].dataset.number;
+
                             }else{
                                 bucketMoreTwoValue.innerHTML += ', ' + moreTwo[i].dataset.number;
+                                allInfoTwoValue.innerHTML += ', ' + moreTwo[i].dataset.number;
+
                             }
                         }
                     }else if(item.classList.contains('block-three__checkbox')){
                         const moreThree = pageBlockThree.querySelectorAll('input:checked');
                         bucketMoreThreeValue.innerHTML = '';
+                        allInfoThreeValue.innerHTML = '';
                         for(let i = 0; i < moreThree.length; i++){
                             if(i === 0){
                                 bucketMoreThreeValue.innerHTML += moreThree[i].dataset.number;
+                                allInfoThreeValue.innerHTML += moreThree[i].dataset.number;
+
                             }else{
                                 bucketMoreThreeValue.innerHTML += ', ' + moreThree[i].dataset.number;
+                                allInfoThreeValue.innerHTML += ', ' + moreThree[i].dataset.number;
+
                             }
                         }
                     }else if(item.classList.contains('block-four__checkbox')){
                         const moreFour = pageBlockFour.querySelectorAll('input:checked');
                         bucketMoreFourValue.innerHTML = '';
+                        allInfoFourValue.innerHTML = '';
                         for(let i = 0; i < moreFour.length; i++){
                             if(i === 0){
                                 bucketMoreFourValue.innerHTML += moreFour[i].dataset.number;
+                                allInfoFourValue.innerHTML += moreFour[i].dataset.number;
+
                             }else{
                                 bucketMoreFourValue.innerHTML += ', ' + moreFour[i].dataset.number;
+                                allInfoFourValue.innerHTML += ', ' + moreFour[i].dataset.number;
+
                             }
                         }
                     }
@@ -1383,7 +1471,7 @@ valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThreeInterne
     music, addMoreMusic, addMoreTwoMusic, addMoreThreeMusic, addMoreFourMusic,
     video, addMoreVideo, addMoreTwoVideo, addMoreThreeVideo, addMoreFourVideo,
     blockNumber, addMoreBlockNumber, addMoreTwoBlockNumber, addMoreThreeBlockNumber, addMoreFourBlockNumber,
-    enterPhone);
+    enterPhone, enterPhoneOne, enterPhoneTwo, enterPhoneThree, enterPhoneFour);
 
 
 
@@ -1441,6 +1529,12 @@ function favorites() {
 
         const arr = Array.from(container);
 
+        const availableNumbers = arr.filter(function(item){
+            if(item.classList.contains('display-none') !== true){
+                return item;
+            }
+        });
+
         //ф-ция для метода some
         function stars(el) {
             //возвращает элементы у которых есть активные чекбоксы
@@ -1448,7 +1542,7 @@ function favorites() {
         }
 
         //проверяем,что в arr есть хотя бы один активный чекбокс
-        if (arr.some(stars) === true) {
+        if (availableNumbers.some(stars) === true) {
 
             //для каждого элемента кнопки "Показать избранное"
             favoritesName.forEach(item => {
@@ -1459,13 +1553,13 @@ function favorites() {
             })
         } else {
             //для каждого номера
-            for (let i = 0; i < container.length; i++) {
+            for (let i = 0; i < availableNumbers.length; i++) {
                 if (i < 7) {
                     //удаляем, скрывающий класс с первых 7 номеров
-                    container[i].classList.remove('hidden');
+                    availableNumbers[i].classList.remove('hidden');
                 } else {
                     //добавляем всем остальным
-                    container[i].classList.add('hidden');
+                    availableNumbers[i].classList.add('hidden');
                 }
             }
             //снимаем блокировку события с кнопки "предыдущие"
@@ -1525,8 +1619,6 @@ function onlyFavorites() {
 
 
         const availableNumbers = arr.filter(function(item){
-            console.log(item);
-            console.log(item.classList.contains('display-block'));
             if(item.classList.contains('display-none') !== true){
                 return item;
             }
@@ -1534,7 +1626,6 @@ function onlyFavorites() {
 
         for(let i = 0; i < availableNumbers.length; i++){
             if(i < 7){
-                // console.log(availableNumbers[i]);
                 availableNumbers[i].classList.remove('hidden');
             }else if(i >= 7 && i < 14){
                 availableNumbers[i].classList.add('hidden');
@@ -1543,6 +1634,7 @@ function onlyFavorites() {
 
         //при нажатии на "следующие"
         nextNumbersBtn.addEventListener('click', () => {
+
             for(let i = 0; i < availableNumbers.length; i++){
                 if(i < 7){
                     availableNumbers[i].classList.add('hidden');
@@ -1599,16 +1691,16 @@ function onlyFavorites() {
         });
 
         //при нажатии "показать избранное"
-        showFavorites.addEventListener('click', () => {
+        showFavorites.addEventListener('click', e => {
 
             //если имеется класс active
             if (showFavorites.classList.contains('active')) {
-
+                console.log(availableNumbers);
                 for(let i = 0; i < availableNumbers.length; i++){
-                    if(i < 8){
-                        console.log(availableNumbers[i]);
+                    if(i < 7){
                         availableNumbers[i].classList.remove('hidden');
-                    }else if(i > 8 && i <= 14){
+                        console.log(availableNumbers[i]);
+                    }else if(i >= 7 && i < 14){
                         availableNumbers[i].classList.add('hidden');
                     }
                 }
@@ -1642,18 +1734,20 @@ function onlyFavorites() {
             } else {//если класса active нет
 
                 //для каждого номера
-                elem.forEach(item => {
+                availableNumbers.forEach(item => {
                     const checkbox = item.querySelector('input[type="checkbox"]');
                     const result = item.classList.contains('hidden');
-
 
                     //если чекбокс активен и блок скрыт
                     if (checkbox.checked && result === true) {
                         //то удаляем класс, скрывающий блок
                         item.classList.remove('hidden');
-                    } else if (!checkbox.checked && result === false) {//если чекбокс не активен и блок не скрыт
+                    } else if(!checkbox.checked && result === false) {
+                        //если чекбокс не активен и блок не скрыт
                         //то добавляем класс, скрывающий блок
+
                         item.classList.add('hidden');
+                        console.log('hh');
                     }
                 });
 
@@ -1689,15 +1783,21 @@ function onlyFavorites() {
                 //кнопке "показать избранное" добавляем класс active
                 showFavorites.classList.add('active');
             }
-
         });
-
 
     })
 }
 
 onlyFavorites();
 
+function numbersUpdate(){
+    const btn = document.getElementById('first-number-next-btn');
+    btn.addEventListener('click', e => {
+        onlyFavorites();
+    })
+
+}
+numbersUpdate();
 
 function newNumber() {
     const addBtn = document.querySelector('.numbers-bucket__btn-wrapper');
@@ -1774,41 +1874,122 @@ conditionError();
 
 function number() {
     const block = document.querySelectorAll('.container-phone-number');
-    const blockNewPhone = document.querySelectorAll('.container-new-phone-number');
-    block.forEach(item => {
-        const btn = item.querySelector('.phone-number__next-btn');
-        const saveNumber = item.querySelector('.phone-number__save-number');
-        const number = item.querySelector('.enter-number');
 
-        //при клике на кнопку далее в блоке с выбором телефона
-        number.addEventListener('change', event => {
-            const correctBtn = document.querySelector('.correct-number__next-bth');
-            //если выбран "Сохранить номер"
-            if(saveNumber.checked === true){
-                //то в корзине номеров в инпут записываем значение введенное пользователем
-                bucketPhone.innerHTML = number.value;
-                //в кнопку с номером телефона записываем значение введенное пользователем
-                correctBtn.innerHTML = number.value;
-            }
+    const blockNewPhone = document.querySelectorAll('.container-new-phone-number');
+    const blockNewPhoneTwo = document.querySelectorAll('.container-new-phone-number-two');
+    const blockNewPhoneThree = document.querySelectorAll('.container-new-phone-number-three');
+    const blockNewPhoneFour = document.querySelectorAll('.container-new-phone-number-four');
+
+    const allInfoContactNumber = document.querySelector('.contact-number__data');
+    const allInfoNumberFriend = document.querySelector('.contact-number-friends__data');
+
+    const contactPhone = document.getElementById('phone');
+    const contactPhoneFriend = document.getElementById('friend-phone');
+
+    block.forEach(item => {
+        const saveNumber = item.querySelector('.phone-number__save-number');
+        // const number = item.querySelector('.enter-number');
+        enterPhone.forEach(item => {
+            //при клике на кнопку далее в блоке с выбором телефона
+            item.addEventListener('change', event => {
+                const correctBtn = document.querySelector('.correct-number__next-bth');
+                //если выбран "Сохранить номер"
+                if(saveNumber.checked === true){
+                    //то в корзине номеров в инпут записываем значение введенное пользователем
+                    bucketPhone.innerHTML = item.value;
+                    //в кнопку с номером телефона записываем значение введенное пользователем
+                    correctBtn.innerHTML = item.value;
+                    //добавляем номер на стр со всеми данными
+                    allInfoPhone.innerHTML = item.value;
+                }
+            })
         })
     });
     blockNewPhone.forEach(item => {
-        const btn = item.querySelector('.phone-number__next-btn');
         const saveNumber = item.querySelector('.phone-number__save-number');
-        const number = item.querySelector('.enter-number');
 
-        //при клике на кнопку далее в блоке с выбором телефона
-        number.addEventListener('change', event => {
-            const number = document.getElementById('add-more-phone-numb');
-            const correctBtn = document.querySelector('.correct-number__add-more-next-bth');
-            //если выбран "Сохранить номер"
-            if(saveNumber.checked === true){
-                //то в корзине номеров в инпут записываем значение введенное пользователем
-                addMoreBucketPhone.innerHTML = number.value;
-                //в кнопку с номером телефона записываем значение введенное пользователем
-                correctBtn.innerHTML = number.value;
-            }
+        enterPhoneOne.forEach(item => {
+            //при клике на кнопку далее в блоке с выбором телефона
+            item.addEventListener('change', event => {
+                const correctBtn = document.querySelector('.correct-number__add-more-next-bth');
+                //если выбран "Сохранить номер"
+                if(saveNumber.checked === true){
+                    //то в корзине номеров в инпут записываем значение введенное пользователем
+                    addMoreBucketPhone.innerHTML = item.value;
+                    //в кнопку с номером телефона записываем значение введенное пользователем
+                    correctBtn.innerHTML = item.value;
+                    //добавляем номер на стр со всеми данными
+                    allInfoNewPhone.innerHTML = item.value;
+                }
+            })
         })
+
+    });
+    blockNewPhoneTwo.forEach(item => {
+        const saveNumber = item.querySelector('.phone-number__save-number');
+
+        enterPhoneTwo.forEach(item => {
+            //при клике на кнопку далее в блоке с выбором телефона
+            item.addEventListener('change', event => {
+                const correctBtn = document.querySelector('.correct-number__add-more-two-next-bth');
+                //если выбран "Сохранить номер"
+                if(saveNumber.checked === true){
+                    //то в корзине номеров в инпут записываем значение введенное пользователем
+                    addMoreTwoBucketPhone.innerHTML = item.value;
+                    //в кнопку с номером телефона записываем значение введенное пользователем
+                    correctBtn.innerHTML = item.value;
+                    //добавляем номер на стр со всеми данными
+                    allInfoNewPhoneTwo.innerHTML = item.value;
+                }
+            })
+        })
+
+    });
+    blockNewPhoneThree.forEach(item => {
+        const saveNumber = item.querySelector('.phone-number__save-number');
+        enterPhoneThree.forEach(item => {
+            //при клике на кнопку далее в блоке с выбором телефона
+            item.addEventListener('change', event => {
+                const correctBtn = document.querySelector('.correct-number__add-more-three-next-bth');
+                //если выбран "Сохранить номер"
+                if(saveNumber.checked === true){
+                    //то в корзине номеров в инпут записываем значение введенное пользователем
+                    addMoreThreeBucketPhone.innerHTML = item.value;
+                    //в кнопку с номером телефона записываем значение введенное пользователем
+                    correctBtn.innerHTML = item.value;
+                    //добавляем номер на стр со всеми данными
+                    allInfoNewPhoneThree.innerHTML = item.value;
+                }
+            })
+        })
+    });
+    blockNewPhoneFour.forEach(item => {
+        const saveNumber = item.querySelector('.phone-number__save-number');
+        enterPhoneFour.forEach(item => {
+            //при клике на кнопку далее в блоке с выбором телефона
+            item.addEventListener('change', event => {
+                const correctBtn = document.querySelector('.correct-number__add-more-four-next-bth');
+                //если выбран "Сохранить номер"
+                if(saveNumber.checked === true){
+                    //то в корзине номеров в инпут записываем значение введенное пользователем
+                    addMoreFourBucketPhone.innerHTML = item.value;
+                    //в кнопку с номером телефона записываем значение введенное пользователем
+                    correctBtn.innerHTML = item.value;
+                    //добавляем номер на стр со всеми данными
+                    allInfoNewPhoneFour.innerHTML = item.value;
+                }
+            })
+        })
+    });
+
+    contactPhone.addEventListener('change', e => {
+        //добавляем номер на стр со всеми данными
+        allInfoContactNumber.innerHTML = contactPhone.value;
+    });
+    contactPhoneFriend.addEventListener('change', e => {
+        //добавляем номер на стр со всеми данными
+        allInfoNumberFriend.innerHTML = contactPhoneFriend.value;
+        console.log(contactPhoneFriend.value);
     })
 
 }
@@ -1856,10 +2037,6 @@ function clearCross(){
         //если у инпута предусмотрен очищающий крестик
         if(clear !== null && filled !== null){
             const field = item.querySelector('.js-ascent-text');
-            // console.log('clearCross', field);
-            const formatName = /[а-яА-ЯёЁ]+(-[а-яА-ЯёЁ]+)? [а-яА-ЯёЁ][а-яА-ЯёЁ]+( )?$/.test(field.value);
-            const str = field.value.split("");
-
             field.addEventListener('focus', e => {
                 // то добавляем класс показывающий крестик
                 clear.classList.add('display-block');
@@ -1903,6 +2080,7 @@ function orderDelivery(){
     const house = block.querySelector('.form__house-input');
     const textHouse = document.querySelector('.js-error-house');
     const textRegion = block.querySelectorAll('.js-error-region');
+    const allInfoHouse = document.querySelector('.house__data');
     const arr = Array.from(checkMark);
     const array = Array.from(fields);
     array.splice(0,1);
@@ -1948,6 +2126,8 @@ function orderDelivery(){
             textRegion[2].innerHTML = "Укажите Ваш населенный пункт";
             textRegion[3].innerHTML = "Укажите Вашу улицу";
         }
+        //добавляем номер дома на стр со всеми данными
+        allInfoHouse.innerHTML = house.value;
     }
 }
 
@@ -1955,8 +2135,48 @@ orderDelivery();
 
 
 function allInfo(){
-    const contactNumber = document.getElementById('phone');
-    contactNumber
+    const housing = document.getElementById('building');
+    const allInfoHousing = document.querySelector('.housing__data');
+
+    const building = document.getElementById('edifice');
+    const allInfoBuilding = document.querySelector('.building__data');
+
+    const flat = document.getElementById('flat');
+    const allInfoFlat = document.querySelector('.flat__data');
+
+    const comment = document.getElementById('comment');
+    const allInfoComment= document.querySelector('.comment__data');
+
+    const data = document.getElementById('date');
+    const allInfoDate = document.querySelector('.date__data');
+
+    const time = document.getElementById('time');
+    const allInfoTime = document.querySelector('.time__data');
+
+    housing.addEventListener('change', e => {
+        //добавляем номер корпуса на стр со всеми данными
+        allInfoHousing.innerHTML = housing.value;
+    });
+    building.addEventListener('change', e => {
+        //добавляем номер корпуса на стр со всеми данными
+        allInfoBuilding.innerHTML = building.value;
+    });
+    flat.addEventListener('change', e => {
+        //добавляем номер корпуса на стр со всеми данными
+        allInfoFlat.innerHTML = flat.value;
+    });
+    comment.addEventListener('change', e => {
+        //добавляем номер корпуса на стр со всеми данными
+        allInfoComment.innerHTML = comment.value;
+    });
+    data.addEventListener('change', e => {
+        //добавляем номер корпуса на стр со всеми данными
+        allInfoDate.innerHTML = data.value;
+    });
+    time.addEventListener('change', e => {
+        //добавляем номер корпуса на стр со всеми данными
+        allInfoTime.innerHTML = time.value;
+    })
 }
 
 allInfo();
