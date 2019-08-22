@@ -498,9 +498,8 @@ errorPhone();
 new Pikaday({
     field: document.getElementById('datepicker'),
     format: 'D/M/YYYY',
-    minDate: new Date(),
     disableDayFn: function(theDate) {
-        return disable = !disable;
+        return theDate < new Date();
     },
     toString(date, format) {
         // you should do formatting based on the passed format,
