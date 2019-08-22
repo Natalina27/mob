@@ -138,6 +138,7 @@ function showTariffOptions() {
     const fields = block.querySelectorAll('.input-filled');
     const tariffBlock = block.querySelector(".additional-offer");
     const btn = block.querySelector('.form__next-link');
+    const phone = block.querySelector('.form__phone-input');
     const textPhone = block.querySelector('.js-phone-error');
     const name = block.querySelector('.form__name-input');
     const textName = block.querySelector('.js-error-name');
@@ -169,6 +170,10 @@ function showTariffOptions() {
             //то добавляем "Далее" класс блокирующий события
             btn.classList.add("removal");
 
+            //добавляем красную обвотку инпуту с номером телефона
+            phone.classList.add("error-border");
+            // снимаем с инпута с номером телефона класс, через метод класс-лист
+            phone.classList.remove("pseudo-hover");
             //добавляем подсказку к телефону
             textPhone.innerHTML = "Необходимо указать номер телефона";
 
@@ -458,12 +463,29 @@ function errorPhone(){
                 //добавляем класс показывающий галочку
                 filled.classList.add('display-block');
 
+                // снимаем с переменной класс, через метод класс-лист
+                el.classList.remove("error-border");
+                // добавляем класс к переменной через метод класс-лист
+                el.classList.add("pseudo-hover");
+
             }else if(el.value === "+7("){
                 phoneError.innerHTML = emptyPhoneMessage;
+                // добавляем класс, через метод класс-лист
+                el.classList.add("error-border");
+                // снимаем с переменной класс через метод класс-лист
+                el.classList.remove("pseudo-hover");
             }else if(str[3] == 9){
                 phoneError.innerHTML = incorrectPhoneMessage;
+                // добавляем класс, через метод класс-лист
+                el.classList.add("error-border");
+                // снимаем с переменной класс через метод класс-лист
+                el.classList.remove("pseudo-hover");
             }else if(str[3] !== 9){
                 phoneError.innerHTML = 'Некорректный код оператора';
+                // добавляем класс, через метод класс-лист
+                el.classList.add("error-border");
+                // снимаем с переменной класс через метод класс-лист
+                el.classList.remove("pseudo-hover");
             }
             clearCross();
         });
@@ -476,6 +498,10 @@ errorPhone();
 new Pikaday({
     field: document.getElementById('datepicker'),
     format: 'D/M/YYYY',
+    minDate: new Date(),
+    disableDayFn: function(theDate) {
+        return disable = !disable;
+    },
     toString(date, format) {
         // you should do formatting based on the passed format,
         // but we will just return 'D/M/YYYY' for simplicity
@@ -637,7 +663,6 @@ function testName() {
                     // снимаем с переменной класс, через метод класс-лист
                     name.classList.remove("pseudo-hover");
 
-
                 } else{
                     // в переменную также вставляется строка, с пустым значениями
                     errorPlace.innerHTML = "";
@@ -753,7 +778,6 @@ function errorRegion(){
                         }else if(item.classList.contains('form__region-two-input')){
                             // В переменную вставляем  строку
                             regionError.innerHTML = "Укажите Ваш регион";
-
                         }else if(item.classList.contains('form__city-input')){
                             // В переменную вставляем  строку
                             regionError.innerHTML = "Укажите Ваш город";
