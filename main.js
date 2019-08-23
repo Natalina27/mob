@@ -2294,6 +2294,89 @@ function allInfo(){
 allInfo();
 
 
+function searchNumbers(){
+    //блок "Получить новый номер"
+    const block = document.querySelectorAll('.new-number__options');
+    block.forEach(item => {
+        //блок с номерами
+        const numbers = item.querySelector('.phone-number__numbers-block1');
+        //контейнер номера
+        const elem = numbers.querySelectorAll('.phone-number__numbers-container');
+        //кнопка "Следующие"
+        const nextNumbersBtn = item.querySelector('.numbers-scroller__show-next');
+        //части кнопки"Следующие"
+        const nextNumbersBtnItems = nextNumbersBtn.querySelectorAll('.favorites-items');
+        // кнопка "Предыдущие"
+        const prevNumbersBtn = item.querySelector('.numbers-scroller__show-prev');
+        const prevNumbersBtnItems = prevNumbersBtn.querySelectorAll('.favorites-items');
+        //инпут поиска по цифрам
+        const search = item.querySelector('.form__search-by-numbers-input');
+
+        search.addEventListener('change', e => {
+            console.log(elem);
+            elem.forEach( item => {
+                // const value = item.dataset.value.replace(/[^0-9]/g, '');
+                // console.log(value);
+                // const array = value.split("");
+                // array.splice(0,1);
+                // const number = array.includes(` "${search.value}" `);
+                // console.log(array);
+                // array.forEach(item => {
+                //     console.log(typeof item);
+                // });
+                // console.log(` "${search.value}" `);
+                // console.log(typeof ` "${search.value}" `);
+                // console.log(number);
+
+                const value = item.dataset.value.replace(/[^0-9]/g, '');
+                const array = value.split("");
+                array.splice(0,1);
+                const arr = Array.from(search.value);
+                console.log(array);
+                function f(elem) {
+                    console.log(elem);
+                    array.forEach(item => {
+                        console.log(item);
+                        console.log(elem === item);
+                        return elem === item;
+                    })
+                }
+
+                if(arr.some(f) === true){
+                    console.log('мяу');
+                    item.classList.remove('hidden');
+                }else{
+                    console.log('ppp');
+                    item.classList.add('hidden');
+                }
+
+                // const arr = ["1", "2", "3", "2", "2"];
+                // const num = arr.includes("2");
+                // console.log(arr);
+                // console.log(num)
+            });
+        })
+    })
+}
+
+searchNumbers();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
