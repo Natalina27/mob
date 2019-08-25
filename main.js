@@ -1662,16 +1662,19 @@ function favorites() {
             }
 
         }
+
     })
 }
 
-//активация/блокировка кнопок переключения номеров
-//что происходит при нажатии "показать избранное"
+// //активация/блокировка кнопок переключения номеров
+// //что происходит при нажатии "показать избранное"
 function onlyFavorites() {
     //блок "Получить новый номер"
     const block = document.querySelectorAll('.new-number__options');
 
     block.forEach(item => {
+        //поле поиска
+        const search = item.querySelector('.form__search-by-numbers-input');
         //блок с номерами
         const numbers = item.querySelector('.phone-number__numbers-block1');
         //контейнер номера
@@ -1702,8 +1705,9 @@ function onlyFavorites() {
         for(let i = 0; i < availableNumbers.length; i++){
             if(i < 7){
                 availableNumbers[i].classList.remove('hidden');
-            }else if(i >= 7 && i < 14){
+            }else if(i >= 7){
                 availableNumbers[i].classList.add('hidden');
+                console.log(availableNumbers[i]);
             }
         }
 
@@ -1764,6 +1768,7 @@ function onlyFavorites() {
             nextNumbersBtn.classList.remove('removal');
 
         });
+        search.addEventListener('input', () => filter());
 
         //при нажатии "показать избранное"
         showFavorites.addEventListener('click', e => {
@@ -1804,6 +1809,8 @@ function onlyFavorites() {
 
                 //у кнопки "показать избранное" удаляем класс active
                 showFavorites.classList.remove('active');
+
+                filter();
 
             } else {//если класса active нет
 
@@ -1858,6 +1865,28 @@ function onlyFavorites() {
             }
         });
 
+        function filter(){
+            elem.forEach( item => {
+                const value = item.dataset.value.replace(/[^0-9]/g, '');
+                const array = Array.from(value);
+                array.splice(0,1);
+                const str = array.join('');
+                const result = str.match(new RegExp(search.value));
+                // console.log(str);
+                // console.log(search.value);
+
+                const checkbox = item.querySelector('input[type="checkbox"]');
+
+                const number = result;
+                const fav = showFavorites.classList.contains('active') && checkbox.checked || !showFavorites.classList.contains('active');
+
+                if (number && fav){
+                    item.classList.remove('hidden');
+                }else{
+                    item.classList.add('hidden');
+                }
+            });
+        }
     })
 }
 
@@ -2293,73 +2322,6 @@ function allInfo(){
 
 allInfo();
 
-
-function searchNumbers(){
-    //блок "Получить новый номер"
-    const block = document.querySelectorAll('.new-number__options');
-    block.forEach(item => {
-        //блок с номерами
-        const numbers = item.querySelector('.phone-number__numbers-block1');
-        //контейнер номера
-        const elem = numbers.querySelectorAll('.phone-number__numbers-container');
-        //кнопка "Следующие"
-        const nextNumbersBtn = item.querySelector('.numbers-scroller__show-next');
-        //части кнопки"Следующие"
-        const nextNumbersBtnItems = nextNumbersBtn.querySelectorAll('.favorites-items');
-        // кнопка "Предыдущие"
-        const prevNumbersBtn = item.querySelector('.numbers-scroller__show-prev');
-        const prevNumbersBtnItems = prevNumbersBtn.querySelectorAll('.favorites-items');
-        //инпут поиска по цифрам
-        const search = item.querySelector('.form__search-by-numbers-input');
-
-        search.addEventListener('change', e => {
-            console.log(elem);
-            elem.forEach( item => {
-                // const value = item.dataset.value.replace(/[^0-9]/g, '');
-                // console.log(value);
-                // const array = value.split("");
-                // array.splice(0,1);
-                // const number = array.includes(` "${search.value}" `);
-                // console.log(array);
-                // array.forEach(item => {
-                //     console.log(typeof item);
-                // });
-                // console.log(` "${search.value}" `);
-                // console.log(typeof ` "${search.value}" `);
-                // console.log(number);
-
-                const value = item.dataset.value.replace(/[^0-9]/g, '');
-                const array = value.split("");
-                array.splice(0,1);
-                const arr = Array.from(search.value);
-                console.log(array);
-                function f(elem) {
-                    console.log(elem);
-                    array.forEach(item => {
-                        console.log(item);
-                        console.log(elem === item);
-                        return elem === item;
-                    })
-                }
-
-                if(arr.some(f) === true){
-                    console.log('мяу');
-                    item.classList.remove('hidden');
-                }else{
-                    console.log('ppp');
-                    item.classList.add('hidden');
-                }
-
-                // const arr = ["1", "2", "3", "2", "2"];
-                // const num = arr.includes("2");
-                // console.log(arr);
-                // console.log(num)
-            });
-        })
-    })
-}
-
-searchNumbers();
 
 
 
