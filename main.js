@@ -1181,7 +1181,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberZero.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoPhone.innerHTML = activeNumberOne.value;
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1227,7 +1227,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberOne.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoNewPhone.innerHTML = activeNumberOne.value;
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1270,8 +1270,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberTwo.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoNewPhoneTwo.innerHTML = activeNumberOne.value;
-
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1314,8 +1313,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberThree.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoNewPhoneThree.innerHTML = activeNumberOne.value;
-
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1357,8 +1355,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberFour.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoNewPhoneFour.innerHTML = activeNumberOne.value;
-
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1709,6 +1706,15 @@ function onlyFavorites() {
             }
         });
 
+        //показываем первые 7, остальные скрываем
+        for(let i = 0; i < availableNumbers.length; i++){
+            if(i < 7){
+                availableNumbers[i].classList.remove('hidden');
+            }else if(i >= 7){
+                availableNumbers[i].classList.add('hidden');
+            }
+        }
+
         //при нажатии на "следующие"
         nextNumbersBtn.addEventListener('click', () => {
 
@@ -1745,7 +1751,7 @@ function onlyFavorites() {
             for(let i = 0; i < availableNumbers.length; i++){
                 if(i < 7){
                     availableNumbers[i].classList.remove('hidden');
-                }else if(i >= 7 && i < 14){
+                }else if(i >= 7){
                     availableNumbers[i].classList.add('hidden');
                 }
             }
@@ -1855,7 +1861,7 @@ function onlyFavorites() {
                 showFavorites.classList.add('active');
             }
         });
-    })
+    });
 }
 
 onlyFavorites();
@@ -2108,7 +2114,7 @@ function clearInput(){
                     clear.classList.remove('display-block');
                     //то добавляем класс скрывающий крестик
                     clear.classList.add('display-none');
-                    filter();
+                    onlyFavorites();
                 }else{
                     //если другое поле, то стираем все
                     field.value="";
@@ -2367,7 +2373,6 @@ function testNumbersPrice(){
             }
         })
     })
-
 }
 testNumbersPrice();
 
