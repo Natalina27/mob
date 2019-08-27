@@ -1465,9 +1465,9 @@ form input[type=checkbox].condition__error + label:before{
 	color: #dce3ea;
 }
 
-.label-search-by-numbers-input{
-	top: calc(50% - 22px/2);
-}
+/*.label-search-by-numbers-input{*/
+/*	top: calc(50% - 22px/2);*/
+/*}*/
 
 .bring__invite{
 	width: 750px;

@@ -151,10 +151,10 @@ function showTariffOptions() {
 
     //ф-ция для метода every
     function check(item){
-        return item.classList.contains('display-block') === true;
+        return item.classList.contains('display-block');
     }
     //если все поля заполненны корректно
-    if(arr.every(check) === true){
+    if(arr.every(check)){
         //то открываем блок с тарифами
         tariffBlock.classList.remove("hidden");
         //и снимаем с кнопки "Далее" класс блокирующий события
@@ -169,27 +169,35 @@ function showTariffOptions() {
         if(arr.every(check) !== true){
             //то добавляем "Далее" класс блокирующий события
             btn.classList.add("removal");
-
-            //добавляем красную обвотку инпуту с номером телефона
-            phone.classList.add("error-border");
-            // снимаем с инпута с номером телефона класс, через метод класс-лист
-            phone.classList.remove("pseudo-hover");
-            //добавляем подсказку к телефону
-            textPhone.innerHTML = "Необходимо указать номер телефона";
-
-            //добавляем красную обвотку инпуту фио
-            name.classList.add("error-border");
-            // снимаем с инпута фио класс, через метод класс-лист
-            name.classList.remove("pseudo-hover");
-            //добавляем текст в инпуту фио
-            textName.innerHTML = "Укажите Ваше ФИО";
-
-            //добавляем красную обвотку инпуту регион
-            region.classList.add("error-border");
-            // снимаем с переменной класс, через метод класс-лист
-            region.classList.remove("pseudo-hover");
-            //добавляем текст импуту регион
-            textRegion.innerHTML = "Укажите Ваш город или регион";
+            //находим все обязательные инпуты
+            for(let i = 0; i < arr.length; i++){
+                //и проверяем их на НЕкорректное значение
+                if(!arr[i].classList.contains('display-block')){
+                    //если первый инпут заполнен некорректно
+                    if(i === 0){
+                        //то добавляем красную обвотку инпуту с номером телефона
+                        phone.classList.add("error-border");
+                        // снимаем с инпута с номером телефона класс, через метод класс-лист
+                        phone.classList.remove("pseudo-hover");
+                        //добавляем подсказку к телефону
+                        textPhone.innerHTML = "Необходимо указать номер телефона";
+                    }else if(i === 1){//если второй
+                        //то добавляем красную обвотку инпуту фио
+                        name.classList.add("error-border");
+                        // снимаем с инпута фио класс, через метод класс-лист
+                        name.classList.remove("pseudo-hover");
+                        //добавляем текст в инпуту фио
+                        textName.innerHTML = "Укажите Ваше ФИО";
+                    }else{//если третий
+                        //то добавляем красную обвотку инпуту регион
+                        region.classList.add("error-border");
+                        // снимаем с переменной класс, через метод класс-лист
+                        region.classList.remove("pseudo-hover");
+                        //добавляем текст импуту регион
+                        textRegion.innerHTML = "Укажите Ваш город или регион";
+                    }
+                }
+            }
         }
     }
 }
@@ -1173,7 +1181,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberZero.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoPhone.innerHTML = activeNumberOne.value;
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1219,7 +1227,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberOne.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoNewPhone.innerHTML = activeNumberOne.value;
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1262,8 +1270,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberTwo.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoNewPhoneTwo.innerHTML = activeNumberOne.value;
-
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1306,8 +1313,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberThree.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoNewPhoneThree.innerHTML = activeNumberOne.value;
-
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1349,8 +1355,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         bucketNumberFour.innerHTML = item.querySelector(`[value="${activeNumberOne.value}"]`).dataset.price;
                         //записываем значение на стр со всеми данными
                         allInfoNewPhoneFour.innerHTML = activeNumberOne.value;
-
-                        onlyFavorites();
+                        filter();
                         calc();
                     };
                     //значение меняется только после выполнения функции(event),
@@ -1660,10 +1665,10 @@ function favorites() {
                     favoritesName[i].classList.remove('hidden');
                 }
             }
-
         }
+    });
 
-    })
+    filter();
 }
 
 // //активация/блокировка кнопок переключения номеров
@@ -1673,8 +1678,10 @@ function onlyFavorites() {
     const block = document.querySelectorAll('.new-number__options');
 
     block.forEach(item => {
-        //поле поиска
+        //поле поиска по цифрам
         const search = item.querySelector('.form__search-by-numbers-input');
+        //поле поиска по цене
+        const price = item.querySelector('.form__price-input');
         //блок с номерами
         const numbers = item.querySelector('.phone-number__numbers-block1');
         //контейнер номера
@@ -1699,15 +1706,12 @@ function onlyFavorites() {
             }
         });
 
-        //в блоке с номерами показываем первые 7 номеров, остальные скрываем
-        //сейчас это не привязано ни к какому событию, потому что нужно чтоб этот кусок кода срабатывал,
-        // когда мы будем вызывать эту ф-цию на клик по кнопке "Оформить"
+        //показываем первые 7, остальные скрываем
         for(let i = 0; i < availableNumbers.length; i++){
             if(i < 7){
                 availableNumbers[i].classList.remove('hidden');
             }else if(i >= 7){
                 availableNumbers[i].classList.add('hidden');
-                console.log(availableNumbers[i]);
             }
         }
 
@@ -1747,7 +1751,7 @@ function onlyFavorites() {
             for(let i = 0; i < availableNumbers.length; i++){
                 if(i < 7){
                     availableNumbers[i].classList.remove('hidden');
-                }else if(i >= 7 && i < 14){
+                }else if(i >= 7){
                     availableNumbers[i].classList.add('hidden');
                 }
             }
@@ -1769,6 +1773,7 @@ function onlyFavorites() {
 
         });
         search.addEventListener('input', () => filter());
+        price.addEventListener('input', () => filter());
 
         //при нажатии "показать избранное"
         showFavorites.addEventListener('click', e => {
@@ -1776,14 +1781,6 @@ function onlyFavorites() {
             //если имеется класс active
             if (showFavorites.classList.contains('active')) {
 
-                //показываем первые 7
-                for(let i = 0; i < availableNumbers.length; i++){
-                    if(i < 7){
-                        availableNumbers[i].classList.remove('hidden');
-                    }else if(i >= 7 && i < 14){
-                        availableNumbers[i].classList.add('hidden');
-                    }
-                }
                 //снимаем блокировку события с кнопки "предыдущие"
                 prevNumbersBtn.classList.remove('removal');
                 //снимаем блокировку события с кнопки "следующие"
@@ -1864,30 +1861,7 @@ function onlyFavorites() {
                 showFavorites.classList.add('active');
             }
         });
-
-        function filter(){
-            elem.forEach( item => {
-                const value = item.dataset.value.replace(/[^0-9]/g, '');
-                const array = Array.from(value);
-                array.splice(0,1);
-                const str = array.join('');
-                const result = str.match(new RegExp(search.value));
-                // console.log(str);
-                // console.log(search.value);
-
-                const checkbox = item.querySelector('input[type="checkbox"]');
-
-                const number = result;
-                const fav = showFavorites.classList.contains('active') && checkbox.checked || !showFavorites.classList.contains('active');
-
-                if (number && fav){
-                    item.classList.remove('hidden');
-                }else{
-                    item.classList.add('hidden');
-                }
-            });
-        }
-    })
+    });
 }
 
 onlyFavorites();
@@ -2129,9 +2103,25 @@ function clearInput(){
                 if(field.classList.contains('form__phone-input')){
                     //то оставляем семерку
                     field.value="+7(";
+                    //удаляем показывающий крестик
+                    clear.classList.remove('display-block');
+                    //то добавляем класс скрывающий крестик
+                    clear.classList.add('display-none');
+                }else if(field.classList.contains('form__search-by-numbers-input') || field.classList.contains('form__price-input')){
+                    //если это поля фильтрации номеров(Поиск по цифрам и Стоимость)
+                    field.value="";
+                    //удаляем показывающий крестик
+                    clear.classList.remove('display-block');
+                    //то добавляем класс скрывающий крестик
+                    clear.classList.add('display-none');
+                    onlyFavorites();
                 }else{
                     //если другое поле, то стираем все
                     field.value="";
+                    //удаляем показывающий крестик
+                    clear.classList.remove('display-block');
+                    //то добавляем класс скрывающий крестик
+                    clear.classList.add('display-none');
                 }
 
                 //если в поле, что-то написано
@@ -2218,7 +2208,6 @@ function orderDelivery(){
     const fields = block.querySelectorAll('.input-parent');
     const house = block.querySelector('.form__house-input');
     const textHouse = document.querySelector('.js-error-house');
-    const textRegion = block.querySelectorAll('.js-error-region');
     const allInfoHouse = document.querySelector('.house__data');
     const arr = Array.from(checkMark);
     const array = Array.from(fields);
@@ -2240,19 +2229,37 @@ function orderDelivery(){
         btn.classList.remove("removal");
     }
     btn.onmousedown = function(event){
-        //если не все поля заполненны корректно
-        if(arr.every(check) !== true || house.value.length === 0){
+        //если не все поля, кроме дома, заполненны НЕкорректно
+        if(arr.every(check) !== true){
             //то добавляем  "Заказать доставку" класс блокирующий события
             btn.classList.add("removal");
 
-            //для каждого обязательного инпута, кроме дома
-            array.forEach(item => {
-                const el = item.querySelector('input');
-                //добавляем красную обвотку
-                el.classList.add("error-border");
-                //и снимаем класс, через метод класс-лист
-                el.classList.remove("pseudo-hover");
-            });
+            //находим все обязательные инпуты кроме дома
+            for(let i = 0; i < arr.length; i++){
+                //и проверяем их на НЕкорректное значение
+                if(!arr[i].classList.contains('display-block')){
+                    //находим сам инпут
+                    const el = array[i].querySelector('input');
+                    //добавляем обвотку
+                    el.classList.add("error-border");
+                    //и снимаем класс, через метод класс-лист
+                    el.classList.remove("pseudo-hover");
+
+                    //если первый инпут заполнен некорректно
+                    if(i === 0){
+                        array[0].querySelector('.js-error-region').innerHTML = "Укажите Ваш регион";
+                    }else if(i === 1){
+                        array[1].querySelector('.js-error-region').innerHTML = "Укажите Ваш город";
+                    }else if(i === 2){
+                        array[2].querySelector('.js-error-region').innerHTML = "Укажите Ваш населенный пункт";
+                    }else{
+                        array[3].querySelector('.js-error-region').innerHTML = "Укажите Вашу улицу";
+                    }
+                }
+            }
+        }else if(house.value.length == 0){//если поле дом заполненное НЕкорректно
+            //то добавляем  "Заказать доставку" класс блокирующий события
+            btn.classList.add("removal");
 
             //добавляем красную обвотку для инпута дома
             house.classList.add("error-border");
@@ -2260,12 +2267,6 @@ function orderDelivery(){
             house.classList.remove("pseudo-hover");
             //добавляем текстовую подсказку к инпуту дома
             textHouse.innerHTML = "Укажите № дома";
-
-            //для первого инпута добавляем текстовую подсказку
-            textRegion[0].innerHTML = "Укажите Ваш регион";
-            textRegion[1].innerHTML = "Укажите Ваш город";
-            textRegion[2].innerHTML = "Укажите Ваш населенный пункт";
-            textRegion[3].innerHTML = "Укажите Вашу улицу";
         }
         //добавляем номер дома на стр со всеми данными
         allInfoHouse.innerHTML = house.value;
@@ -2322,12 +2323,155 @@ function allInfo(){
 
 allInfo();
 
+//маска для инпута "Поиск по цифрам"
+function testSearchNumbers(){
+    //блок с инпутом "поиск по цифрам"
+    const block = document.querySelectorAll('.form__search-by-numbers');
+    block.forEach(item => {
+        //находим сам инпут "Поиск по цифрам"
+        const search = item.querySelector('.form__search-by-numbers-input');
+        //находим кнопку чистки поля
+        const clear = item.querySelector('.js-clear-field');
 
+        IMask(
+            search,
+            {
+                mask: /^\d{0,7}$/
 
+            });
 
+        //чтобы в инпуте "Поиск по цифрам" можно было использовать крестик
+        search.addEventListener('blur', e => {
+            if(search.value == 0){
+                //удаляем показывающий крестик
+                clear.classList.remove('display-block');
+                //то добавляем класс скрывающий крестик
+                clear.classList.add('display-none');
+            }
+        })
+    })
+}
 
+testSearchNumbers();
 
+//чтобы в инпуте "Стоимость" можно было использовать крестик
+function testNumbersPrice(){
+    //блок с инпутом "Стоимость"
+    const block = document.querySelectorAll('.form__price');
+    block.forEach(item => {
+        //находим сам инпут "Стоимость"
+        const price = item.querySelector('.form__price-input');
+        //находим кнопку чистки поля
+        const clear = item.querySelector('.js-clear-field');
 
+        price.addEventListener('blur', e => {
+            if(price.value == 0){
+                //удаляем показывающий крестик
+                clear.classList.remove('display-block');
+                //то добавляем класс скрывающий крестик
+                clear.classList.add('display-none');
+            }
+        })
+    })
+}
+testNumbersPrice();
+
+function filter(){
+    //блок "Получить новый номер"
+    const block = document.querySelectorAll('.new-number__options');
+    block.forEach(item => {
+        //поле поиска по цифрам
+        const search = item.querySelector('.form__search-by-numbers-input');
+        //поле поиска по цене
+        const price = item.querySelector('.form__price-input');
+        //блок с номерами
+        const numbers = item.querySelector('.phone-number__numbers-block1');
+        //контейнер номера
+        const elem = numbers.querySelectorAll('.phone-number__numbers-container');
+        //кнопка "Следующие"
+        const nextNumbersBtn = item.querySelector('.numbers-scroller__show-next');
+        //части кнопки"Следующие"
+        const nextNumbersBtnItems = nextNumbersBtn.querySelectorAll('.favorites-items');
+        // кнопка "Предыдущие"
+        const prevNumbersBtn = item.querySelector('.numbers-scroller__show-prev');
+        const prevNumbersBtnItems = prevNumbersBtn.querySelectorAll('.favorites-items');
+        //кнопка "Показать избранное"
+        const showFavorites = item.querySelector('.favorites-btn');
+
+        //для каждого контейнера с номером телефона
+        elem.forEach( item => {
+            //находим сам номер телефона и оставляем только цифры
+            const value = item.dataset.value.replace(/[^0-9]/g, '');
+            //преобразуем номер в массив, чтобы подкорректировать его
+            const array = Array.from(value);
+            //удаляем первый символ(7)
+            array.splice(0,1);
+            //возвращаем обратно в строку
+            const str = array.join('');
+            //с помощью метода match находим массив совпадений. RegExp создаёт объект регулярного выражения для сопоставления текста с шаблоном
+            const result = str.match(new RegExp(search.value));
+
+            //цена номер, написанная в контейнере номера
+            const numberPrice = item.querySelector('.phone-number__price').innerHTML;
+            //цена, находящаяся в инпуте "Стоимость"
+            const resultPrice = numberPrice === price.value;
+
+            //чекбокс стоимости
+            const checkbox = item.querySelector('input[type="checkbox"]');
+            //если мы находимся в блоке только избранных номеров и номер выбран звездочкой или мы не находимся в блоке только изббранных номеров
+            const favorite = showFavorites.classList.contains('active') && checkbox.checked || !showFavorites.classList.contains('active');
+
+            //если есть номера совпадающие с тем, что ввел пользователь в инпут "Поиск по цифрам " и favorite(выше) и в инпуте "Стоимость" ничего не выбранно
+            //или если есть номера совпадающие с той ценой, которую выбрал пользователь в инпуте "Стоимость" и favorite(выше) и в инпуте "Поиск по цифрам" ничего не введено
+            //или есть в оба инпута что-то введено и совпадает с имеющимися номера и favorite(выше)
+            if(result && favorite && !price.value || resultPrice && favorite && !search.value|| result && resultPrice && favorite){
+                //то мы показываем номер
+                item.classList.remove('hidden');
+            }else{
+                //иначе скрываем
+                item.classList.add('hidden');
+            }
+        });
+
+        //НЕ скрытые номера
+        const rightNumber = numbers.querySelectorAll('.phone-number__numbers-container:not(.hidden)');
+        //делаем из них массив
+        const numbersArr = Array.from(rightNumber);
+
+        //скрываем первые 7 и показываем след 7
+        for(let i = 0; i < numbersArr.length; i++){
+            if(i < 7){
+                numbersArr[i].classList.remove('hidden');
+
+                //для каждого элемента кнопки "следующие"
+                nextNumbersBtnItems.forEach(item => {
+                    //добавляем обесцвечивающий класс
+                    item.classList.add('favorites');
+                });
+                //для кнопки "следующие" добавляем класс, блокирующий события
+                nextNumbersBtn.classList.add('removal');
+
+                //для каждого элемента кнопки "предыдущие"
+                prevNumbersBtnItems.forEach(item => {
+                    //добавляем обесцвечивающий класс
+                    item.classList.add('favorites');
+                });
+                //для кнопки  "предыдущие" добавляем класс, блокирующий события
+                prevNumbersBtn.classList.add('removal');
+            }else if(i >= 7){
+                numbersArr[i].classList.add('hidden');
+
+                //для каждого элемента кнопки "следующие"
+                nextNumbersBtnItems.forEach(item => {
+                    //добавляем выделяющий класс
+                    item.classList.remove('favorites');
+                });
+                //у кнопки "следующие" удаляем класс, блокирующий события
+                nextNumbersBtn.classList.remove('removal');
+            }
+        }
+    })
+}
 
 
 
