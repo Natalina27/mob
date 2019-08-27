@@ -1718,6 +1718,24 @@ function onlyFavorites() {
             }
         }
 
+        //для каждого элемента кнопки "следующие"
+        nextNumbersBtnItems.forEach(item => {
+            //добавляем выделяющий класс
+            item.classList.remove('favorites');
+        });
+
+        //у кнопки "следующие" удаляем класс, блокирующий события
+        nextNumbersBtn.classList.remove('removal');
+
+        //для каждого элемента кнопки "предыдущие"
+        prevNumbersBtnItems.forEach(item => {
+            //добавляем обесцвечивающий класс
+            item.classList.add('favorites');
+        });
+
+        //для кнопки  "предыдущие" добавляем класс, блокирующий события
+        prevNumbersBtn.classList.add('removal');
+
 
         //при нажатии на "следующие"
         nextNumbersBtn.addEventListener('click', () => {
@@ -1897,6 +1915,7 @@ function newNumber() {
     const block4 = document.querySelector('.bucket-new-four-number');
 
     addBtn.addEventListener('click', event =>{
+        numbersPage = 0;
         //стр с корзинами
         const wrap = document.querySelector('.numbers-bucket__content');
         //скрытая корзина
@@ -1910,7 +1929,6 @@ function newNumber() {
                 //корзина перестает быть скрытой
                 block1.classList.remove('hidden');
                 //происходит обновление списка номеров
-                numbersPage = 0;
                 onlyFavorites();
             })
         }else if(bucket === block2){
@@ -1919,7 +1937,6 @@ function newNumber() {
             const btn = pageNumber.querySelector('.phone-number__next-btn');
             btn.addEventListener('click', event =>{
                 block2.classList.remove('hidden');
-                numbersPage = 0;
                 onlyFavorites();
             })
         }else if(bucket === block3){
@@ -1928,7 +1945,6 @@ function newNumber() {
             const btn = pageNumber.querySelector('.phone-number__next-btn');
             btn.addEventListener('click', event =>{
                 block3.classList.remove('hidden');
-                numbersPage = 0;
                 onlyFavorites();
             })
         }else if(bucket === block4){
@@ -1937,7 +1953,6 @@ function newNumber() {
             const btn = pageNumber.querySelector('.phone-number__next-btn');
             btn.addEventListener('click', event =>{
                 block4.classList.remove('hidden');
-                numbersPage = 0;
                 onlyFavorites();
             })
         }
@@ -2440,7 +2455,7 @@ function filter(){
                             //добавляем выделяющий класс
                             item.classList.add('favorites');
                         });
-                        //у кнопки "следующие" удаляем класс, блокирующий события
+                        //у кнопки "следующие" добавляем класс, блокирующий события
                         nextNumbersBtn.classList.add('removal');
 
                         //для каждого элемента кнопки "предыдущие"
