@@ -1165,6 +1165,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         //удаляем первые 2 номера - в том блоке, в котором мы его выбрали и в корректирующем
                         arr.splice(0,2);
                         //для каждого такого номера в остальных блоках
+
                         arr.forEach(item => {
                             item.classList.add('display-none');
                         });
@@ -1211,11 +1212,11 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         const arr = Array.from(container);
                         //удаляем первые 2 номера - в том блоке, в котором мы его выбрали и в корректирующем
                         //т.к addMoreBlockNumber второй блок, то его номера в общем списке будут 3,4 - их мы и удаляем
-                        arr.splice(1,2);
+                        arr.splice(2,2);
                         arr.forEach(item => {
                             item.classList.add('display-none');
                         });
-
+                        
                         //кнопка с номером телефона
                         const correctBtn = document.querySelector('.correct-number__add-more-next-bth');
                         //в корзине номеров в инпут записываем значение :checked эл
@@ -1254,11 +1255,10 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
 
                         const container = document.querySelectorAll(`[data-value="${activeNumberOne.value}"]`);
                         const arr = Array.from(container);
-                        arr.splice(3,2);
+                        arr.splice(4,2);
                         arr.forEach(item => {
                             item.classList.add('display-none');
                         });
-
                         //кнопка с номером телефона
                         const correctBtn = document.querySelector('.correct-number__add-more-two-next-bth');
                         //в корзине номеров в инпут записываем значение :checked эл
@@ -1297,7 +1297,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
 
                         const container = document.querySelectorAll(`[data-value="${activeNumberOne.value}"]`);
                         const arr = Array.from(container);
-                        arr.splice(5,2);
+                        arr.splice(6,2);
                         arr.forEach(item => {
                             item.classList.add('display-none');
                         });
@@ -1340,7 +1340,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
 
                         const container = document.querySelectorAll(`[data-value="${activeNumberOne.value}"]`);
                         const arr = Array.from(container);
-                        arr.splice(7,2);
+                        arr.splice(8,2);
                         arr.forEach(item => {
                             item.classList.add('display-none');
                         });
@@ -1699,11 +1699,6 @@ function onlyFavorites() {
 
         //отфильтровываем номера, которые еще не были выбранны
         const availableNumbers = arr.filter(function(item){
-            // // если у search или price есть значение
-            // if (!search.value || !price.value) {
-            //     if (item.classList.contains('is-filter')) return true
-            // }
-
             if(item.classList.contains('display-none') !== true){
                 return true;
             }
