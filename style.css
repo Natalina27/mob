@@ -365,14 +365,14 @@ input[type='number']::-webkit-inner-spin-button {
 .form__wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 30px auto;
+    margin: 30px auto 30px auto;
     max-width: 610px;
 }
 
 .form__wrapper-input {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto 30px;
+    margin: 30px auto 30px auto;
     max-width: 610px;	
 }
 
@@ -1465,9 +1465,7 @@ form input[type=checkbox].condition__error + label:before{
 	color: #dce3ea;
 }
 
-/*.label-search-by-numbers-input{*/
-/*	top: calc(50% - 22px/2);*/
-/*}*/
+
 
 .bring__invite{
 	width: 750px;
@@ -1522,6 +1520,20 @@ form input[type=checkbox].condition__error + label:before{
 	margin-top: 3px;
 	margin-left: 10px;
 }
+
+.bring-info__client-name{
+	text-transform: capitalize;
+}
+
+.bring-info__red-text{
+	color: red;
+	margin: 15px 0;
+}
+
+
+
+
+
 
 
 
