@@ -604,103 +604,59 @@ function testText() {
 testText();
 
 function testName() {
-    const block = document.querySelectorAll('.form__name');
+    const block = document.querySelector('.form__name');
     const allInfoName = document.querySelector('.name__data');
-    const allInfoFriendName = document.querySelector('.name-friends__data');
     const pageInviteFriend = document.querySelector('.bring-info__client-name');
-    block.forEach(item => {
-        const name = item.querySelector('.form__name-input');
-        const clear = item.querySelector('.js-clear-field');
-        const filled = item.querySelector('.input-filled');
-        name.onkeyup = function test(){
-            const value = name.value;
-            const pattern = /[()&^$?/%#\!@;+_*=":'0-9]/;
-            //делаем проверку с помощью метода test
-            //(выполняет поиск сопоставления)
-            if(pattern.test(value)){
-                //Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
-                name.value = value.replace(pattern, '');
-            }
-            //создаем объект для корректировки строки
-            const replacer = {
-                "q": "й", "w": "ц", "e": "у", "r": "к", "t": "е", "y": "н", "u": "г",
-                "i": "ш", "o": "щ", "p": "з", "[": "х", "]": "ъ", "a": "ф", "s": "ы",
-                "d": "в", "f": "а", "g": "п", "h": "р", "j": "о", "k": "л", "l": "д",
-                ";": "ж", "'": "э", "z": "я", "x": "ч", "c": "с", "v": "м", "b": "и",
-                "n": "т", "m": "ь", ",": "б", ".": "ю", "/": "."
-            };
-
-            let replace;
-
-            //создаем цикл,чтобы не потерять длину
-            for (let i = 0; i < value.length; i++) {
-
-                //проверяем, что значемние value приобразованное в нижний регистр определено
-                if (replacer[value[i].toLowerCase()] !== undefined) {
-
-                    //если значение value в нижнем регистре
-                    if (value[i] === value[i].toLowerCase()) {
-                        //то в replace записывается значение value в низнем регистре
-                        replace = replacer[value[i].toLowerCase()];
-                    } else
-                    // если значение value в верхнем регистре
-                    if (value[i] === value[i].toUpperCase()) {
-                        //то в replace записывается значение value в верхнем регистре
-                        replace = replacer[value[i].toLowerCase()].toUpperCase();
-                    }
-                    // Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
-                    name.value = value.replace(value[i], replace);
-                }
-            }
+    const name = block.querySelector('.form__name-input');
+    const clear = block.querySelector('.js-clear-field');
+    const filled = block.querySelector('.input-filled');
+    name.onkeyup = function test(){
+        const value = name.value;
+        const pattern = /[()&^$?/%#\!@;+_*=":'0-9]/;
+        //делаем проверку с помощью метода test
+        //(выполняет поиск сопоставления)
+        if(pattern.test(value)){
+            //Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+            name.value = value.replace(pattern, '');
+        }
+        //создаем объект для корректировки строки
+        const replacer = {
+            "q": "й", "w": "ц", "e": "у", "r": "к", "t": "е", "y": "н", "u": "г",
+            "i": "ш", "o": "щ", "p": "з", "[": "х", "]": "ъ", "a": "ф", "s": "ы",
+            "d": "в", "f": "а", "g": "п", "h": "р", "j": "о", "k": "л", "l": "д",
+            ";": "ж", "'": "э", "z": "я", "x": "ч", "c": "с", "v": "м", "b": "и",
+            "n": "т", "m": "ь", ",": "б", ".": "ю", "/": "."
         };
-        name.addEventListener('blur', e => {
-            const formatName =/[а-яА-ЯёЁ]+(-[а-яА-ЯёЁ]+)? [а-яА-ЯёЁ][а-яА-ЯёЁ]+( )?$/.test(name.value);
-            const errorPlace = item.querySelector(".js-error-name");
-            errorPlace.innerHTML = "";
-            if(name.value.length > 0){
-                if (formatName !== true) {
-                    if(!name.classList.contains('form__friends-name-input')){
-                        // В переменную вставляем  строку
-                        errorPlace.innerHTML = "Укажите Ваше ФИО";
-                    }else{
-                        // В переменную вставляем  строку
-                        errorPlace.innerHTML = "Укажите ФИО Вашего друга";
-                    }
-                    // добавляем класс к переменной через метод класс-лист
-                    name.classList.add("error-border");
-                    // снимаем с переменной класс, через метод класс-лист
-                    name.classList.remove("pseudo-hover");
 
-                } else{
-                    // в переменную также вставляется строка, с пустым значениями
-                    errorPlace.innerHTML = "";
-                    // снимаем с переменной класс, через метод класс-лист
-                    name.classList.remove("error-border");
-                    // добавляем класс к переменной через метод класс-лист
-                    name.classList.add("pseudo-hover");
+        let replace;
 
-                    //то добавляем класс скрывающий крестик
-                    clear.classList.add('display-none');
-                    //удаляем класс скрывающий галочку
-                    filled.classList.remove('display-none');
-                    //удаляем показывающий крестик
-                    clear.classList.remove('display-block');
-                    //добавляем класс показывающий галочку
-                    filled.classList.add('display-block');
+        //создаем цикл,чтобы не потерять длину
+        for (let i = 0; i < value.length; i++) {
 
-                    //если это инпут не "укажите имя друга"
-                    if(!name.classList.contains('form__friends-name-input')){
-                        //добавляем значение на стр со всеми данными
-                        allInfoName.innerHTML = name.value;
-                        //добавляем значение в обращение на стр Пригласить друга
-                        pageInviteFriend.innerHTML = name.value;
-                    }else{
-                        //добавляем значение на стр со всеми данными
-                        allInfoFriendName.innerHTML = name.value;
-                    }
+            //проверяем, что значемние value приобразованное в нижний регистр определено
+            if (replacer[value[i].toLowerCase()] !== undefined) {
 
+                //если значение value в нижнем регистре
+                if (value[i] === value[i].toLowerCase()) {
+                    //то в replace записывается значение value в низнем регистре
+                    replace = replacer[value[i].toLowerCase()];
+                } else
+                // если значение value в верхнем регистре
+                if (value[i] === value[i].toUpperCase()) {
+                    //то в replace записывается значение value в верхнем регистре
+                    replace = replacer[value[i].toLowerCase()].toUpperCase();
                 }
-            }else{
+                // Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+                name.value = value.replace(value[i], replace);
+            }
+        }
+    };
+    name.addEventListener('blur', e => {
+        const formatName =/[а-яА-ЯёЁ]+(-[а-яА-ЯёЁ]+)? [а-яА-ЯёЁ][а-яА-ЯёЁ]+( )?$/.test(name.value);
+        const errorPlace = block.querySelector(".js-error-name");
+        errorPlace.innerHTML = "";
+        if(name.value.length > 0){
+            if (formatName !== true) {
                 if(!name.classList.contains('form__friends-name-input')){
                     // В переменную вставляем  строку
                     errorPlace.innerHTML = "Укажите Ваше ФИО";
@@ -712,17 +668,149 @@ function testName() {
                 name.classList.add("error-border");
                 // снимаем с переменной класс, через метод класс-лист
                 name.classList.remove("pseudo-hover");
+
+            } else{
+                // в переменную также вставляется строка, с пустым значениями
+                errorPlace.innerHTML = "";
+                // снимаем с переменной класс, через метод класс-лист
+                name.classList.remove("error-border");
+                // добавляем класс к переменной через метод класс-лист
+                name.classList.add("pseudo-hover");
+
                 //то добавляем класс скрывающий крестик
                 clear.classList.add('display-none');
+                //удаляем класс скрывающий галочку
+                filled.classList.remove('display-none');
                 //удаляем показывающий крестик
                 clear.classList.remove('display-block');
-            }
-            clearCross();
-        })
-    })
+                //добавляем класс показывающий галочку
+                filled.classList.add('display-block');
 
+                //добавляем значение на стр со всеми данными
+                allInfoName.innerHTML = name.value;
+                //добавляем значение в обращение на стр Пригласить друга
+                pageInviteFriend.innerHTML = name.value;
+            }
+        }else{
+            // В переменную вставляем  строку
+            errorPlace.innerHTML = "Укажите Ваше ФИО";
+            // добавляем класс к переменной через метод класс-лист
+            name.classList.add("error-border");
+            // снимаем с переменной класс, через метод класс-лист
+            name.classList.remove("pseudo-hover");
+            //то добавляем класс скрывающий крестик
+            clear.classList.add('display-none');
+            //удаляем показывающий крестик
+            clear.classList.remove('display-block');
+        }
+        clearCross();
+    })
 }
 testName();
+
+function testFriendName() {
+    const block = document.querySelector('.form__friend-name');
+    const name = block.querySelector('.form__name-input');
+    const clear = block.querySelector('.js-clear-field');
+    const filled = block.querySelector('.input-filled');
+    const allInfoFriendName = document.querySelector('.name-friends__data');
+    name.onkeyup = function test(){
+        const value = name.value;
+        const pattern = /[()&^$?/%#\!@;+_*=":'0-9]/;
+        //делаем проверку с помощью метода test
+        //(выполняет поиск сопоставления)
+        if(pattern.test(value)){
+            //Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+            name.value = value.replace(pattern, '');
+        }
+        //создаем объект для корректировки строки
+        const replacer = {
+            "q": "й", "w": "ц", "e": "у", "r": "к", "t": "е", "y": "н", "u": "г",
+            "i": "ш", "o": "щ", "p": "з", "[": "х", "]": "ъ", "a": "ф", "s": "ы",
+            "d": "в", "f": "а", "g": "п", "h": "р", "j": "о", "k": "л", "l": "д",
+            ";": "ж", "'": "э", "z": "я", "x": "ч", "c": "с", "v": "м", "b": "и",
+            "n": "т", "m": "ь", ",": "б", ".": "ю", "/": "."
+        };
+
+        let replace;
+
+        //создаем цикл,чтобы не потерять длину
+        for (let i = 0; i < value.length; i++) {
+
+            //проверяем, что значемние value приобразованное в нижний регистр определено
+            if (replacer[value[i].toLowerCase()] !== undefined) {
+
+                //если значение value в нижнем регистре
+                if (value[i] === value[i].toLowerCase()) {
+                    //то в replace записывается значение value в низнем регистре
+                    replace = replacer[value[i].toLowerCase()];
+                } else
+                // если значение value в верхнем регистре
+                if (value[i] === value[i].toUpperCase()) {
+                    //то в replace записывается значение value в верхнем регистре
+                    replace = replacer[value[i].toLowerCase()].toUpperCase();
+                }
+                // Метод replace() возвращает новую строку с сопоставлениями, заменёнными на заменитель
+                name.value = value.replace(value[i], replace);
+            }
+        }
+    };
+    name.addEventListener('blur', e => {
+        const formatName = /[а-яА-ЯёЁ]/.test(name.value);
+        const errorPlace = block.querySelector(".js-error-name");
+        errorPlace.innerHTML = "";
+        if(name.value.length > 0){
+            if (formatName !== true || name.value.length < 3) {
+                if(!name.classList.contains('form__friends-name-input')){
+                    // В переменную вставляем  строку
+                    errorPlace.innerHTML = "Укажите Ваше ФИО";
+                }else{
+                    // В переменную вставляем  строку
+                    errorPlace.innerHTML = "Укажите ФИО Вашего друга";
+                }
+                // добавляем класс к переменной через метод класс-лист
+                name.classList.add("error-border");
+                // снимаем с переменной класс, через метод класс-лист
+                name.classList.remove("pseudo-hover");
+
+            } else{
+                // в переменную также вставляется строка, с пустым значениями
+                errorPlace.innerHTML = "";
+                // снимаем с переменной класс, через метод класс-лист
+                name.classList.remove("error-border");
+                // добавляем класс к переменной через метод класс-лист
+                name.classList.add("pseudo-hover");
+
+                //то добавляем класс скрывающий крестик
+                clear.classList.add('display-none');
+                //удаляем класс скрывающий галочку
+                filled.classList.remove('display-none');
+                //удаляем показывающий крестик
+                clear.classList.remove('display-block');
+                //добавляем класс показывающий галочку
+                filled.classList.add('display-block');
+
+                //добавляем значение на стр со всеми данными
+                allInfoFriendName.innerHTML = name.value;
+
+            }
+        }else{
+            // В переменную вставляем  строку
+            errorPlace.innerHTML = "Укажите ФИО Вашего друга";
+            // добавляем класс к переменной через метод класс-лист
+            name.classList.add("error-border");
+            // снимаем с переменной класс, через метод класс-лист
+            name.classList.remove("pseudo-hover");
+            //то добавляем класс скрывающий крестик
+            clear.classList.add('display-none');
+            //удаляем показывающий крестик
+            clear.classList.remove('display-block');
+        }
+        clearCross();
+    })
+}
+
+testFriendName();
 
 
 function errorRegion(){
@@ -1216,7 +1304,7 @@ function valueTransfer(internet, addMoreInternet, addMoreTwoInternet, addMoreThr
                         arr.forEach(item => {
                             item.classList.add('display-none');
                         });
-                        
+
                         //кнопка с номером телефона
                         const correctBtn = document.querySelector('.correct-number__add-more-next-bth');
                         //в корзине номеров в инпут записываем значение :checked эл
@@ -1956,6 +2044,63 @@ function newNumber() {
 
 newNumber();
 
+//при нажатии на крестик на корзине номера
+function newNumberCross() {
+    //все корзины номеров
+    const bucket = document.querySelectorAll('.bucket-wrapper');
+    bucket.forEach(item => {
+        //крестик
+        const cross = item.querySelector('.close-block');
+        //если крестик есть
+        if(cross !== null){
+            //то при нажатии на него
+            cross.addEventListener('click', e => {
+                let blockServices = '';
+                let blockNumbers = '';
+                if(item.classList.contains('bucket-new-number')){
+                    blockServices = document.querySelector('.add-more-service');
+                    blockNumbers = document.querySelector('.add-more-number');
+                }else if(item.classList.contains('bucket-new-two-number')){
+                    blockServices = document.querySelector('.add-more-two-service');
+                    blockNumbers = document.querySelector('.add-more-two-number');
+                }if(item.classList.contains('bucket-new-three-number')){
+                    blockServices = document.querySelector('.add-more-three-service');
+                    blockNumbers = document.querySelector('.add-more-three-number');
+                }if(item.classList.contains('bucket-new-four-number')){
+                    blockServices = document.querySelector('.add-more-four-service');
+                    blockNumbers = document.querySelector('.add-more-four-number');
+                }
+                const internet = blockServices.querySelector('.form__internet-input');
+                const calls = blockServices.querySelector('.form__calls-input');
+                const messenger = blockServices.querySelector('.application-internet__options-messenger');
+                const social = blockServices.querySelector('.application-internet__options-social');
+                const music = blockServices.querySelector('.application-internet__options-music');
+                const video = blockServices.querySelector('.application-internet__options-video');
+                const sms = blockServices.querySelector('.application-internet__options-sms');
+                const arr = [messenger, social, music, video, sms];
+                const numbersWrap = blockNumbers.querySelectorAll('input[type="radio"]');
+
+                //в инпуте интернет выбираем 2 опцию
+                internet.options[1].selected = true;
+                //в инпуте звонки выбираем 1 опцию
+                calls.options[0].selected = true;
+
+                //делаем невыбранными все чекеты
+                arr.forEach(item => {
+                    item.checked = false;
+                });
+                //делаем невыбранными все номреа
+                numbersWrap.forEach(item => {
+                    item.checked = false;
+                });
+                //скрываем корзину
+                item.classList.add('hidden');
+            })
+        }
+    })
+}
+
+newNumberCross();
 
 //принятие условий
 function conditionError() {
@@ -2356,11 +2501,12 @@ function filter(){
             const value = item.dataset.value.replace(/[^0-9]/g, '');
             //преобразуем номер в массив, чтобы подкорректировать его
             const array = Array.from(value);
-            //удаляем первый символ(7)
+            //удаляем первые 4 символа (7995)
             array.splice(0,4);
             //возвращаем обратно в строку
             const str = array.join('');
-            //с помощью метода match находим массив совпадений. RegExp создаёт объект регулярного выражения для сопоставления текста с шаблоном
+            //с помощью метода match находим массив совпадений.
+            //RegExp создаёт объект регулярного выражения для сопоставления текста с шаблоном
             const result = str.match(new RegExp(search.value));
 
             //цена номер, написанная в контейнере номера
@@ -2368,14 +2514,14 @@ function filter(){
             //цена, находящаяся в инпуте "Стоимость"
             const resultPrice = numberPrice === price.value;
 
-            //чекбокс стоимости
+            //чекбокс звездочки
             const checkbox = item.querySelector('input[type="checkbox"]');
             //если мы находимся в блоке только избранных номеров и номер выбран звездочкой или мы не находимся в блоке только изббранных номеров
             const favorite = showFavorites.classList.contains('active') && checkbox.checked || !showFavorites.classList.contains('active');
 
             //если есть номера совпадающие с тем, что ввел пользователь в инпут "Поиск по цифрам " и favorite(выше) и в инпуте "Стоимость" ничего не выбранно
             //или если есть номера совпадающие с той ценой, которую выбрал пользователь в инпуте "Стоимость" и favorite(выше) и в инпуте "Поиск по цифрам" ничего не введено
-            //или есть в оба инпута что-то введено и совпадает с имеющимися номера и favorite(выше)
+            //или есть в оба инпута что-то введено и совпадает с имеющимися номерами/стоимостями и favorite(выше)
             if(result && favorite && !price.value || resultPrice && favorite && !search.value|| result && resultPrice && favorite){
                 //то мы показываем номер
                 item.classList.remove('hidden');
@@ -2470,6 +2616,18 @@ function filter(){
 
 
 let numbersPage = 0;
+
+
+const element = document.getElementById('id');
+const options = {
+    limit: document.querySelector('.area'),
+};
+const drag = new Draggable (element, options);
+
+drag.set(window.innerWidth - 140,window.innerHeight - 162);
+
+
+
 
 
 

@@ -1531,8 +1531,84 @@ form input[type=checkbox].condition__error + label:before{
 }
 
 
+.area{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none
+}
 
 
+.wrap{
+	width: 120px;
+	height: 120px;
+	pointer-events: all;
+}
+
+.wrap__img{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.wrap__cross{
+	width: 12px;
+	height: 12px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	position: absolute;
+	top: 7px;
+	right: 0;
+}
+
+.wrap__cross:before,
+.wrap__cross:after {
+	content: "";
+	position: absolute;
+	top: 5.4px;
+	left: 2px;
+	width: 8px;
+	height: 1px;
+	background: #000;
+}
+
+.wrap__cross:before {
+	transform: rotate(45deg);
+}
+
+.wrap__cross:after {
+	transform: rotate(-45deg);
+}
+
+.wrap__help{
+	max-width: 300px;
+	width: max-content;
+	position: absolute;
+	top: -55px;
+	left: -50px;
+	padding: 15px;
+	background-color: #eeeeee;
+	border-radius: 10px;
+	border: 1px solid #000;
+}
+
+.wrap__help:after, .wrap__help:before{
+	content:'';
+	position: absolute;
+	left: calc(50% - 16px);
+	bottom: -18px;
+	border: 8px solid transparent;
+	border-top: 10px solid #000;
+}
+
+.wrap__help:after{
+	border-top: 10px solid #eeeeee;
+	bottom: -17px;
+}
 
 
 
